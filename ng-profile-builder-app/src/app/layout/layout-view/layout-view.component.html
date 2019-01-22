@@ -1,0 +1,20 @@
+<h2 class="text-center">{{layout.title}}</h2>
+<section class="container layout">
+  <ng-template #layoutRows let-rows="rows">
+    <section class="row" *ngFor="let row of rows, let rIdx = index">
+      <div class="col-sm-{{col.name}}" *ngFor="let col of row.cols, let cIdx = index">
+        <div class="layout-content" *ngIf="!col.rows">
+          {{sampleText}}
+          <a class="link settings" href="#">
+            <span class="fa fa-cog"></span>
+          </a>
+        </div>
+        <section class="container" *ngIf="col.rows">
+          <ng-container *ngTemplateOutlet="layoutRows; context: {rows: col.rows}"></ng-container>
+        </section>
+      </div>
+    </section>
+  </ng-template>
+
+  <ng-container *ngTemplateOutlet="layoutRows; context: {rows: layout.rows}"></ng-container>
+</section>

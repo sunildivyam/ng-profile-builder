@@ -1,0 +1,77 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "username1",
+      "firstName": "",
+      "lastName": "",
+      "group": "admin"
+    }
+  ],
+  "layouts": [
+    {
+      "id": 1,
+      "title": "2 Rows 2 Col",
+      "userId": 1,
+      "rows": [
+        {
+          "cols": [
+            {
+              "name": "6"
+            },
+            {
+              "name": "6"
+            }
+          ]
+        },
+        {
+          "cols": [
+            {
+              "name": "4"
+            },
+            {
+              "name": "8",
+              "rows": [
+                {
+                  "cols": [
+                    {
+                      "name": "6"
+                    },
+                    {
+                      "name": "6"
+                    }
+                  ]
+                },
+                {
+                  "cols": [
+                    {
+                      "name": "4"
+                    },
+                    {
+                      "name": "6"
+                    },
+                    {
+                      "name": "2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "id": 1,
+      "title": "Profile 1",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "title": "Profile 2",
+      "userId": 1
+    }
+  ]
+}
