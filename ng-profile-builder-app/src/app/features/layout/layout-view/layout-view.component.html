@@ -1,4 +1,4 @@
-<section class="container layout" *ngIf="layout">
+<section class="container-fluid layout" *ngIf="layout">
   <div class="row">
     <div class="col-sm-12">
         <input type="text" class="form-control layout-title" [(ngModel)]="layoutTitle" (change)="titleChange($event)"/>
@@ -19,7 +19,7 @@
         <a *ngIf="col.rows && col.rows.length" class="link settings" href="#" (click)="editColumnClick($event, col)">
           <span class="fa fa-cog"></span>            
         </a>
-        <section class="container" *ngIf="col.rows && col.rows.length">          
+        <section class="container-fluid" *ngIf="col.rows && col.rows.length">          
           <ng-container *ngTemplateOutlet="layoutRows; context: {rows: col.rows}"></ng-container>
         </section>
       </div>

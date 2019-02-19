@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="row bg-white">
-      <div class="col-sm-12">
+      <div class="col-sm-12 scroll-container">
         <div class="container-fluid column-form-container" *ngIf="!column.rows || !column.rows.length">
           <div class="row">
             <div class="col-sm-12">      
@@ -31,11 +31,11 @@
         </div>
       
         <div class="container-fluid column-form-container" *ngIf="column.rows && column.rows.length" >
-          <div class="row" *ngFor="let row of column.rows; index as rowIndex">    
-            <div class="col-sm-10">
+          <div class="row column-row" *ngFor="let row of column.rows; index as rowIndex; last as isLastRow">    
+            <div class="col-sm-12 row-column">
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-sm-{{col.name}}"  *ngFor="let col of row.cols; index as colIndex">
+                  <div class="col-sm-{{col.name}} inner-column"  *ngFor="let col of row.cols; index as colIndex">
                     <div class="input-group">
                       <input class="form-control"  type="text" [(ngModel)]="col.name"/>                      
                       <div class="btn-group dropright context-dropdown input-group-prepend">
@@ -52,13 +52,17 @@
                   <div class="col-sm-{{12- getTotalOfColumns(row.cols)}}" *ngIf="getTotalOfColumns(row.cols) < 12">
                       <button title="add column"  type="button" class="btn-default text-success" (click)="addColumnClick($event, row)"><span class="fa fa-plus"></span></button>
                   </div>
+                  <div class="btn-group row-controls">
+                    <button title="remove row" type="button" class="btn text-danger btn-remove-row" (click)="removeRowClick($event, rowIndex)"><span class="fa fa-close"></span></button>                    
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-sm-2 text-right">      
-              <button title="add row"  type="button" class="btn-default text-success" (click)="addRowClick($event)"><span class="fa fa-plus"></span></button>
-              <button title="remove row" type="button" class="btn-default text-danger" (click)="removeRowClick($event, rowIndex)"><span class="fa fa-close"></span></button>
-            </div>
+          </div>
+          <div class="row column-row"> 
+              <div class="col-sm-12 row-column">
+                  <button title="add row"  type="button" class="btn-default text-success btn-add-row" (click)="addRowClick($event)"><span class="fa fa-plus"></span></button>              
+              </div>
           </div>    
         </div>
       </div>
