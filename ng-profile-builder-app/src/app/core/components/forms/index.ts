@@ -1,0 +1,9 @@
+export { AdditionalsFormComponent } from './additionals-form/additionals-form.component';
+export { BasicInfoFormComponent } from './basic-info-form/basic-info-form.component';
+export { EducationFormComponent } from './education-form/education-form.component';
+export { EmployersFormComponent } from './employers-form/employers-form.component';
+export { ExtendedListFormComponent } from './extended-list-form/extended-list-form.component';
+export { ProjectsFormComponent } from './projects-form/projects-form.component';
+export { RatingFormComponent } from './rating-form/rating-form.component';
+export { SkillsFormComponent } from './skills-form/skills-form.component';
+export { SocialMediaFormComponent } from './social-media-form/social-media-form.component';

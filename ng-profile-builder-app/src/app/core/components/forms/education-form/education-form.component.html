@@ -1,0 +1,56 @@
+<form #educationsForm="ngForm" class="card" [ngClass]="{'list-mode': isListMode}">
+  <div class="card-header bg-warning">
+      <h4>Education</h4>
+      <input type="checkbox" [(ngModel)]="isListMode" name="isListMode"/>
+      List Mode?
+  </div>
+  <div class="card-body" dnd-sortable-container [sortableData]="formData" [dropZones]="['education-dropZone']">      
+      <span *ngIf="!this.formData || !this.formData.length">No Education added yet. Please click "Add" button below to add one or more education.</span>
+      <div 
+        class="education-item card card-body"
+        *ngFor="let education of formData; let idx = index" dnd-sortable [sortableIndex]="idx" [dragEnabled]="true">
+        <div class="" *ngIf="isListMode">
+          {{education.name}}
+        </div>
+        <div class="container-fluid" *ngIf="!isListMode">
+          <div class="row">                
+            <div class="col-sm-12">
+              <div class="input-group">
+                <input type="text" class="form-control" name="name{{idx}}" placeholder="Degree/Diploma/Education Name..." [(ngModel)]="education.name">
+                <a class="btn btn-danger input-group-addon" href="#" (click)="onRemoveClick($event, idx)"> 
+                  <span class="fa fa-close"></span>
+                </a>
+              </div>  
+            </div>
+          </div>          
+          <div class="row">
+            <div class="col-sm-6">
+                <label class="form-label" for="from{{idx}}">From</label>
+                <input type="date" class="form-control" name="from{{idx}}" placeholder="From Date" [(ngModel)]="education.from">
+            </div>
+            <div class="col-sm-6">
+                <label class="form-label" for="to{{idx}}">To</label>
+                <input type="date" class="form-control" name="to{{idx}}" placeholder="To Date" [(ngModel)]="education.to">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="institution{{idx}}" placeholder="University/Instition Name..." [(ngModel)]="education.institution">
+            </div>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="branch{{idx}}" placeholder="Stream/Branch/Subjects..." [(ngModel)]="education.branch">
+            </div>
+          </div>
+        </div>  
+      </div>
+      <a class="btn btn-success list-group" href="#" (click)="onAddClick($event)"> Add </a>        
+  </div>
+  <div class="card-footer">
+      <button class="btn btn-primary" (click)="onSaveClick($event)"> 
+          <span>Save Education </span>
+          <span class="fa fa-spinner" *ngIf="saveStarted===true"></span>
+          <span class="fa fa-check text-success" *ngIf="saveSuccess===true"></span>
+          <span class="fa fa-warning text-danger" *ngIf="saveSuccess===false"></span>
+        </button>
+  </div>
+</form>

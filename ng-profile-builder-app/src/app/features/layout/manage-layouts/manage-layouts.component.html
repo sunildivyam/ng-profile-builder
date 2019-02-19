@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
+        
+    </div>
+    <div class="col-sm-4">
+        <pba-layout-list class="input-group-prepend" [layouts]="layouts" (onSelect)="currentLayoutChanged($event)" [selectedLayout]="currentLayout">
+        </pba-layout-list>      
+    </div>
+    <div class="col-sm-4 text-right">      
+        <pba-control-toolbar
+        (onSaveClick)="updateLayout($event)"
+        (onDeleteClick)="deleteLayoutClick($event)"
+        (onAddClick)="addLayoutClick($event)"></pba-control-toolbar>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 layout-container">
+      <pba-layout-view [layout]="currentLayout">
+      </pba-layout-view>
+    </div>
+  </div>
+</div>
+  

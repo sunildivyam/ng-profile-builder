@@ -1,0 +1,28 @@
+<section class="container layout" *ngIf="layout">
+  <div class="row">
+    <div class="col-sm-12">
+        <input type="text" class="form-control layout-title" [(ngModel)]="layoutTitle" (change)="titleChange($event)"/>
+    </div>
+  </div>
+  <ng-container *ngTemplateOutlet="layoutRows; context: {rows: layout?.rows}"></ng-container>
+</section>
+
+<ng-template #layoutRows let-rows="rows">
+    <section class="row" *ngFor="let row of rows, let rIdx = index">
+      <div class="col-sm-{{col.name}} layout-content-container" *ngFor="let col of row.cols, let cIdx = index">
+        <div class="layout-content" *ngIf="!col.rows || !col.rows.length" [ngStyle]="col.styles">
+          {{sampleText}}
+          <a class="link settings" href="#" (click)="editColumnClick($event, col)">
+            <span class="fa fa-cog"></span>            
+          </a>          
+        </div>
+        <a *ngIf="col.rows && col.rows.length" class="link settings" href="#" (click)="editColumnClick($event, col)">
+          <span class="fa fa-cog"></span>            
+        </a>
+        <section class="container" *ngIf="col.rows && col.rows.length">          
+          <ng-container *ngTemplateOutlet="layoutRows; context: {rows: col.rows}"></ng-container>
+        </section>
+      </div>
+    </section>
+  </ng-template>
+<pba-column-form *ngIf="isColumnFormVisible" [column]="editColumn" (formClosed)="columnFormCloseClick($event)"></pba-column-form>

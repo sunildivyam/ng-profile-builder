@@ -1,0 +1,46 @@
+.dnd-drag-start {
+    -moz-transform:scale(0.99);
+    -webkit-transform:scale(0.99);
+    transform:scale(0.99);
+    opacity:0.7;
+    border: 2px dashed #000;
+}
+
+.dnd-drag-enter {
+    opacity:0.7;
+    background-color: greenyellow!important;
+    border: none;
+}
+
+.dnd-drag-over {
+    background-color: greenyellow!important;
+    border: none;
+}
+
+.dnd-sortable-drag {
+  -moz-transform:scale(0.99);
+  -webkit-transform:scale(0.99);
+  transform:scale(0.99);
+  opacity:0.7;
+  background-color: greenyellow!important;
+  border: none;
+}
+
+.employer-item {
+    margin: 30px 0px;
+    cursor: move!important;
+    background-color: #f7f7f7;
+    border-top: 20px solid #04aeff;
+}
+.employer-item .row {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.roles-container {
+
+}
+
+.role-item {
+    margin: 5px 0px;
+}

@@ -1,0 +1,22 @@
+{
+    "employers": [
+        {
+            "id": 1,
+            "name": "Infosys",
+            "averageSalary": 82993,
+            "salaryCurrency": "$"
+        },
+        {
+            "id": 1,
+            "name": "Tata Consultancy",
+            "averageSalary": 79540,
+            "salaryCurrency": "$"
+        },
+        {
+            "id": 1,
+            "name": "IBM",
+            "averageSalary": 89295,
+            "salaryCurrency": "$"
+        }
+    ]
+}

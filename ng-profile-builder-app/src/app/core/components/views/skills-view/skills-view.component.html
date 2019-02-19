@@ -1,0 +1,62 @@
+<form #skillsForm="ngForm" class="card" [ngClass]="{'list-mode': isListMode}">
+  <div class="card-header bg-warning">
+      <h4>Skills</h4>
+      <input type="checkbox" [(ngModel)]="isListMode" name="isListMode"/>
+      List Mode?
+  </div>
+  <div class="card-body" dnd-sortable-container [sortableData]="formData" [dropZones]="['skill-dropZone']">
+      <span *ngIf="!this.formData || !this.formData.length">No Skills added yet. Please click "Add" button below to add one or more skills.</span>
+      <div
+        class="skill-item card card-body"
+        *ngFor="let skill of formData; let idx = index" dnd-sortable [sortableIndex]="idx" [dragEnabled]="true">
+        <div class="" *ngIf="isListMode">
+          {{skill.name}}
+        </div>
+        <div class="container-fluid" *ngIf="!isListMode">
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="input-group">
+                <input type="text" class="form-control" name="skillName{{idx}}" placeholder="Skill Name" [(ngModel)]="skill.name">
+                <a class="btn btn-danger input-group-addon" href="#" (click)="onRemoveClick($event, idx)">
+                  <span class="fa fa-close"></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <input type="checkbox" class="form-label" name="isPrimarySkill{{idx}}" [(ngModel)]="skill.isPrimarySkill">
+              <label class="form-label" for="isPrimarySkill{{idx}}">Primary Skill?</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+                <label class="form-label" for="from{{idx}}">From</label>
+                <input type="date" class="form-control" name="from{{idx}}" placeholder="From Date" [(ngModel)]="skill.from">
+            </div>
+            <div class="col-sm-6">
+                <label class="form-label" for="to{{idx}}">To</label>
+                <input type="date" class="form-control" name="to{{idx}}" placeholder="To Date" [(ngModel)]="skill.to">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <label>Skill Proficiency Level</label>
+                <pba-rating-form [sizeClass]="'lg'" [rating]="skill.rating" (onChange)="onRatingChange($event, idx)"></pba-rating-form>
+            </div>
+            <div class="col-sm-6">
+              <textarea class="form-control" name="summary{{idx}}" placeholder="Summary" [(ngModel)]="skill.summary" row="4">
+              </textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-success list-group" href="#" (click)="onAddClick($event)"> Add </a>
+  </div>
+  <div class="card-footer">
+      <button class="btn btn-primary" (click)="onSaveClick($event)">
+          <span>Save Skills </span>
+          <span class="fa fa-spinner" *ngIf="saveStarted===true"></span>
+          <span class="fa fa-check text-success" *ngIf="saveSuccess===true"></span>
+          <span class="fa fa-warning text-danger" *ngIf="saveSuccess===false"></span>
+        </button>
+  </div>
+</form>

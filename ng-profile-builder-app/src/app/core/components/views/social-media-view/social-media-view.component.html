@@ -1,0 +1,43 @@
+<form #socialMediaForm="ngForm" class="card">
+  <h4 class="card-header bg-warning">Social media</h4>
+  <div class="card-body">
+    <div class="list-group" dnd-sortable-container [sortableData]="formData">
+      <span *ngIf="!this.formData || !this.formData.length">No Social media links added yet. Please click "Add" button below to add one or more links.</span>
+      <div 
+        class="list-group-item social-media-item"
+        *ngFor="let linkItem of formData; let idx = index" dnd-sortable [sortableIndex]="idx" [effectCursor]="'move'">            
+        <div class="input-group">         
+          <select [(ngModel)]="linkItem.name" class="input-group-addon" name="linkName{{idx}}">
+            <option value="" disabled selected hidden>Select...</option>
+            <option value="facebook">Facebook</option>
+            <option value="twitter">Twitter</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="naukri">Naukri</option>*
+            <option value="stack-overflow">StackOverflow</option>
+            <option value="instagram">Instagram</option>
+            <option value="google">Google</option>
+            <option value="google-plus">Google Plus</option>
+            <option value="github">Github</option>
+            <option value="pinterest">Pinterest</option>
+            <option value="globe">Web</option>            
+            <option value="internet-explorer">Other</option>
+          </select>
+              
+          <input type="text" class="form-control form-addon" name="url{{idx}}" placeholder="Enter url like https://www.facebook.com/..." [(ngModel)]="linkItem.url">
+          <a class="btn btn-danger input-group-addon" href="#" (click)="onRemoveClick($event, idx)">
+            <span class="fa fa-close"></span>  
+          </a>
+        </div>              
+      </div>
+      <a class="btn btn-success" href="#" (click)="onAddClick($event)"> Add </a>  
+    </div>
+  </div>
+  <div class="card-footer">
+      <button class="btn btn-primary" (click)="onSaveClick($event)"> 
+        <span>Save Social Media Links </span>
+        <span class="fa fa-spinner" *ngIf="saveStarted===true"></span>
+        <span class="fa fa-check text-success" *ngIf="saveSuccess===true"></span>
+        <span class="fa fa-warning text-danger" *ngIf="saveSuccess===false"></span>
+      </button>
+  </div>
+</form>

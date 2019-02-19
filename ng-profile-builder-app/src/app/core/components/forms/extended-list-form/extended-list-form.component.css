@@ -1,0 +1,31 @@
+.dnd-drag-start {
+    -moz-transform:scale(0.99);
+    -webkit-transform:scale(0.99);
+    transform:scale(0.99);
+    opacity:0.7;
+    border: 2px dashed #000;
+}
+
+.dnd-drag-enter {
+    opacity:0.7;
+    background-color: greenyellow!important;
+    border: none;
+}
+
+.dnd-drag-over {
+    background-color: greenyellow!important;
+    border: none;
+}
+
+.dnd-sortable-drag {
+  -moz-transform:scale(0.99);
+  -webkit-transform:scale(0.99);
+  transform:scale(0.99);
+  opacity:0.7;
+  background-color: greenyellow!important;
+  border: none;
+}
+
+.extended-list-container {
+    padding: 10px;
+}

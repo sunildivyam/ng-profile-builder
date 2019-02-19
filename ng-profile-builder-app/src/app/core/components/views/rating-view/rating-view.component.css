@@ -1,0 +1,28 @@
+.rating {
+    cursor: default;
+    padding: 0px;
+}
+.rating-item {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin: 1px;
+    border: 2px solid rgb(231, 231, 231);
+    border-radius: 50%;
+}
+
+.rating-item.active, .rating-item:hover {
+    border-color: darkgrey;
+    background-color: green;
+}
+
+.lg {
+    width: 20px;
+    height: 20px;    
+}
+
+.rating.readonly .rating-item:hover {
+    background-color: transparent;
+    border-color: rgb(231, 231, 231);
+}

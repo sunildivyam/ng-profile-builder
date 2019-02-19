@@ -1,0 +1,67 @@
+<div class="column-form-backdrop">
+  <div class="container">
+    <div class="row bg-info">
+      <div class="col-sm-10 text-left">
+                 
+      </div>
+      <div class="col-sm-2 text-right">
+        <a title="close" class="link btn-close" href="#" (click)="closeClick($event)"><span class="fa fa-close"></span></a>
+      </div>
+    </div>
+    <div class="row bg-white">
+      <div class="col-sm-12">
+        <div class="container-fluid column-form-container" *ngIf="!column.rows || !column.rows.length">
+          <div class="row">
+            <div class="col-sm-12">      
+              <div class="input-group">
+                <input class="form-control" type="text" [(ngModel)]="column.name" readonly/>
+                <div class="btn-group dropright context-dropdown input-group-prepend">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#" *ngFor="let nav of contextNav" (click)="contextNavClick($event, nav)" [title]="nav.title" [hidden]="nav.id === 'remove_column'">
+                      <i class="fa {{nav.className}}"></i>
+                    </a>
+                    
+                  </div>
+                </div>
+                <button title="add column" type="button" class="btn-default text-success input-group-prepend" (click)="addColumnClick($event)"><span class="fa fa-plus"></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="container-fluid column-form-container" *ngIf="column.rows && column.rows.length" >
+          <div class="row" *ngFor="let row of column.rows; index as rowIndex">    
+            <div class="col-sm-10">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-{{col.name}}"  *ngFor="let col of row.cols; index as colIndex">
+                    <div class="input-group">
+                      <input class="form-control"  type="text" [(ngModel)]="col.name"/>                      
+                      <div class="btn-group dropright context-dropdown input-group-prepend">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#" *ngFor="let nav of contextNav" (click)="contextNavClick($event, nav, rowIndex, colIndex)" [title]="nav.title">
+                            <i class="fa {{nav.className}}"></i>
+                          </a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-{{12- getTotalOfColumns(row.cols)}}" *ngIf="getTotalOfColumns(row.cols) < 12">
+                      <button title="add column"  type="button" class="btn-default text-success" (click)="addColumnClick($event, row)"><span class="fa fa-plus"></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-2 text-right">      
+              <button title="add row"  type="button" class="btn-default text-success" (click)="addRowClick($event)"><span class="fa fa-plus"></span></button>
+              <button title="remove row" type="button" class="btn-default text-danger" (click)="removeRowClick($event, rowIndex)"><span class="fa fa-close"></span></button>
+            </div>
+          </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

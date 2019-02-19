@@ -1,0 +1,19 @@
+<form #extendedListForm{{listId}}="ngForm">
+  <label class="form-label">{{headerText}}</label>
+  <div class="extended-list-container" dnd-sortable-container [sortableData]="formData" [dropZones]="['extended-list-zone']">
+    <div class="extended-list-item" *ngFor="let listItem of formData; let itemIndex=index; trackBy:identify" dnd-sortable [sortableIndex]="itemIndex" [dragEnabled]="dragOperationEnabled">
+      <div class="input-group">
+        <input type="text" 
+        class="form-control" 
+        name="extendedListItem{{listId}}_{{itemIndex}}" 
+        placeholder="placeholderText" 
+        [ngModel]="formData[itemIndex]"
+        (change)="onValueUpdate($event, itemIndex)">
+        <a class="btn btn-danger input-group-addon" href="#" (click)="onRemoveClick($event, itemIndex)"> 
+          <span class="fa fa-close"></span>
+        </a>
+      </div> 
+    </div>
+    <a class="link" href="#" (click)="onAddClick($event)">{{addBtnLabel}}</a> 
+  </div>
+</form>
