@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, Injector, OnChanges } from '@angular/core';
 import {Skill} from '../../../models';
 
 @Component({
@@ -6,8 +6,8 @@ import {Skill} from '../../../models';
   templateUrl: './skills-form.component.html',
   styleUrls: ['./skills-form.component.css']
 })
-export class SkillsFormComponent implements OnInit {
-  @Input() skills:Array<Skill>;
+export class SkillsFormComponent implements OnInit, OnChanges {
+  @Input() skills: Array<Skill>;
   @Output() onSave = new EventEmitter();
 
   formData: Array<Skill>;
@@ -16,25 +16,30 @@ export class SkillsFormComponent implements OnInit {
   saveSuccess: boolean;
 
   private onSaveSuccess() {
-    console.log("Skills Saved");
+    console.log('Skills Saved');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
   private onSaveNext() {
-    console.log("Skills Saving");
+    console.log('Skills Saving');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
   private onSaveError() {
-    console.log("Skills Error occured");
+    console.log('Skills Error occured');
     this.saveStarted = false;
     this.saveSuccess = false;
   }
 
-  constructor() {
-    this.formData = new Array<Skill>();
+  constructor(private injector: Injector) {
+    const formInjector = this.injector.get('skills');
+    const onSaveFromInjector = this.injector.get('onSave');
+    if (onSaveFromInjector) {
+      this.onSave = onSaveFromInjector;
+    }
+    this.formData = formInjector || new Array<Skill>();
     this.isListMode = false;
     this.saveStarted = false;
     this.saveSuccess = null;
@@ -55,7 +60,8 @@ export class SkillsFormComponent implements OnInit {
     this.saveStarted = true;
     this.saveSuccess = null;
 
-    event && event.preventDefault();
+    event.preventDefault();
+    event.formName = 'skills';
     event.formData = this.formData;
     event.onSaveSuccess = this.onSaveSuccess.bind(this);
     event.onSaveNext = this.onSaveNext.bind(this);
@@ -65,12 +71,12 @@ export class SkillsFormComponent implements OnInit {
   }
 
   onRemoveClick(event, index) {
-    event && event.preventDefault();
+    event.preventDefault();
     this.formData.splice(index, 1);
   }
 
   onAddClick(event) {
-    event && event.preventDefault();
+    event.preventDefault();
     this.formData.push(new Skill());
   }
 

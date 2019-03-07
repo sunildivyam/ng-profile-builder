@@ -1,16 +1,13 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'pba-rating-view',
   templateUrl: './rating-view.component.html',
   styleUrls: ['./rating-view.component.css']
 })
-export class RatingViewComponent implements OnInit {
+export class RatingViewComponent {
   @Input() rating: number;
-  @Input() isReadOnly: boolean;
   @Input() sizeClass: string;
-
-  @Output() onChange = new EventEmitter();
 
   private MAX_RATING = 10;
   private MIN_RATING = 1;
@@ -18,28 +15,12 @@ export class RatingViewComponent implements OnInit {
 
   constructor() {
     this.ratings = this.generateRatings();
-    this.sizeClass = "";
-  }
-
-  ngOnInit() {
-  }
-
-  ngOnChanges() {
-
-  }
-
-  onRatingClick(event, rating) {
-    if (this.isReadOnly === true) {
-      return;
-    }
-    this.rating = rating;
-    event.rating = rating;
-    this.onChange.emit(event);
+    this.sizeClass = '';
   }
 
   private generateRatings() {
-    let ratings = new Array<number>();
-    for (let i = this.MIN_RATING; i<=this.MAX_RATING; i++) {
+    const ratings = new Array<number>();
+    for (let i = this.MIN_RATING; i <= this.MAX_RATING; i++) {
       ratings.push(i);
     }
     return ratings;

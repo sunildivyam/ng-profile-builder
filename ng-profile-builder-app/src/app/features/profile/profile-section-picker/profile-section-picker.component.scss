@@ -1,0 +1,40 @@
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  li {
+    display: inline-block;
+    margin: 2px;
+    padding: 5px 15px;
+    border: 1px solid grey;
+    border-radius: 5px;
+
+    .fa {
+      padding-left: 10px;
+      color: lightgrey;
+    }
+
+    &.selected {
+      color: green;
+      background-color: #d0ff15;
+      border-color: green;
+
+      .fa {
+        color: green;
+      }
+    }
+  }
+}
+
+.alignment-links {
+  li{
+    padding: 10px;
+    margin: 2px;
+    border: none;
+
+    .fa {
+      padding: 0px;
+    }
+  }
+}

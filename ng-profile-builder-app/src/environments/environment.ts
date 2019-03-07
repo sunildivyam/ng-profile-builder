@@ -13,7 +13,12 @@ export const environment = {
     }
   },
   firebase: {
-   
+    apiKey: "AIzaSyD39lUCqTODj57gQJRQZdJmIsWgZCc3gY0",
+    authDomain: "ng-profile-builder.firebaseapp.com",
+    databaseURL: "https://ng-profile-builder.firebaseio.com",
+    projectId: "ng-profile-builder",
+    storageBucket: "ng-profile-builder.appspot.com",
+    messagingSenderId: "650054045462"
   }
 };
 

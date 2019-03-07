@@ -29,3 +29,7 @@
 .extended-list-container {
     padding: 10px;
 }
+
+.extended-list-item {
+  margin-bottom: 10px;
+}

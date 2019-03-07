@@ -1,78 +1,30 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
-import {Education} from '../../../models';
-
+import { Component, OnChanges, Input, Injector } from '@angular/core';
+import { Education } from '../../../models';
+import { ProfileViewService } from '../../../services';
 
 @Component({
   selector: 'pba-education-view',
   templateUrl: './education-view.component.html',
   styleUrls: ['./education-view.component.css']
 })
-export class EducationViewComponent implements OnInit {
-  @Input() educationItems:Array<Education>;
-  @Output() onSave = new EventEmitter();
+export class EducationViewComponent implements OnChanges {
+  @Input() education: Array<Education>;
+  viewData: Array<any>;
 
-  formData: Array<Education>;
-  isListMode: boolean;
-  saveStarted: boolean;
-  saveSuccess: boolean;
-
-  private onSaveSuccess() {
-    console.log("Education Saved");
-    this.saveStarted = false;
-    this.saveSuccess = true;
+  constructor(private injector: Injector, private profileViewService: ProfileViewService) {
+    this.education = this.injector.get('education') || new Array<Education>();
+    this.transformData();
   }
 
-  private onSaveNext() {
-    console.log("Education Saving");
-    this.saveStarted = false;
-    this.saveSuccess = true;
-  }
-
-  private onSaveError() {
-    console.log("Education Error occured");
-    this.saveStarted = false;
-    this.saveSuccess = false;
-  }
-
-  constructor() {
-    this.formData = new Array<Education>();
-    this.isListMode = false;
-    this.saveStarted = false;
-    this.saveSuccess = null;
-  }
-
-  ngOnInit() {
+  transformData() {
+    this.viewData = new Array<any>();
+    this.education.map((eduItem: Education) => {
+      const item = {...eduItem, duration: this.profileViewService.getDuration(eduItem.from, eduItem.to).toString() };
+      this.viewData.push(item);
+    });
   }
 
   ngOnChanges() {
-    this.formData = JSON.parse(JSON.stringify(this.educationItems)) || new Array<Education>();
-  }
-
-  onSaveClick(event) {
-    if (this.saveStarted === true) {
-      return false;
-    }
-
-    this.saveStarted = true;
-    this.saveSuccess = null;
-
-    event && event.preventDefault();
-    event.formData = this.formData;
-    event.onSaveSuccess = this.onSaveSuccess.bind(this);
-    event.onSaveNext = this.onSaveNext.bind(this);
-    event.onSaveError = this.onSaveError.bind(this);
-
-    this.onSave.emit(event);
-  }
-
-  onRemoveClick(event, index) {
-    event && event.preventDefault();
-    this.formData.splice(index, 1);
-  }
-
-  onAddClick(event) {
-    event && event.preventDefault();
-    this.formData.push(new Education());
+    this.transformData();
   }
 }

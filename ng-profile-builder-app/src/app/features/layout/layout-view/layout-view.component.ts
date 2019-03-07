@@ -10,7 +10,7 @@ import { Layout, Column } from '../models';
 export class LayoutViewComponent implements OnInit, OnChanges {
   @Input() layout: Layout;
   layoutTitle: string;
-  isColumnFormVisible: boolean = false;
+  isColumnFormVisible = false;
   editColumn: Column;
 
   sampleText: string;
@@ -25,14 +25,14 @@ export class LayoutViewComponent implements OnInit, OnChanges {
     }
     this.layout.title = this.layoutTitle;
   }
-  
+
   public editColumnClick(event, col: Column): void {
     event.preventDefault();
     this.editColumn = col;
     this.isColumnFormVisible = true;
   }
 
-  public columnFormCloseClick(col: Column): void {    
+  public columnFormCloseClick(col: Column): void {
     this.isColumnFormVisible = false;
   }
 

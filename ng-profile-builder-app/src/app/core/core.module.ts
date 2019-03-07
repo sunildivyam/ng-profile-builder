@@ -21,12 +21,13 @@ const providers = {...Services};
   providers: Object.values(providers),
   imports: [CommonModule,
     FormsModule,
-    DndModule,
+    DndModule.forRoot(),
     RouterModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule.enablePersistence()],
   declarations: Object.values(declarables),
   exports: Object.values(exportables),
+  entryComponents: Object.values({ ...FormComponents, ...ViewComponents }),
 })
 export class CoreModule { }

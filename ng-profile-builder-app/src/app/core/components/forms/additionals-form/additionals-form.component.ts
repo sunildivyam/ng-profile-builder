@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, Injector } from '@angular/core';
 
 import {Additional} from '../../../models';
 
@@ -35,8 +35,13 @@ export class AdditionalsFormComponent implements OnInit, OnChanges {
     this.saveSuccess = false;
   }
 
-  constructor() {
-    this.formData = new Array<Additional>();
+  constructor(private injector: Injector) {
+    const formInjector = this.injector.get('additionals');
+    const onSaveFromInjector = this.injector.get('onSave');
+    if (onSaveFromInjector) {
+      this.onSave = onSaveFromInjector;
+    }
+    this.formData = formInjector || new Array<Additional>();
     this.dragOperationBulletsEnabled = false;
     this.saveStarted = false;
     this.saveSuccess = null;
@@ -57,7 +62,8 @@ export class AdditionalsFormComponent implements OnInit, OnChanges {
     this.saveStarted = true;
     this.saveSuccess = null;
 
-    event && event.preventDefault();
+    event.preventDefault();
+    event.formName = 'additionals';
     event.formData = this.formData;
     event.onSaveSuccess = this.onSaveSuccess.bind(this);
     event.onSaveNext = this.onSaveNext.bind(this);
@@ -67,12 +73,12 @@ export class AdditionalsFormComponent implements OnInit, OnChanges {
   }
 
   onRemoveClick(event, index) {
-    event && event.preventDefault();
+    event.preventDefault();
     this.formData.splice(index, 1);
   }
 
   onAddClick(event) {
-    event && event.preventDefault();
+    event.preventDefault();
     this.formData.push(new Additional());
   }
 

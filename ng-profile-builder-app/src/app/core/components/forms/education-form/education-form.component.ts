@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, Injector, OnChanges } from '@angular/core';
 import {Education} from '../../../models';
 
 @Component({
@@ -6,8 +6,8 @@ import {Education} from '../../../models';
   templateUrl: './education-form.component.html',
   styleUrls: ['./education-form.component.css']
 })
-export class EducationFormComponent implements OnInit {
-  @Input() educationItems:Array<Education>;
+export class EducationFormComponent implements OnInit, OnChanges {
+  @Input() education: Array<Education>;
   @Output() onSave = new EventEmitter();
 
   formData: Array<Education>;
@@ -16,25 +16,30 @@ export class EducationFormComponent implements OnInit {
   saveSuccess: boolean;
 
   private onSaveSuccess() {
-    console.log("Education Saved");
+    console.log('Education Saved');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
   private onSaveNext() {
-    console.log("Education Saving");
+    console.log('Education Saving');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
   private onSaveError() {
-    console.log("Education Error occured");
+    console.log('Education Error occured');
     this.saveStarted = false;
     this.saveSuccess = false;
   }
 
-  constructor() {
-    this.formData = new Array<Education>();
+  constructor(private injector: Injector) {
+    const formInjector = this.injector.get('education');
+    const onSaveFromInjector = this.injector.get('onSave');
+    if (onSaveFromInjector) {
+      this.onSave = onSaveFromInjector;
+    }
+    this.formData = formInjector || new Array<Education>();
     this.isListMode = false;
     this.saveStarted = false;
     this.saveSuccess = null;
@@ -44,7 +49,7 @@ export class EducationFormComponent implements OnInit {
   }
 
   ngOnChanges() {
-    this.formData = JSON.parse(JSON.stringify(this.educationItems)) || new Array<Education>();
+    this.formData = JSON.parse(JSON.stringify(this.education)) || new Array<Education>();
   }
 
   onSaveClick(event) {
@@ -55,7 +60,8 @@ export class EducationFormComponent implements OnInit {
     this.saveStarted = true;
     this.saveSuccess = null;
 
-    event && event.preventDefault();
+    event.preventDefault();
+    event.formName = 'education';
     event.formData = this.formData;
     event.onSaveSuccess = this.onSaveSuccess.bind(this);
     event.onSaveNext = this.onSaveNext.bind(this);
@@ -65,12 +71,12 @@ export class EducationFormComponent implements OnInit {
   }
 
   onRemoveClick(event, index) {
-    event && event.preventDefault();
+    event.preventDefault();
     this.formData.splice(index, 1);
   }
 
   onAddClick(event) {
-    event && event.preventDefault();
+    event.preventDefault();
     this.formData.push(new Education());
   }
 }

@@ -1,0 +1,5 @@
+<pba-wizard
+  [steps]="profileSteps"
+  [wizardContext]="currentProfile?.content"
+  (previousClick)="saveProfile($event)"
+  (nextClick)="saveProfile($event)"></pba-wizard>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, Injector, OnChanges } from '@angular/core';
 
 import {Employer} from '../../../models';
 
@@ -8,8 +8,8 @@ import {Employer} from '../../../models';
   templateUrl: './employers-form.component.html',
   styleUrls: ['./employers-form.component.css']
 })
-export class EmployersFormComponent implements OnInit {
-  @Input() employers:Array<Employer>;
+export class EmployersFormComponent implements OnInit, OnChanges {
+  @Input() employers: Array<Employer>;
   @Output() onSave = new EventEmitter();
 
   formData: Array<Employer>;
@@ -18,25 +18,30 @@ export class EmployersFormComponent implements OnInit {
   saveSuccess: boolean;
 
   onSaveSuccess() {
-    console.log("Employers Saved");
+    console.log('Employers Saved');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
   onSaveNext() {
-    console.log("Employers Saving");
+    console.log('Employers Saving');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
   onSaveError() {
-    console.log("Employers Error occured");
+    console.log('Employers Error occured');
     this.saveStarted = false;
     this.saveSuccess = false;
   }
 
-  constructor() {
-    this.formData = new Array<Employer>();
+  constructor(private injector: Injector) {
+    const formInjector = this.injector.get('employers');
+    const onSaveFromInjector = this.injector.get('onSave');
+    if (onSaveFromInjector) {
+      this.onSave = onSaveFromInjector;
+    }
+    this.formData = formInjector || new Array<Employer>();
     this.dragOperationRolesEnabled = false;
     this.saveStarted = false;
     this.saveSuccess = null;
@@ -57,7 +62,8 @@ export class EmployersFormComponent implements OnInit {
     this.saveStarted = true;
     this.saveSuccess = null;
 
-    event && event.preventDefault();
+    event.preventDefault();
+    event.formName = 'employers';
     event.formData = this.formData;
     event.onSaveSuccess = this.onSaveSuccess.bind(this);
     event.onSaveNext = this.onSaveNext.bind(this);
@@ -67,12 +73,12 @@ export class EmployersFormComponent implements OnInit {
   }
 
   onRemoveClick(event, index) {
-    event && event.preventDefault();
+    event.preventDefault();
     this.formData.splice(index, 1);
   }
 
   onAddClick(event) {
-    event && event.preventDefault();
+    event.preventDefault();
     this.formData.push(new Employer());
   }
 

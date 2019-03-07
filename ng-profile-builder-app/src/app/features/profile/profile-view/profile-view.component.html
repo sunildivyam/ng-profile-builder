@@ -1,0 +1,31 @@
+<section class="container layout" [class.readonly-view]="isReadonly" *ngIf="layout">
+  <ng-container *ngTemplateOutlet="layoutRows; context: {rows: layout?.rows}"></ng-container>
+</section>
+
+<ng-template #layoutRows let-rows="rows">
+  <section class="row" *ngFor="let row of rows, let rIdx = index">
+    <div class="col-sm-{{col.name}} layout-content-container" *ngFor="let col of row.cols, let cIdx = index">
+      <div class="layout-content" *ngIf="!col.rows || !col.rows.length" [ngStyle]="col.styles">
+
+        <pba-profile-section  class="container-fluid" [components]="col.components" [content]="content"></pba-profile-section>
+
+        <a class="link settings" href="#" data-toggle="modal" data-target="#exampleModal"
+          (click)="editColumnClick($event, col)"
+          *ngIf="!isReadonly">
+          <span class="fa fa-cog"></span>
+        </a>
+
+      </div>
+      <!--
+      <a *ngIf="col.rows && col.rows.length" class="link settings" href="#" (click)="editColumnClick($event, col)">
+        <span class="fa fa-cog"></span>
+      </a>
+      -->
+      <section class="container-fluid" *ngIf="col.rows && col.rows.length">
+        <ng-container *ngTemplateOutlet="layoutRows; context: {rows: col.rows}"></ng-container>
+      </section>
+    </div>
+  </section>
+</ng-template>
+<pba-profile-section-picker [column]="sectionColumn"></pba-profile-section-picker>
+

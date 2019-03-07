@@ -19,14 +19,14 @@ export class FirebaseService {
     if (userId) {
       condFn = ref => ref.where('userId', '==', userId);
     }
-        
+
     return new Observable((observer) => {
       this.db.collection(this.endpoints.layouts, condFn).snapshotChanges().subscribe((data) => {
         const layouts = data.map((e) => {
           return {
             id: e.payload.doc.id,
             ...e.payload.doc.data()
-          }
+          };
         });
         observer.next(layouts);
       });
@@ -39,7 +39,7 @@ export class FirebaseService {
         const layout = {
           id: data.payload.id,
           ...data.payload.data()
-        }
+        };
         observer.next(layout);
       });
     });
@@ -48,7 +48,7 @@ export class FirebaseService {
   createLayout(layout: any): Observable<any> {
     return new Observable((observer) => {
       const plainObject = JSON.parse(JSON.stringify(layout));
-      this.db.collection(this.endpoints.layouts).add(plainObject).then((data) => {        
+      this.db.collection(this.endpoints.layouts).add(plainObject).then((data) => {
         observer.next(data.id);
       });
     });
@@ -79,7 +79,7 @@ export class FirebaseService {
           return {
             id: e.payload.doc.id,
             ...e.payload.doc.data()
-          }
+          };
         });
         observer.next(profiles);
       });
@@ -92,7 +92,7 @@ export class FirebaseService {
         const profile = {
           id: data.payload.id,
           ...data.payload.data()
-        }
+        };
         observer.next(profile);
       });
     });
@@ -112,7 +112,8 @@ export class FirebaseService {
       const plainObject = JSON.parse(JSON.stringify(profile));
       this.db.doc(`${this.endpoints.profiles}/${id}`).update(plainObject).then((data) => {
         observer.next(data);
-      });
+        observer.complete();
+      }, (err) => observer.error(err));
     });
   }
 

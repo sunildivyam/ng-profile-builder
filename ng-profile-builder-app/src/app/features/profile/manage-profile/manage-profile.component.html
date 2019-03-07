@@ -1,0 +1,58 @@
+<pba-background *ngIf="!isDataMode && !isLayoutMode">
+    <div  class="container profile-card">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1>{{currentProfile?.content?.basicInfo?.profileName}}</h1>
+            <h2>{{currentProfile?.content?.basicInfo?.firstName}} {{currentProfile?.content?.basicInfo?.lastName}}</h2>
+            <p [innerHtml]="currentProfile?.content?.basicInfo?.overview"></p>
+            <div class="btn-toolbar">
+              <button (click)="updateLayoutClicked($event)" class="btn-update-layout btn btn-secondary">Update Layout</button>
+              <button (click)="updateProfileContentClicked($event)" class="btn-update-profile btn btn-secondary">Update Profile</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</pba-background>
+
+<!-- The Close Button -->
+<div class="container" *ngIf="isDataMode || isLayoutMode">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="btn-toolbar">
+          <a href="#" (click)="closeEditMode($event)" class="btn-close"><i class="fa fa-close"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- The Layout Mode -->
+<div class="layout-select-box" *ngIf="isLayoutMode">
+  <pba-background>
+    <div class="container">
+      <div class="input-group">
+        <a class="btn btn-default btn-lg" (click)="updateProfileLayoutClick($event)" title="Save changes">
+          <i class="fa fa-save"></i>
+          <i *ngIf="isUpdatingProfile === true" class="fa fa-spinner"></i>
+          <i *ngIf="isUpdatingProfile === false" class="fa fa-check"></i>
+        </a>
+        <a class="btn btn-default btn-lg" routerLink="/layouts" title="create new layout"><i class="fa fa-plus"></i></a>
+      </div>
+      <h1 class="display-4 collapsed" data-toggle="collapse" href="#layout-select-box" role="button">Layout for your Profile</h1>
+      <div class="collapse show" id="layout-select-box">
+        <p class="lead">Give your profile a eye catching look. Arrange your profile highlights to top and premium sections.
+          So Choose a layout of your preference and drop in your selected profile components to the desired sections of the layout.
+        </p>
+        <hr class="my-4">
+        <div class="input-group">
+          <a class="btn btn-default" (click)="revertLayoutClick($event)" title="revert to profile layout"><i class="fa fa-undo"></i></a>
+          <pba-layout-list class="input-group-prepend" [layouts]="layouts" (onSelect)="currentLayoutChanged($event)" [selectedLayout]="currentLayout"></pba-layout-list>
+        </div>
+      </div>
+    </div>
+  </pba-background>
+  <pba-profile-view [content]="currentProfile?.content" [layout]="currentProfile?.layout" [isReadonly]="false"></pba-profile-view>
+</div>
+
+<!-- The Profile Form Data Mode -->
+<pba-profile-form *ngIf="isDataMode" [profile]="currentProfile" (saved)="updateProfileClick($event)"></pba-profile-form>
+

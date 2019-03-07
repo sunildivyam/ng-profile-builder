@@ -1,5 +1,7 @@
 <form #basicInfoForm="ngForm" class="card">
-    <h4 class="card-header bg-warning">Basic Info</h4>
+  <!--
+  <h4 class="card-header bg-warning">Basic Info</h4>
+  -->
     <div class="card-body">
       <div class="form-group">
         <label for="profileName">Profile Title</label>
@@ -35,7 +37,7 @@
       </div>
       <div class="form-group">
         <label for="overview">Overview <small>(Short Description of you duties, roles, work etc.)</small></label>
-        <div class="form-control" rows="8" name="overview" [innerHTML]="formData.overview" (blur)="overviewInput($event)" contenteditable="true"></div>
+        <div class="form-control overview" rows="8" name="overview" [innerHTML]="formData.overview" (blur)="overviewInput($event)" contenteditable="true"></div>
       </div>
     </div>
     <div class="card-footer">

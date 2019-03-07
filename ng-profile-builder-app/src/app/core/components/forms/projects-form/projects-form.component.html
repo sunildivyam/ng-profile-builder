@@ -1,27 +1,26 @@
 <form #projectsForm="ngForm" class="card">
-  <div class="card-header bg-warning">
-      <h4>Projects</h4>
+  <div class="card-header">
       <div class="col-sm-12">
           <input type="checkbox" [(ngModel)]="dragOperationRolesEnabled" name="enableRoleDnD{{idx}}"/>
           Enable Drag and Drop Sorting for Project Roles?
-      </div> 
+      </div>
   </div>
-  <div class="card-body" dnd-sortable-container [sortableData]="formData" [dropZones]="['project-dropZone']">      
+  <div class="card-body" dnd-sortable-container [sortableData]="formData" [dropZones]="['project-dropZone']">
       <span *ngIf="!this.formData || !this.formData.length">No Projects added yet. Please click "Add" button below to add one or more projects.</span>
-      <div 
+      <div
         class="project-item card card-body"
         *ngFor="let project of formData; let idx = index" dnd-sortable [sortableIndex]="idx" [dragEnabled]="!dragOperationRolesEnabled">
-          
-        <div class="row">                
+
+        <div class="row">
           <div class="col-sm-12">
             <div class="input-group">
               <input type="text" class="form-control" name="name{{idx}}" placeholder="Project Name..." [(ngModel)]="project.name">
-              <a class="btn btn-danger input-group-addon" href="#" (click)="onRemoveClick($event, idx)"> 
+              <a class="btn btn-danger input-group-addon" href="#" (click)="onRemoveClick($event, idx)">
                 <span class="fa fa-close"></span>
               </a>
-            </div>  
+            </div>
           </div>
-        </div>          
+        </div>
         <div class="row">
           <div class="col-sm-6">
               <label class="form-label" for="from{{idx}}">From</label>
@@ -43,33 +42,33 @@
         </div>
         <div class="row">
           <div class="col-sm-12">
-            <pba-extended-list-form 
+            <pba-extended-list-form
               [list]="project.roles"
               [headerText]="'Roles/Duties'"
-              [placeholderText]="'role or duty'" 
+              [placeholderText]="'role or duty'"
               [addBtnLabel]="'Add Role'"
               [dragOperationEnabled]="dragOperationRolesEnabled"
               (onChange)="onRolesChange($event, idx)">
-            </pba-extended-list-form>                                
+            </pba-extended-list-form>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12">
-            <pba-extended-list-form 
+            <pba-extended-list-form
               [list]="project.technologies"
               [headerText]="'Technologies used in Project'"
-              [placeholderText]="'technology name...'" 
+              [placeholderText]="'technology name...'"
               [addBtnLabel]="'Add Technology'"
               [dragOperationEnabled]="dragOperationRolesEnabled"
               (onChange)="onTechnologiesChange($event, idx)">
-            </pba-extended-list-form>                                
+            </pba-extended-list-form>
           </div>
-        </div>  
+        </div>
       </div>
-      <a class="btn btn-success list-group" href="#" (click)="onAddClick($event)"> Add </a>        
+      <a class="btn btn-success list-group" href="#" (click)="onAddClick($event)"> Add </a>
   </div>
   <div class="card-footer">
-    <button class="btn btn-primary" (click)="onSaveClick($event)"> 
+    <button class="btn btn-primary" (click)="onSaveClick($event)">
       <span>Save Projects </span>
       <span class="fa fa-spinner" *ngIf="saveStarted===true"></span>
       <span class="fa fa-check text-success" *ngIf="saveSuccess===true"></span>

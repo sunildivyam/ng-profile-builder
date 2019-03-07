@@ -1,67 +1,25 @@
-<form #employersForm="ngForm" class="card">
-    <div class="card-header bg-warning">
-        <h4>Employers</h4>
-        <div class="col-sm-12">
-            <input type="checkbox" [(ngModel)]="dragOperationRolesEnabled" name="enableRoleDnD{{idx}}"/>
-            Enable Drag and Drop Sorting for Employer Roles?
-        </div> 
-    </div>
-    <div class="card-body" dnd-sortable-container [sortableData]="formData" [dropZones]="['employer-dropZone']">      
-        <span *ngIf="!this.formData || !this.formData.length">No Employers added yet. Please click "Add" button below to add one or more employers.</span>
-        <div 
-          class="employer-item card card-body"
-          *ngFor="let employer of formData; let idx = index" dnd-sortable [sortableIndex]="idx" [dragEnabled]="!dragOperationRolesEnabled">
-            
-          <div class="row">                
-            <div class="col-sm-12">
-              <div class="input-group">
-                <input type="text" class="form-control" name="employerName{{idx}}" placeholder="Employer Name" [(ngModel)]="employer.employerName">
-                <a class="btn btn-danger input-group-addon" href="#" (click)="onRemoveClick($event, idx)"> 
-                  <span class="fa fa-close"></span>
-                </a>
-              </div>  
-            </div>
-          </div>          
-          <div class="row">
-            <div class="col-sm-6">
-                <label class="form-label" for="from{{idx}}">From</label>
-                <input type="date" class="form-control" name="from{{idx}}" placeholder="From Date" [(ngModel)]="employer.from">
-            </div>
-            <div class="col-sm-6">
-                <label class="form-label" for="to{{idx}}">To</label>
-                <input type="date" class="form-control" name="to{{idx}}" placeholder="To Date" [(ngModel)]="employer.to">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-                <input type="text" class="form-control" name="designation{{idx}}" placeholder="Designation" [(ngModel)]="employer.designation">
-            </div>
-            <div class="col-sm-6">
-              <textarea class="form-control" name="summary{{idx}}" placeholder="Summary" [(ngModel)]="employer.summary" row="4">
-              </textarea>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
-              <pba-extended-list-form 
-                [list]="employer.roles"
-                [headerText]="'Roles/Duties'"
-                [placeholderText]="'role or duty'" 
-                [addBtnLabel]="'Add Role'"
-                [dragOperationEnabled]="dragOperationRolesEnabled"
-                (onChange)="onRolesChange($event, idx)">
-              </pba-extended-list-form>                                
-            </div>
-          </div> 
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">Employers</h2>
+  </div>
+  <div class="card-body">
+    <div class="container-fluid" *ngFor="let emp of viewData">
+      <div class="row">
+        <div class="col-sm-2">
+          <div>{{emp.from | date:'MMM, y'}}</div>
+          <div>{{(emp.to | date:'MMM, y') ||  'Present'}}</div>
+          <div><i><strong>{{emp.experience}}</strong></i></div>
         </div>
-        <a class="btn btn-success list-group" href="#" (click)="onAddClick($event)"> Add </a>        
+        <div class="col-sm-10">
+          <h4 class="font-5">{{emp.designation}}</h4>
+          <h3 class="font-4">{{emp.empName}}</h3>
+          <summary class="font-4 padding-top-10">{{emp.summary}}</summary>
+          <h3 *ngIf="emp.roles.length" class="font-4 padding-top-10">Roles:</h3>
+          <ul *ngIf="emp.roles.length" class="padding-top-10">
+            <li class="font-4" *ngFor="let role of emp.roles">{{role}}</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="card-footer">
-      <button class="btn btn-primary" (click)="onSaveClick($event)"> 
-        <span>Save Employers </span>
-        <span class="fa fa-spinner" *ngIf="saveStarted===true"></span>
-        <span class="fa fa-check text-success" *ngIf="saveSuccess===true"></span>
-        <span class="fa fa-warning text-danger" *ngIf="saveSuccess===false"></span>
-      </button>
-    </div>
-  </form>
+  </div>
+</div>

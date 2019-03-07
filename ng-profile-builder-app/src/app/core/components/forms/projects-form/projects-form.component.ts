@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, Injector } from '@angular/core';
 import {Project} from '../../../models';
 
 @Component({
@@ -6,8 +6,8 @@ import {Project} from '../../../models';
   templateUrl: './projects-form.component.html',
   styleUrls: ['./projects-form.component.css']
 })
-export class ProjectsFormComponent implements OnInit {
-  @Input() projects:Array<Project>;
+export class ProjectsFormComponent implements OnInit, OnChanges {
+  @Input() projects: Array<Project>;
   @Output() onSave = new EventEmitter();
 
   formData: Array<Project>;
@@ -16,25 +16,30 @@ export class ProjectsFormComponent implements OnInit {
   saveSuccess: boolean;
 
   onSaveSuccess() {
-    console.log("Projects Saved");
+    console.log('Projects Saved');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
   onSaveNext() {
-    console.log("Projects Saving");
+    console.log('Projects Saving');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
   onSaveError() {
-    console.log("Projects Error occured");
+    console.log('Projects Error occured');
     this.saveStarted = false;
     this.saveSuccess = false;
   }
 
-  constructor() {
-    this.formData = new Array<Project>();
+  constructor(private injector: Injector) {
+    const formInjector = this.injector.get('projects');
+    const onSaveFromInjector = this.injector.get('onSave');
+    if (onSaveFromInjector) {
+      this.onSave = onSaveFromInjector;
+    }
+    this.formData = formInjector || new Array<Project>();
     this.dragOperationRolesEnabled = false;
     this.saveStarted = false;
     this.saveSuccess = null;
@@ -55,7 +60,8 @@ export class ProjectsFormComponent implements OnInit {
     this.saveStarted = true;
     this.saveSuccess = null;
 
-    event && event.preventDefault();
+    event.preventDefault();
+    event.formName = 'projects';
     event.formData = this.formData;
     event.onSaveSuccess = this.onSaveSuccess.bind(this);
     event.onSaveNext = this.onSaveNext.bind(this);
@@ -65,12 +71,12 @@ export class ProjectsFormComponent implements OnInit {
   }
 
   onRemoveClick(event, index) {
-    event && event.preventDefault();
+    event.preventDefault();
     this.formData.splice(index, 1);
   }
 
   onAddClick(event) {
-    event && event.preventDefault();
+    event.preventDefault();
     this.formData.push(new Project());
   }
 

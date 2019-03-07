@@ -5,3 +5,6 @@ export { Employer } from './employer.model';
 export { Project } from './project.model';
 export { Skill } from './skill.model';
 export { SocialMedia } from './social-media.model';
+
+export { WizardStep } from './wizard-step.model';
+export { Duration } from './duration.model';

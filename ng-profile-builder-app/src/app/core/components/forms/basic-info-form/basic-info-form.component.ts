@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, Injector } from '@angular/core';
 import {BasicInfo} from '../../../models';
 
 @Component({
@@ -7,7 +7,7 @@ import {BasicInfo} from '../../../models';
   styleUrls: ['./basic-info-form.component.css']
 })
 export class BasicInfoFormComponent implements OnInit, OnChanges {
-  @Input() info: BasicInfo;
+  @Input() basicInfo: BasicInfo;
   @Output() onSave = new EventEmitter<BasicInfo>();
 
   formData: BasicInfo;
@@ -16,34 +16,40 @@ export class BasicInfoFormComponent implements OnInit, OnChanges {
 
 
   onSaveSuccess() {
-    console.log("Basic info Saved");
+    console.log('Basic info Saved');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
   onSaveNext() {
-    console.log("Basic info Saving");
+    console.log('Basic info Saving');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
   onSaveError() {
-    console.log("Basic info Error occured");
+    console.log('Basic info Error occured');
     this.saveStarted = false;
     this.saveSuccess = false;
   }
 
-  constructor() {
-    this.formData = new BasicInfo();
+  constructor(private injector: Injector) {
+    const formInjector = this.injector.get('basicInfo');
+    const onSaveFromInjector = this.injector.get('onSave');
+    if (onSaveFromInjector) {
+      this.onSave = onSaveFromInjector;
+    }
+    this.formData = formInjector || new BasicInfo();
     this.saveStarted = false;
     this.saveSuccess = null;
    }
 
   ngOnInit() {
+
   }
 
   ngOnChanges() {
-    this.formData = JSON.parse(JSON.stringify(this.info)) || new BasicInfo();
+    this.formData = JSON.parse(JSON.stringify(this.basicInfo)) || new BasicInfo();
   }
 
   onSaveClick(event) {
@@ -54,7 +60,8 @@ export class BasicInfoFormComponent implements OnInit, OnChanges {
     this.saveStarted = true;
     this.saveSuccess = null;
 
-    event && event.preventDefault();
+    event.preventDefault();
+    event.formName = 'basicInfo';
     event.formData = this.formData;
     event.onSaveSuccess = this.onSaveSuccess.bind(this);
     event.onSaveNext = this.onSaveNext.bind(this);

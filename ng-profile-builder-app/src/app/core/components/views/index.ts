@@ -2,7 +2,6 @@ export { AdditionalsViewComponent } from './additionals-view/additionals-view.co
 export { BasicInfoViewComponent } from './basic-info-view/basic-info-view.component';
 export { EducationViewComponent } from './education-view/education-view.component';
 export { EmployersViewComponent } from './employers-view/employers-view.component';
-export { ExtendedListViewComponent } from './extended-list-view/extended-list-view.component';
 export { ProjectsViewComponent } from './projects-view/projects-view.component';
 export { RatingViewComponent } from './rating-view/rating-view.component';
 export { SkillsViewComponent } from './skills-view/skills-view.component';

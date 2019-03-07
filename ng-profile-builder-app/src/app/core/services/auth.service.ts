@@ -5,19 +5,18 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
   private _currentUser = {
-    id: '1',
+    id: 'debTwyXxqv60kYJbEdYz',
     userName: 'sunil.divyam',
     firstName: 'Sunil',
     lastName: 'Kumar'
-  }
+  };
   constructor() { }
 
- 
- public get currentUserId() : string {
+ public get currentUserId(): string {
    return this._currentUser.id;
  }
- 
- public get currentUser() : Object {
+
+ public get currentUser(): Object {
   return this._currentUser;
 }
 }

@@ -1,0 +1,30 @@
+<pba-background>
+  <div class="container carousel">
+    <div class="row">
+      <div class="col-sm-12 wizard-nav">
+        <a href="#" class="btn-previous" (click)="previousBtnClick($event)"><span class="fa fa-chevron-left"></span></a>
+        <div class="nav-items">
+          <a *ngFor="let step of steps; index as idx; last as last"
+          [class.active]="idx <= activeStepIndex"
+          href="#" class="nav-item"
+          (click)="navBtnClick($event, idx)">
+          <span class="label">{{idx+1}}</span>
+          <span class="title d-none d-lg-inline" >{{step.label}}</span>
+          <span class="label" *ngIf="last"><i class="fa fa-check"></i></span>
+          </a>
+        </div>
+        <a href="#" class="btn-next" (click)="nextBtnClick($event)"><span class="fa fa-chevron-right"></span></a>
+      </div>
+    </div>
+  </div>
+</pba-background>
+<div class="container carousel">
+  <div class="row">
+    <div class="col-sm-12 overview">
+      <h1 class="step-title">{{currentStep?.label}}</h1>
+      <div class="content">
+        <ng-container #vc></ng-container>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
-import {SocialMedia} from '../../../models';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, Injector } from '@angular/core';
+import { SocialMedia } from '../../../models';
 
 @Component({
   selector: 'pba-social-media-form',
@@ -7,7 +7,7 @@ import {SocialMedia} from '../../../models';
   styleUrls: ['./social-media-form.component.css']
 })
 export class SocialMediaFormComponent implements OnInit, OnChanges {
-  @Input() links:Array<SocialMedia>;
+  @Input() socialMedia: Array<SocialMedia>;
   @Output() onSave = new EventEmitter();
 
   formData: Array<SocialMedia>;
@@ -32,8 +32,13 @@ export class SocialMediaFormComponent implements OnInit, OnChanges {
     this.saveSuccess = false;
   }
 
-  constructor() {
-    this.formData = new Array<SocialMedia>();
+  constructor(private injector: Injector) {
+    const formInjector = this.injector.get('socialMedia');
+    const onSaveFromInjector = this.injector.get('onSave');
+    if (onSaveFromInjector) {
+      this.onSave = onSaveFromInjector;
+    }
+    this.formData = formInjector || new Array<SocialMedia>();
     this.saveStarted = false;
     this.saveSuccess = null;
   }
@@ -42,7 +47,7 @@ export class SocialMediaFormComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    this.formData = JSON.parse(JSON.stringify(this.links)) || new Array<SocialMedia>();
+    this.formData = JSON.parse(JSON.stringify(this.socialMedia)) || new Array<SocialMedia>();
   }
 
   onSaveClick(event) {
@@ -53,7 +58,8 @@ export class SocialMediaFormComponent implements OnInit, OnChanges {
     this.saveStarted = true;
     this.saveSuccess = null;
 
-    event && event.preventDefault();
+    event.preventDefault();
+    event.formName = 'socialMedia';
     event.formData = this.formData;
     event.onSaveSuccess = this.onSaveSuccess.bind(this);
     event.onSaveNext = this.onSaveNext.bind(this);
@@ -63,12 +69,12 @@ export class SocialMediaFormComponent implements OnInit, OnChanges {
   }
 
   onRemoveClick(event, index) {
-    event && event.preventDefault();
+    event.preventDefault();
     this.formData.splice(index, 1);
   }
 
   onAddClick(event) {
-    event && event.preventDefault();
+    event.preventDefault();
     this.formData.push(new SocialMedia());
   }
 }
