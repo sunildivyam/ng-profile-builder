@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Duration } from '../models';
+import { Duration, Employer } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -51,5 +51,12 @@ export class ProfileViewService {
 
   public getDuration(fromDate, toDate): Duration {
     return this.dateDiff(fromDate, toDate);
+  }
+
+  public getPresentEmployer(employers: Array<Employer>): Employer {
+    if (!employers || !employers.length) {
+      return new Employer();
+    }
+    return employers.find(emp => !emp.to) || new Employer();
   }
 }

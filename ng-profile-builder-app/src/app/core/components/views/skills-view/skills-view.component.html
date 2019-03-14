@@ -6,8 +6,8 @@
       <div class="container-fluid">
         <div class="row"  *ngFor="let skill of viewData">
           <div class="col-sm-12">
-              <h4 class="">{{skill.name}}</h4>
-              <div class="">{{skill.experience}}</div>
+              <h4 class=""><strong>{{skill.name}}</strong></h4>
+              <small class="">{{skill.experience}}</small>
               <pba-rating-view [rating]="skill.rating"></pba-rating-view>
           </div>
         </div>

@@ -12,7 +12,7 @@
   border-radius: 50%;
 }
 
-.rating-item.active, .rating-item:hover {
+.rating-item.active {
   border-color: darkgrey;
   background-color: green;
 }
@@ -22,7 +22,3 @@
   height: 20px;
 }
 
-.rating.readonly .rating-item:hover {
-  background-color: transparent;
-  border-color: rgb(231, 231, 231);
-}

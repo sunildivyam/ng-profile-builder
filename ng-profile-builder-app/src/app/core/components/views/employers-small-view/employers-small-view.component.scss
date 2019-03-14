@@ -1,0 +1,47 @@
+$circleSize: 20px;
+$circleWidth: 2px;
+$contentLeftSpaceing: 15px;
+$line-color: #bfbfbf;
+
+.employers-small-view {
+  .row {
+    position: relative;
+    margin-left: 5px;
+    border-left: $circleWidth solid $line-color;
+    .item {
+      padding-left: ($circleSize/2)-1;
+    }
+    .circle {
+      position: absolute;
+      display: block;
+      left: -($circleSize/2)-1;
+      top: ($circleSize/2)+1;
+      width: $circleSize;
+      height: $circleSize;
+      background: white;
+      border: $circleWidth solid $line-color;
+      border-radius: 50%;
+      text-align: center;
+    }
+
+    .name {
+      margin: 0px;
+      line-height: $circleSize;
+      padding-left: 15px;
+      border-bottom: $circleWidth solid $line-color;
+      text-transform: uppercase;
+    }
+    .designation {
+      padding-left: $contentLeftSpaceing;
+    }
+
+    .duration {
+      padding-left: $contentLeftSpaceing;
+    }
+
+    .more {
+      padding-left: $contentLeftSpaceing;
+      padding-top: 15px;
+    }
+  }
+}

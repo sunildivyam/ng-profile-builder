@@ -1,7 +1,6 @@
 <div class="rating readonly">
   <span
     class="rating-item {{sizeClass}} {{ratingItem<=rating?'active':''}}"
-    *ngFor="let ratingItem of ratings; let index = index"
-    (click)="onRatingClick($event, ratingItem)">
+    *ngFor="let ratingItem of ratings; let index = index">
   </span>
 </div>

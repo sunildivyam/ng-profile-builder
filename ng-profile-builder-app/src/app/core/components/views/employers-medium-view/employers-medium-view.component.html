@@ -1,0 +1,28 @@
+<div class="card employers-small-view">
+  <div class="card-header">
+    <h2 class="card-title">Employers</h2>
+  </div>
+  <div class="card-body">
+    <div class="container-fluid" *ngFor="let emp of viewData">
+      <div class="row">
+        <div class="item col-sm-12">
+          <div class="circle"></div>
+          <h3 class="name">
+            {{emp.employerName}}
+          </h3>
+          <h4 class="designation">{{emp.designation}} | <i><strong>{{emp.experience}}</strong></i></h4>
+          <div class="duration">
+             <small>from {{emp.from | date:'MMM, y'}} to {{(emp.to | date:'MMM, y') || 'Present'}}</small>
+          </div>
+          <div class="more">
+            <summary class="font-4 padding-top-10">{{emp.summary}}</summary>
+            <h3 *ngIf="emp.roles.length" class="font-4 padding-top-10">Roles:</h3>
+            <ul *ngIf="emp.roles.length" class="padding-top-10">
+              <li class="font-4" *ngFor="let role of emp.roles">{{role}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

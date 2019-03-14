@@ -5,15 +5,15 @@ export class Employer {
     designation: string;
     address: string;
     summary: string;
-    roles: Array<string>; 
+    roles: Array<string>;
 
     constructor () {
-        this.employerName = "";
+        this.employerName = '';
         this.from = null;
         this.to = null;
-        this.designation = "";
-        this.address = "";
-        this.summary = "";
+        this.designation = '';
+        this.address = '';
+        this.summary = '';
         this.roles = new Array<string>();
     }
 }

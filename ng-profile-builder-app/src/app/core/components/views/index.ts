@@ -2,7 +2,13 @@ export { AdditionalsViewComponent } from './additionals-view/additionals-view.co
 export { BasicInfoViewComponent } from './basic-info-view/basic-info-view.component';
 export { EducationViewComponent } from './education-view/education-view.component';
 export { EmployersViewComponent } from './employers-view/employers-view.component';
+export { EmployersSmallViewComponent } from './employers-small-view/employers-small-view.component';
+export { EmployersMediumViewComponent } from './employers-medium-view/employers-medium-view.component';
 export { ProjectsViewComponent } from './projects-view/projects-view.component';
 export { RatingViewComponent } from './rating-view/rating-view.component';
 export { SkillsViewComponent } from './skills-view/skills-view.component';
 export { SocialMediaViewComponent } from './social-media-view/social-media-view.component';
+export { ProfileHeaderViewComponent } from './profile-header-view/profile-header-view.component';
+export { PrimarySkillsViewComponent } from './primary-skills-view/primary-skills-view.component';
+export { ContactBarViewComponent } from './contact-bar-view/contact-bar-view.component';
+export { SummaryViewComponent } from './summary-view/summary-view.component';

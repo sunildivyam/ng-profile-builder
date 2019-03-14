@@ -7,6 +7,8 @@ export class BasicInfo {
   phone: string;
   birthDate: string;
   overview: string;
+  shortAddress: string;
+  address: string;
 
   constructor() {
     this.profileName = '';
@@ -17,5 +19,7 @@ export class BasicInfo {
     this.phone = '';
     this.birthDate = '';
     this.overview = '';
+    this.shortAddress = '';
+    this.shortAddress = '';
   }
 }

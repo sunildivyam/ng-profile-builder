@@ -3,11 +3,11 @@ import { Skill } from '../../../models';
 import { ProfileViewService } from '../../../services';
 
 @Component({
-  selector: 'pba-skills-view',
-  templateUrl: './skills-view.component.html',
-  styleUrls: ['./skills-view.component.scss']
+  selector: 'pba-primary-skills-view',
+  templateUrl: './primary-skills-view.component.html',
+  styleUrls: ['./primary-skills-view.component.scss']
 })
-export class SkillsViewComponent implements OnChanges {
+export class PrimarySkillsViewComponent implements OnChanges {
   @Input() skills: Array<Skill>;
   viewData: Array<any>;
 
@@ -19,8 +19,10 @@ export class SkillsViewComponent implements OnChanges {
   transformData() {
     this.viewData = new Array<any>();
     this.skills.map((skillItem: Skill) => {
-      const item = { ...skillItem, experience: this.profileViewService.getDuration(skillItem.from, skillItem.to).toString() };
-      this.viewData.push(item);
+      if (skillItem.isPrimarySkill === true) {
+        const item = { ...skillItem, experience: this.profileViewService.getDuration(skillItem.from, skillItem.to).toString() };
+        this.viewData.push(item);
+      }
     });
   }
 

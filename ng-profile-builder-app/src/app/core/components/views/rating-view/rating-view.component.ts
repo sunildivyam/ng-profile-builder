@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'pba-rating-view',
   templateUrl: './rating-view.component.html',
-  styleUrls: ['./rating-view.component.css']
+  styleUrls: ['./rating-view.component.scss']
 })
 export class RatingViewComponent {
   @Input() rating: number;
