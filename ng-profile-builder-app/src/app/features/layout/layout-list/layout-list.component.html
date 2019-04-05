@@ -1,5 +1,8 @@
-<select class="form-control" [(ngModel)]="currentLayout" (change)="selectLayoutClick($event)">
-  <option [value]="undefined" disabled selected>select...</option>
+<select class="form-control"
+  [(ngModel)]="selectedLayout"
+  (change)="selectLayoutClick($event)"
+  [compareWith]="compareFn">  <!-- Compare function to select Options dynamically for objects-->
+  <option [ngValue]="undefined" disabled>select...</option>
   <option *ngFor="let layout of layouts" [ngValue]="layout">
     {{layout.title}}
   </option>

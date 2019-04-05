@@ -5,6 +5,8 @@ export { EmployersViewComponent } from './employers-view/employers-view.componen
 export { EmployersSmallViewComponent } from './employers-small-view/employers-small-view.component';
 export { EmployersMediumViewComponent } from './employers-medium-view/employers-medium-view.component';
 export { ProjectsViewComponent } from './projects-view/projects-view.component';
+export { ProjectsSmallViewComponent } from './projects-small-view/projects-small-view.component';
+export { ProjectsMediumViewComponent } from './projects-medium-view/projects-medium-view.component';
 export { RatingViewComponent } from './rating-view/rating-view.component';
 export { SkillsViewComponent } from './skills-view/skills-view.component';
 export { SocialMediaViewComponent } from './social-media-view/social-media-view.component';
@@ -12,3 +14,5 @@ export { ProfileHeaderViewComponent } from './profile-header-view/profile-header
 export { PrimarySkillsViewComponent } from './primary-skills-view/primary-skills-view.component';
 export { ContactBarViewComponent } from './contact-bar-view/contact-bar-view.component';
 export { SummaryViewComponent } from './summary-view/summary-view.component';
+export { DisclaimerViewComponent } from './disclaimer-view/disclaimer-view.component';
+export { ImageViewComponent } from './image-view/image-view.component';

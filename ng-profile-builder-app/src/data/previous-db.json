@@ -1,0 +1,3824 @@
+{
+  "status": 200,
+  "data": [
+    {
+      "_id": "5a291ba16d8eeb5790388747",
+      "basicInfo": {
+        "profileName": "Senior Interactive Developer L1",
+        "firstName": "Sunil",
+        "lastName": "Kumar",
+        "email": "sunil.divyam@gmail.com",
+        "profileImage": "",
+        "phone": "+919910129602",
+        "birthDate": "1979-03-05",
+        "shortAddress": "Noida, India",
+        "address": "Aachvis Softech Pvt Ltd SEZ, GF Tower C, Plot No 7, Sec 144 Exp way",
+        "currentDesignation": "Senior Interactive Developer",
+        "experience": "7 years, 6 months"
+      },
+      "socialMedia": [
+        {
+          "name": "linkedin",
+          "url": "https://linkedin.com/sunil.divyam"
+        },
+        {
+          "name": "github",
+          "url": "https://www.github.com/sunil.divyam"
+        }
+      ],
+      "employers": [
+        {
+          "employerName": "Sapient Consulting",
+          "from": "2014-06-02",
+          "to": "",
+          "designation": "Senior Interactive Developer L1",
+          "address": "",
+          "summary": "Performed as a team contributor and as an individual, in multiple projects and teams, excelling towards client impact and satisfaction.",
+          "roles": [
+            "Analysing existing and developing complex multi module, multi featured web applications.",
+            "UI Architecture, Design & Development.",
+            "Track leading & team development.",
+            "Led multiple POCs to success within and across Teams/Projects.",
+            "Integration of latest and most compatible technologies in the projects.",
+            "Working with SCRUM and Agile approach.",
+            "Working with JIRA and Confluence.",
+            "Implementation of best approaches and practices, such as Test Driven Development (TDD), Domain Driven Development (DDD), Model View Controller (MVC) etc. .",
+            "Maintaining code quality at its best through Code Reviews.",
+            "Implementing UI build process using various build tools like Gulp, grunt, webpack etc. .",
+            "Contributed as an Interviewer."
+          ],
+          "experience": "3 years, 6 months"
+        },
+        {
+          "employerName": "RedArrow India",
+          "from": "2010-02-01",
+          "to": "2014-05-31",
+          "designation": "Senior Programmer",
+          "address": "",
+          "summary": "Performed as a team contributor and as an individual, in multiple projects and teams, excelling towards client impact and satisfaction. Worked on multiple projects from financial markets and education industries.",
+          "roles": [
+            "User Experience development.",
+            "Integration and development of Angularjs and jQuery in ASP.net web forms and MVC applications",
+            "Integration and development of Web APIs in .Net application using Angularjs",
+            "Database Design in SQL Server.",
+            "Team leading and team development.",
+            "Client Interaction through Requirement Calls and Meetings.",
+            "Maintaining code quality at its best through Code Reviews.",
+            "Registering and setting up Domains and Sub-Domains.",
+            "Hosting and managing websites."
+          ],
+          "experience": "4 years"
+        },
+        {
+          "employerName": "Indiabulls Commodities Pvt. Ltd.",
+          "from": "2008-07-01",
+          "to": "2009-12-31",
+          "designation": "Relationship Manager",
+          "address": "",
+          "summary": "Performed towards building and managing clientele and their investment portfolio. \nDealt with Commodities & Bullion trading in Multi Commodity Exchange (MCX) of India.",
+          "roles": [
+            "Identifying, targeting, acquisition, and retaining clientele by performing marketing and management activities.",
+            "Opening and maintaining clients' online and offline trading accounts.",
+            "Developing and assisting client in managing their investment portfolio.",
+            "Manage the pay in, pay out & cash.",
+            "Client Guidance regarding trading."
+          ]
+        },
+        {
+          "employerName": "Cosmo Tradex Pvt. Ltd.",
+          "from": "2007-07-01",
+          "to": "2008-06-30",
+          "designation": "Business Development Manager",
+          "address": "",
+          "summary": "Performed towards building and managing clientele and their investment portfolio. \nDealt with International Commodities & Bullion trading in Commodity Exchange (COMEX).",
+          "roles": [
+            "Identifying, targeting, acquisition, and retaining clientele by performing marketing and management activities.",
+            "Opening and maintaining clients' online and offline trading accounts.",
+            "Developing and assisting client in managing their investment portfolio.",
+            "Manage the pay in, pay out & cash.",
+            "Client Guidance regarding trading."
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "name": "OOJS & Advance JavaScript",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 9,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "React JS",
+          "from": "2017-03-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "AngularJS 1.x",
+          "institution": "sdsa",
+          "from": "2013-10-01",
+          "to": null,
+          "branch": "sadsad",
+          "experience": "1 years, 6 months",
+          "rating": 9,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "Angularjs 2 to 6+",
+          "from": "2016-04-01",
+          "to": null,
+          "rating": 7,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "HTML5",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 10,
+          "summary": "",
+          "experience": "5 months",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "CSS3, LESS, SASS",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 10,
+          "summary": "",
+          "experience": "1 years, 2 months",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "jQuery",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 9,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "Redux",
+          "from": "2017-03-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": false
+        },
+        {
+          "name": "React Native",
+          "from": "2018-04-01",
+          "to": null,
+          "rating": 2,
+          "summary": ""
+        },
+        {
+          "name": "Bootstrap 3 & 4",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 9,
+          "summary": "",
+          "experience": "1 years, 4 months"
+        },
+        {
+          "name": "Material UI",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Node JS",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Express JS",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Webpack",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Gulp",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Grunt",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "TypeScript",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": false
+        },
+        {
+          "name": "JSX",
+          "from": "2017-03-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": false
+        },
+        {
+          "name": "ES6",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": false
+        },
+        {
+          "name": "Mongodb",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Browserify",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Babel",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "SVN",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "GIT",
+          "from": "2015-01-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Microsoft SQL Server, SQL",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "C#, .NET, MVC, Web API",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "JAVA, JSP",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 2,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Captivate",
+          "from": "2016-12-01",
+          "to": "2017-08-31",
+          "rating": 5,
+          "summary": "",
+          "experience": "9 months"
+        },
+        {
+          "name": "Adobe Campaign",
+          "from": "2017-09-01",
+          "to": null,
+          "rating": 5,
+          "summary": "",
+          "experience": "4 months"
+        },
+        {
+          "name": "Adobe AEM 5 & 6",
+          "from": "2014-06-02",
+          "to": "2017-03-31",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Sitecatalyst",
+          "from": "2014-06-06",
+          "to": "",
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Omniture",
+          "from": "2015-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": "",
+          "experience": "2 years, 11 months"
+        },
+        {
+          "name": "Adobe Photoshop",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Moodle",
+          "from": "2015-05-01",
+          "to": "2016-06-30",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Highcharts",
+          "from": "2014-06-02",
+          "to": "",
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "D3 js",
+          "from": "2015-06-02",
+          "to": "2016-06-30",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Karma and Jasmine",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "JSON, XML, YML",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Goldman Sachs DASH UI",
+          "from": "2016-07-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        }
+      ],
+      "projects": [
+        {
+          "name": "AYCO, Marketing Site",
+          "clientName": "Goldman Sachs",
+          "from": "2018-01-01",
+          "to": null,
+          "summary": "AYCO is a Goldman Sachs Company, and this project is a marketing site developed using Adobe AEM6 for the content pages and JavaScript, CSS3, Highcharts at the UI development.",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "DAS (Digital Advertising Solutions) Campaign",
+          "clientName": "Goldman Sachs",
+          "from": "2017-09-01",
+          "to": "2017-12-31",
+          "summary": "Digital Advertising Solutions, Provides a range of services to the client, like Document Dropbox, Marketing Campaigns, Automated real time and marketing campaign Emails etc.",
+          "technologies": [
+            "JavaScript"
+          ],
+          "roles": [],
+          "duration": "5 months"
+        },
+        {
+          "name": "GSAM (Goldman Sachs Assets Marketing)",
+          "clientName": "Goldman Sachs",
+          "from": "2017-03-01",
+          "to": null,
+          "summary": "Goldman Sachs Asset Management (GSAM) is one of the world’s leading investment managers. Across 33 offices worldwide, Goldman Sachs extend these global capabilities to the world’s leading pension plans, sovereign wealth funds, central banks, insurance companies, financial institutions, endowments, foundations, individuals and family offices, for whom it invest or advise on more than $1 trillion of assets.",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "GSCIO-PE (Goldman Sachs CIO - Portfolio Explorer)",
+          "clientName": "Goldman Sachs",
+          "from": "2016-07-01",
+          "to": "2017-02-28",
+          "summary": "Goldman Sachs CIO Portfolio Explorer provides a detailed analysis of client portfolio and cash flows with the help of complex visualizations using various tables, graph and charts.",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "GS-AIMS University",
+          "clientName": "Goldman Sachs",
+          "from": "2015-05-01",
+          "to": "2016-06-30",
+          "summary": "Goldman Sachs AIMS University provides a range of educational programs, courses, course modules, lessons, instructor courses, and quizzes. It keeps track of the users learning progress.",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "GSCIO-AIMS (Goldman Sachs CIO - Alternate Investment Manager Selection)",
+          "clientName": "Goldman Sachs",
+          "from": "2014-06-02",
+          "to": "2017-03-31",
+          "summary": "The Alternative Investments & Manager Selection (“AIMS”) provides investors with investment and advisory solutions, across leading hedge fund managers, private equity funds, real estate managers, public equity strategies, fixed income strategies etc. .",
+          "technologies": [],
+          "roles": [],
+          "duration": "1 years, 10 months"
+        },
+        {
+          "name": "IMS (Insurance Management System)",
+          "clientName": "Secure Vision Ltd.",
+          "from": "2013-04-01",
+          "to": "2014-05-31",
+          "summary": "Secure Vision's Insurance Management System (IMS), automates the key processes involved in providing multiple Insurance plans to its customers and experience to its users with user friendly subsystems. This also provides Secure Vision a platform to manage Insurance business and its clientele. ",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "MISMS (Multiple Installment Scheme Management System)",
+          "clientName": "Secure Vision Ltd.",
+          "from": "2012-01-01",
+          "to": "2013-03-30",
+          "summary": "Secure Vision's MISMS (Multiple Installment Scheme Management System), automates the processes involved in managing Multiple Installment Scheme and experience to its users with user friendly subsystems. ",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "NAIP, Nematology Project",
+          "clientName": "Indian Agricultural Research Institute (IARI)",
+          "from": "2011-05-01",
+          "to": "2011-12-30",
+          "summary": "NAIP, a research project carried by division of Nematology, Indian Agricultural Research Institute (IARI), New Delhi. The project provides detailed information regarding its evolution, history, progress, deliverable, National Training,work allocations, expected outcomes, published papers, environmental and social issues, timelines etc.. ",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "CBSE Learning",
+          "clientName": "CBSE School, Nigeria",
+          "from": "2010-02-01",
+          "to": "2011-04-30",
+          "summary": "CBSE Learning was a public facing web site with authentication and authorization features, that provides authors and moderators to compose and publish Central Board of Secondary Education (CBSE)'s learning materials like Sample Papers,  Question Papers, Chapters, latest CBSE news and events, Solved Questions from experts and many other features. This also provides administrator's desktop panel, that provides detailed information for analysis and administer. Public Users can register, login and access public and featured contents.",
+          "technologies": [],
+          "roles": []
+        }
+      ],
+      "education": [
+        {
+          "name": "Masters of Business Administration",
+          "institution": "Guru Govind Singh Indraprastha University, Delhi",
+          "from": "2005-07-01",
+          "to": "2007-06-30",
+          "branch": "Marketing and International Business"
+        },
+        {
+          "name": "Bachelor of Science",
+          "institution": "Dr. Bhim Rao Ambedkar University, Agra",
+          "from": "1998-07-01",
+          "to": "2001-06-30",
+          "branch": "Physics, Chemistry, Maths"
+        },
+        {
+          "name": "Senior Secondary School",
+          "institution": "CBSE Board",
+          "from": "1997-07-01",
+          "to": "1998-06-30",
+          "branch": "Physics, Chemistry, Maths and Biology",
+          "duration": "1 years"
+        },
+        {
+          "name": "Higher Secondary School",
+          "institution": "CBSE Board",
+          "from": "1995-07-01",
+          "to": "1996-06-30",
+          "branch": "Science, Maths, English and Social Studies",
+          "duration": "1 years"
+        }
+      ],
+      "additionals": [
+        {
+          "title": "Awards & Certifications",
+          "summary": "",
+          "bullets": [
+            "A-Level, 1 year Diploma in Information Technology in 2003 from DOEACC Society, Ministry of Information Technology, New Delhi.",
+            "Awarded National Mathematics Olympiad Certificate, 1996.",
+            "Sapient Core Values, recognition certificate, for extraordinary experiences for clients and their customers.",
+            "Multiple recognition from team members across projects at Sapient."
+          ]
+        },
+        {
+          "title": "Successful POCs",
+          "summary": "Successfully completed following POCs:",
+          "bullets": [
+            "POC done using D3 Charts and Angular js, the goal was to represent a complex data coming from multiple sources in a Multi branch Hierarchical custom charts and add interactivity to nodes.",
+            "POC done using Angular js, Moodle, Adobe Captivate, and Adobe AEM, the goal was to integrate all of these to create a Custom LMS for an existing Application.",
+            "POC done using Angular js, Gulp js, Bootstrap, Highcharts and DASH UI (a Goldman Sachs native Framework), the goal was to develop a Client Portfolio Explorer and Integrate DASH UI framework to have complex tables and charts.",
+            "POC done using Block Chain, Angular js, Node js and Bootstrap, the goal was to implement multiple node servers and develop a lending application using Block Chain.",
+            "POC done using Adobe Campaign, the goal was to write and introduce a JavaScript in between the Marketing Campaign Workflow, which processes Lakhs of prospects in batches and recreates them with additional data based on some business rules.",
+            "POC done using jekyll, liquid templates, and Adobe Campaign, the goal was to automate the email content creation for Adobe Campaign.",
+            "POC done using react and redux, the goal was to integrate and implement new modules with react components, redux store in existing complex, JavaScript Module Pattern Project.",
+            "POC done using intro.js, Angular js, the goal was to develop an interactive step by step help tutorial for an existing project."
+          ]
+        },
+        {
+          "title": "Training and Seminars Facilitated",
+          "summary": "I have contributed by sharing my knowledge by various ways:",
+          "bullets": [
+            "Angular js 1.6 | Workshop and Classroom Session to teams at Sapient Noida, India | 6 days, 2 hours each day.",
+            "Wep Pack 3 | Classrom Session to teams at Sapient Noida, India.",
+            "Wep Pack 3  | WebEx Session to teams at Sapient across Globe.",
+            "JavaScript Module Pattern | Classroom Session to team at Sapient Noida, India.",
+            "CSS - Best Practices | Classroom Session to teams at RedArrow India.",
+            "Integrating ASP.Net MVC and Angular js Classroom Session to teams at RedArrow India.",
+            "Presented in National Seminars at college."
+          ]
+        },
+        {
+          "title": "Upcoming and Growing Technologies Knowledge",
+          "summary": "Gaining interest and knowledge in following growing areas of technology and science:",
+          "bullets": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Block Chain"
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "5a2c3074b442e291a0f2bfe0",
+      "basicInfo": {
+        "profileName": "MEAN Full Stack Developer",
+        "firstName": "Sunil",
+        "lastName": "Kumar",
+        "email": "sunil.divyam@gmail.com",
+        "profileImage": "",
+        "phone": "9910129602",
+        "birthDate": "1979-03-05",
+        "shortAddress": "Noida, India",
+        "address": "Aachvis Softech Pvt Ltd SEZ, GF Tower C, Plot No 7, Sec 144 Exp way",
+        "currentDesignation": "Senior Interactive Developer",
+        "experience": "7 years, 6 months"
+      },
+      "socialMedia": [
+        {
+          "name": "linkedin",
+          "url": "https://www.linkedin/sunil.divyam"
+        },
+        {
+          "name": "stack-overflow",
+          "url": "https://www.stackoverflow.com/sunil.divyam"
+        },
+        {
+          "name": "github",
+          "url": "https://www.github.com/sunil.divyam"
+        },
+        {
+          "name": "globe",
+          "url": "https://www.myweb.com"
+        }
+      ],
+      "employers": [
+        {
+          "employerName": "Sapient Consulting",
+          "from": "2014-06-02",
+          "to": "",
+          "designation": "Senior Interactive Developer",
+          "address": "",
+          "summary": "All Interactive with JavaScript OOP, Angular 1, 2, Nodejs, React, .net, MVC, Web API",
+          "roles": [
+            "Interactive Design",
+            "UI Architecture",
+            "Track leading"
+          ],
+          "experience": "3 years, 6 months"
+        },
+        {
+          "employerName": "RedArrow India",
+          "from": "2010-06-01",
+          "to": "2014-05-31",
+          "designation": "Senior Programmer",
+          "address": "",
+          "summary": "All Interactive with JavaScript OOP, Angular 1, 2, Nodejs, React, .net, MVC, Web API",
+          "roles": [
+            "Database Design in SQL Server",
+            "Team leading",
+            "Client Interaction",
+            "Client Requirement Calls and Meetings",
+            "Web design1"
+          ],
+          "experience": "4 years"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Angular js 1.x",
+          "institution": "sdsa",
+          "from": "2016-06-02",
+          "to": null,
+          "branch": "sadsad",
+          "experience": "1 years, 6 months",
+          "rating": 8,
+          "summary": "Setting up the infrastructureSetting up the infrastructureSetting up the infrastructure"
+        },
+        {
+          "name": "Adobe Captivate",
+          "from": "2016-12-01",
+          "to": "2017-08-31",
+          "rating": 4,
+          "summary": "",
+          "experience": "9 months"
+        },
+        {
+          "name": "Adobe Campaign",
+          "from": "2017-08-01",
+          "to": null,
+          "rating": 5,
+          "summary": "",
+          "experience": "4 months"
+        },
+        {
+          "name": "Adobe Omniture",
+          "from": "2015-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": "",
+          "experience": "2 years, 11 months"
+        },
+        {
+          "name": "Hello",
+          "from": "2017-07-05",
+          "to": "2017-12-08",
+          "rating": 7,
+          "summary": "",
+          "experience": "5 months"
+        },
+        {
+          "name": "sadsad",
+          "from": "2016-10-01",
+          "to": "2017-12-09",
+          "rating": 1,
+          "summary": "",
+          "experience": "1 years, 2 months"
+        },
+        {
+          "name": "aasas",
+          "from": "2016-07-01",
+          "to": "2017-11-09",
+          "rating": 6,
+          "summary": "",
+          "experience": "1 years, 4 months"
+        },
+        {
+          "name": "sdsd",
+          "from": "2017-10-06",
+          "to": "2017-12-07",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "jhkjhk",
+          "from": "2017-10-01",
+          "to": "2017-11-01",
+          "rating": 5,
+          "summary": ""
+        },
+        {
+          "name": "hhhhhhhhhhhhhh",
+          "from": "2016-07-01",
+          "to": "2017-12-05",
+          "rating": 10,
+          "summary": ""
+        },
+        {
+          "name": "rrrrrrrrrrrrr",
+          "from": "2017-02-02",
+          "to": "2017-10-27",
+          "rating": 4,
+          "summary": ""
+        },
+        {
+          "name": "dasdasdooooooo",
+          "from": "2017-02-02",
+          "to": "2017-10-12",
+          "rating": 9,
+          "summary": ""
+        }
+      ],
+      "projects": [
+        {
+          "name": "AIMS (Alternate Investment Manager Selection)",
+          "clientName": "Goldman Sachs",
+          "from": "2014-06-02",
+          "to": "2016-03-31",
+          "summary": "Screen readers will have trouble with your forms if you don’t include a label for every input. For these input groups, ensure that any additional label or functionality is conveyed to assistive technologies.",
+          "technologies": [
+            "JavaScript OOP",
+            "LESS",
+            "jQuery",
+            "Angularjs 1.4"
+          ],
+          "roles": [
+            "Setting up the infrastructure",
+            "Setting up the infrastructure",
+            "Setting up the infrastructure",
+            "Setting up the infrastructure",
+            "Setting up the infrastructure"
+          ],
+          "duration": "1 years, 10 months"
+        },
+        {
+          "name": "Project 2",
+          "clientName": "Goldman Sachs",
+          "from": "2017-07-01",
+          "to": "2017-12-08",
+          "summary": "Setting up the infrastructureSetting up the infrastructureSetting up the infrastructureSetting up the infrastructure",
+          "technologies": [],
+          "roles": [],
+          "duration": "5 months"
+        }
+      ],
+      "education": [
+        {
+          "name": "Higher Secondary School",
+          "institution": "CBSE Board",
+          "from": "1995-07-01",
+          "to": "1996-06-30",
+          "branch": "Science, Maths, English and Social Studies",
+          "duration": "1 years"
+        },
+        {
+          "name": "Senior Secondary School",
+          "institution": "CBSE Board",
+          "from": "1997-07-01",
+          "to": "1998-06-30",
+          "branch": "Physics, Chemistry, Maths and Biology",
+          "duration": "1 years"
+        }
+      ]
+    },
+    {
+      "_id": "5a2c31edb442e291a0f2bfe1",
+      "basicInfo": {
+        "profileName": "React UI Developer",
+        "firstName": "Sunil",
+        "lastName": "Kumar",
+        "email": "sunil.divyam@gmail.com",
+        "profileImage": "",
+        "phone": "9910129602",
+        "birthDate": "1979-03-05",
+        "overview": "<div>When <span>I</span> saw this tweet it struck me, because <span>I</span> realized that it has been <span>a</span> long <span>time</span> since <span>I</span> have optimized <span>a</span> page for print or even spared <span>a</span> thought on checking.&nbsp;&nbsp;<span>Maybe it’</span><span>s</span><span> due to the constant resizing of our browsers and making sure that our sites work perfectly in all shapes and sizes or maybe it’</span><span>s</span><span> just because </span><span>I</span><span> rarely print web pages myself. Whatever it is, </span><span>I</span><span> totally forgot about print </span><span>style</span><span> sheets and that’</span><span>s</span><span> bad.&nbsp;</span></div><div><span><br></span></div><div><span>Optimizing web pages for print is <b>important </b>because we want our sites to be as accessible as possible, no matter the medium. We shouldn’t make assumptions about our users and their behavior. People still print web pages. Just think about articles or blog posts, recipes, contact information, and directions or real estate sites. Someone somewhere will eventually try to print one of the pages you made.</span></div><br><br>",
+        "shortAddress": "Noida, India",
+        "address": "Aachvis Softech Pvt Ltd SEZ, GF Tower C, Plot No 7, Sec 144 Exp way",
+        "currentDesignation": "Senior Interactive Developer",
+        "experience": "7 years, 6 months"
+      },
+      "socialMedia": [
+        {
+          "name": "linkedin",
+          "url": "https://www.linkedin/sunil.divyam"
+        },
+        {
+          "name": "facebook",
+          "url": "https://www.facebook.com/sun.mgt"
+        },
+        {
+          "name": "twitter",
+          "url": "@sunil.divyam"
+        }
+      ],
+      "employers": [
+        {
+          "employerName": "Sapient Consulting",
+          "from": "2014-06-02",
+          "to": "",
+          "designation": "Senior Interactive Developer",
+          "address": "",
+          "summary": "All Interactive with JavaScript OOP, Angular 1, 2, Nodejs, React, .net, MVC, Web API",
+          "roles": [
+            "Interactive Design",
+            "UI Architecture",
+            "Track leading"
+          ],
+          "experience": "3 years, 6 months"
+        },
+        {
+          "employerName": "RedArrow India",
+          "from": "2010-06-01",
+          "to": "2014-05-31",
+          "designation": "Senior Programmer",
+          "address": "",
+          "summary": "All Interactive with JavaScript OOP, Angular 1, 2, Nodejs, React, .net, MVC, Web API",
+          "roles": [
+            "Database Design in SQL Server",
+            "Team leading",
+            "Client Interaction",
+            "Client Requirement Calls and Meetings",
+            "Web design1"
+          ],
+          "experience": "4 years"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Angular js 1.x",
+          "institution": "sdsa",
+          "from": "2016-06-02",
+          "to": null,
+          "branch": "sadsad",
+          "experience": "1 years, 6 months",
+          "rating": 8,
+          "summary": "Setting up the infrastructureSetting up the infrastructureSetting up the infrastructure"
+        },
+        {
+          "name": "Adobe Captivate",
+          "from": "2016-12-01",
+          "to": "2017-08-31",
+          "rating": 4,
+          "summary": "",
+          "experience": "9 months"
+        },
+        {
+          "name": "Adobe Campaign",
+          "from": "2017-08-01",
+          "to": null,
+          "rating": 5,
+          "summary": "",
+          "experience": "4 months"
+        },
+        {
+          "name": "Adobe Omniture",
+          "from": "2015-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": "",
+          "experience": "2 years, 11 months"
+        },
+        {
+          "name": "Hello",
+          "from": "2017-07-05",
+          "to": "2017-12-08",
+          "rating": 7,
+          "summary": "",
+          "experience": "5 months"
+        },
+        {
+          "name": "sadsad",
+          "from": "2016-10-01",
+          "to": "2017-12-09",
+          "rating": 1,
+          "summary": "",
+          "experience": "1 years, 2 months"
+        },
+        {
+          "name": "aasas",
+          "from": "2016-07-01",
+          "to": "2017-11-09",
+          "rating": 6,
+          "summary": "",
+          "experience": "1 years, 4 months"
+        },
+        {
+          "name": "sdsd",
+          "from": "2017-10-06",
+          "to": "2017-12-07",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "jhkjhk",
+          "from": "2017-10-01",
+          "to": "2017-11-01",
+          "rating": 5,
+          "summary": ""
+        },
+        {
+          "name": "hhhhhhhhhhhhhh",
+          "from": "2016-07-01",
+          "to": "2017-12-05",
+          "rating": 10,
+          "summary": ""
+        },
+        {
+          "name": "rrrrrrrrrrrrr",
+          "from": "2017-02-02",
+          "to": "2017-10-27",
+          "rating": 4,
+          "summary": ""
+        },
+        {
+          "name": "dasdasdooooooo",
+          "from": "2017-02-02",
+          "to": "2017-10-12",
+          "rating": 9,
+          "summary": ""
+        }
+      ],
+      "projects": [
+        {
+          "name": "AIMS (Alternate Investment Manager Selection)",
+          "clientName": "Goldman Sachs",
+          "from": "2014-06-02",
+          "to": "2016-03-31",
+          "summary": "Screen readers will have trouble with your forms if you don’t include a label for every input. For these input groups, ensure that any additional label or functionality is conveyed to assistive technologies.",
+          "technologies": [
+            "JavaScript OOP",
+            "LESS",
+            "jQuery",
+            "Angularjs 1.4"
+          ],
+          "roles": [
+            "Setting up the infrastructure",
+            "Setting up the infrastructure",
+            "Setting up the infrastructure",
+            "Setting up the infrastructure",
+            "Setting up the infrastructure"
+          ],
+          "duration": "1 years, 10 months"
+        },
+        {
+          "name": "Project 2",
+          "clientName": "Goldman Sachs",
+          "from": "2017-07-01",
+          "to": "2017-12-08",
+          "summary": "Setting up the infrastructureSetting up the infrastructureSetting up the infrastructureSetting up the infrastructure",
+          "technologies": [],
+          "roles": [],
+          "duration": "5 months"
+        }
+      ],
+      "education": [
+        {
+          "name": "Higher Secondary School",
+          "institution": "CBSE Board",
+          "from": "1995-07-01",
+          "to": "1996-06-30",
+          "branch": "Science, Maths, English and Social Studies",
+          "duration": "1 years"
+        },
+        {
+          "name": "Senior Secondary School",
+          "institution": "CBSE Board",
+          "from": "1997-07-01",
+          "to": "1998-06-30",
+          "branch": "Physics, Chemistry, Maths and Biology",
+          "duration": "1 years"
+        }
+      ],
+      "additionals": []
+    },
+    {
+      "_id": "5a2c32d1b442e291a0f2bfe2",
+      "basicInfo": {
+        "profileName": "Senior Associate L1",
+        "firstName": "Sunil",
+        "lastName": "Kumar",
+        "email": "sunil.divyam@gmail.com",
+        "profileImage": "",
+        "phone": "9910129602",
+        "birthDate": "1979-03-05",
+        "shortAddress": "Noida, India",
+        "address": "Aachvis Softech Pvt Ltd SEZ, GF Tower C, Plot No 7, Sec 144 Exp way",
+        "currentDesignation": "Senior Interactive Developer",
+        "experience": "7 years, 6 months"
+      },
+      "socialMedia": [
+        {
+          "name": "linkedin",
+          "url": "https://www.linkedin/sunil.divyam"
+        },
+        {
+          "name": "facebook",
+          "url": "https://www.facebook.com/sun.mgt"
+        },
+        {
+          "name": "twitter",
+          "url": "@sunil.divyam"
+        },
+        {
+          "name": "stack-overflow",
+          "url": "https://www.stackoverflow.com/sunil.divyam"
+        },
+        {
+          "name": "github",
+          "url": "https://www.github.com/sunil.divyam"
+        },
+        {
+          "name": "instagram",
+          "url": "https://www.instagram.com/lllld"
+        },
+        {
+          "name": "globe",
+          "url": "https://www.myweb.com"
+        }
+      ],
+      "employers": [
+        {
+          "employerName": "Sapient Consulting",
+          "from": "2014-06-02",
+          "to": "",
+          "designation": "Senior Interactive Developer",
+          "address": "",
+          "summary": "All Interactive with JavaScript OOP, Angular 1, 2, Nodejs, React, .net, MVC, Web API",
+          "roles": [
+            "Interactive Design",
+            "UI Architecture",
+            "Track leading"
+          ],
+          "experience": "3 years, 6 months"
+        },
+        {
+          "employerName": "RedArrow India",
+          "from": "2010-06-01",
+          "to": "2014-05-31",
+          "designation": "Senior Programmer",
+          "address": "",
+          "summary": "All Interactive with JavaScript OOP, Angular 1, 2, Nodejs, React, .net, MVC, Web API",
+          "roles": [
+            "Database Design in SQL Server",
+            "Team leading",
+            "Client Interaction",
+            "Client Requirement Calls and Meetings",
+            "Web design1"
+          ],
+          "experience": "4 years"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Angular js 1.x",
+          "institution": "sdsa",
+          "from": "2016-06-02",
+          "to": null,
+          "branch": "sadsad",
+          "experience": "1 years, 6 months",
+          "rating": 8,
+          "summary": "Setting up the infrastructureSetting up the infrastructureSetting up the infrastructure"
+        },
+        {
+          "name": "Adobe Captivate",
+          "from": "2016-12-01",
+          "to": "2017-08-31",
+          "rating": 4,
+          "summary": "",
+          "experience": "9 months"
+        },
+        {
+          "name": "Adobe Campaign",
+          "from": "2017-08-01",
+          "to": null,
+          "rating": 5,
+          "summary": "",
+          "experience": "4 months"
+        },
+        {
+          "name": "Adobe Omniture",
+          "from": "2015-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": "",
+          "experience": "2 years, 11 months"
+        },
+        {
+          "name": "Hello",
+          "from": "2017-07-05",
+          "to": "2017-12-08",
+          "rating": 7,
+          "summary": "",
+          "experience": "5 months"
+        },
+        {
+          "name": "sadsad",
+          "from": "2016-10-01",
+          "to": "2017-12-09",
+          "rating": 1,
+          "summary": "",
+          "experience": "1 years, 2 months"
+        },
+        {
+          "name": "aasas",
+          "from": "2016-07-01",
+          "to": "2017-11-09",
+          "rating": 6,
+          "summary": "",
+          "experience": "1 years, 4 months"
+        },
+        {
+          "name": "sdsd",
+          "from": "2017-10-06",
+          "to": "2017-12-07",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "jhkjhk",
+          "from": "2017-10-01",
+          "to": "2017-11-01",
+          "rating": 5,
+          "summary": ""
+        },
+        {
+          "name": "hhhhhhhhhhhhhh",
+          "from": "2016-07-01",
+          "to": "2017-12-05",
+          "rating": 10,
+          "summary": ""
+        },
+        {
+          "name": "rrrrrrrrrrrrr",
+          "from": "2017-02-02",
+          "to": "2017-10-27",
+          "rating": 4,
+          "summary": ""
+        },
+        {
+          "name": "dasdasdooooooo",
+          "from": "2017-02-02",
+          "to": "2017-10-12",
+          "rating": 9,
+          "summary": ""
+        }
+      ],
+      "projects": [
+        {
+          "name": "AIMS (Alternate Investment Manager Selection)",
+          "clientName": "Goldman Sachs",
+          "from": "2014-06-02",
+          "to": "2016-03-31",
+          "summary": "Screen readers will have trouble with your forms if you don’t include a label for every input. For these input groups, ensure that any additional label or functionality is conveyed to assistive technologies.",
+          "technologies": [
+            "JavaScript OOP",
+            "LESS",
+            "jQuery",
+            "Angularjs 1.4"
+          ],
+          "roles": [
+            "Setting up the infrastructure",
+            "Setting up the infrastructure",
+            "Setting up the infrastructure",
+            "Setting up the infrastructure",
+            "Setting up the infrastructure"
+          ],
+          "duration": "1 years, 10 months"
+        },
+        {
+          "name": "Project 2",
+          "clientName": "Goldman Sachs",
+          "from": "2017-07-01",
+          "to": "2017-12-08",
+          "summary": "Setting up the infrastructureSetting up the infrastructureSetting up the infrastructureSetting up the infrastructure",
+          "technologies": [],
+          "roles": [],
+          "duration": "5 months"
+        }
+      ],
+      "education": [
+        {
+          "name": "Higher Secondary School",
+          "institution": "CBSE Board",
+          "from": "1995-07-01",
+          "to": "1996-06-30",
+          "branch": "Science, Maths, English and Social Studies",
+          "duration": "1 years"
+        },
+        {
+          "name": "Senior Secondary School",
+          "institution": "CBSE Board",
+          "from": "1997-07-01",
+          "to": "1998-06-30",
+          "branch": "Physics, Chemistry, Maths and Biology",
+          "duration": "1 years"
+        }
+      ]
+    },
+    {
+      "_id": "5a682dfdb086b10e38198f06",
+      "basicInfo": {
+        "profileName": "Interactive Developer",
+        "firstName": "Sunil",
+        "lastName": "Kumar",
+        "email": "sunil.divyam@gmail.com",
+        "profileImage": "",
+        "phone": "9910129602",
+        "birthDate": "1979-03-05",
+        "shortAddress": "Noida, India",
+        "address": "Aachvis Softech Pvt Ltd SEZ, GF Tower C, Plot No 7, Sec 144 Exp way",
+        "currentDesignation": "Senior Interactive Developer",
+        "experience": "7 years, 6 months"
+      },
+      "socialMedia": [
+        {
+          "name": "stack-overflow",
+          "url": "https://www.stackoverflow.com/sunil.divyam"
+        },
+        {
+          "name": "github",
+          "url": "https://www.github.com/sunil.divyam"
+        },
+        {
+          "name": "linkedin",
+          "url": "https://linkedin.com/sunil.divyam"
+        }
+      ],
+      "employers": [
+        {
+          "employerName": "Sapient Consulting",
+          "from": "2014-06-02",
+          "to": "",
+          "designation": "Senior Interactive Developer",
+          "address": "",
+          "summary": "Performed as a Team Contributor and as an Individual, in the context of Web designing and development , Client Impact for Projects from Financial Markets and education Industries.",
+          "roles": [
+            "Interactive Design",
+            "UI Architecture",
+            "Track leading",
+            "Led multiple POCs to success within and across Teams/Projects.",
+            "Led Morning LLPs"
+          ],
+          "experience": "3 years, 6 months"
+        },
+        {
+          "employerName": "RedArrow India",
+          "from": "2010-02-01",
+          "to": "2014-05-31",
+          "designation": "Senior Programmer",
+          "address": "",
+          "summary": "Performed as a Team Contributor and as an Individual, in the context of Web designing and development , Client Impact for Projects from Financial Markets and education Industries.",
+          "roles": [
+            "Database Design in SQL Server",
+            "Team leading",
+            "Client Interaction",
+            "Client Requirement Calls and Meetings",
+            "Web design"
+          ],
+          "experience": "4 years"
+        },
+        {
+          "employerName": "Indiabulls Commodities Pvt. Ltd.",
+          "from": "2008-07-01",
+          "to": "2009-12-31",
+          "designation": "Relationship Manager",
+          "address": "",
+          "summary": "Dealt with Commodities & Bullion trading in Multi Commodity Exchange (MCX)",
+          "roles": [
+            "Identifying client base.",
+            "Opening and maintaining their online and offline  trading accounts.",
+            "Developing client portfolio.",
+            "Manage the pay in, pay out & cash.",
+            "Client Guidance regarding trading."
+          ]
+        },
+        {
+          "employerName": "Cosmo Tradex Pvt. Ltd.",
+          "from": "2007-07-01",
+          "to": "2008-06-30",
+          "designation": "Business Development Manager",
+          "address": "",
+          "summary": "Dealt with International Commodities & Bullion (Crude Oil, Natural Gas, Gold, Silver, Copper etc.) trading in Commodity Exchange (COMEX).",
+          "roles": [
+            "Identifying client base.",
+            "Opening and maintaining their online and offline  trading accounts.",
+            "Developing client portfolio.",
+            "Manage the pay in, pay out & cash.",
+            "Client Guidance regarding trading."
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "name": "JavaScript OOP, Advance JavaScript",
+          "from": "2010-01-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "HTML5",
+          "from": "2010-01-01",
+          "to": "",
+          "rating": 10,
+          "summary": "",
+          "experience": "5 months"
+        },
+        {
+          "name": "CSS3, LESS, SASS",
+          "from": "2010-10-01",
+          "to": "",
+          "rating": 10,
+          "summary": "",
+          "experience": "1 years, 2 months"
+        },
+        {
+          "name": "AngularJS 1.x",
+          "institution": "sdsa",
+          "from": "2016-06-02",
+          "to": null,
+          "branch": "sadsad",
+          "experience": "1 years, 6 months",
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Angularjs 2, + latest",
+          "from": "2016-04-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "React JS",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "JSX",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Redux",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "ES6",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "TypeScript",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "jQuery",
+          "from": "2010-01-01",
+          "to": "",
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Node JS",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Express JS",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Mongodb",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Gulp",
+          "from": "2014-01-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Webpack",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Grunt",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Browserify",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Babel",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "SVN",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "GIT",
+          "from": "2015-01-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Bootstrap 4",
+          "from": "2010-01-01",
+          "to": "",
+          "rating": 9,
+          "summary": "",
+          "experience": "1 years, 4 months"
+        },
+        {
+          "name": "Material UI",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Microsoft SQL Server, SQL",
+          "from": "2010-01-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "C#, .NET, MVC, Web API",
+          "from": "2010-01-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "JAVA, JSP",
+          "from": "2014-02-06",
+          "to": null,
+          "rating": 2,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Captivate",
+          "from": "2016-12-01",
+          "to": "2017-08-31",
+          "rating": 4,
+          "summary": "",
+          "experience": "9 months"
+        },
+        {
+          "name": "Adobe Campaign",
+          "from": "2017-08-01",
+          "to": null,
+          "rating": 5,
+          "summary": "",
+          "experience": "4 months"
+        },
+        {
+          "name": "Adobe AEM6",
+          "from": "2016-01-01",
+          "to": "2017-10-31",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Sitecatalyst",
+          "from": "2014-06-06",
+          "to": "",
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Omniture",
+          "from": "2015-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": "",
+          "experience": "2 years, 11 months"
+        },
+        {
+          "name": "Adobe Photoshop",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Moodle",
+          "from": "2015-01-01",
+          "to": "2016-03-01",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Highcharts",
+          "from": "2014-06-01",
+          "to": "",
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "D3 js",
+          "from": "2015-06-02",
+          "to": "2016-06-30",
+          "rating": 6,
+          "summary": ""
+        }
+      ],
+      "projects": [
+        {
+          "name": "AIMS (Alternate Investment Manager Selection)",
+          "clientName": "Goldman Sachs",
+          "from": "2014-06-02",
+          "to": "2017-03-31",
+          "summary": "The Alternative Investments & Manager Selection (“AIMS”) provides investors with investment and advisory solutions, across leading hedge fund managers, private equity funds, real estate managers, public equity strategies, fixed income strategies etc. .",
+          "technologies": [],
+          "roles": [],
+          "duration": "1 years, 10 months"
+        },
+        {
+          "name": "DAS (Digital Advertising Solutions)",
+          "clientName": "Goldman Sachs",
+          "from": "2017-04-01",
+          "to": "",
+          "summary": "Digital Advertising Solutions, Provides a range of services to the client, like Document Dropbox, Marketing Campaigns, Automated Emails etc.",
+          "technologies": [],
+          "roles": [],
+          "duration": "5 months"
+        },
+        {
+          "name": "GSAM (Goldman Sachs Assets Marketing)",
+          "clientName": "Goldman Sachs",
+          "from": "2017-04-01",
+          "to": null,
+          "summary": "",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "IMS (Insurance Management Systems)",
+          "clientName": "Secure Vision Ltd.",
+          "from": null,
+          "to": null,
+          "summary": "",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "MISMS (Multiple Installment Scheme Management System)",
+          "clientName": "Secure Vision Ltd.",
+          "from": null,
+          "to": null,
+          "summary": "",
+          "technologies": [],
+          "roles": []
+        }
+      ],
+      "education": [
+        {
+          "name": "Masters of Business Administration",
+          "institution": "Indraprastha University, New Delhi",
+          "from": "2005-07-01",
+          "to": "2007-06-30",
+          "branch": "Marketing and International Business"
+        },
+        {
+          "name": "Bachelor of Science",
+          "institution": "Dr. Bhim Rao Ambedkar University, Agra",
+          "from": "1998-07-01",
+          "to": "2001-06-30",
+          "branch": "Physics, Chemistry, Maths"
+        },
+        {
+          "name": "Senior Secondary School",
+          "institution": "CBSE Board",
+          "from": "1997-07-01",
+          "to": "1998-06-30",
+          "branch": "Physics, Chemistry, Maths and Biology",
+          "duration": "1 years"
+        },
+        {
+          "name": "Higher Secondary School",
+          "institution": "CBSE Board",
+          "from": "1995-07-01",
+          "to": "1996-06-30",
+          "branch": "Science, Maths, English and Social Studies",
+          "duration": "1 years"
+        },
+        {
+          "name": "O-Level",
+          "institution": "DOEACC Society, Ministry of Information Technology, New Delhi",
+          "from": "2002-07-01",
+          "to": "2003-06-30",
+          "branch": "Information Technology"
+        }
+      ],
+      "additionals": [
+        {
+          "title": "POCs",
+          "summary": "Successfully completed following POCs:",
+          "bullets": [
+            "POC done using D3 Charts and Angular js, the goal was to represent a complex data coming from multiple sources in a Multi branch Hierarchical custom charts and add interactivity to nodes.",
+            "POC done using Angular js, Moodle, Adobe Captivate, and Adobe AEM, the goal was to integrate all of these to create a Custom LMS for an existing Application.",
+            "POC done using Angular js, Gulp js, Bootstrap, Highcharts and DASH UI (a Goldman Sachs native Framework), the goal was to develop a Client Portfolio Explorer and Integrate DASH UI framework to have complex tables and charts.",
+            "POC done using Block Chain, Angular js, Node js and Bootstrap, the goal was to implement multiple node servers and develop a lending application using Block Chain.",
+            "POC done using Adobe Campaign, the goal was to write and introduce a JavaScript in between the Marketing Campaign Workflow, which processes Lakhs of prospects in batches and recreates them with additional data based on some business rules.",
+            "POC done using jekyll, liquid templates, and Adobe Campaign, the goal was to automate the email content creation for Adobe Campaign.",
+            "POC done using react and redux, the goal was to integrate and implement new modules with react components, redux store in existing complex, JavaScript Module Pattern Project.",
+            "POC done using intro.js, Angular js, the goal was to develop an interactive step by step help tutorial for an existing project."
+          ]
+        },
+        {
+          "title": "Training Facilitated  ",
+          "summary": "My knowledge sharing work as a Trainer:",
+          "bullets": [
+            "Angular js 1.6 | Workshop and Classroom Training to teams at Sapient Noida, India | 6 days, 2 hours each day.",
+            "Wep Pack 3 | Classrom Training to teams at Sapient Noida, India.",
+            "Wep Pack 3  | WebEx Ttraining to teams at Sapient across Globe.",
+            "JavaScript Module Pattern | Classroom Training to teams at Sapient Noida, India.",
+            "Node js Basics | Classroom Training to internal project team at Sapient Noida, India.",
+            "CSS - Best Practices | Classroom Training to teams at Sapient Noida, India.",
+            "Starting with MEAN | Classroom Training to teams at Sapient Noida, India",
+            "Integrating ASP.Net MVC and Angular js | Classroom Training to teams at Sapient Noida, India."
+          ]
+        },
+        {
+          "title": "Upcoming and Growing Technologies Knowledge",
+          "summary": "",
+          "bullets": [
+            "Machine Learning",
+            "Artificial Intelligence",
+            "Block Chain",
+            "Data Science"
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "5a6eb952b086b10e38198f07",
+      "basicInfo": {
+        "profileName": "JAPAN- Interactive Developer",
+        "firstName": "Sunil",
+        "lastName": "Kumar",
+        "email": "sunil.divyam@gmail.com",
+        "profileImage": "",
+        "phone": "9910129602",
+        "birthDate": "1979-03-05",
+        "shortAddress": "Noida, India",
+        "address": "Aachvis Softech Pvt Ltd SEZ, GF Tower C, Plot No 7, Sec 144 Exp way",
+        "currentDesignation": "Senior Interactive Developer",
+        "experience": "7 years, 6 months"
+      },
+      "socialMedia": [
+        {
+          "name": "stack-overflow",
+          "url": "https://www.stackoverflow.com/sunil.divyam"
+        },
+        {
+          "name": "github",
+          "url": "https://www.github.com/sunil.divyam"
+        },
+        {
+          "name": "linkedin",
+          "url": "https://linkedin.com/sunil.divyam"
+        }
+      ],
+      "employers": [
+        {
+          "employerName": "Sapient Consulting",
+          "from": "2014-06-02",
+          "to": "",
+          "designation": "Senior Interactive Developer",
+          "address": "",
+          "summary": "Performed as a Team Contributor and as an Individual, in the context of Web designing and development , Client Impact for Projects from Financial Markets and education Industries.",
+          "roles": [
+            "Interactive Design",
+            "UI Architecture",
+            "Track leading",
+            "Led multiple POCs to success within and across Teams/Projects.",
+            "Led Morning LLPs"
+          ],
+          "experience": "3 years, 6 months"
+        },
+        {
+          "employerName": "RedArrow India",
+          "from": "2010-02-01",
+          "to": "2014-05-31",
+          "designation": "Senior Programmer",
+          "address": "",
+          "summary": "Performed as a Team Contributor and as an Individual, in the context of Web designing and development , Client Impact for Projects from Financial Markets and education Industries.",
+          "roles": [
+            "Database Design in SQL Server",
+            "Team leading",
+            "Client Interaction",
+            "Client Requirement Calls and Meetings",
+            "Web design"
+          ],
+          "experience": "4 years"
+        },
+        {
+          "employerName": "Indiabulls Commodities Pvt. Ltd.",
+          "from": "2008-07-01",
+          "to": "2009-12-31",
+          "designation": "Relationship Manager",
+          "address": "",
+          "summary": "Dealt with Commodities & Bullion trading in Multi Commodity Exchange (MCX)",
+          "roles": [
+            "Identifying client base.",
+            "Opening and maintaining their online and offline  trading accounts.",
+            "Developing client portfolio.",
+            "Manage the pay in, pay out & cash.",
+            "Client Guidance regarding trading."
+          ]
+        },
+        {
+          "employerName": "Cosmo Tradex Pvt. Ltd.",
+          "from": "2007-07-01",
+          "to": "2008-06-30",
+          "designation": "Business Development Manager",
+          "address": "",
+          "summary": "Dealt with International Commodities & Bullion (Crude Oil, Natural Gas, Gold, Silver, Copper etc.) trading in Commodity Exchange (COMEX).",
+          "roles": [
+            "Identifying client base.",
+            "Opening and maintaining their online and offline  trading accounts.",
+            "Developing client portfolio.",
+            "Manage the pay in, pay out & cash.",
+            "Client Guidance regarding trading."
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "name": "JavaScript OOP, Advance JavaScript",
+          "from": "2010-01-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "HTML5",
+          "from": "2010-01-01",
+          "to": "",
+          "rating": 10,
+          "summary": "",
+          "experience": "5 months"
+        },
+        {
+          "name": "CSS3, LESS, SASS",
+          "from": "2010-10-01",
+          "to": "",
+          "rating": 10,
+          "summary": "",
+          "experience": "1 years, 2 months"
+        },
+        {
+          "name": "AngularJS 1.x",
+          "institution": "sdsa",
+          "from": "2016-06-02",
+          "to": null,
+          "branch": "sadsad",
+          "experience": "1 years, 6 months",
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Angularjs 2, + latest",
+          "from": "2016-04-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "React JS",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "JSX",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Redux",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "ES6",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "TypeScript",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "jQuery",
+          "from": "2010-01-01",
+          "to": "",
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Node JS",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Express JS",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Mongodb",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Gulp",
+          "from": "2014-01-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Webpack",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Grunt",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Browserify",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Babel",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "SVN",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "GIT",
+          "from": "2015-01-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Bootstrap 4",
+          "from": "2010-01-01",
+          "to": "",
+          "rating": 9,
+          "summary": "",
+          "experience": "1 years, 4 months"
+        },
+        {
+          "name": "Material UI",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Microsoft SQL Server, SQL",
+          "from": "2010-01-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "C#, .NET, MVC, Web API",
+          "from": "2010-01-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "JAVA, JSP",
+          "from": "2014-02-06",
+          "to": null,
+          "rating": 2,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Captivate",
+          "from": "2016-12-01",
+          "to": "2017-08-31",
+          "rating": 4,
+          "summary": "",
+          "experience": "9 months"
+        },
+        {
+          "name": "Adobe Campaign",
+          "from": "2017-08-01",
+          "to": null,
+          "rating": 5,
+          "summary": "",
+          "experience": "4 months"
+        },
+        {
+          "name": "Adobe AEM6",
+          "from": "2016-01-01",
+          "to": "2017-10-31",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Sitecatalyst",
+          "from": "2014-06-06",
+          "to": "",
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Omniture",
+          "from": "2015-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": "",
+          "experience": "2 years, 11 months"
+        },
+        {
+          "name": "Adobe Photoshop",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Moodle",
+          "from": "2015-01-01",
+          "to": "2016-03-01",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Highcharts",
+          "from": "2014-06-01",
+          "to": "",
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "D3 js",
+          "from": "2015-06-02",
+          "to": "2016-06-30",
+          "rating": 6,
+          "summary": ""
+        }
+      ],
+      "projects": [
+        {
+          "name": "AIMS (Alternate Investment Manager Selection)",
+          "clientName": "Goldman Sachs",
+          "from": "2014-06-02",
+          "to": "2017-03-31",
+          "summary": "The Alternative Investments & Manager Selection (“AIMS”) provides investors with investment and advisory solutions, across leading hedge fund managers, private equity funds, real estate managers, public equity strategies, fixed income strategies etc. .",
+          "technologies": [],
+          "roles": [],
+          "duration": "1 years, 10 months"
+        },
+        {
+          "name": "DAS (Digital Advertising Solutions)",
+          "clientName": "Goldman Sachs",
+          "from": "2017-04-01",
+          "to": "",
+          "summary": "Digital Advertising Solutions, Provides a range of services to the client, like Document Dropbox, Marketing Campaigns, Automated Emails etc.",
+          "technologies": [],
+          "roles": [],
+          "duration": "5 months"
+        },
+        {
+          "name": "GSAM (Goldman Sachs Assets Marketing)",
+          "clientName": "Goldman Sachs",
+          "from": "2017-04-01",
+          "to": null,
+          "summary": "",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "IMS (Insurance Management Systems)",
+          "clientName": "Secure Vision Ltd.",
+          "from": null,
+          "to": null,
+          "summary": "",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "MISMS (Multiple Installment Scheme Management System)",
+          "clientName": "Secure Vision Ltd.",
+          "from": null,
+          "to": null,
+          "summary": "",
+          "technologies": [],
+          "roles": []
+        }
+      ],
+      "education": [
+        {
+          "name": "Masters of Business Administration",
+          "institution": "Indraprastha University, New Delhi",
+          "from": "2005-07-01",
+          "to": "2007-06-30",
+          "branch": "Marketing and International Business"
+        },
+        {
+          "name": "Bachelor of Science",
+          "institution": "Dr. Bhim Rao Ambedkar University, Agra",
+          "from": "1998-07-01",
+          "to": "2001-06-30",
+          "branch": "Physics, Chemistry, Maths"
+        },
+        {
+          "name": "Senior Secondary School",
+          "institution": "CBSE Board",
+          "from": "1997-07-01",
+          "to": "1998-06-30",
+          "branch": "Physics, Chemistry, Maths and Biology",
+          "duration": "1 years"
+        },
+        {
+          "name": "Higher Secondary School",
+          "institution": "CBSE Board",
+          "from": "1995-07-01",
+          "to": "1996-06-30",
+          "branch": "Science, Maths, English and Social Studies",
+          "duration": "1 years"
+        },
+        {
+          "name": "O-Level",
+          "institution": "DOEACC Society, Ministry of Information Technology, New Delhi",
+          "from": "2002-07-01",
+          "to": "2003-06-30",
+          "branch": "Information Technology"
+        }
+      ],
+      "additionals": [
+        {
+          "title": "POCs",
+          "summary": "Successfully completed following POCs:",
+          "bullets": [
+            "POC done using D3 Charts and Angular js, the goal was to represent a complex data coming from multiple sources in a Multi branch Hierarchical custom charts and add interactivity to nodes.",
+            "POC done using Angular js, Moodle, Adobe Captivate, and Adobe AEM, the goal was to integrate all of these to create a Custom LMS for an existing Application.",
+            "POC done using Angular js, Gulp js, Bootstrap, Highcharts and DASH UI (a Goldman Sachs native Framework), the goal was to develop a Client Portfolio Explorer and Integrate DASH UI framework to have complex tables and charts.",
+            "POC done using Block Chain, Angular js, Node js and Bootstrap, the goal was to implement multiple node servers and develop a lending application using Block Chain.",
+            "POC done using Adobe Campaign, the goal was to write and introduce a JavaScript in between the Marketing Campaign Workflow, which processes Lakhs of prospects in batches and recreates them with additional data based on some business rules.",
+            "POC done using jekyll, liquid templates, and Adobe Campaign, the goal was to automate the email content creation for Adobe Campaign.",
+            "POC done using react and redux, the goal was to integrate and implement new modules with react components, redux store in existing complex, JavaScript Module Pattern Project.",
+            "POC done using intro.js, Angular js, the goal was to develop an interactive step by step help tutorial for an existing project."
+          ]
+        },
+        {
+          "title": "Training Facilitated  ",
+          "summary": "My knowledge sharing work as a Trainer:",
+          "bullets": [
+            "Angular js 1.6 | Workshop and Classroom Training to teams at Sapient Noida, India | 6 days, 2 hours each day.",
+            "Wep Pack 3 | Classrom Training to teams at Sapient Noida, India.",
+            "Wep Pack 3  | WebEx Ttraining to teams at Sapient across Globe.",
+            "JavaScript Module Pattern | Classroom Training to teams at Sapient Noida, India.",
+            "Node js Basics | Classroom Training to internal project team at Sapient Noida, India.",
+            "CSS - Best Practices | Classroom Training to teams at Sapient Noida, India.",
+            "Starting with MEAN | Classroom Training to teams at Sapient Noida, India",
+            "Integrating ASP.Net MVC and Angular js | Classroom Training to teams at Sapient Noida, India."
+          ]
+        },
+        {
+          "title": "Upcoming and Growing Technologies Knowledge",
+          "summary": "",
+          "bullets": [
+            "Machine Learning",
+            "Artificial Intelligence",
+            "Block Chain",
+            "Data Science"
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "5a6f832ab086b10e38198f08",
+      "basicInfo": {
+        "profileName": "Senior Interactive Developer L1 | JAPAN | 30 Jan 2018",
+        "firstName": "Sunil",
+        "lastName": "Kumar",
+        "email": "sunil.divyam@gmail.com",
+        "profileImage": "",
+        "phone": "+919910129602",
+        "birthDate": "1979-03-05",
+        "shortAddress": "Noida, India",
+        "address": "Aachvis Softech Pvt Ltd SEZ, GF Tower C, Plot No 7, Sec 144 Exp way",
+        "currentDesignation": "Senior Interactive Developer",
+        "experience": "7 years, 6 months"
+      },
+      "socialMedia": [
+        {
+          "name": "linkedin",
+          "url": "https://linkedin.com/sunil.divyam"
+        },
+        {
+          "name": "github",
+          "url": "https://www.github.com/sunil.divyam"
+        }
+      ],
+      "employers": [
+        {
+          "employerName": "Sapient Consulting",
+          "from": "2014-06-02",
+          "to": "",
+          "designation": "Senior Interactive Developer L1",
+          "address": "",
+          "summary": "Performed as a team contributor and as an individual, in multiple projects and teams, excelling towards client impact and satisfaction.",
+          "roles": [
+            "Analysing existing and developing complex multi module, multi featured web applications.",
+            "UI Architecture, Design & Development.",
+            "Track leading & team development.",
+            "Led multiple POCs to success within and across Teams/Projects.",
+            "Integration of latest and most compatible technologies in the projects."
+          ],
+          "experience": "3 years, 6 months"
+        },
+        {
+          "employerName": "RedArrow India",
+          "from": "2010-02-01",
+          "to": "2014-05-31",
+          "designation": "Senior Programmer",
+          "address": "",
+          "summary": "Performed as a team contributor and as an individual, in multiple projects and teams, excelling towards client impact and satisfaction. Worked on multiple projects from financial markets and education industries.",
+          "roles": [
+            "User Experience development.",
+            "Integration and development of Angularjs and jQuery in ASP.net web forms and MVC applications",
+            "Integration and development of Web APIs in .Net application using Angularjs",
+            "Database Design in SQL Server.",
+            "Team leading and team development.",
+            "Client Interaction through Requirement Calls and Meetings."
+          ],
+          "experience": "4 years"
+        },
+        {
+          "employerName": "Indiabulls Commodities Pvt. Ltd.",
+          "from": "2008-07-01",
+          "to": "2009-12-31",
+          "designation": "Relationship Manager",
+          "address": "",
+          "summary": "Performed towards building and managing clientele and their investment portfolio. \nDealt with Commodities & Bullion trading in Multi Commodity Exchange (MCX) of India.",
+          "roles": [
+            "Identifying, targeting, acquisition, and retaining clientele by performing marketing and management activities.",
+            "Opening and maintaining clients' online and offline trading accounts.",
+            "Developing and assisting client in managing their investment portfolio.",
+            "Manage the pay in, pay out & cash.",
+            "Client Guidance regarding trading."
+          ]
+        },
+        {
+          "employerName": "Cosmo Tradex Pvt. Ltd.",
+          "from": "2007-07-01",
+          "to": "2008-06-30",
+          "designation": "Business Development Manager",
+          "address": "",
+          "summary": "Performed towards building and managing clientele and their investment portfolio. \nDealt with International Commodities & Bullion trading in Commodity Exchange (COMEX).",
+          "roles": [
+            "Identifying, targeting, acquisition, and retaining clientele by performing marketing and management activities.",
+            "Opening and maintaining clients' online and offline trading accounts.",
+            "Developing and assisting client in managing their investment portfolio.",
+            "Manage the pay in, pay out & cash.",
+            "Client Guidance regarding trading."
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "name": "OOJS & Advance JavaScript",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "HTML5",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 10,
+          "summary": "",
+          "experience": "5 months"
+        },
+        {
+          "name": "CSS3, LESS, SASS",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 10,
+          "summary": "",
+          "experience": "1 years, 2 months"
+        },
+        {
+          "name": "AngularJS 1.x",
+          "institution": "sdsa",
+          "from": "2013-10-01",
+          "to": null,
+          "branch": "sadsad",
+          "experience": "1 years, 6 months",
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Angularjs 2 to 5+",
+          "from": "2016-04-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "React JS",
+          "from": "2017-03-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "JSX",
+          "from": "2017-03-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Redux",
+          "from": "2017-03-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "ES6",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "TypeScript",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "jQuery",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Node JS",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Express JS",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Mongodb",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Gulp",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Webpack",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Grunt",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Browserify",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Babel",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "SVN",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "GIT",
+          "from": "2015-01-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Bootstrap 3 & 4",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 9,
+          "summary": "",
+          "experience": "1 years, 4 months"
+        },
+        {
+          "name": "Material UI",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Microsoft SQL Server, SQL",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "C#, .NET, MVC, Web API",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "JAVA, JSP",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 2,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Captivate",
+          "from": "2016-12-01",
+          "to": "2017-08-31",
+          "rating": 5,
+          "summary": "",
+          "experience": "9 months"
+        },
+        {
+          "name": "Adobe Campaign",
+          "from": "2017-09-01",
+          "to": null,
+          "rating": 5,
+          "summary": "",
+          "experience": "4 months"
+        },
+        {
+          "name": "Adobe AEM 5 & 6",
+          "from": "2014-06-02",
+          "to": "2017-03-31",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Sitecatalyst",
+          "from": "2014-06-06",
+          "to": "",
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Omniture",
+          "from": "2015-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": "",
+          "experience": "2 years, 11 months"
+        },
+        {
+          "name": "Adobe Photoshop",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Moodle",
+          "from": "2015-05-01",
+          "to": "2016-06-30",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Highcharts",
+          "from": "2014-06-01",
+          "to": "",
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "D3 js",
+          "from": "2015-06-02",
+          "to": "2016-06-30",
+          "rating": 6,
+          "summary": ""
+        }
+      ],
+      "projects": [
+        {
+          "name": "DAS (Digital Advertising Solutions) Campaign",
+          "clientName": "Goldman Sachs",
+          "from": "2017-09-01",
+          "to": "",
+          "summary": "Digital Advertising Solutions, Provides a range of services to the client, like Document Dropbox, Marketing Campaigns, Automated real time and marketing campaign Emails etc.",
+          "technologies": [],
+          "roles": [],
+          "duration": "5 months"
+        },
+        {
+          "name": "GSAM (Goldman Sachs Assets Marketing)",
+          "clientName": "Goldman Sachs",
+          "from": "2017-03-01",
+          "to": null,
+          "summary": "Goldman Sachs Asset Management (GSAM) is one of the world’s leading investment managers. Across 33 offices worldwide, Goldman Sachs extend these global capabilities to the world’s leading pension plans, sovereign wealth funds, central banks, insurance companies, financial institutions, endowments, foundations, individuals and family offices, for whom it invest or advise on more than $1 trillion of assets.",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "GSCIO-PE (Goldman Sachs CIO - Portfolio Explorer)",
+          "clientName": "Goldman Sachs",
+          "from": "2016-07-01",
+          "to": "2017-02-28",
+          "summary": "Goldman Sachs CIO Portfolio Explorer provides a detailed analysis of client portfolio and cash flows with the help of complex visualizations using various tables, graph and charts.",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "GS-AIMS University",
+          "clientName": "Goldman Sachs",
+          "from": "2015-05-01",
+          "to": "2016-06-30",
+          "summary": "Goldman Sachs AIMS University provides a range of educational programs, courses, course modules, lessons, instructor courses, and quizzes. It keeps track of the users learning progress.",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "GSCIO-AIMS (Goldman Sachs CIO - Alternate Investment Manager Selection)",
+          "clientName": "Goldman Sachs",
+          "from": "2014-06-02",
+          "to": "2017-03-31",
+          "summary": "The Alternative Investments & Manager Selection (“AIMS”) provides investors with investment and advisory solutions, across leading hedge fund managers, private equity funds, real estate managers, public equity strategies, fixed income strategies etc. .",
+          "technologies": [],
+          "roles": [],
+          "duration": "1 years, 10 months"
+        },
+        {
+          "name": "IMS (Insurance Management System)",
+          "clientName": "Secure Vision Ltd.",
+          "from": "2013-04-01",
+          "to": "2014-05-31",
+          "summary": "Secure Vision's Insurance Management System (IMS), automates the key processes involved in providing multiple Insurance plans to its customers and experience to its users with user friendly subsystems. This also provides Secure Vision a platform to manage Insurance business and its clientele. ",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "MISMS (Multiple Installment Scheme Management System)",
+          "clientName": "Secure Vision Ltd.",
+          "from": "2012-01-01",
+          "to": "2013-03-30",
+          "summary": "Secure Vision's MISMS (Multiple Installment Scheme Management System), automates the processes involved in managing Multiple Installment Scheme and experience to its users with user friendly subsystems. ",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "NAIP, Nematology Project",
+          "clientName": "Indian Agricultural Research Institute (IARI)",
+          "from": "2011-05-01",
+          "to": "2011-12-30",
+          "summary": "NAIP, a research project carried by division of Nematology, Indian Agricultural Research Institute (IARI), New Delhi. The project provides detailed information regarding its evolution, history, progress, deliverable, National Training,work allocations, expected outcomes, published papers, environmental and social issues, timelines etc.. ",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "CBSE Learning",
+          "clientName": "CBSE School, Nigeria",
+          "from": "2010-02-01",
+          "to": "2011-04-30",
+          "summary": "CBSE Learning was a public facing web site with authentication and authorization features, that provides authors and moderators to compose and publish Central Board of Secondary Education (CBSE)'s learning materials like Sample Papers,  Question Papers, Chapters, latest CBSE news and events, Solved Questions from experts and many other features. This also provides administrator's desktop panel, that provides detailed information for analysis and administer. Public Users can register, login and access public and featured contents.",
+          "technologies": [],
+          "roles": []
+        }
+      ],
+      "education": [
+        {
+          "name": "Masters of Business Administration",
+          "institution": "Indraprastha University, New Delhi",
+          "from": "2005-07-01",
+          "to": "2007-06-30",
+          "branch": "Marketing and International Business"
+        },
+        {
+          "name": "Bachelor of Science",
+          "institution": "Dr. Bhim Rao Ambedkar University, Agra",
+          "from": "1998-07-01",
+          "to": "2001-06-30",
+          "branch": "Physics, Chemistry, Maths"
+        },
+        {
+          "name": "Senior Secondary School",
+          "institution": "CBSE Board",
+          "from": "1997-07-01",
+          "to": "1998-06-30",
+          "branch": "Physics, Chemistry, Maths and Biology",
+          "duration": "1 years"
+        },
+        {
+          "name": "Higher Secondary School",
+          "institution": "CBSE Board",
+          "from": "1995-07-01",
+          "to": "1996-06-30",
+          "branch": "Science, Maths, English and Social Studies",
+          "duration": "1 years"
+        }
+      ],
+      "additionals": [
+        {
+          "title": "Awards & Certifications",
+          "summary": "",
+          "bullets": [
+            "O-Level, 1 year Diploma in Information Technology in 2003 from DOEACC Society, Ministry of Information Technology, New Delhi.",
+            "Awarded National Mathematics Olympiad Certificate, 1996.",
+            "Sapient Core Values, recognition certificate, for extraordinary experiences for clients and their customers.",
+            "Multiple recognition from team members across projects at Sapient."
+          ]
+        },
+        {
+          "title": "Successful POCs",
+          "summary": "Successfully completed following POCs:",
+          "bullets": [
+            "POC done using D3 Charts and Angular js, the goal was to represent a complex data coming from multiple sources in a Multi branch Hierarchical custom charts and add interactivity to nodes.",
+            "POC done using Angular js, Moodle, Adobe Captivate, and Adobe AEM, the goal was to integrate all of these to create a Custom LMS for an existing Application.",
+            "POC done using Angular js, Gulp js, Bootstrap, Highcharts and DASH UI (a Goldman Sachs native Framework), the goal was to develop a Client Portfolio Explorer and Integrate DASH UI framework to have complex tables and charts.",
+            "POC done using Block Chain, Angular js, Node js and Bootstrap, the goal was to implement multiple node servers and develop a lending application using Block Chain.",
+            "POC done using Adobe Campaign, the goal was to write and introduce a JavaScript in between the Marketing Campaign Workflow, which processes Lakhs of prospects in batches and recreates them with additional data based on some business rules.",
+            "POC done using jekyll, liquid templates, and Adobe Campaign, the goal was to automate the email content creation for Adobe Campaign.",
+            "POC done using react and redux, the goal was to integrate and implement new modules with react components, redux store in existing complex, JavaScript Module Pattern Project.",
+            "POC done using intro.js, Angular js, the goal was to develop an interactive step by step help tutorial for an existing project."
+          ]
+        },
+        {
+          "title": "Training and Seminars Facilitated",
+          "summary": "I have contributed by sharing my knowledge by various ways:",
+          "bullets": [
+            "Angular js 1.6 | Workshop and Classroom Session to teams at Sapient Noida, India | 6 days, 2 hours each day.",
+            "Wep Pack 3 | Classrom Session to teams at Sapient Noida, India.",
+            "Wep Pack 3  | WebEx Session to teams at Sapient across Globe.",
+            "JavaScript Module Pattern | Classroom Session to team at Sapient Noida, India.",
+            "CSS - Best Practices | Classroom Session to teams at RedArrow India.",
+            "Integrating ASP.Net MVC and Angular js Classroom Session to teams at RedArrow India.",
+            "Presented in National Seminars at college."
+          ]
+        },
+        {
+          "title": "Upcoming and Growing Technologies Knowledge",
+          "summary": "Gaining interest and knowledge in following recent areas of technology and science:",
+          "bullets": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Block Chain"
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "5afcf276698d08135476758c",
+      "basicInfo": {
+        "profileName": "Senior Interactive Developer L1 | SWITCH | 17-May-2018",
+        "firstName": "Sunil",
+        "lastName": "Kumar",
+        "email": "sunil.divyam@gmail.com",
+        "profileImage": "",
+        "phone": "+919910129602",
+        "birthDate": "1979-03-05",
+        "shortAddress": "Noida, India",
+        "address": "Aachvis Softech Pvt Ltd SEZ, GF Tower C, Plot No 7, Sec 144 Exp way",
+        "currentDesignation": "Senior Interactive Developer",
+        "experience": "7 years, 6 months"
+      },
+      "socialMedia": [
+        {
+          "name": "linkedin",
+          "url": "https://linkedin.com/sunil.divyam"
+        },
+        {
+          "name": "github",
+          "url": "https://www.github.com/sunil.divyam"
+        }
+      ],
+      "employers": [
+        {
+          "employerName": "Sapient Consulting",
+          "from": "2014-06-02",
+          "to": "",
+          "designation": "Senior Interactive Developer L1",
+          "address": "",
+          "summary": "Performed as a team contributor and as an individual, in multiple projects and teams, excelling towards client impact and satisfaction.",
+          "roles": [
+            "Analysing existing and developing complex multi module, multi featured web applications.",
+            "UI Architecture, Design & Development.",
+            "Track leading & team development.",
+            "Led multiple POCs to success within and across Teams/Projects.",
+            "Integration of latest and most compatible technologies in the projects.",
+            "Working with SCRUM and Agile approach.",
+            "Working with JIRA and Confluence.",
+            "Implementation of best approaches and practices, such as Test Driven Development (TDD), Domain Driven Development (DDD), Model View Controller (MVC) etc. .",
+            "Maintaining code quality at its best through Code Reviews.",
+            "Implementing UI build process using various build tools like Gulp, grunt, webpack etc. .",
+            "Contributed as an Interviewer."
+          ],
+          "experience": "3 years, 6 months"
+        },
+        {
+          "employerName": "RedArrow India",
+          "from": "2010-02-01",
+          "to": "2014-05-31",
+          "designation": "Senior Programmer",
+          "address": "",
+          "summary": "Performed as a team contributor and as an individual, in multiple projects and teams, excelling towards client impact and satisfaction. Worked on multiple projects from financial markets and education industries.",
+          "roles": [
+            "User Experience development.",
+            "Integration and development of Angularjs and jQuery in ASP.net web forms and MVC applications",
+            "Integration and development of Web APIs in .Net application using Angularjs",
+            "Database Design in SQL Server.",
+            "Team leading and team development.",
+            "Client Interaction through Requirement Calls and Meetings.",
+            "Maintaining code quality at its best through Code Reviews.",
+            "Registering and setting up Domains and Sub-Domains.",
+            "Hosting and managing websites."
+          ],
+          "experience": "4 years"
+        },
+        {
+          "employerName": "Indiabulls Commodities Pvt. Ltd.",
+          "from": "2008-07-01",
+          "to": "2009-12-31",
+          "designation": "Relationship Manager",
+          "address": "",
+          "summary": "Performed towards building and managing clientele and their investment portfolio. \nDealt with Commodities & Bullion trading in Multi Commodity Exchange (MCX) of India.",
+          "roles": [
+            "Identifying, targeting, acquisition, and retaining clientele by performing marketing and management activities.",
+            "Opening and maintaining clients' online and offline trading accounts.",
+            "Developing and assisting client in managing their investment portfolio.",
+            "Manage the pay in, pay out & cash.",
+            "Client Guidance regarding trading."
+          ]
+        },
+        {
+          "employerName": "Cosmo Tradex Pvt. Ltd.",
+          "from": "2007-07-01",
+          "to": "2008-06-30",
+          "designation": "Business Development Manager",
+          "address": "",
+          "summary": "Performed towards building and managing clientele and their investment portfolio. \nDealt with International Commodities & Bullion trading in Commodity Exchange (COMEX).",
+          "roles": [
+            "Identifying, targeting, acquisition, and retaining clientele by performing marketing and management activities.",
+            "Opening and maintaining clients' online and offline trading accounts.",
+            "Developing and assisting client in managing their investment portfolio.",
+            "Manage the pay in, pay out & cash.",
+            "Client Guidance regarding trading."
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "name": "OOJS & Advance JavaScript",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 9,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "React JS",
+          "from": "2017-03-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "AngularJS 1.x",
+          "institution": "sdsa",
+          "from": "2013-10-01",
+          "to": null,
+          "branch": "sadsad",
+          "experience": "1 years, 6 months",
+          "rating": 9,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "Angularjs 2 to 6+",
+          "from": "2016-04-01",
+          "to": null,
+          "rating": 7,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "HTML5",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 10,
+          "summary": "",
+          "experience": "5 months",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "CSS3, LESS, SASS",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 10,
+          "summary": "",
+          "experience": "1 years, 2 months",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "jQuery",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 9,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "Redux",
+          "from": "2017-03-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": false
+        },
+        {
+          "name": "React Native",
+          "from": "2018-04-01",
+          "to": null,
+          "rating": 2,
+          "summary": ""
+        },
+        {
+          "name": "Bootstrap 3 & 4",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 9,
+          "summary": "",
+          "experience": "1 years, 4 months"
+        },
+        {
+          "name": "Material UI",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Node JS",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Express JS",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Webpack",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Gulp",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Grunt",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "TypeScript",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": false
+        },
+        {
+          "name": "JSX",
+          "from": "2017-03-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": false
+        },
+        {
+          "name": "ES6",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": false
+        },
+        {
+          "name": "Mongodb",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Browserify",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Babel",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "SVN",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "GIT",
+          "from": "2015-01-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Microsoft SQL Server, SQL",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "C#, .NET, MVC, Web API",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "JAVA, JSP",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 2,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Captivate",
+          "from": "2016-12-01",
+          "to": "2017-08-31",
+          "rating": 5,
+          "summary": "",
+          "experience": "9 months"
+        },
+        {
+          "name": "Adobe Campaign",
+          "from": "2017-09-01",
+          "to": null,
+          "rating": 5,
+          "summary": "",
+          "experience": "4 months"
+        },
+        {
+          "name": "Adobe AEM 5 & 6",
+          "from": "2014-06-02",
+          "to": "2017-03-31",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Sitecatalyst",
+          "from": "2014-06-06",
+          "to": "",
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Omniture",
+          "from": "2015-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": "",
+          "experience": "2 years, 11 months"
+        },
+        {
+          "name": "Adobe Photoshop",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Moodle",
+          "from": "2015-05-01",
+          "to": "2016-06-30",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Highcharts",
+          "from": "2014-06-02",
+          "to": "",
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "D3 js",
+          "from": "2015-06-02",
+          "to": "2016-06-30",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Karma and Jasmine",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "JSON, XML, YML",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Goldman Sachs DASH UI",
+          "from": "2016-07-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        }
+      ],
+      "projects": [
+        {
+          "name": "AYCO, Marketing Site",
+          "clientName": "Goldman Sachs",
+          "from": "2018-01-01",
+          "to": null,
+          "summary": "AYCO is a Goldman Sachs Company, and this project is a marketing site developed using Adobe AEM6 for the content pages and JavaScript, CSS3, Highcharts at the UI development.",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "DAS (Digital Advertising Solutions) Campaign",
+          "clientName": "Goldman Sachs",
+          "from": "2017-09-01",
+          "to": "2017-12-31",
+          "summary": "Digital Advertising Solutions, Provides a range of services to the client, like Document Dropbox, Marketing Campaigns, Automated real time and marketing campaign Emails etc.",
+          "technologies": [],
+          "roles": [],
+          "duration": "5 months"
+        },
+        {
+          "name": "GSAM (Goldman Sachs Assets Marketing)",
+          "clientName": "Goldman Sachs",
+          "from": "2017-03-01",
+          "to": null,
+          "summary": "Goldman Sachs Asset Management (GSAM) is one of the world’s leading investment managers. Across 33 offices worldwide, Goldman Sachs extend these global capabilities to the world’s leading pension plans, sovereign wealth funds, central banks, insurance companies, financial institutions, endowments, foundations, individuals and family offices, for whom it invest or advise on more than $1 trillion of assets.",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "GSCIO-PE (Goldman Sachs CIO - Portfolio Explorer)",
+          "clientName": "Goldman Sachs",
+          "from": "2016-07-01",
+          "to": "2017-02-28",
+          "summary": "Goldman Sachs CIO Portfolio Explorer provides a detailed analysis of client portfolio and cash flows with the help of complex visualizations using various tables, graph and charts.",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "GS-AIMS University",
+          "clientName": "Goldman Sachs",
+          "from": "2015-05-01",
+          "to": "2016-06-30",
+          "summary": "Goldman Sachs AIMS University provides a range of educational programs, courses, course modules, lessons, instructor courses, and quizzes. It keeps track of the users learning progress.",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "GSCIO-AIMS (Goldman Sachs CIO - Alternate Investment Manager Selection)",
+          "clientName": "Goldman Sachs",
+          "from": "2014-06-02",
+          "to": "2017-03-31",
+          "summary": "The Alternative Investments & Manager Selection (“AIMS”) provides investors with investment and advisory solutions, across leading hedge fund managers, private equity funds, real estate managers, public equity strategies, fixed income strategies etc. .",
+          "technologies": [],
+          "roles": [],
+          "duration": "1 years, 10 months"
+        },
+        {
+          "name": "IMS (Insurance Management System)",
+          "clientName": "Secure Vision Ltd.",
+          "from": "2013-04-01",
+          "to": "2014-05-31",
+          "summary": "Secure Vision's Insurance Management System (IMS), automates the key processes involved in providing multiple Insurance plans to its customers and experience to its users with user friendly subsystems. This also provides Secure Vision a platform to manage Insurance business and its clientele. ",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "MISMS (Multiple Installment Scheme Management System)",
+          "clientName": "Secure Vision Ltd.",
+          "from": "2012-01-01",
+          "to": "2013-03-30",
+          "summary": "Secure Vision's MISMS (Multiple Installment Scheme Management System), automates the processes involved in managing Multiple Installment Scheme and experience to its users with user friendly subsystems. ",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "NAIP, Nematology Project",
+          "clientName": "Indian Agricultural Research Institute (IARI)",
+          "from": "2011-05-01",
+          "to": "2011-12-30",
+          "summary": "NAIP, a research project carried by division of Nematology, Indian Agricultural Research Institute (IARI), New Delhi. The project provides detailed information regarding its evolution, history, progress, deliverable, National Training,work allocations, expected outcomes, published papers, environmental and social issues, timelines etc.. ",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "CBSE Learning",
+          "clientName": "CBSE School, Nigeria",
+          "from": "2010-02-01",
+          "to": "2011-04-30",
+          "summary": "CBSE Learning was a public facing web site with authentication and authorization features, that provides authors and moderators to compose and publish Central Board of Secondary Education (CBSE)'s learning materials like Sample Papers,  Question Papers, Chapters, latest CBSE news and events, Solved Questions from experts and many other features. This also provides administrator's desktop panel, that provides detailed information for analysis and administer. Public Users can register, login and access public and featured contents.",
+          "technologies": [],
+          "roles": []
+        }
+      ],
+      "education": [
+        {
+          "name": "Masters of Business Administration",
+          "institution": "Guru Govind Singh Indraprastha University, Delhi",
+          "from": "2005-07-01",
+          "to": "2007-06-30",
+          "branch": "Marketing and International Business"
+        },
+        {
+          "name": "Bachelor of Science",
+          "institution": "Dr. Bhim Rao Ambedkar University, Agra",
+          "from": "1998-07-01",
+          "to": "2001-06-30",
+          "branch": "Physics, Chemistry, Maths"
+        },
+        {
+          "name": "Senior Secondary School",
+          "institution": "CBSE Board",
+          "from": "1997-07-01",
+          "to": "1998-06-30",
+          "branch": "Physics, Chemistry, Maths and Biology",
+          "duration": "1 years"
+        },
+        {
+          "name": "Higher Secondary School",
+          "institution": "CBSE Board",
+          "from": "1995-07-01",
+          "to": "1996-06-30",
+          "branch": "Science, Maths, English and Social Studies",
+          "duration": "1 years"
+        }
+      ],
+      "additionals": [
+        {
+          "title": "Awards & Certifications",
+          "summary": "",
+          "bullets": [
+            "A-Level, 1 year Diploma in Information Technology in 2003 from DOEACC Society, Ministry of Information Technology, New Delhi.",
+            "Awarded National Mathematics Olympiad Certificate, 1996.",
+            "Sapient Core Values, recognition certificate, for extraordinary experiences for clients and their customers.",
+            "Multiple recognition from team members across projects at Sapient."
+          ]
+        },
+        {
+          "title": "Successful POCs",
+          "summary": "Successfully completed following POCs:",
+          "bullets": [
+            "POC done using D3 Charts and Angular js, the goal was to represent a complex data coming from multiple sources in a Multi branch Hierarchical custom charts and add interactivity to nodes.",
+            "POC done using Angular js, Moodle, Adobe Captivate, and Adobe AEM, the goal was to integrate all of these to create a Custom LMS for an existing Application.",
+            "POC done using Angular js, Gulp js, Bootstrap, Highcharts and DASH UI (a Goldman Sachs native Framework), the goal was to develop a Client Portfolio Explorer and Integrate DASH UI framework to have complex tables and charts.",
+            "POC done using Block Chain, Angular js, Node js and Bootstrap, the goal was to implement multiple node servers and develop a lending application using Block Chain.",
+            "POC done using Adobe Campaign, the goal was to write and introduce a JavaScript in between the Marketing Campaign Workflow, which processes Lakhs of prospects in batches and recreates them with additional data based on some business rules.",
+            "POC done using jekyll, liquid templates, and Adobe Campaign, the goal was to automate the email content creation for Adobe Campaign.",
+            "POC done using react and redux, the goal was to integrate and implement new modules with react components, redux store in existing complex, JavaScript Module Pattern Project.",
+            "POC done using intro.js, Angular js, the goal was to develop an interactive step by step help tutorial for an existing project.",
+            "POC in-progress for developing Single Ecosystem for React Native (Android & IOS) and React Web Apps."
+          ]
+        },
+        {
+          "title": "Training and Seminars Facilitated",
+          "summary": "I have contributed by sharing my knowledge by various ways:",
+          "bullets": [
+            "Angular js 1.6 | Workshop and Classroom Session to teams at Sapient Noida, India | 6 days, 2 hours each day.",
+            "Wep Pack 3 | Classrom Session to teams at Sapient Noida, India.",
+            "Wep Pack 3  | WebEx Session to teams at Sapient across Globe.",
+            "JavaScript Module Pattern | Classroom Session to team at Sapient Noida, India.",
+            "CSS - Best Practices | Classroom Session to teams at RedArrow India.",
+            "Integrating ASP.Net MVC and Angular js Classroom Session to teams at RedArrow India.",
+            "Presented in National Seminars at college."
+          ]
+        },
+        {
+          "title": "Upcoming and Growing Technologies Knowledge",
+          "summary": "Gaining interest and knowledge in following growing areas of technology and science:",
+          "bullets": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Block Chain"
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "5c36eac65e778808adcc87ab",
+      "basicInfo": {
+        "profileName": "Senior Interactive Developer Level 2 | For Trainer | 10-Jan-2019",
+        "firstName": "Sunil",
+        "lastName": "Kumar",
+        "email": "sunil.divyam@gmail.com",
+        "profileImage": "",
+        "phone": "+919910129602",
+        "birthDate": "1979-03-05",
+        "shortAddress": "Noida, India",
+        "address": "Aachvis Softech Pvt Ltd SEZ, GF Tower C, Plot No 7, Sec 144 Exp way",
+        "currentDesignation": "Senior Interactive Developer",
+        "experience": "7 years, 6 months",
+        "overview": "<div><b>Mr. Sunil Kumar</b> is <b>Senior Interactive Developer L2</b>, and working out of the Noida office within our Global market business unit. Mr. Sunil has been associated to Sapient for more than four years and has <b>11 years of experience</b> in the IT consulting, software development and financial markets, and has been developing and working on complex Sapient frameworks and projects, which would help client to manage its business. Sunil is experienced and specialized front-end, skilled with an add-on knowledge of back end technologies and has been adding great value to the client’s business.<span>\t</span></div><div><br></div><div>Prior to joining Sapient in June, 2014, Mr. Sunil was a Senior Programmer for RedArrow India, a leading website designing and development company. He holds a <b>Masters degree in Business Administration (Marketing &amp; International Business)</b> from Guru Govind Singh Indraprastha University, New Delhi, and an <b>A-Level Diploma in IT</b> from DOEACC, Department of Electronics and IT, Government of India, New Delhi.&nbsp; &nbsp;Mr. Sunil has worked and managed client accounts while working with International Commodities Market (COMEX) and Indian Commodities Market (MCX) trading as a part of Cosmo Tradex Pvt. Ltd. and Indiabulls Commodities Pvt. Ltd.</div><div><br></div><div>Sunil is a <b>Sapient Certified Interviewer</b>, and has contributed <b>120+ hours</b> for assessing external and internal candidates. He has been actively <b>sharing his knowledge and expertise</b> across teams by Trainings and Workshops.</div><div><br></div>"
+      },
+      "socialMedia": [],
+      "employers": [
+        {
+          "employerName": "Sapient Consulting",
+          "from": "2014-06-02",
+          "to": "",
+          "designation": "Senior Interactive Developer Level 2",
+          "address": "",
+          "summary": "Performing as a team contributor and as an individual, in multiple projects and teams, excelling towards client impact and satisfaction.",
+          "roles": [
+            "Analysing existing and developing complex multi module, multi featured web applications.",
+            "UI Architecture, Design & Development.",
+            "Track leading & team development.",
+            "Led multiple POCs to success within and across Teams/Projects.",
+            "Integration of latest and most compatible technologies in the projects.",
+            "Working with SCRUM and Agile approach.",
+            "Working with JIRA and Confluence.",
+            "Implementation of best approaches and practices, such as Test Driven Development (TDD), Domain Driven Development (DDD), Model View Controller (MVC) etc. .",
+            "Maintaining code quality at its best through Code Reviews.",
+            "Implementing UI build process using various build tools like Gulp, grunt, webpack etc. .",
+            "Contributing as an Interviewer."
+          ],
+          "experience": "3 years, 6 months"
+        },
+        {
+          "employerName": "RedArrow India",
+          "from": "2010-02-01",
+          "to": "2014-05-31",
+          "designation": "Senior Programmer",
+          "address": "",
+          "summary": "Performed as a team contributor and as an individual, in multiple projects and teams, excelling towards client impact and satisfaction. Worked on multiple projects from financial markets and education industries.",
+          "roles": [
+            "User Experience development.",
+            "Integration and development of Angularjs and jQuery in ASP.net web forms and MVC applications",
+            "Integration and development of Web APIs in .Net application using Angularjs",
+            "Database Design in SQL Server.",
+            "Team leading and team development.",
+            "Client Interaction through Requirement Calls and Meetings.",
+            "Maintaining code quality at its best through Code Reviews.",
+            "Registering and setting up Domains and Sub-Domains.",
+            "Hosting and managing websites."
+          ],
+          "experience": "4 years"
+        },
+        {
+          "employerName": "Indiabulls Commodities Pvt. Ltd.",
+          "from": "2008-07-01",
+          "to": "2009-12-31",
+          "designation": "Relationship Manager",
+          "address": "",
+          "summary": "Performed towards building and managing clientele and their investment portfolio. \nDealt with Commodities & Bullion trading in Multi Commodity Exchange (MCX) of India.",
+          "roles": [
+            "Identifying, targeting, acquisition, and retaining clientele by performing marketing and management activities.",
+            "Opening and maintaining clients' online and offline trading accounts.",
+            "Developing and assisting client in managing their investment portfolio.",
+            "Manage the pay in, pay out & cash.",
+            "Client Guidance regarding trading."
+          ]
+        },
+        {
+          "employerName": "Cosmo Tradex Pvt. Ltd.",
+          "from": "2007-07-01",
+          "to": "2008-06-30",
+          "designation": "Business Development Manager",
+          "address": "",
+          "summary": "Performed towards building and managing clientele and their investment portfolio. \nDealt with International Commodities & Bullion trading in Commodity Exchange (COMEX).",
+          "roles": [
+            "Identifying, targeting, acquisition, and retaining clientele by performing marketing and management activities.",
+            "Opening and maintaining clients' online and offline trading accounts.",
+            "Developing and assisting client in managing their investment portfolio.",
+            "Manage the pay in, pay out & cash.",
+            "Client Guidance regarding trading."
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "name": "OOJS & Advance JavaScript",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 9,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "React JS",
+          "from": "2015-03-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "AngularJS 1.x",
+          "institution": "sdsa",
+          "from": "2013-10-01",
+          "to": null,
+          "branch": "sadsad",
+          "experience": "1 years, 6 months",
+          "rating": 9,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "Angular 2 to 6+",
+          "from": "2016-04-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "HTML5",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 10,
+          "summary": "",
+          "experience": "5 months",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "CSS3, LESS, SASS",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 10,
+          "summary": "",
+          "experience": "1 years, 2 months",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "jQuery",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 9,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "Redux",
+          "from": "2017-03-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": false
+        },
+        {
+          "name": "React Native",
+          "from": "2018-04-01",
+          "to": null,
+          "rating": 2,
+          "summary": ""
+        },
+        {
+          "name": "Bootstrap 3 & 4",
+          "from": "2010-02-01",
+          "to": "",
+          "rating": 9,
+          "summary": "",
+          "experience": "1 years, 4 months"
+        },
+        {
+          "name": "Material UI",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Node JS",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": "",
+          "isPrimarySkill": true
+        },
+        {
+          "name": "Express JS",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Webpack",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Gulp",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Grunt",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "TypeScript",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": false
+        },
+        {
+          "name": "JSX",
+          "from": "2017-03-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": false
+        },
+        {
+          "name": "ES6",
+          "from": "2017-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": "",
+          "isPrimarySkill": false
+        },
+        {
+          "name": "Mongodb",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Browserify",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 8,
+          "summary": ""
+        },
+        {
+          "name": "Babel",
+          "from": "2016-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "SVN",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "GIT",
+          "from": "2015-01-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Microsoft SQL Server, SQL",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "C#, .NET, MVC, Web API",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "JAVA, JSP",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 2,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Captivate",
+          "from": "2016-12-01",
+          "to": "2017-08-31",
+          "rating": 5,
+          "summary": "",
+          "experience": "9 months"
+        },
+        {
+          "name": "Adobe Campaign",
+          "from": "2017-09-01",
+          "to": null,
+          "rating": 5,
+          "summary": "",
+          "experience": "4 months"
+        },
+        {
+          "name": "Adobe AEM 5 & 6",
+          "from": "2014-06-02",
+          "to": "2017-03-31",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Sitecatalyst",
+          "from": "2014-06-06",
+          "to": "",
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "Adobe Omniture",
+          "from": "2015-01-01",
+          "to": null,
+          "rating": 7,
+          "summary": "",
+          "experience": "2 years, 11 months"
+        },
+        {
+          "name": "Adobe Photoshop",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Moodle",
+          "from": "2015-05-01",
+          "to": "2016-06-30",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Highcharts",
+          "from": "2014-06-02",
+          "to": "",
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "D3 js",
+          "from": "2015-06-02",
+          "to": "2016-06-30",
+          "rating": 6,
+          "summary": ""
+        },
+        {
+          "name": "Karma and Jasmine",
+          "from": "2014-06-02",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        },
+        {
+          "name": "JSON, XML, YML",
+          "from": "2010-02-01",
+          "to": null,
+          "rating": 9,
+          "summary": ""
+        },
+        {
+          "name": "Goldman Sachs DASH UI",
+          "from": "2016-07-01",
+          "to": null,
+          "rating": 7,
+          "summary": ""
+        }
+      ],
+      "projects": [
+        {
+          "name": "AYCO, Marketing Site",
+          "clientName": "Goldman Sachs",
+          "from": "2018-01-01",
+          "to": null,
+          "summary": "AYCO is a Goldman Sachs Company, and this project is a marketing site developed using Adobe AEM6 for the content pages and JavaScript, CSS3, Highcharts at the UI development.",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "DAS (Digital Advertising Solutions) Campaign",
+          "clientName": "Goldman Sachs",
+          "from": "2017-09-01",
+          "to": "2017-12-31",
+          "summary": "Digital Advertising Solutions, Provides a range of services to the client, like Document Dropbox, Marketing Campaigns, Automated real time and marketing campaign Emails etc.",
+          "technologies": [],
+          "roles": [],
+          "duration": "5 months"
+        },
+        {
+          "name": "GSAM (Goldman Sachs Assets Marketing)",
+          "clientName": "Goldman Sachs",
+          "from": "2017-03-01",
+          "to": null,
+          "summary": "Goldman Sachs Asset Management (GSAM) is one of the world’s leading investment managers. Across 33 offices worldwide, Goldman Sachs extend these global capabilities to the world’s leading pension plans, sovereign wealth funds, central banks, insurance companies, financial institutions, endowments, foundations, individuals and family offices, for whom it invest or advise on more than $1 trillion of assets.",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "GSCIO-PE (Goldman Sachs CIO - Portfolio Explorer)",
+          "clientName": "Goldman Sachs",
+          "from": "2016-07-01",
+          "to": "2017-02-28",
+          "summary": "Goldman Sachs CIO Portfolio Explorer provides a detailed analysis of client portfolio and cash flows with the help of complex visualizations using various tables, graph and charts.",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "GS-AIMS University",
+          "clientName": "Goldman Sachs",
+          "from": "2015-05-01",
+          "to": "2016-06-30",
+          "summary": "Goldman Sachs AIMS University provides a range of educational programs, courses, course modules, lessons, instructor courses, and quizzes. It keeps track of the users learning progress.",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "GSCIO-AIMS (Goldman Sachs CIO - Alternate Investment Manager Selection)",
+          "clientName": "Goldman Sachs",
+          "from": "2014-06-02",
+          "to": "2017-03-31",
+          "summary": "The Alternative Investments & Manager Selection (“AIMS”) provides investors with investment and advisory solutions, across leading hedge fund managers, private equity funds, real estate managers, public equity strategies, fixed income strategies etc. .",
+          "technologies": [],
+          "roles": [],
+          "duration": "1 years, 10 months"
+        },
+        {
+          "name": "IMS (Insurance Management System)",
+          "clientName": "Secure Vision Ltd.",
+          "from": "2013-04-01",
+          "to": "2014-05-31",
+          "summary": "Secure Vision's Insurance Management System (IMS), automates the key processes involved in providing multiple Insurance plans to its customers and experience to its users with user friendly subsystems. This also provides Secure Vision a platform to manage Insurance business and its clientele. ",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "MISMS (Multiple Installment Scheme Management System)",
+          "clientName": "Secure Vision Ltd.",
+          "from": "2012-01-01",
+          "to": "2013-03-30",
+          "summary": "Secure Vision's MISMS (Multiple Installment Scheme Management System), automates the processes involved in managing Multiple Installment Scheme and experience to its users with user friendly subsystems. ",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "NAIP, Nematology Project",
+          "clientName": "Indian Agricultural Research Institute (IARI)",
+          "from": "2011-05-01",
+          "to": "2011-12-30",
+          "summary": "NAIP, a research project carried by division of Nematology, Indian Agricultural Research Institute (IARI), New Delhi. The project provides detailed information regarding its evolution, history, progress, deliverable, National Training,work allocations, expected outcomes, published papers, environmental and social issues, timelines etc.. ",
+          "technologies": [],
+          "roles": []
+        },
+        {
+          "name": "CBSE Learning",
+          "clientName": "CBSE School, Nigeria",
+          "from": "2010-02-01",
+          "to": "2011-04-30",
+          "summary": "CBSE Learning was a public facing web site with authentication and authorization features, that provides authors and moderators to compose and publish Central Board of Secondary Education (CBSE)'s learning materials like Sample Papers,  Question Papers, Chapters, latest CBSE news and events, Solved Questions from experts and many other features. This also provides administrator's desktop panel, that provides detailed information for analysis and administer. Public Users can register, login and access public and featured contents.",
+          "technologies": [],
+          "roles": []
+        }
+      ],
+      "education": [
+        {
+          "name": "Masters of Business Administration",
+          "institution": "Guru Govind Singh Indraprastha University, Delhi",
+          "from": "2005-07-01",
+          "to": "2007-06-30",
+          "branch": "Marketing and International Business"
+        },
+        {
+          "name": "Bachelor of Science",
+          "institution": "Dr. Bhim Rao Ambedkar University, Agra",
+          "from": "1998-07-01",
+          "to": "2001-06-30",
+          "branch": "Physics, Chemistry, Maths"
+        },
+        {
+          "name": "Senior Secondary School",
+          "institution": "CBSE Board",
+          "from": "1997-07-01",
+          "to": "1998-06-30",
+          "branch": "Physics, Chemistry, Maths and Biology",
+          "duration": "1 years"
+        },
+        {
+          "name": "Higher Secondary School",
+          "institution": "CBSE Board",
+          "from": "1995-07-01",
+          "to": "1996-06-30",
+          "branch": "Science, Maths, English and Social Studies",
+          "duration": "1 years"
+        }
+      ],
+      "additionals": [
+        {
+          "title": "Awards & Certifications",
+          "summary": "",
+          "bullets": [
+            "A-Level, 1 year Diploma in Information Technology in 2003 from DOEACC Society, Ministry of Information Technology, New Delhi.",
+            "Awarded National Mathematics Olympiad Certificate, 1996.",
+            "Sapient Core Values, recognition certificate, for extraordinary experiences for clients and their customers.",
+            "Multiple recognition from team members across projects at Sapient."
+          ]
+        },
+        {
+          "title": "Successful POCs",
+          "summary": "Successfully completed following POCs:",
+          "bullets": [
+            "POC done using D3 Charts and Angular js, the goal was to represent a complex data coming from multiple sources in a Multi branch Hierarchical custom charts and add interactivity to nodes.",
+            "POC done using Angular js, Moodle, Adobe Captivate, and Adobe AEM, the goal was to integrate all of these to create a Custom LMS for an existing Application.",
+            "POC done using Angular js, Gulp js, Bootstrap, Highcharts and DASH UI (a Goldman Sachs native Framework), the goal was to develop a Client Portfolio Explorer and Integrate DASH UI framework to have complex tables and charts.",
+            "POC done using Block Chain, Angular js, Node js and Bootstrap, the goal was to implement multiple node servers and develop a lending application using Block Chain.",
+            "POC done using Adobe Campaign, the goal was to write and introduce a JavaScript in between the Marketing Campaign Workflow, which processes Lakhs of prospects in batches and recreates them with additional data based on some business rules.",
+            "POC done using jekyll, liquid templates, and Adobe Campaign, the goal was to automate the email content creation for Adobe Campaign.",
+            "POC done using react and redux, the goal was to integrate and implement new modules with react components, redux store in existing complex, JavaScript Module Pattern Project.",
+            "POC done using intro.js, Angular js, the goal was to develop an interactive step by step help tutorial for an existing project.",
+            "POC in-progress for developing Single Ecosystem for React Native (Android & IOS) and React Web Apps."
+          ]
+        },
+        {
+          "title": "Training and Seminars Facilitated",
+          "summary": "I have contributed by sharing my knowledge by various ways:",
+          "bullets": [
+            "Angular js 1.6 | Workshop and Classroom Session to teams at Sapient Noida, India | 6 days, 2 hours each day.",
+            "Wep Pack 3 | Classrom Session to teams at Sapient Noida, India.",
+            "Wep Pack 3  | WebEx Session to teams at Sapient across Globe.",
+            "JavaScript Module Pattern | Classroom Session to team at Sapient Noida, India.",
+            "CSS - Best Practices | Classroom Session to teams at RedArrow India.",
+            "Integrating ASP.Net MVC and Angular js Classroom Session to teams at RedArrow India.",
+            "Presented in National Seminars at college."
+          ]
+        },
+        {
+          "title": "Upcoming and Growing Technologies Knowledge",
+          "summary": "Gaining interest and knowledge in following growing areas of technology and science:",
+          "bullets": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Block Chain"
+          ]
+        }
+      ]
+    }
+  ],
+  "message": null
+}

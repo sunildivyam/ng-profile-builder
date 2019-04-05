@@ -8,6 +8,8 @@
             <div class="btn-toolbar">
               <button (click)="updateLayoutClicked($event)" class="btn-update-layout btn btn-secondary">Update Layout</button>
               <button (click)="updateProfileContentClicked($event)" class="btn-update-profile btn btn-secondary">Update Profile</button>
+              <button (click)="duplicateProfileClicked($event)" class="btn-duplicate-profile btn btn-secondary">Duplicate Profile</button>
+              <button (click)="migrateFromPrevious($event)" class="btn-duplicate-profile btn btn-secondary">Migrate Profiels</button>
             </div>
           </div>
         </div>
@@ -44,13 +46,16 @@
         </p>
         <hr class="my-4">
         <div class="input-group">
+            <a class="btn btn-default" (click)="toggleProfileViewModeClick($event)" title="toggle Preview Mode">
+              <i *ngIf="!isReadonlyProfileView" class="fa fa-desktop"></i>
+              <i *ngIf="isReadonlyProfileView" class="fa fa-edit"></i></a>
           <a class="btn btn-default" (click)="revertLayoutClick($event)" title="revert to profile layout"><i class="fa fa-undo"></i></a>
           <pba-layout-list class="input-group-prepend" [layouts]="layouts" (onSelect)="currentLayoutChanged($event)" [selectedLayout]="currentLayout"></pba-layout-list>
         </div>
       </div>
     </div>
   </pba-background>
-  <pba-profile-view [content]="currentProfile?.content" [layout]="currentProfile?.layout" [isReadonly]="false"></pba-profile-view>
+  <pba-profile-view [content]="currentProfile?.content" [layout]="currentProfile?.layout" [isReadonly]="isReadonlyProfileView"></pba-profile-view>
 </div>
 
 <!-- The Profile Form Data Mode -->

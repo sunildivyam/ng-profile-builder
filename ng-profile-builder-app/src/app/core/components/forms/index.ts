@@ -7,3 +7,4 @@ export { ProjectsFormComponent } from './projects-form/projects-form.component';
 export { RatingFormComponent } from './rating-form/rating-form.component';
 export { SkillsFormComponent } from './skills-form/skills-form.component';
 export { SocialMediaFormComponent } from './social-media-form/social-media-form.component';
+export { ImageUploadFormComponent } from './image-upload-form/image-upload-form.component';

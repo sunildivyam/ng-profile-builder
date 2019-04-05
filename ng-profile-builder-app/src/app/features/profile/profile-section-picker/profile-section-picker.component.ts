@@ -54,13 +54,19 @@ export class ProfileSectionPickerComponent implements OnInit {
 
   public contextNavClick(event, nav: any, rowIndex: number, colIndex: number): void {
     event.preventDefault();
-    if (nav.id.indexOf('align-horizontal')) {
-      const col = typeof rowIndex !== 'undefined' ? this.column.rows[rowIndex].cols[colIndex] : this.column;
-      col.styles = Object.assign({}, col.styles, nav.styles);
-    } else if (nav.id.indexOf('align-horizontal')) {
-      const col = typeof rowIndex !== 'undefined' ? this.column.rows[rowIndex].cols[colIndex] : this.column;
-      col.styles = Object.assign({}, col.styles, nav.styles);
-    }
+    const col = typeof rowIndex !== 'undefined' ? this.column.rows[rowIndex].cols[colIndex] : this.column;
+    col.styles = Object.assign({}, col.styles, nav.styles);
+
+    // if (nav.id.indexOf('align-horizontal')) {
+    //   const col = typeof rowIndex !== 'undefined' ? this.column.rows[rowIndex].cols[colIndex] : this.column;
+    //   col.styles = Object.assign({}, col.styles, nav.styles);
+    // } else if (nav.id.indexOf('align-horizontal')) {
+    //   const col = typeof rowIndex !== 'undefined' ? this.column.rows[rowIndex].cols[colIndex] : this.column;
+    //   col.styles = Object.assign({}, col.styles, nav.styles);
+    // } else if(nav.id === 'stretch') {
+    //   const col = typeof rowIndex !== 'undefined' ? this.column.rows[rowIndex].cols[colIndex] : this.column;
+    //   col.styles = Object.assign({}, col.styles, nav.styles);
+    // }
   }
 
   closeClicked() {

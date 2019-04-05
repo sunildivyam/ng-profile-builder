@@ -7,7 +7,7 @@
     <div class="col-sm-{{col.name}} layout-content-container" *ngFor="let col of row.cols, let cIdx = index">
       <div class="layout-content" *ngIf="!col.rows || !col.rows.length" [ngStyle]="col.styles">
 
-        <pba-profile-section  class="container-fluid" [components]="col.components" [content]="content"></pba-profile-section>
+        <pba-profile-section  class="profile-section-container" [ngStyle]="col.styles" [components]="col.components" [content]="content"></pba-profile-section>
 
         <a class="link settings" href="#" data-toggle="modal" data-target="#exampleModal"
           (click)="editColumnClick($event, col)"
@@ -28,4 +28,3 @@
   </section>
 </ng-template>
 <pba-profile-section-picker [column]="sectionColumn"></pba-profile-section-picker>
-

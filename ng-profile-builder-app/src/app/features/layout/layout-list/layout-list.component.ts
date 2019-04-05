@@ -12,21 +12,22 @@ export class LayoutListComponent implements OnInit, OnChanges {
 @Input() public selectedLayout: Layout;
 @Output() public onSelect = new EventEmitter();
 
-private currentLayout: Layout;
-
   constructor() {
-    this.currentLayout = new Layout();
   }
 
-  public selectLayoutClick(): void {
-    this.onSelect.emit(this.currentLayout);
+  public selectLayoutClick(event): void {
+    console.log(event);
+    this.onSelect.emit(this.selectedLayout);
+  }
+
+  public compareFn(c1: any, c2:any): boolean {
+      return c1 && c2 ? c1.id === c2.id : c1 === c2;
   }
 
   public ngOnInit(): void {
-    this.currentLayout = this.selectedLayout;
+
   }
 
   public ngOnChanges(): void {
-    this.currentLayout = this.selectedLayout;
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, UrlSegment } from '@angular/router';
+import { ActivatedRoute, UrlSegment, Router } from '@angular/router';
 import { Profile, ProfileContent } from '../models';
-import { FirebaseService, AuthService } from 'src/app/core';
+import { FirebaseService, AuthService /*, ProfileService */ } from 'src/app/core';
 import { Layout } from '../../layout';
 
 @Component({
@@ -17,10 +17,13 @@ export class ManageProfileComponent implements OnInit {
   originalLayout: Layout;
   currentLayout: Layout;
   isUpdatingProfile: boolean;
+  isReadonlyProfileView: boolean = false;
 
   constructor(private firebaseService: FirebaseService,
     private authService: AuthService,
-    private route: ActivatedRoute ) {
+    private route: ActivatedRoute,
+    private router: Router /* ,
+    private profileService: ProfileService */ ) {
       this.route.url.subscribe((urlSegments: Array<UrlSegment>) => {
         if (urlSegments.length) {
           const profileId = urlSegments[0].path;
@@ -43,6 +46,12 @@ export class ManageProfileComponent implements OnInit {
   public createProfile() {
     this.firebaseService.createProfile(this.currentProfile).subscribe((newProfileId: string) => {
       this.currentProfile.id = newProfileId;
+    });
+  }
+
+  public duplicateProfile(profile: Profile) {
+    this.firebaseService.createProfile(profile).subscribe((newProfileId: string) => {
+      this.router.navigateByUrl('/dashboard');
     });
   }
 
@@ -133,4 +142,31 @@ export class ManageProfileComponent implements OnInit {
   public updateProfileLayoutClick(event): void {
     this.updateProfile(event.onSaveSuccess, event.onSaveNext, event.onSaveError);
   }
+
+  public duplicateProfileClicked() {
+    const duplicatedProfile = {...this.currentProfile};
+    duplicatedProfile.id = undefined;
+    duplicatedProfile.content.basicInfo.profileName = `DUPLICATED: ${duplicatedProfile.content.basicInfo.profileName}`;
+    this.duplicateProfile(duplicatedProfile);
+  }
+
+  public toggleProfileViewModeClick() {
+    this.isReadonlyProfileView = !this.isReadonlyProfileView;
+  }
+
+  // public migrateFromPrevious() {
+  //   let prevProfiles = new Array<any>();
+  //   this.profileService.getProfilesForMigration().subscribe((res: any) => {
+  //     prevProfiles = res.data;
+  //     prevProfiles.map((prevProfile) => {
+  //       delete prevProfile._id;
+  //       const newProfile = new Profile();
+  //       newProfile.content = <ProfileContent>prevProfile;
+  //       newProfile.userId = this.authService.currentUserId;
+  //       this.firebaseService.createProfile(newProfile).subscribe((newProfileId: string) => {
+  //         console.log("CREATED: ", newProfileId);
+  //       });
+  //     });
+  //   });
+  // }
 }

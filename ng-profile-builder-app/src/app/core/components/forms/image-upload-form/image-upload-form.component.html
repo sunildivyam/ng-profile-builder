@@ -1,0 +1,18 @@
+<div class="card">
+  <label class="card-img-top"
+  ondragover="return false;"
+  (dragenter)="handleDragEnter($event)"
+  (dragleave)="handleDragLeave($event)"
+  (drop)="handleDrop($event)"
+  [class.dragging]="dragging"
+  [class.error]="isError">
+    <img *ngIf="imageSrc" class="img" [src]="imageSrc" alt="Profile Image">
+  </label>
+  <div class="card-body">
+    <div *ngIf="isError" class="text text-danger"><span class="fa fa-error"></span>{{errorMsg}}</div>
+    <input type="file" name="file" (change)="handleChange($event)"/>
+  </div>
+  <div class="card-footer">
+    <a class="card-link" href="#" (click)="clear($event)">Clear</a>
+  </div>
+</div>

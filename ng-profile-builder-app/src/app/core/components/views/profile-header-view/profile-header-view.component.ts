@@ -8,7 +8,7 @@ import { ProfileViewService } from '../../../services';
   styleUrls: ['./profile-header-view.component.scss']
 })
 export class ProfileHeaderViewComponent implements OnChanges {
-  @Input() basicInfo: Array<BasicInfo>;
+  @Input() basicInfo: BasicInfo;
   @Input() employers: Array<Employer>;
 
   viewData: any;

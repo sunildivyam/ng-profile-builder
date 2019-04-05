@@ -6,12 +6,16 @@ import {
   EducationViewComponent,
   SkillsViewComponent,
   ProjectsViewComponent,
+  ProjectsSmallViewComponent,
+  ProjectsMediumViewComponent,
   SocialMediaViewComponent,
   AdditionalsViewComponent,
   ProfileHeaderViewComponent,
   PrimarySkillsViewComponent,
   ContactBarViewComponent,
-  SummaryViewComponent
+  SummaryViewComponent,
+  DisclaimerViewComponent,
+  ImageViewComponent,
 } from 'src/app/core';
 import { ViewComponentsConfig } from '../models';
 
@@ -22,6 +26,8 @@ export const ProfileViewsConfig = {
   employersMedium: new ViewComponentsConfig('Employers Medium View', 'employersMedium', EmployersMediumViewComponent, ['employers']),
   education: new ViewComponentsConfig('Education', 'education', EducationViewComponent, ['education']),
   projects: new ViewComponentsConfig('Projects', 'projects', ProjectsViewComponent, ['projects']),
+  projectsSmall: new ViewComponentsConfig('Projects Small View', 'projectsSmall', ProjectsSmallViewComponent, ['projects']),
+  projectsMedium: new ViewComponentsConfig('Projects Medium View', 'projectsMedium', ProjectsMediumViewComponent, ['projects']),
   skills: new ViewComponentsConfig('Skills', 'skills', SkillsViewComponent, ['skills']),
   socialMedia: new ViewComponentsConfig('Social Media', 'socialMedia', SocialMediaViewComponent, ['socialMedia']),
   additionals: new ViewComponentsConfig('Additionals', 'additionals', AdditionalsViewComponent, ['additionals']),
@@ -29,4 +35,6 @@ export const ProfileViewsConfig = {
   primarySkills: new ViewComponentsConfig('Primary Skills', 'primarySkills', PrimarySkillsViewComponent, ['skills']),
   contactBar: new ViewComponentsConfig('Contact Bar', 'contactBar', ContactBarViewComponent, ['basicInfo']),
   summary: new ViewComponentsConfig('Profile Summary', 'summary', SummaryViewComponent, ['basicInfo']),
+  disclaimer: new ViewComponentsConfig('Disclaimer', 'disclaimer', DisclaimerViewComponent, ['basicInfo']),
+  image: new ViewComponentsConfig('Profile Image', 'image', ImageViewComponent, ['basicInfo']),
 };

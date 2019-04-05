@@ -17,18 +17,22 @@ export class ManageLayoutsComponent implements OnInit {
 
   private getLayouts(): void {
     this.firebaseService.getLayouts(this.authService.currentUserId)
-      .subscribe((layouts: Array<Layout>) => this.layouts = layouts);
+      .subscribe((layouts: Array<Layout>) => {
+        this.layouts = layouts;
+      });
   }
 
   private createLayout() {
     this.firebaseService.createLayout(this.currentLayout)
     .subscribe((id: string) => {
       this.currentLayout.id = id;
-      this.layouts.push(this.currentLayout);
     });
   }
 
   private deleteLayout() {
+    if (!this.currentLayout || !this.currentLayout.id) {
+      return false;
+    }
     this.firebaseService.deleteLayout(this.currentLayout.id)
     .subscribe(() => {
       this.layouts = this.layouts.map((layout) => {
@@ -36,7 +40,11 @@ export class ManageLayoutsComponent implements OnInit {
           return layout;
         }
       });
-      this.currentLayout = null;
+      setTimeout(() => {
+        if (this.layouts && this.layouts.length) {
+          this.currentLayout = this.layouts[0];
+        }
+      });
     });
   }
 
@@ -63,6 +71,7 @@ export class ManageLayoutsComponent implements OnInit {
   }
 
   public currentLayoutChanged(layout: Layout): void {
+    console.log(this.currentLayout);
     this.currentLayout = layout;
   }
 

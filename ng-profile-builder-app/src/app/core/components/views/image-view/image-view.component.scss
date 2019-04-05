@@ -1,0 +1,14 @@
+$size: 150px;
+.image-container {
+  width: $size;
+  height: $size;
+  border: 1px solid grey;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0px;
+  margin: 15px;
+
+  .img {
+    width: 100%;
+  }
+}

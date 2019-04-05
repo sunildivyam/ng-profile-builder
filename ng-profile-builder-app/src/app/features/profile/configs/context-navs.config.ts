@@ -46,6 +46,21 @@ export const ContextNavs = [
     styles: {
       alignItems: 'flex-end'
     }
+  },
+  {
+    id: 'stretch',
+    title: 'stretch',
+    className: 'fa-arrows-h text-warning',
+    styles: {
+      width: '100%'
+    }
+  },
+  {
+    id: 'auto',
+    title: 'auto',
+    className: 'fa-long-arrow-right text-warning',
+    styles: {
+      width: 'auto'
+    }
   }
-
 ];

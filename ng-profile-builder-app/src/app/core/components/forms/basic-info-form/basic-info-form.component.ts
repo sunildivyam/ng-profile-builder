@@ -75,4 +75,8 @@ export class BasicInfoFormComponent implements OnInit, OnChanges {
       this.formData.overview = event.target.innerHTML;
     });
   }
+
+  profileImageChanged(imageBase64Str: string) {
+    this.formData.profileImage = imageBase64Str;
+  }
 }

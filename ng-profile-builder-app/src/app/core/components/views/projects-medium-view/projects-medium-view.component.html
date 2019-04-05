@@ -1,0 +1,31 @@
+<div class="card projects-small-view">
+  <div class="card-header">
+    <h2 class="card-title">Projects</h2>
+  </div>
+  <div class="card-body">
+    <div class="container-fluid" *ngFor="let proj of viewData">
+      <div class="row">
+        <div class="item col-sm-12">
+          <div class="circle"></div>
+          <h3 class="name">
+            {{proj.name}} | <i><small>{{proj.duration}}</small></i>
+          </h3>
+          <h4 class="designation">{{proj.clientName}}</h4>
+          <div class="duration">
+             <small>from {{proj.from | date:'MMM, y'}} to {{(proj.to | date:'MMM, y') || 'Present'}}</small>
+          </div>
+          <div class="more">
+            <summary class="font-4 padding-top-10">{{proj.summary}}</summary>
+            <div *ngIf="proj.technologies.length" class="padding-top-10">
+              <span class="font-4 label">{{proj.technologies.join(', ')}}</span>
+            </div>
+            <h3 *ngIf="proj.roles.length" class="font-4 padding-top-10">My Roles in the Project:</h3>
+            <ul *ngIf="proj.roles.length" class="padding-top-10">
+              <li class="font-4" *ngFor="let role of proj.roles">{{role}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

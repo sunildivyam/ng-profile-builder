@@ -6,19 +6,16 @@ export class Layout {
   title: string;
   rows: Array<Row>;
   userId: string;
+  dateUpdated: Date;
 
   constructor() {
     this.title = 'Custom Layout Title';
+    this.dateUpdated = new Date();
     this.rows = new Array<Row>();
     const row = new Row();
     const col = new Column();
     col.name = '12';
     row.cols.push(col);
-    try {
     this.rows.push(row);
-    } catch (er) {
-      console.log(er);
-    }
-    console.log(this.rows);
    }
 }

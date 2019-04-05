@@ -9,6 +9,7 @@ import { ProfileViewComponent } from './profile-view/profile-view.component';
 import { LayoutModule } from '../layout';
 import { ProfileSectionComponent } from './profile-section/profile-section.component';
 import { ProfileSectionPickerComponent } from './profile-section-picker/profile-section-picker.component';
+import { ProfileCardsViewComponent } from './profile-cards-view/profile-cards-view.component';
 
 @NgModule({
   providers: [],
@@ -17,8 +18,11 @@ import { ProfileSectionPickerComponent } from './profile-section-picker/profile-
     ManageProfileComponent,
     ProfileViewComponent,
     ProfileSectionComponent,
-    ProfileSectionPickerComponent],
-  exports: [ProfileFormComponent, ManageProfileComponent]
+    ProfileSectionPickerComponent,
+    ProfileCardsViewComponent],
+  exports: [ProfileFormComponent,
+    ManageProfileComponent,
+    ProfileCardsViewComponent]
 })
 
 export class ProfileModule {}

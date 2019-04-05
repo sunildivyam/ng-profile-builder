@@ -1,0 +1,22 @@
+$size: 150px;
+.card-img-top {
+  width: $size;
+  height: $size;
+  border: 1px solid grey;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0px;
+  margin: 15px;
+
+  .img {
+    width: 100%;
+  }
+
+  &.dragging {
+    border: 2px dashed rgb(6, 194, 252);
+  }
+
+  &.error {
+    border: 2px dashed rgb(253, 0, 0);
+  }
+}

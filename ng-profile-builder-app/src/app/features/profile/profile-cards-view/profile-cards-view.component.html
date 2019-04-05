@@ -1,0 +1,15 @@
+<div class="card-columns">
+  <div class="card" *ngFor="let profile of viewData">
+    <img class="card-img-top" src="assets/background.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{profile?.content?.basicInfo?.profileName}}</h5>
+      <h6 class="card-text">{{profile?.content?.basicInfo?.firstName}} {{profile?.content?.basicInfo?.lastName}}</h6>
+      <div class="card-text" title="layout name"><span class="fa fa-vcard-o"></span> {{profile?.layout?.title}}</div>
+      <div class="card-text" title="last updated"><span class="fa fa-calendar-check-o"></span> {{profile?.dateUpdated | date:'dd, MMM, y : hh:mm:s'}}</div>
+    </div>
+    <div class="card-footer">
+      <a class="card-link" [routerLink]="['/buildprofile', profile.id]">Update <i class="fa fa-edit"></i></a>
+      <a class="card-link" [routerLink]="['/viewprofile', profile.id]">View <i class="fa fa-desktop"></i></a>
+    </div>
+  </div>
+</div>
