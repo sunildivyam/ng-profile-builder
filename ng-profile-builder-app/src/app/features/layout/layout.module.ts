@@ -11,6 +11,6 @@ import { ColumnFormComponent } from './column-form/column-form.component';
   providers:[],
   imports: [CoreModule, FormsModule, CommonModule],
   declarations: [LayoutViewComponent, LayoutListComponent, ManageLayoutsComponent, ColumnFormComponent],
-  exports: [LayoutViewComponent, LayoutListComponent, ManageLayoutsComponent]
+  exports: [LayoutViewComponent, LayoutListComponent, ManageLayoutsComponent, ColumnFormComponent]
 })
 export class LayoutModule {}

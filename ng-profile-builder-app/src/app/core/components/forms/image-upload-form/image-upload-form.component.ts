@@ -53,7 +53,7 @@ export class ImageUploadFormComponent implements OnInit {
       return;
     }
 
-    reader.onload = (e) => {
+    reader.onload = (e: any) => {
       this.imageSrc = e.target.result;
       this.dropped = true;
       this.dragging = false;

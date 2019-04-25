@@ -16,6 +16,7 @@ export class ProfileSectionPickerComponent implements OnInit {
   public contextNav = ContextNavs;
   public viewComponentsConfig = ProfileViewsConfig;
   public viewComponents = Object.values(ProfileViewsConfig);
+  public isColumnFormVisible = false;
 
   constructor(private cd: ChangeDetectorRef) { }
 
@@ -72,6 +73,16 @@ export class ProfileSectionPickerComponent implements OnInit {
   closeClicked() {
     this.closeClick.emit(this.column);
   }
+  
+  public editColumnClick(event, col: Column): void {
+    event.preventDefault();    
+    this.isColumnFormVisible = true;
+  }
+
+  public columnFormCloseClick(col: Column): void {
+    this.isColumnFormVisible = false;
+  }
+
 
   ngOnInit() {
   }

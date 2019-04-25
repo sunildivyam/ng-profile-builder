@@ -1,12 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed">
-  <a class="navbar-brand" href="/">Profile Builder</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#app-header" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="app-header">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" [routerLinkActive]="'active'" routerLink="/dashboard">Dashboard <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" [routerLinkActive]="'active'" routerLink="/layouts">Layouts</a>
+<pba-background bgColor="#006515" topSpacing="0px" bottomSpacing="0px">
+  <nav class="container navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed">
+    <a class="navbar-brand" href="/">Profile Builder</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#app-header" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="app-header">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" [routerLinkActive]="'active'" routerLink="/dashboard">Dashboard <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" [routerLinkActive]="'active'" routerLink="/layouts">Layouts</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</pba-background>

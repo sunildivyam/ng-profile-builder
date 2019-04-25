@@ -13,6 +13,7 @@ import {
   ProfileHeaderViewComponent,
   PrimarySkillsViewComponent,
   ContactBarViewComponent,
+  ExperienceBarViewComponent,
   SummaryViewComponent,
   DisclaimerViewComponent,
   ImageViewComponent,
@@ -20,7 +21,14 @@ import {
 import { ViewComponentsConfig } from '../models';
 
 export const ProfileViewsConfig = {
+  profileHeader: new ViewComponentsConfig('Profile Header', 'profileHeader', ProfileHeaderViewComponent, ['basicInfo', 'employers']),
+  image: new ViewComponentsConfig('Profile Image', 'image', ImageViewComponent, ['basicInfo']),
+  contactBar: new ViewComponentsConfig('Contact Bar', 'contactBar', ContactBarViewComponent, ['basicInfo']),
+  experienceBar: new ViewComponentsConfig('Experience Bar', 'experienceBar', ExperienceBarViewComponent, ['employers']),
+  socialMedia: new ViewComponentsConfig('Social Media', 'socialMedia', SocialMediaViewComponent, ['socialMedia']),
+  primarySkills: new ViewComponentsConfig('Primary Skills', 'primarySkills', PrimarySkillsViewComponent, ['skills']),
   basicInfo: new ViewComponentsConfig('Basic Information', 'basicInfo',  BasicInfoViewComponent, ['basicInfo']),
+  summary: new ViewComponentsConfig('Profile Summary', 'summary', SummaryViewComponent, ['basicInfo']),
   employers: new ViewComponentsConfig('Employers', 'employers', EmployersViewComponent, ['employers']),
   employersSmall: new ViewComponentsConfig('Employers Small View', 'employersSmall', EmployersSmallViewComponent, ['employers']),
   employersMedium: new ViewComponentsConfig('Employers Medium View', 'employersMedium', EmployersMediumViewComponent, ['employers']),
@@ -28,13 +36,7 @@ export const ProfileViewsConfig = {
   projects: new ViewComponentsConfig('Projects', 'projects', ProjectsViewComponent, ['projects']),
   projectsSmall: new ViewComponentsConfig('Projects Small View', 'projectsSmall', ProjectsSmallViewComponent, ['projects']),
   projectsMedium: new ViewComponentsConfig('Projects Medium View', 'projectsMedium', ProjectsMediumViewComponent, ['projects']),
-  skills: new ViewComponentsConfig('Skills', 'skills', SkillsViewComponent, ['skills']),
-  socialMedia: new ViewComponentsConfig('Social Media', 'socialMedia', SocialMediaViewComponent, ['socialMedia']),
+  skills: new ViewComponentsConfig('Skills', 'skills', SkillsViewComponent, ['skills']),    
   additionals: new ViewComponentsConfig('Additionals', 'additionals', AdditionalsViewComponent, ['additionals']),
-  profileHeader: new ViewComponentsConfig('Profile Header', 'profileHeader', ProfileHeaderViewComponent, ['basicInfo', 'employers']),
-  primarySkills: new ViewComponentsConfig('Primary Skills', 'primarySkills', PrimarySkillsViewComponent, ['skills']),
-  contactBar: new ViewComponentsConfig('Contact Bar', 'contactBar', ContactBarViewComponent, ['basicInfo']),
-  summary: new ViewComponentsConfig('Profile Summary', 'summary', SummaryViewComponent, ['basicInfo']),
-  disclaimer: new ViewComponentsConfig('Disclaimer', 'disclaimer', DisclaimerViewComponent, ['basicInfo']),
-  image: new ViewComponentsConfig('Profile Image', 'image', ImageViewComponent, ['basicInfo']),
+  disclaimer: new ViewComponentsConfig('Disclaimer', 'disclaimer', DisclaimerViewComponent, ['basicInfo']),  
 };

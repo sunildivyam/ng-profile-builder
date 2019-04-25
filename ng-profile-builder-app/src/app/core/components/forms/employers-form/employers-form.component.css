@@ -44,3 +44,7 @@
 .role-item {
     margin: 5px 0px;
 }
+
+input[type="checkbox"] {
+  margin-right: 7px;
+}

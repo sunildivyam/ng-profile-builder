@@ -16,3 +16,4 @@ export { ContactBarViewComponent } from './contact-bar-view/contact-bar-view.com
 export { SummaryViewComponent } from './summary-view/summary-view.component';
 export { DisclaimerViewComponent } from './disclaimer-view/disclaimer-view.component';
 export { ImageViewComponent } from './image-view/image-view.component';
+export { ExperienceBarViewComponent } from './experience-bar-view/experience-bar-view.component';

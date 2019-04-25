@@ -9,18 +9,18 @@
 
         <pba-profile-section  class="profile-section-container" [ngStyle]="col.styles" [components]="col.components" [content]="content"></pba-profile-section>
 
-        <a class="link settings" href="#" data-toggle="modal" data-target="#exampleModal"
-          (click)="editColumnClick($event, col)"
+        <a class="link settings" href="#" data-toggle="modal" data-target="#profileSectionPickerModal"
+          (click)="editSectionClick($event, col)"
           *ngIf="!isReadonly">
           <span class="fa fa-cog"></span>
         </a>
 
       </div>
-      <!--
-      <a *ngIf="col.rows && col.rows.length" class="link settings" href="#" (click)="editColumnClick($event, col)">
+      
+      <a *ngIf="col.rows && col.rows.length" class="link settings row-settings" href="#" (click)="editColumnClick($event, col)">
         <span class="fa fa-cog"></span>
       </a>
-      -->
+    
       <section class="container-fluid" *ngIf="col.rows && col.rows.length">
         <ng-container *ngTemplateOutlet="layoutRows; context: {rows: col.rows}"></ng-container>
       </section>
@@ -28,3 +28,4 @@
   </section>
 </ng-template>
 <pba-profile-section-picker [column]="sectionColumn"></pba-profile-section-picker>
+<pba-column-form *ngIf="isColumnFormVisible" [column]="sectionColumn" (formClosed)="columnFormCloseClick($event)"></pba-column-form>

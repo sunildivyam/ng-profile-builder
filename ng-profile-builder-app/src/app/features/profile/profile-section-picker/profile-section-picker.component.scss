@@ -5,7 +5,7 @@ ul {
 
   li {
     display: inline-block;
-    margin: 2px;
+    margin: 10px;
     padding: 5px 15px;
     border: 1px solid grey;
     border-radius: 5px;
@@ -37,4 +37,24 @@ ul {
       padding: 0px;
     }
   }
+}
+.settings {
+  float: right;
+  text-decoration: none;
+  font-size: 18px;
+
+  .fa {
+    margin-right: 10px;
+  }
+}
+
+.section-header {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: inherit;
+  margin: 10px 0px;
+}
+
+.modal-header {
+  background-color: cornflowerblue;
 }

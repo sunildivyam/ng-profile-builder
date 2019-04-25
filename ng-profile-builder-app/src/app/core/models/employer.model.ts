@@ -6,6 +6,7 @@ export class Employer {
     address: string;
     summary: string;
     roles: Array<string>;
+    isRelevant: boolean;
 
     constructor () {
         this.employerName = '';
@@ -15,5 +16,6 @@ export class Employer {
         this.address = '';
         this.summary = '';
         this.roles = new Array<string>();
+        this.isRelevant = true;
     }
 }

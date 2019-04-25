@@ -9,15 +9,18 @@
               <button (click)="updateLayoutClicked($event)" class="btn-update-layout btn btn-secondary">Update Layout</button>
               <button (click)="updateProfileContentClicked($event)" class="btn-update-profile btn btn-secondary">Update Profile</button>
               <button (click)="duplicateProfileClicked($event)" class="btn-duplicate-profile btn btn-secondary">Duplicate Profile</button>
+              <!--
               <button (click)="migrateFromPrevious($event)" class="btn-duplicate-profile btn btn-secondary">Migrate Profiels</button>
+              -->
             </div>
           </div>
         </div>
       </div>
 </pba-background>
 
+<div class="modal container-fluid" *ngIf="isDataMode || isLayoutMode">
 <!-- The Close Button -->
-<div class="container" *ngIf="isDataMode || isLayoutMode">
+<div class="container close-container" *ngIf="isDataMode || isLayoutMode">
   <div class="row">
     <div class="col-sm-12">
       <div class="btn-toolbar">
@@ -61,3 +64,4 @@
 <!-- The Profile Form Data Mode -->
 <pba-profile-form *ngIf="isDataMode" [profile]="currentProfile" (saved)="updateProfileClick($event)"></pba-profile-form>
 
+</div>

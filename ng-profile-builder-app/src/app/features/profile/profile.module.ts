@@ -6,6 +6,7 @@ import { RouterModule} from '@angular/router';
 import { ProfileFormComponent } from './profile-form/profile-form.component';
 import { ManageProfileComponent } from './manage-profile/manage-profile.component';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
+import { PreviewProfileComponent } from './preview-profile/preview-profile.component';
 import { LayoutModule } from '../layout';
 import { ProfileSectionComponent } from './profile-section/profile-section.component';
 import { ProfileSectionPickerComponent } from './profile-section-picker/profile-section-picker.component';
@@ -17,11 +18,13 @@ import { ProfileCardsViewComponent } from './profile-cards-view/profile-cards-vi
   declarations: [ProfileFormComponent,
     ManageProfileComponent,
     ProfileViewComponent,
+    PreviewProfileComponent,
     ProfileSectionComponent,
     ProfileSectionPickerComponent,
     ProfileCardsViewComponent],
   exports: [ProfileFormComponent,
     ManageProfileComponent,
+    PreviewProfileComponent,
     ProfileCardsViewComponent]
 })
 

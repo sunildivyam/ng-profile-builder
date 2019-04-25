@@ -1,0 +1,15 @@
+.contact-bar {
+  background: rgb(207, 207, 207);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .item {
+    margin: 5px;
+    padding: 5px 15px;
+
+    .label {
+      font-weight: bold;
+    }
+  }
+}

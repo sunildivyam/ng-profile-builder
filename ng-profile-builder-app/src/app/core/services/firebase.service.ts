@@ -3,6 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Profile } from 'src/app/features/profile';
 
 @Injectable({
   providedIn: 'root'
@@ -36,7 +37,7 @@ export class FirebaseService {
 
   getLayout(id: string): Observable<any> {
     return new Observable((observer) => {
-      this.db.doc(`${this.endpoints.layouts}/${id}`).snapshotChanges().subscribe((data) => {
+      this.db.doc(`${this.endpoints.layouts}/${id}`).snapshotChanges().subscribe((data: any) => {
         const layout = {
           id: data.payload.id,
           dateUpdated: data.payload._document.version.toTimestamp().toDate(),
@@ -77,6 +78,10 @@ export class FirebaseService {
   getProfiles(): Observable<any> {
     return new Observable((observer) => {
       this.db.collection(this.endpoints.profiles).snapshotChanges().subscribe((data) => {
+        data.sort((a: any, b: any) => {
+          // desc order
+          return b.payload.doc._document.version.toTimestamp().seconds - a.payload.doc._document.version.toTimestamp().seconds;
+        });
         const profiles = data.map((e) => {
           return {
             id: e.payload.doc.id,
@@ -91,7 +96,7 @@ export class FirebaseService {
 
   getProfile(id: string): Observable<any> {
     return new Observable((observer) => {
-      this.db.doc(`${this.endpoints.profiles}/${id}`).snapshotChanges().subscribe((data) => {
+      this.db.doc(`${this.endpoints.profiles}/${id}`).snapshotChanges().subscribe((data: any) => {
         const profile = {
           id: data.payload.id,
           dateUpdated: data.payload._document.version.toTimestamp().toDate(),

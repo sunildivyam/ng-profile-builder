@@ -1,15 +1,15 @@
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+<div class="modal fade" id="profileSectionPickerModal" tabindex="-1" role="dialog" aria-labelledby="profileSectionPickerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Profile Section</h5>
+        <h5 class="modal-title" id="profileSectionPickerModalLabel">Profile Section</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeClicked($event)">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-          <div>Select View Items for this section</div>
+          <div class="section-header">Select View Items for this section</div>
           <ul>
             <li *ngFor="let cmp of viewComponents"
             (click)="toggleSelectComponent(cmp.name)"
@@ -19,7 +19,7 @@
             </li>
           </ul>
           <hr>
-          <div>Section content alignment</div>
+          <div class="section-header">Section content alignment</div>
           <ul class="alignment-links">
             <li *ngFor="let nav of contextNav" [title]="nav.title">
               <a class="" href="#" (click)="contextNavClick($event, nav, rowIndex, colIndex)" >
@@ -27,6 +27,13 @@
               </a>
             </li>
           </ul>
+          <hr>
+          <a class="link settings" href="#" (click)="editColumnClick($event)">
+            <span class="fa fa-cog"></span>Change column layout
+          </a>
+          <div class="section-header">Change Column layout</div>
+          <i class="text-danger"><small>* Changing Column layout will loose the existing View Items for this section.</small></i>          
+          <pba-column-form *ngIf="isColumnFormVisible" [column]="column" (formClosed)="columnFormCloseClick($event)"></pba-column-form>
       </div>
     </div>
   </div>

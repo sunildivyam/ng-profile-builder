@@ -13,17 +13,27 @@ export class ProfileViewComponent implements OnInit, OnChanges {
   @Input() isReadonly: boolean;
 
   sectionColumn: Column;
+  isColumnFormVisible: boolean;
 
   constructor() { }
 
-  editColumnClick(event, col: Column) {
+  editSectionClick(event, col: Column) {
     this.sectionColumn = col;
+  }
+
+  public editColumnClick(event, col: Column): void {
+    event.preventDefault();
+    this.sectionColumn = col;
+    this.isColumnFormVisible = true;
+  }
+
+  public columnFormCloseClick(col: Column): void {
+    this.isColumnFormVisible = false;
   }
 
   ngOnInit() {
   }
 
-  ngOnChanges(changes) {
-    console.log(changes);
+  ngOnChanges(changes) {    
   }
 }

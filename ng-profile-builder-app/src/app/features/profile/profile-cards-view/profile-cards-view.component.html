@@ -1,6 +1,6 @@
-<div class="card-columns">
+<div class="card-columns container">
   <div class="card" *ngFor="let profile of viewData">
-    <img class="card-img-top" src="assets/background.jpg" alt="Card image cap">
+    <img class="card-img-top" src="{{profile?.content?.basicInfo?.profileImage || 'assets/background.jpg'}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{profile?.content?.basicInfo?.profileName}}</h5>
       <h6 class="card-text">{{profile?.content?.basicInfo?.firstName}} {{profile?.content?.basicInfo?.lastName}}</h6>

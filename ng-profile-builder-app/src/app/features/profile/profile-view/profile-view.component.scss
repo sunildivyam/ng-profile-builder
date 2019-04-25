@@ -20,8 +20,8 @@
 
 .layout {
   .row {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     border: 1px dotted lightblue;
   }
 
@@ -29,14 +29,19 @@
     position: relative;
     padding: 0px;
     margin: 0px;
+    transition: border 0.5s ease-out;
+    border: 10px solid white;      
 
     .settings {
       top: 0px;
       right: 0px;
       display: none;
     }
-
+    .row-settings {
+      z-index: 1;      
+    }
     &:hover {
+      border: 10px solid rgb(217, 255, 0);      
       &>.settings {
         display: block;
       }
@@ -46,23 +51,25 @@
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: center;
-
+      justify-content: center;      
       min-height: 100px;
-      background: rgb(155, 226, 253);;
-      border: 1px solid transparent;
+      background: rgb(155, 226, 253);;      
       padding: 0px;
-      margin: 2px;
+      margin: 0px;
 
       .settings {
         top: 0px;
-        right: 5px;
+        right: calc(50% - 27px);
         display: none;
+        font-size: 30px;
+        background: #001c5f;
+        padding: 0px 15px 5px 15px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0px 0px 10px 0px black;
       }
 
       &:hover {
-        border: 1px dotted lightblue;
-
         .settings {
           display: block;
         }
@@ -74,15 +81,24 @@
     position: absolute;
     display: none;
     top: 10px;
-    right: 15px;
+    right: 15px;    
   }
 
   &.readonly-view {
+    background: white;
+    border: 10px solid white;
+    
     .row {
       border: none;
     }
     .layout-content-container {
       border: none;
+
+      &:hover {        
+        &>.settings {
+          display: none;
+        }
+      }
 
       .layout-content {
         margin: 0px;
