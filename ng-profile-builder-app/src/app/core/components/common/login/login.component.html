@@ -1,0 +1,10 @@
+<div class="container">
+  <firebase-ui *ngIf="!authService.isUserLoggedIn()" 
+    (signInSuccessWithAuthResult)="signInSuccessCb($event)"
+    (signInFailure)="signInErrorCb($event)">
+  </firebase-ui>
+  <div class="looged-in-container"  *ngIf="authService.isUserLoggedIn()">
+    <p class="text-success"><strong>{{authService.currentUser?.displayName || 'Guest' }}</strong>You are already signed in.</p>
+    <p class="text-info">Please Sign out first to Sign in as different user. <a href="#" class="btn-link" (click)="logoutClick($event)">Sign out</a></p>    
+  </div>
+</div>

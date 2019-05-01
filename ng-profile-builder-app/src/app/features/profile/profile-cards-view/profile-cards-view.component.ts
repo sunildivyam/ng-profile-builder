@@ -24,7 +24,7 @@ export class ProfileCardsViewComponent implements OnChanges {
     });
   }
   public getProfiles() {
-    this.firebaseService.getProfiles().subscribe((profiles: Array<Profile>) => {
+    this.firebaseService.getProfiles(this.authService.currentUserId).subscribe((profiles: Array<Profile>) => {
       this.profiles = profiles;
       this.transformData();
     });

@@ -12,7 +12,8 @@ import {
   DashboardComponent,
   ViewProfileComponent,
   BuildProfileComponent,
-  LayoutsComponent
+  LayoutsComponent,
+  LoginPageComponent
 } from './partials';
 
 @NgModule({
@@ -21,7 +22,8 @@ import {
     DashboardComponent,
     ViewProfileComponent,
     BuildProfileComponent,
-    LayoutsComponent
+    LayoutsComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,22 +1,38 @@
 import { Injectable } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private _currentUser = {
-    id: 'debTwyXxqv60kYJbEdYz',
-    userName: 'sunil.divyam',
-    firstName: 'Sunil',
-    lastName: 'Kumar'
-  };
-  constructor() { }
+  private _currentUser: any = {};
 
- public get currentUserId(): string {
-   return this._currentUser.id;
- }
+  constructor(private angularFireAuth: AngularFireAuth) {
+    this.angularFireAuth.authState.subscribe(this.firebaseAuthChangeListner);
+  }
+  private firebaseAuthChangeListner(response: any) {
+    if (response) {
+      console.log("SUCCESS", response);
+    } else {      
+      console.log("LOGOUT", response);
+    }
+  }
+  public logout(): Promise<void> {
+    return this.angularFireAuth.auth.signOut();
+  }
 
- public get currentUser(): Object {
-  return this._currentUser;
-}
+  public isUserLoggedIn(): boolean {
+    if (this.angularFireAuth.auth.currentUser) {
+      return true;
+    }
+    return false;
+  }
+
+  public get currentUserId(): string {
+    return this.angularFireAuth.auth.currentUser && this.angularFireAuth.auth.currentUser.uid;
+  }
+
+  public get currentUser(): Object {
+    return this.angularFireAuth.auth.currentUser;
+  }
 }

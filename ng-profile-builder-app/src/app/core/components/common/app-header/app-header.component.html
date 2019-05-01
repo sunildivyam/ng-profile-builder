@@ -4,10 +4,20 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#app-header" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="app-header">
+    <div class="collapse navbar-collapse justify-content-between" id="app-header">
       <div class="navbar-nav">
         <a class="nav-item nav-link" [routerLinkActive]="'active'" routerLink="/dashboard">Dashboard <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" [routerLinkActive]="'active'" routerLink="/layouts">Layouts</a>
+      </div>
+      <div class="navbar-nav account" *ngIf="authService.currentUserId">
+        <a class="nav-item nav-link" href="#">
+          <img *ngIf="authService.currentUser?.photoURL" class="profile-photo" [src]="authService.currentUser?.photoURL"/> 
+          {{authService.currentUser.isAnonymous ? 'Guest' : (authService.currentUser?.displayName || 'User')}}
+        </a>
+        <a class="nav-item nav-link" href="#" (click)="logoutClick($event)">Logout</a>
+      </div>
+      <div class="navbar-nav account" *ngIf="!authService.currentUserId">
+        <a class="nav-item nav-link" [routerLinkActive]="'active'" routerLink="/login">Sign In</a>
       </div>
     </div>
   </nav>

@@ -16,11 +16,7 @@ export class FirebaseService {
 
   // Layout APIs
   getLayouts(userId: string): Observable<any> {
-    let condFn;
-    if (userId) {
-      condFn = ref => ref.where('userId', '==', userId);
-    }
-
+    let condFn = ref => ref.where('userId', '==', userId);
     return new Observable((observer) => {
       this.db.collection(this.endpoints.layouts, condFn).snapshotChanges().subscribe((data) => {
         const layouts = data.map((e) => {
@@ -75,9 +71,11 @@ export class FirebaseService {
   }
 
   // Profile APIs
-  getProfiles(): Observable<any> {
+  getProfiles(userId: string): Observable<any> {
+    let condFn = ref => ref.where('userId', '==', userId);
+
     return new Observable((observer) => {
-      this.db.collection(this.endpoints.profiles).snapshotChanges().subscribe((data) => {
+      this.db.collection(this.endpoints.profiles, condFn).snapshotChanges().subscribe((data) => {
         data.sort((a: any, b: any) => {
           // desc order
           return b.payload.doc._document.version.toTimestamp().seconds - a.payload.doc._document.version.toTimestamp().seconds;
