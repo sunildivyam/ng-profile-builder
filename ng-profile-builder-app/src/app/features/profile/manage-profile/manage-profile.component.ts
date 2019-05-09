@@ -27,8 +27,18 @@ export class ManageProfileComponent implements OnInit {
       this.route.url.subscribe((urlSegments: Array<UrlSegment>) => {
         if (urlSegments.length) {
           const profileId = urlSegments[0].path;
-          this.getProfile(profileId);
-        }
+          if (profileId) {
+            this.getProfile(profileId);
+          } else {
+            this.currentProfile = new Profile();
+            this.currentLayout = new Layout();
+            this.isDataMode = true;
+          }          
+        } else {
+          this.currentProfile = new Profile();
+          this.currentLayout = new Layout();
+          this.isDataMode = true;
+        }  
       });
     }
 
@@ -37,9 +47,11 @@ export class ManageProfileComponent implements OnInit {
   }
 
   public getProfile(id: string) {
-    this.firebaseService.getProfile(id).subscribe((profile: Profile) => {
+    this.firebaseService.getProfile(id, this.authService.currentUserId).subscribe((profile: Profile) => {
       profile.content = <ProfileContent>{...(new ProfileContent()), ...profile.content};
       this.currentProfile = profile;
+    }, (error) => {
+      this.currentProfile = null;
     });
   }
 
@@ -95,7 +107,7 @@ export class ManageProfileComponent implements OnInit {
 
   public addProfileClick(): void {
     this.currentProfile = new Profile();
-    this.currentProfile.userId = this.authService.currentUserId;
+    this.currentProfile.uid = this.authService.currentUserId;
 
     this.createProfile();
   }
@@ -162,7 +174,7 @@ export class ManageProfileComponent implements OnInit {
   //       delete prevProfile._id;
   //       const newProfile = new Profile();
   //       newProfile.content = <ProfileContent>prevProfile;
-  //       newProfile.userId = this.authService.currentUserId;
+  //       newProfile.uid = this.authService.currentUserId;
   //       this.firebaseService.createProfile(newProfile).subscribe((newProfileId: string) => {
   //         console.log("CREATED: ", newProfileId);
   //       });

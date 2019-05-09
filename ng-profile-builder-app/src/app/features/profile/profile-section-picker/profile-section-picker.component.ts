@@ -70,12 +70,13 @@ export class ProfileSectionPickerComponent implements OnInit {
     // }
   }
 
-  closeClicked() {
+  closeClicked(event: any) {
+    event.preventDefault();
     this.closeClick.emit(this.column);
   }
-  
-  public editColumnClick(event, col: Column): void {
-    event.preventDefault();    
+
+  public editColumnClick(event: any): void {
+    event.preventDefault();
     this.isColumnFormVisible = true;
   }
 

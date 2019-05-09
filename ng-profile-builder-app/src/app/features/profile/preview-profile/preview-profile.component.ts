@@ -19,9 +19,9 @@ export class PreviewProfileComponent implements OnInit {
       }
     });
   }
-  
+
   public getProfile(id: string) {
-    this.firebaseService.getProfile(id).subscribe((profile: Profile) => {
+    this.firebaseService.getProfile(id, '').subscribe((profile: Profile) => {
       profile.content = <ProfileContent>{...(new ProfileContent()), ...profile.content};
       this.currentProfile = profile;
     });

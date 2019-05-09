@@ -5,7 +5,7 @@ export class Layout {
   id: string;
   title: string;
   rows: Array<Row>;
-  userId: string;
+  uid: string;
   dateUpdated: Date;
 
   constructor() {

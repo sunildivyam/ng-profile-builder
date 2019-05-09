@@ -13,9 +13,9 @@ export class AppHeaderComponent implements OnInit {
   public logoutClick(event: any): void {
     event.preventDefault();
     this.authService.logout().then((res: any) => {
-      console.log("logged out successfuly", res);
+      // todo
     }, (err) => {
-      console.log("Erro Logging out", err);
+      // todo
     });  
   }
 

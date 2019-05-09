@@ -9,8 +9,8 @@ import { FirebaseService, AuthService } from 'src/app/core';
 })
 
 export class ManageLayoutsComponent implements OnInit {
-  private layouts: Array<Layout> = new Array<Layout>();
-  private currentLayout: Layout;
+  public layouts: Array<Layout> = new Array<Layout>();
+  public currentLayout: Layout;
 
   constructor(private firebaseService: FirebaseService,
     private authService: AuthService) { }
@@ -55,23 +55,25 @@ export class ManageLayoutsComponent implements OnInit {
     });
   }
 
-  public addLayoutClick(): void {
+  public addLayoutClick(event: any): void {
+    event.preventDefault();
     this.currentLayout = new Layout();
-    this.currentLayout.userId = this.authService.currentUserId;
+    this.currentLayout.uid = this.authService.currentUserId;
 
     this.createLayout();
   }
 
-  public deleteLayoutClick(): void {
+  public deleteLayoutClick(event: any): void {
+    event.preventDefault();
     this.deleteLayout();
   }
 
-  public updateLayoutClick(): void {
+  public updateLayoutClick(event: any): void {
+    event.preventDefault();
     this.updateLayout();
   }
 
   public currentLayoutChanged(layout: Layout): void {
-    console.log(this.currentLayout);
     this.currentLayout = layout;
   }
 

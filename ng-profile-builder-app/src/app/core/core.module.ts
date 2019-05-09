@@ -8,21 +8,18 @@ import { RouterModule } from '@angular/router';
 // Firebase modules
 import {FirebaseUIModule, firebase, firebaseui} from 'firebaseui-angular';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFirestoreModule, DefaultFirestoreSettings } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-
-// import * as firebase from 'firebase/app';
-// import * as firebaseui from 'firebaseui';
 
 import * as CommonComponents from './components/common';
 import * as FormComponents from './components/forms';
+
 import * as ViewComponents from './components/views';
 import * as Services from './services';
 import { environment } from 'src/environments/environment';
 
-const declarables = { ...FormComponents, ...CommonComponents, ...ViewComponents };
-const exportables = { ...declarables };
-const providers = {...Services};
+// This removes warning from console. as this setting will be removed from future releases, and will work as true by default.
+delete DefaultFirestoreSettings.timestampsInSnapshots;
 
 const firebaseuiConfig = {
   signInFlow: 'redirect', // or popup
@@ -55,7 +52,7 @@ const firebaseuiConfig = {
 }
 
 @NgModule({
-  providers: Object.values(providers),
+  providers: Object.values(Services),
   imports: [CommonModule,
     FormsModule,
     DndModule.forRoot(),
@@ -65,8 +62,82 @@ const firebaseuiConfig = {
     AngularFireAuthModule,
     AngularFirestoreModule.enablePersistence(),
     FirebaseUIModule.forRoot(firebaseuiConfig)],
-  declarations: Object.values(declarables),
-  exports: Object.values(exportables),
+  declarations: [
+    CommonComponents.AppFooterComponent,
+    CommonComponents.AppHeaderComponent,
+    CommonComponents.BackgroundComponent,
+    CommonComponents.ControlToolbarComponent,
+    CommonComponents.WizardComponent,
+    CommonComponents.MessageComponent,
+    CommonComponents.LoginComponent,
+    FormComponents.AdditionalsFormComponent,
+    FormComponents.BasicInfoFormComponent,
+    FormComponents.EducationFormComponent,
+    FormComponents.EmployersFormComponent,
+    FormComponents.ExtendedListFormComponent,
+    FormComponents.ImageUploadFormComponent,
+    FormComponents.SocialMediaFormComponent,
+    FormComponents.SkillsFormComponent,
+    FormComponents.RatingFormComponent,
+    FormComponents.ProjectsFormComponent,
+    ViewComponents.AdditionalsViewComponent,
+    ViewComponents.BasicInfoViewComponent,
+    ViewComponents.ContactBarViewComponent,
+    ViewComponents.DisclaimerViewComponent,
+    ViewComponents.EducationViewComponent,
+    ViewComponents.EmployersMediumViewComponent,
+    ViewComponents.EmployersSmallViewComponent,
+    ViewComponents.EmployersViewComponent,
+    ViewComponents.ExperienceBarViewComponent,
+    ViewComponents.SummaryViewComponent,
+    ViewComponents.SocialMediaViewComponent,
+    ViewComponents.SkillsViewComponent,
+    ViewComponents.RatingViewComponent,
+    ViewComponents.ProjectsViewComponent,
+    ViewComponents.ProjectsSmallViewComponent,
+    ViewComponents.ProjectsMediumViewComponent,
+    ViewComponents.ProfileHeaderViewComponent,
+    ViewComponents.PrimarySkillsViewComponent,
+    ViewComponents.ImageViewComponent
+    ],
+  exports: [
+    CommonComponents.AppFooterComponent,
+    CommonComponents.AppHeaderComponent,
+    CommonComponents.BackgroundComponent,
+    CommonComponents.ControlToolbarComponent,
+    CommonComponents.WizardComponent,
+    CommonComponents.MessageComponent,
+    CommonComponents.LoginComponent,
+    FormComponents.AdditionalsFormComponent,
+    FormComponents.BasicInfoFormComponent,
+    FormComponents.EducationFormComponent,
+    FormComponents.EmployersFormComponent,
+    FormComponents.ExtendedListFormComponent,
+    FormComponents.ImageUploadFormComponent,
+    FormComponents.SocialMediaFormComponent,
+    FormComponents.SkillsFormComponent,
+    FormComponents.RatingFormComponent,
+    FormComponents.ProjectsFormComponent,
+    ViewComponents.AdditionalsViewComponent,
+    ViewComponents.BasicInfoViewComponent,
+    ViewComponents.ContactBarViewComponent,
+    ViewComponents.DisclaimerViewComponent,
+    ViewComponents.EducationViewComponent,
+    ViewComponents.EmployersMediumViewComponent,
+    ViewComponents.EmployersSmallViewComponent,
+    ViewComponents.EmployersViewComponent,
+    ViewComponents.ExperienceBarViewComponent,
+    ViewComponents.SummaryViewComponent,
+    ViewComponents.SocialMediaViewComponent,
+    ViewComponents.SkillsViewComponent,
+    ViewComponents.RatingViewComponent,
+    ViewComponents.ProjectsViewComponent,
+    ViewComponents.ProjectsSmallViewComponent,
+    ViewComponents.ProjectsMediumViewComponent,
+    ViewComponents.ProfileHeaderViewComponent,
+    ViewComponents.PrimarySkillsViewComponent,
+    ViewComponents.ImageViewComponent
+    ],
   entryComponents: Object.values({ ...FormComponents, ...ViewComponents }),
 })
 export class CoreModule { }

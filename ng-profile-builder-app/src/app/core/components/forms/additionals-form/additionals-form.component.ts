@@ -6,7 +6,8 @@ import {Additional} from '../../../models';
 @Component({
   selector: 'pba-additionals-form',
   templateUrl: './additionals-form.component.html',
-  styleUrls: ['./additionals-form.component.css']
+  styleUrls: ['./additionals-form.component.css'],
+  // encapsulation: ViewEncapsulation.Native,
 })
 export class AdditionalsFormComponent implements OnInit, OnChanges {
   @Input() additionals: Array<Additional>;

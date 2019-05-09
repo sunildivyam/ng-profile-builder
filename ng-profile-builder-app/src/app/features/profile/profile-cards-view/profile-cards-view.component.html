@@ -13,3 +13,7 @@
     </div>
   </div>
 </div>
+<pba-message *ngIf="!viewData || !viewData.length"
+  [messageText]="'You have not created your profile/s of yours. Please create one, clicking button above.'" 
+  [headerText]="">
+</pba-message>

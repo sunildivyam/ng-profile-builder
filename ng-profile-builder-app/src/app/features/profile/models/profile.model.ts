@@ -5,7 +5,7 @@ export class Profile {
   id: string;
   layout: Layout;
   content: ProfileContent;
-  userId: string;
+  uid: string;
 
   constructor() {
     this.content = new ProfileContent();

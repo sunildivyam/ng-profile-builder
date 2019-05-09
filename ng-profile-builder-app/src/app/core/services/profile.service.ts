@@ -9,8 +9,7 @@ import { Profile } from 'src/app/features/profile/models';
 export class ProfileService {
   private api = environment.apiConfig;
 
-  constructor(private http: HttpClient, /*private httpHeaders: HttpHeaders*/) {
-    console.log(this.api);
+  constructor(private http: HttpClient, /*private httpHeaders: HttpHeaders*/) {    
     this.setHeaders();
   }
   private setHeaders() {

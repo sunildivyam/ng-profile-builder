@@ -1,22 +1,25 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { Subscription, Subject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private _currentUser: any = {};
+  private _currentUser: any = {};  
 
   constructor(private angularFireAuth: AngularFireAuth) {
-    this.angularFireAuth.authState.subscribe(this.firebaseAuthChangeListner);
+    this.angularFireAuth.authState.subscribe(this.firebaseAuthChangeListner);    
   }
-  private firebaseAuthChangeListner(response: any) {
-    if (response) {
-      console.log("SUCCESS", response);
-    } else {      
-      console.log("LOGOUT", response);
+
+  private firebaseAuthChangeListner(response: any) {    
+    if (response) {      
+      // console.log("SUCCESS", response);
+    } else {
+      // console.log("LOGOUT", response);
     }
   }
+
   public logout(): Promise<void> {
     return this.angularFireAuth.auth.signOut();
   }
@@ -34,5 +37,9 @@ export class AuthService {
 
   public get currentUser(): Object {
     return this.angularFireAuth.auth.currentUser;
+  }
+
+  public loginStateChange(): Observable<firebase.User> {
+    return this.angularFireAuth.authState;
   }
 }

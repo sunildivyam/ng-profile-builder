@@ -58,8 +58,7 @@ export class ImageUploadFormComponent implements OnInit {
       this.dropped = true;
       this.dragging = false;
       this.isError = false;
-      if (this.imageSrc.length > this.MAX_IMAGE_SIZE) {
-        console.log(this.imageSrc.length/1024, 'kb');
+      if (this.imageSrc.length > this.MAX_IMAGE_SIZE) {        
         this.toggleError(true, `Image exceeds Size of ${this.MAX_IMAGE_SIZE/1024} kb`);
         setTimeout(() => this.imageSrc = '', 2000);
         return;

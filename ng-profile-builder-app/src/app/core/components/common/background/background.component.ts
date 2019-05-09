@@ -18,7 +18,10 @@ export class BackgroundComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    this.imageUrl = `url('${this.bgImageUrl}')`;
+    if (this.bgImageUrl) {
+      this.imageUrl = `url('${this.bgImageUrl}')`;
+    } else {
+      this.imageUrl = '';
+    }
   }
-
 }

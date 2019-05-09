@@ -15,8 +15,7 @@ export class LayoutListComponent implements OnInit, OnChanges {
   constructor() {
   }
 
-  public selectLayoutClick(event): void {
-    console.log(event);
+  public selectLayoutClick(event): void {    
     this.onSelect.emit(this.selectedLayout);
   }
 

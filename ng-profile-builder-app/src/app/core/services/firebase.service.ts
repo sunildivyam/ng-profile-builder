@@ -15,11 +15,11 @@ export class FirebaseService {
   }
 
   // Layout APIs
-  getLayouts(userId: string): Observable<any> {
-    let condFn = ref => ref.where('userId', '==', userId);
+  getLayouts(uid: string): Observable<any> {
+    let condFn = ref => ref.where('uid', '==', uid);
     return new Observable((observer) => {
       this.db.collection(this.endpoints.layouts, condFn).snapshotChanges().subscribe((data) => {
-        const layouts = data.map((e) => {
+        const layouts = data.map((e: any) => {
           return {
             id: e.payload.doc.id,
             dateUpdated: e.payload.doc._document.version.toTimestamp().toDate(),
@@ -71,8 +71,8 @@ export class FirebaseService {
   }
 
   // Profile APIs
-  getProfiles(userId: string): Observable<any> {
-    let condFn = ref => ref.where('userId', '==', userId);
+  getProfiles(uid: string): Observable<any> {
+    let condFn = ref => ref.where('uid', '==', uid);
 
     return new Observable((observer) => {
       this.db.collection(this.endpoints.profiles, condFn).snapshotChanges().subscribe((data) => {
@@ -80,7 +80,7 @@ export class FirebaseService {
           // desc order
           return b.payload.doc._document.version.toTimestamp().seconds - a.payload.doc._document.version.toTimestamp().seconds;
         });
-        const profiles = data.map((e) => {
+        const profiles = data.map((e: any) => {
           return {
             id: e.payload.doc.id,
             dateUpdated: e.payload.doc._document.version.toTimestamp().toDate(),
@@ -88,19 +88,25 @@ export class FirebaseService {
           };
         });
         observer.next(profiles);
+      }, (error) => {
+        console.log("ERROR:", error);
+        observer.error([]);
       });
     });
   }
 
-  getProfile(id: string): Observable<any> {
+  getProfile(id: string, uid: string): Observable<any> {
     return new Observable((observer) => {
-      this.db.doc(`${this.endpoints.profiles}/${id}`).snapshotChanges().subscribe((data: any) => {
+      this.db.doc(`${this.endpoints.profiles}/${id}`).get().subscribe((data: any) => {
         const profile = {
-          id: data.payload.id,
-          dateUpdated: data.payload._document.version.toTimestamp().toDate(),
-          ...data.payload.data()
+          id: data.id,
+          dateUpdated: data._document.version.toTimestamp().toDate(),
+          ...data.data()
         };
         observer.next(profile);
+      }, (error) => {
+        console.log("ERROR:", error);
+        observer.error(null);
       });
     });
   }
@@ -121,7 +127,7 @@ export class FirebaseService {
         observer.next(data);
         observer.complete();
       }, (err) => {
-        console.log(err);
+        // console.log(err);
         observer.error(err)
       });
     });

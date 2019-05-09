@@ -17,23 +17,31 @@ export class LoginComponent implements OnInit {
       this.route.queryParams.subscribe((params: Params) => {
         this.returnUrl = params['returnUrl'] || '/dashboard';
       });
+
+      this.authService.loginStateChange().subscribe((user) => {
+        if (user) {
+          this.router.navigateByUrl(this.returnUrl);
+        } else {
+          this.router.navigateByUrl('/login');
+        }
+      });
     }
   
   public signInSuccessCb(successData: FirebaseUISignInSuccessWithAuthResult) {
-    console.log("Successfully Signed In", successData);
-    this.router.navigateByUrl(this.returnUrl);
+     // console.log("Successfully Signed In", successData);
+    // this.router.navigateByUrl(this.returnUrl);
   }
 
   public signInErrorCb(errorData: FirebaseUISignInFailure) {
-    console.log("Signing In Failed", errorData);
+    // console.log("Signing In Failed", errorData);
   }
 
   public logoutClick(event: any): void {
     event.preventDefault();
     this.authService.logout().then((res: any) => {
-      console.log("logged out successfuly", res);
+      // console.log("logged out successfuly", res);
     }, (err) => {
-      console.log("Erro Logging out", err);
+      // console.log("Erro Logging out", err);
     });  
   }
 

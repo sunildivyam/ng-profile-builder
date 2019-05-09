@@ -1,6 +1,7 @@
 <div class="container">
   <firebase-ui *ngIf="!authService.isUserLoggedIn()" 
     (signInSuccessWithAuthResult)="signInSuccessCb($event)"
+    (signInSuccess)="signInSuccessCb($event)"
     (signInFailure)="signInErrorCb($event)">
   </firebase-ui>
   <div class="looged-in-container"  *ngIf="authService.isUserLoggedIn()">
