@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Layout, Column, Row } from '../models';
 import { FirebaseService, AuthService } from 'src/app/core';
+import { ActivatedRoute, UrlSegment, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'pba-manage-layouts',
@@ -11,21 +13,50 @@ import { FirebaseService, AuthService } from 'src/app/core';
 export class ManageLayoutsComponent implements OnInit {
   public layouts: Array<Layout> = new Array<Layout>();
   public currentLayout: Layout;
+  public currentLayoutId: string;
+  public getLayoutsSubscription: Subscription;
 
-  constructor(private firebaseService: FirebaseService,
-    private authService: AuthService) { }
+  constructor(
+    private firebaseService: FirebaseService,
+    private authService: AuthService,
+    private route: ActivatedRoute,
+    private router: Router) {
+    this.route.parent.url.subscribe((urlSegments: Array<UrlSegment>) => {
+      if (urlSegments.length) {
+        this.currentLayoutId = urlSegments[0].path;
+        this.setCurrentLayout();
+      }
+    });
+  }
 
   private getLayouts(): void {
-    this.firebaseService.getLayouts(this.authService.currentUserId)
+    this.getLayoutsSubscription = this.firebaseService.getLayouts(this.authService.currentUserId)
       .subscribe((layouts: Array<Layout>) => {
         this.layouts = layouts;
+        this.setCurrentLayout();
+        this.getLayoutsSubscription.unsubscribe();
       });
   }
 
+  private setCurrentLayout(): void {
+    if (this.currentLayoutId && this.currentLayoutId != '0' && this.layouts.length) {
+      this.currentLayout = this.layouts.find((lt) => this.currentLayoutId == lt.id);
+    } else if (this.currentLayoutId === '0'){
+      this.createLayout();
+    } else {
+      this.currentLayout = null;
+    }
+  }
   private createLayout() {
+    this.currentLayout = new Layout();
+    this.currentLayout.uid = this.authService.currentUserId;
     this.firebaseService.createLayout(this.currentLayout)
     .subscribe((id: string) => {
+      this.currentLayout = new Layout();
+      this.currentLayout.uid = this.authService.currentUserId;
       this.currentLayout.id = id;
+      this.layouts.push(this.currentLayout);
+      this.router.navigateByUrl(`/layouts/${id}/manage`);
     });
   }
 
@@ -35,15 +66,17 @@ export class ManageLayoutsComponent implements OnInit {
     }
     this.firebaseService.deleteLayout(this.currentLayout.id)
     .subscribe(() => {
-      this.layouts = this.layouts.map((layout) => {
+      this.layouts = this.layouts.filter((layout) => {
         if (layout.id !== this.currentLayout.id) {
           return layout;
         }
       });
       setTimeout(() => {
+        let id = '0';
         if (this.layouts && this.layouts.length) {
-          this.currentLayout = this.layouts[0];
+          id = this.layouts[0].id;
         }
+        this.router.navigateByUrl(`/layouts/${id}/manage`);
       });
     });
   }
@@ -57,9 +90,6 @@ export class ManageLayoutsComponent implements OnInit {
 
   public addLayoutClick(event: any): void {
     event.preventDefault();
-    this.currentLayout = new Layout();
-    this.currentLayout.uid = this.authService.currentUserId;
-
     this.createLayout();
   }
 
@@ -74,7 +104,7 @@ export class ManageLayoutsComponent implements OnInit {
   }
 
   public currentLayoutChanged(layout: Layout): void {
-    this.currentLayout = layout;
+    this.router.navigateByUrl(`/layouts/${layout.id}/manage`);
   }
 
   ngOnInit() {

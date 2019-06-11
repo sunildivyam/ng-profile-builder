@@ -1,0 +1,16 @@
+<div class="card-columns container">
+  <div class="card" *ngFor="let layout of viewData">
+    <img class="card-img-top" src="/assets/layout.jpg" alt="Layout image">
+    <div class="card-body">
+      <h5 class="card-title">{{layout?.title}}</h5>
+      <div class="card-text" title="last updated"><span class="fa fa-calendar-check-o"></span> {{layout?.dateUpdated | date:'dd, MMM, y : hh:mm:s'}}</div>
+    </div>
+    <div class="card-footer">
+      <a class="card-link" [routerLink]="['/layouts', layout.id, 'manage']">Update <i class="fa fa-edit"></i></a>
+    </div>
+  </div>
+</div>
+<pba-message *ngIf="!viewData || !viewData.length"
+  [messageText]="'You have not created layout/s yet. Please create one, clicking button above.'"
+  [headerText]="">
+</pba-message>

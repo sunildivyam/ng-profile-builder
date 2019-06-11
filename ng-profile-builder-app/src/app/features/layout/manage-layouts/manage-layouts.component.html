@@ -1,23 +1,30 @@
 <pba-background>
   <div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-          <h2>Layouts</h2>
-        </div>
-        <div class="col-sm-4">
-            <pba-layout-list class="input-group-prepend" [layouts]="layouts" (onSelect)="currentLayoutChanged($event)" [selectedLayout]="currentLayout">
-            </pba-layout-list>
-        </div>
-        <div class="col-sm-4 text-right">
-            <pba-control-toolbar
-            (onSaveClick)="updateLayoutClick($event)"
-            (onDeleteClick)="deleteLayoutClick($event)"
-            (onAddClick)="addLayoutClick($event)"></pba-control-toolbar>
-        </div>
+    <div class="row" *ngIf="currentLayout || layouts.length">
+      <div class="col-sm-4">
       </div>
+      <div class="col-sm-4">
+          <pba-layout-list class="input-group-prepend" [layouts]="layouts" (onSelect)="currentLayoutChanged($event)" [selectedLayout]="currentLayout">
+          </pba-layout-list>
+      </div>
+      <div class="col-sm-4 text-right">
+          <pba-control-toolbar
+          (onSaveClick)="updateLayoutClick($event)"
+          (onDeleteClick)="deleteLayoutClick($event)"
+          (onAddClick)="addLayoutClick($event)"></pba-control-toolbar>
+      </div>
+    </div>
+    <div *ngIf="!currentLayout && !layouts.length" class="row">
+      <div class="col-sm-8">
+        No Layout exist. Please create one, click "Add new layout" button.
+      </div>
+      <div class="col-sm-4 text-right">
+        <a href="#" (click)="addLayoutClick($event)" class="btn btn-primary"><i class="fa fa-new"></i>Add new layout</a>
+      </div>
+    </div>
   </div>
 </pba-background>
-<div class="container manage-layout">
+<div *ngIf="currentLayout" class="container manage-layout">
   <div class="row">
     <div class="col-sm-12 layout-container">
       <pba-layout-view [layout]="currentLayout">
@@ -25,3 +32,5 @@
     </div>
   </div>
 </div>
+
+<pba-message *ngIf="!currentLayout" [messageText]="'Layout Not Found'"></pba-message>

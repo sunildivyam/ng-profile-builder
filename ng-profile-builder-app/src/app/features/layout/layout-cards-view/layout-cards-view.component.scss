@@ -1,0 +1,26 @@
+.card-columns {
+  margin-top: 20px;
+  orphans: 2!important;
+  widows: 2!important;
+}
+
+.card {
+  background: rgb(76, 114, 119);
+  color: white;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background: black;
+    border-radius: 20px;
+  }
+}
+
+.card-img-top {
+  display: block;
+  max-width: 100%;
+  margin: 10px auto;
+  border-radius: 10px;
+}

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DndModule } from 'ng2-dnd';
 import { RouterModule } from '@angular/router';
@@ -46,8 +46,8 @@ const firebaseuiConfig = {
     firebase.auth.PhoneAuthProvider.PROVIDER_ID,
     firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
   ],
-  tosUrl: '<your-tos-link>',
-  privacyPolicyUrl: '<your-privacyPolicyUrl-link>',
+  tosUrl: '/termsofservice',
+  privacyPolicyUrl: '/privacypolicy',
   credentialHelper: firebaseui.auth.CredentialHelper.ACCOUNT_CHOOSER_COM
 }
 

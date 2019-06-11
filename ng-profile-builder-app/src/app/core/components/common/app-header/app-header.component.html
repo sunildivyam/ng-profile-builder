@@ -6,12 +6,13 @@
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="app-header">
       <div class="navbar-nav">
-        <a class="nav-item nav-link" [routerLinkActive]="'active'" routerLink="/dashboard">Dashboard <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" [routerLinkActive]="'active'" routerLink="/layouts">Layouts</a>
+        <a class="nav-item nav-link" [routerLinkActive]="'active'" routerLink="/home">Home</a>
+        <a class="nav-item nav-link" [routerLinkActive]="'active'" routerLink="/profiles">My Profiles</a>
+        <a class="nav-item nav-link" [routerLinkActive]="'active'" routerLink="/layouts">My Layouts</a>
       </div>
       <div class="navbar-nav account" *ngIf="authService.currentUserId">
-        <a class="nav-item nav-link" href="#">
-          <img *ngIf="authService.currentUser?.photoURL" class="profile-photo" [src]="authService.currentUser?.photoURL"/> 
+        <a class="nav-item nav-link" [routerLink]="['/profiles', 'dashboard']">
+          <img *ngIf="authService.currentUser?.photoURL" class="profile-photo" [src]="authService.currentUser?.photoURL"/>
           {{authService.currentUser.isAnonymous ? 'Guest' : (authService.currentUser?.displayName || 'User')}}
         </a>
         <a class="nav-item nav-link" href="#" (click)="logoutClick($event)">Logout</a>

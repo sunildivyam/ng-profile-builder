@@ -8,12 +8,12 @@
       <div class="card-text" title="last updated"><span class="fa fa-calendar-check-o"></span> {{profile?.dateUpdated | date:'dd, MMM, y : hh:mm:s'}}</div>
     </div>
     <div class="card-footer">
-      <a class="card-link" [routerLink]="['/buildprofile', profile.id]">Update <i class="fa fa-edit"></i></a>
-      <a class="card-link" [routerLink]="['/viewprofile', profile.id]">View <i class="fa fa-desktop"></i></a>
+      <a class="card-link" [routerLink]="['/profiles', profile.id, 'manage']">Update <i class="fa fa-edit"></i></a>
+      <a class="card-link" [routerLink]="['/profiles', profile.id, 'view']">View <i class="fa fa-desktop"></i></a>
     </div>
   </div>
 </div>
 <pba-message *ngIf="!viewData || !viewData.length"
-  [messageText]="'You have not created your profile/s of yours. Please create one, clicking button above.'" 
+  [messageText]="'You have not created profile/s yet. Please create one, clicking button above.'"
   [headerText]="">
 </pba-message>

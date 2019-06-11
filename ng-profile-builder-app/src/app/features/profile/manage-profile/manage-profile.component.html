@@ -1,4 +1,4 @@
-<pba-background *ngIf="!isDataMode && !isLayoutMode">
+<pba-background *ngIf="!isDataMode && !isLayoutMode && currentProfile">
     <div  class="container profile-card">
         <div class="row">
           <div class="col-sm-12">
@@ -65,3 +65,4 @@
 <pba-profile-form *ngIf="isDataMode" [profile]="currentProfile" (saved)="updateProfileClick($event)"></pba-profile-form>
 
 </div>
+<pba-message *ngIf="!currentProfile" [messageText]="'Profile Not Found'"></pba-message>

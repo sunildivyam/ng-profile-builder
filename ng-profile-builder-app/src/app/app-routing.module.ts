@@ -1,43 +1,69 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent, 
-  ViewProfileComponent, 
-  BuildProfileComponent, 
-  LayoutsComponent,
-  LoginPageComponent } from './partials';
-import { CanActivateRouteGuard } from './core/services';
+import { CanActivateRouteGuard, CanActivateChildRouteGuard } from './core/services';
+import {
+  HomeLandingComponent,
+  ProfilesLandingComponent,
+  ProfilesDashboardLandingComponent,
+  ProfilesViewLandingComponent,
+  ProfilesManageLandingComponent,
+  LayoutsLandingComponent,
+  LayoutsDashboardLandingComponent,
+  LayoutsManageLandingComponent,
+  LoginLandingComponent,
+  ErrorLandingComponent,
+  PrintProfileLandingComponent,
+  TermsofserviceLandingComponent,
+  PrivacypolicyLandingComponent
+} from './partials';
 
 const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent, canActivate: [CanActivateRouteGuard] },
-  { path: 'login', 
+  { path: 'home', component: HomeLandingComponent },
+  {
+    path: 'profiles',
+    canActivateChild: [CanActivateChildRouteGuard],
     children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', component: ProfilesDashboardLandingComponent }, // Dashboard landing page
       {
-        path: '', component: LoginPageComponent
-      },
-      {
-        path: '?returnUrl', component: LoginPageComponent
+        path: ':id',
+        component: ProfilesLandingComponent,
+        children: [
+          { path: '', redirectTo: 'manage', pathMatch: 'full' },
+          { path: 'view', component: ProfilesViewLandingComponent },
+          { path: 'manage', component: ProfilesManageLandingComponent }
+        ]
       }
     ]
   },
-  { path: 'viewprofile',
+  {
+    path: 'layouts',
+    canActivateChild: [CanActivateChildRouteGuard],
     children: [
-      { path: '',  redirectTo: '/dashboard', pathMatch: 'full'},
-      { path: ':id', component: ViewProfileComponent, canActivate: [CanActivateRouteGuard] },
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', component: LayoutsDashboardLandingComponent }, // Dashboard landing page
+      {
+        path: ':id',
+        component: LayoutsLandingComponent,
+        children: [
+          { path: '', redirectTo: 'manage', pathMatch: 'full' },
+          { path: 'manage', component: LayoutsManageLandingComponent }
+        ]
+      }
     ]
   },
-  { path: 'buildprofile',
+  {
+    path: 'login',
     children: [
-      { path: '', component: BuildProfileComponent, canActivate: [CanActivateRouteGuard] },
-      { path: ':id', component: BuildProfileComponent, canActivate: [CanActivateRouteGuard] },
+      { path: '', component: LoginLandingComponent },
+      { path: '?returnUrl', component: LoginLandingComponent }
     ]
   },
-  { path: 'layouts',
-    children: [
-      { path: '', component: LayoutsComponent, canActivate: [CanActivateRouteGuard] },
-      { path: ':id', component: LayoutsComponent, canActivate: [CanActivateRouteGuard] },
-    ]
-  },
-  { path: '**', redirectTo: '/dashboard', pathMatch: 'full'},
+  { path: 'printprofile/:id', component: PrintProfileLandingComponent, data: {bareboneMode: true} },
+  { path: 'termsofservice', component: TermsofserviceLandingComponent },
+  { path: 'privacypolicy', component: PrivacypolicyLandingComponent },
+  { path: 'error', component: ErrorLandingComponent },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({

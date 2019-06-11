@@ -9,21 +9,37 @@ import { ProfileModule } from './features/profile';
 
 import {
   AppComponent,
-  DashboardComponent,
-  ViewProfileComponent,
-  BuildProfileComponent,
-  LayoutsComponent,
-  LoginPageComponent
+  HomeLandingComponent,
+  ProfilesLandingComponent,
+  ProfilesDashboardLandingComponent,
+  ProfilesViewLandingComponent,
+  ProfilesManageLandingComponent,
+  LayoutsLandingComponent,
+  LayoutsDashboardLandingComponent,
+  LayoutsManageLandingComponent,
+  LoginLandingComponent,
+  ErrorLandingComponent,
+  PrintProfileLandingComponent,
+  TermsofserviceLandingComponent,
+  PrivacypolicyLandingComponent
 } from './partials';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    ViewProfileComponent,
-    BuildProfileComponent,
-    LayoutsComponent,
-    LoginPageComponent
+    HomeLandingComponent,
+    ProfilesLandingComponent,
+    LayoutsLandingComponent,
+    LoginLandingComponent,
+    ErrorLandingComponent,
+    PrintProfileLandingComponent,
+    TermsofserviceLandingComponent,
+    PrivacypolicyLandingComponent,
+    ProfilesDashboardLandingComponent,
+    ProfilesViewLandingComponent,
+    ProfilesManageLandingComponent,
+    LayoutsDashboardLandingComponent,
+    LayoutsManageLandingComponent
   ],
   imports: [
     BrowserModule,

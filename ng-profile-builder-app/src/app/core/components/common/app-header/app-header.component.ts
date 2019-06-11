@@ -9,18 +9,14 @@ import { AuthService } from '../../../services';
 export class AppHeaderComponent implements OnInit {
 
   constructor(public authService: AuthService) { }
-  
+
   public logoutClick(event: any): void {
     event.preventDefault();
     this.authService.logout().then((res: any) => {
       // todo
     }, (err) => {
       // todo
-    });  
-  }
-
-  public myProfileClick(event: any): void {
-    event.preventDefault();  
+    });
   }
 
   ngOnInit() {

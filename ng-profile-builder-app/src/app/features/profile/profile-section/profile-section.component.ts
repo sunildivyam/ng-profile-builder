@@ -35,6 +35,7 @@ export class ProfileSectionComponent implements OnInit, OnChanges {
     const reflectiveInjectors = ReflectiveInjector.fromResolvedProviders(resolvedInputProviders, this.viewContainerRef.parentInjector);
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(componentClass);
     const componentRef = componentFactory.create(reflectiveInjectors);
+    // componentRef.location.nativeElement.style = `width: 100%;`;
     this.viewContainerRef.insert(componentRef.hostView);
   }
 

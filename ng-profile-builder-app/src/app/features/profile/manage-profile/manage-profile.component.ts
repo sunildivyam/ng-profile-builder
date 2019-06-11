@@ -24,21 +24,17 @@ export class ManageProfileComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router /* ,
     private profileService: ProfileService */ ) {
-      this.route.url.subscribe((urlSegments: Array<UrlSegment>) => {
+      this.route.parent.url.subscribe((urlSegments: Array<UrlSegment>) => {
         if (urlSegments.length) {
           const profileId = urlSegments[0].path;
-          if (profileId) {
+          if (profileId && profileId != '0') {
             this.getProfile(profileId);
           } else {
             this.currentProfile = new Profile();
             this.currentLayout = new Layout();
-            this.isDataMode = true;
-          }          
-        } else {
-          this.currentProfile = new Profile();
-          this.currentLayout = new Layout();
-          this.isDataMode = true;
-        }  
+            this.createProfile();
+          }
+        }
       });
     }
 
@@ -57,7 +53,7 @@ export class ManageProfileComponent implements OnInit {
 
   public createProfile() {
     this.firebaseService.createProfile(this.currentProfile).subscribe((newProfileId: string) => {
-      this.currentProfile.id = newProfileId;
+      this.router.navigateByUrl(`/profiles/${newProfileId}/manage`);
     });
   }
 
