@@ -14,7 +14,8 @@ import {
   ErrorLandingComponent,
   PrintProfileLandingComponent,
   TermsofserviceLandingComponent,
-  PrivacypolicyLandingComponent
+  PrivacypolicyLandingComponent,
+  ParalaxProfileLandingComponent,
 } from './partials';
 
 const routes: Routes = [
@@ -60,6 +61,7 @@ const routes: Routes = [
     ]
   },
   { path: 'printprofile/:id', component: PrintProfileLandingComponent, data: {bareboneMode: true} },
+  { path: 'vprofile/:id', component: ParalaxProfileLandingComponent, data: {bareboneMode: true} },
   { path: 'termsofservice', component: TermsofserviceLandingComponent },
   { path: 'privacypolicy', component: PrivacypolicyLandingComponent },
   { path: 'error', component: ErrorLandingComponent },

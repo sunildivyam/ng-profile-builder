@@ -1,0 +1,49 @@
+$circleSize: 30px;
+$circleWidth: 1px;
+$contentLeftSpaceing: 15px;
+$line-color: #8d8d8d;
+
+.projects-view {
+  .info-section {
+    .row {
+      padding: 0px;
+    }
+    .left-info {
+      position: relative;
+      border-right: $circleWidth solid $line-color;
+      border-top: $circleWidth solid $line-color;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      .circle {
+        position: absolute;
+        display: block;
+        right: -($circleSize/2)-1;
+        top: -($circleSize/2)-3;
+        width: $circleSize;
+        height: $circleSize;
+        background: white;
+        border: $circleWidth solid $line-color;
+        border-radius: 50%;
+        text-align: center;
+        z-index: 1;
+      }
+    }
+    .right-info {
+      border-top: $circleWidth solid $line-color;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    &:first-child {
+      .left-info {
+        border-top: none;
+        .circle {
+          display: none;
+        }
+      }
+      .right-info {
+        border-top: none;
+      }
+    }
+  }
+}

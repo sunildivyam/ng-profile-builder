@@ -6,7 +6,7 @@ import {Project} from '../../../models';
 @Component({
   selector: 'pba-projects-view',
   templateUrl: './projects-view.component.html',
-  styleUrls: ['./projects-view.component.css']
+  styleUrls: ['./projects-view.component.scss']
 })
 export class ProjectsViewComponent implements OnChanges {
   @Input() projects: Array<Project>;

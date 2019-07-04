@@ -23,6 +23,7 @@ import {
   TermsofserviceLandingComponent,
   PrivacypolicyLandingComponent
 } from './partials';
+import { ParalaxProfileLandingComponent } from './partials/paralax-profile-landing/paralax-profile-landing.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {
     ProfilesViewLandingComponent,
     ProfilesManageLandingComponent,
     LayoutsDashboardLandingComponent,
-    LayoutsManageLandingComponent
+    LayoutsManageLandingComponent,
+    ParalaxProfileLandingComponent
   ],
   imports: [
     BrowserModule,

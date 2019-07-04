@@ -1,16 +1,17 @@
-<div class="card">
+<div class="card projects-view">
     <div class="card-header">
       <h2 class="card-title">Projects | <span class="badge badge-secondary">{{viewData?.length}} Projects</span></h2>
     </div>
     <div class="card-body">
-      <div class="container-fluid" *ngFor="let proj of viewData">
+      <div class="container-fluid info-section" *ngFor="let proj of viewData">
         <div class="row">
-          <div class="col-sm-2">
+          <div class="col-sm-2 left-info">
               <div>{{proj.from | date:'MMM, y'}}</div>
               <div>{{(proj.to | date:'MMM, y') ||  'Present'}}</div>
               <div><i><strong>{{proj.duration}}</strong></i></div>
+              <div class="circle"></div>
           </div>
-          <div class="col-sm-10">
+          <div class="col-sm-10 right-info">
               <h4 class="font-5">{{proj.name}}</h4>
               <h3 class="font-4">{{proj.clientName}}</h3>
               <summary class="font-4 padding-top-10">{{proj.summary}}</summary>

@@ -5,7 +5,7 @@ import { ProfileViewService } from '../../../services';
 @Component({
   selector: 'pba-employers-view',
   templateUrl: './employers-view.component.html',
-  styleUrls: ['./employers-view.component.css']
+  styleUrls: ['./employers-view.component.scss']
 })
 export class EmployersViewComponent implements OnChanges {
   @Input() employers: Array<Employer>;

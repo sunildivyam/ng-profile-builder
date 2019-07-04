@@ -25,7 +25,6 @@ export class AppComponent implements OnInit, OnDestroy {
     });
 
     this.routeDataSubscription = this.router.events.subscribe((event:any) => {
-      console.log(event);
       switch(true) {
         case event instanceof NavigationStart:
           this.loaderService.start();
