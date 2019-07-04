@@ -12,13 +12,13 @@ export class EmployersViewComponent implements OnChanges {
   viewData: Array<any>;
 
   constructor(private injector: Injector, private profileViewService: ProfileViewService) {
-    this.employers = this.injector.get('employers') || new Array<Employer>();
+    this.employers = this.injector.get('employers', new Array<Employer>());
     this.transformData();
   }
 
   transformData() {
     this.viewData = new Array<any>();
-    this.employers.map((empItem: Employer) => {
+    this.employers && this.employers.map((empItem: Employer) => {
       const item = {...empItem, experience: this.profileViewService.getDuration(empItem.from, empItem.to).toString() };
       this.viewData.push(item);
     });

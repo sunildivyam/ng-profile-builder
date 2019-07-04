@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Injector } from '@angular/core';
+import { Component, Input, Injector } from '@angular/core';
 import { BasicInfo } from '../../../models';
 
 @Component({
@@ -6,14 +6,10 @@ import { BasicInfo } from '../../../models';
   templateUrl: './basic-info-view.component.html',
   styleUrls: ['./basic-info-view.component.css']
 })
-export class BasicInfoViewComponent implements OnInit {
+export class BasicInfoViewComponent {
   @Input() basicInfo: BasicInfo;
 
   constructor(private injector: Injector) {
-    this.basicInfo = injector.get('basicInfo') || new BasicInfo();
+    this.basicInfo = injector.get('basicInfo', new BasicInfo());
   }
-
-  ngOnInit() {
-  }
-
 }

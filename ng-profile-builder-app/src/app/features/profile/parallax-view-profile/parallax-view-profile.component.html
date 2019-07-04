@@ -1,0 +1,20 @@
+<pba-background pbaParallax [ratio]="0.2" [isParallaxReady]="isDataReady" class="section parallax">
+  <div  class="container">
+    <div class="row">
+      <div class="col-12">
+        <pba-employers-view [employers]="currentProfile?.content?.employers" ></pba-employers-view>
+      </div>
+    </div>
+  </div>
+</pba-background>
+
+
+<pba-background pbaParallax [ratio]="0.9" [isParallaxReady]="isDataReady" [bgColor]="'#4411aa'" class="section parallax">
+  <div  class="container">
+    <div class="row">
+      <div class="col-12">
+        <pba-projects-view [projects]="currentProfile?.content?.projects" ></pba-projects-view>
+      </div>
+    </div>
+  </div>
+</pba-background>

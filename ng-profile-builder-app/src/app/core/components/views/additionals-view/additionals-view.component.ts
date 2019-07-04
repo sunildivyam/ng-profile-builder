@@ -13,13 +13,13 @@ export class AdditionalsViewComponent implements OnChanges {
   viewData: Array<any>;
 
   constructor(private injector: Injector, private profileViewService: ProfileViewService) {
-    this.additionals = this.injector.get('additionals') || new Array<Additional>();
+    this.additionals = this.injector.get('additionals', new Array<Additional>());
     this.transformData();
   }
 
   transformData() {
     this.viewData = new Array<any>();
-    this.additionals.map((additionalItem: Additional) => {
+    this.additionals && this.additionals.map((additionalItem: Additional) => {
       const item = { ...additionalItem };
       this.viewData.push(item);
     });

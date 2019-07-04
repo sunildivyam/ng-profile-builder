@@ -12,14 +12,14 @@ export class EducationViewComponent implements OnChanges {
   viewData: Array<any>;
 
   constructor(private injector: Injector, private profileViewService: ProfileViewService) {
-    this.education = this.injector.get('education') || new Array<Education>();
+    this.education = this.injector.get('education', new Array<Education>());
     this.transformData();
   }
 
   transformData() {
     this.viewData = new Array<any>();
-    this.education.map((eduItem: Education) => {
-      const item = {...eduItem, duration: this.profileViewService.getDuration(eduItem.from, eduItem.to).toString() };
+    this.education && this.education.map((eduItem: Education) => {
+      const item = { ...eduItem, duration: this.profileViewService.getDuration(eduItem.from, eduItem.to).toString() };
       this.viewData.push(item);
     });
   }

@@ -12,7 +12,7 @@ export class ContactBarViewComponent implements OnChanges {
   viewData: any;
 
   constructor(private injector: Injector, private profileViewService: ProfileViewService) {
-    this.basicInfo = this.injector.get('basicInfo') || new BasicInfo();
+    this.basicInfo = this.injector.get('basicInfo', new BasicInfo());
     this.transformData();
   }
 

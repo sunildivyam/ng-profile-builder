@@ -12,13 +12,13 @@ export class PrimarySkillsViewComponent implements OnChanges {
   viewData: Array<any>;
 
   constructor(private injector: Injector, private profileViewService: ProfileViewService) {
-    this.skills = this.injector.get('skills') || new Array<Skill>();
+    this.skills = this.injector.get('skills', new Array<Skill>());
     this.transformData();
   }
 
   transformData() {
     this.viewData = new Array<any>();
-    this.skills.map((skillItem: Skill) => {
+    this.skills && this.skills.map((skillItem: Skill) => {
       if (skillItem.isPrimarySkill === true) {
         const item = { ...skillItem, experience: this.profileViewService.getDuration(skillItem.from, skillItem.to).toString() };
         this.viewData.push(item);

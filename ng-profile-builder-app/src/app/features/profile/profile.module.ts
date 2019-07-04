@@ -11,6 +11,7 @@ import { LayoutModule } from '../layout';
 import { ProfileSectionComponent } from './profile-section/profile-section.component';
 import { ProfileSectionPickerComponent } from './profile-section-picker/profile-section-picker.component';
 import { ProfileCardsViewComponent } from './profile-cards-view/profile-cards-view.component';
+import { ParallaxViewProfileComponent } from './parallax-view-profile/parallax-view-profile.component';
 
 @NgModule({
   providers: [],
@@ -21,11 +22,13 @@ import { ProfileCardsViewComponent } from './profile-cards-view/profile-cards-vi
     PreviewProfileComponent,
     ProfileSectionComponent,
     ProfileSectionPickerComponent,
-    ProfileCardsViewComponent],
+    ProfileCardsViewComponent,
+    ParallaxViewProfileComponent],
   exports: [ProfileFormComponent,
     ManageProfileComponent,
     PreviewProfileComponent,
-    ProfileCardsViewComponent]
+    ProfileCardsViewComponent,
+    ParallaxViewProfileComponent]
 })
 
 export class ProfileModule {}

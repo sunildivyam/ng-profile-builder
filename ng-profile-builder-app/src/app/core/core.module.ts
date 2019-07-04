@@ -70,6 +70,7 @@ const firebaseuiConfig = {
     CommonComponents.WizardComponent,
     CommonComponents.MessageComponent,
     CommonComponents.LoginComponent,
+    CommonComponents.ParallaxDirective,
     FormComponents.AdditionalsFormComponent,
     FormComponents.BasicInfoFormComponent,
     FormComponents.EducationFormComponent,
@@ -98,7 +99,7 @@ const firebaseuiConfig = {
     ViewComponents.ProjectsMediumViewComponent,
     ViewComponents.ProfileHeaderViewComponent,
     ViewComponents.PrimarySkillsViewComponent,
-    ViewComponents.ImageViewComponent
+    ViewComponents.ImageViewComponent,
     ],
   exports: [
     CommonComponents.AppFooterComponent,
@@ -108,6 +109,7 @@ const firebaseuiConfig = {
     CommonComponents.WizardComponent,
     CommonComponents.MessageComponent,
     CommonComponents.LoginComponent,
+    CommonComponents.ParallaxDirective,
     FormComponents.AdditionalsFormComponent,
     FormComponents.BasicInfoFormComponent,
     FormComponents.EducationFormComponent,

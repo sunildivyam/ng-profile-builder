@@ -14,8 +14,8 @@ export class ProfileHeaderViewComponent implements OnChanges {
   viewData: any;
 
   constructor(private injector: Injector, private profileViewService: ProfileViewService) {
-    this.basicInfo = this.injector.get('basicInfo') || new BasicInfo();
-    this.employers = this.injector.get('employers') || new Array<Employer>();
+    this.basicInfo = this.injector.get('basicInfo', new BasicInfo());
+    this.employers = this.injector.get('employers', new Array<Employer>());
 
     this.transformData();
   }

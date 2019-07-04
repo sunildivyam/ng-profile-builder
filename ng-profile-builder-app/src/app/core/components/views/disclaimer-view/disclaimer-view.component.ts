@@ -12,12 +12,12 @@ export class DisclaimerViewComponent implements OnChanges {
   viewData: any;
 
   constructor(private injector: Injector, private profileViewService: ProfileViewService) {
-    this.basicInfo = this.injector.get('basicInfo') || new BasicInfo();
+    this.basicInfo = this.injector.get('basicInfo', new BasicInfo());
     this.transformData();
   }
 
   transformData() {
-    this.viewData = {...this.basicInfo};
+    this.viewData = { ...this.basicInfo };
   }
 
   ngOnChanges() {

@@ -5,3 +5,4 @@ export { ControlToolbarComponent } from './control-toolbar/control-toolbar.compo
 export { WizardComponent } from './wizard/wizard.component';
 export { BackgroundComponent } from './background/background.component';
 export { MessageComponent } from './message/message.component';
+export { ParallaxDirective } from './parallax/parallax.directive';

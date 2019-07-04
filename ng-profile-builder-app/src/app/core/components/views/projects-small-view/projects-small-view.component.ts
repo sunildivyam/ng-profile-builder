@@ -12,13 +12,13 @@ export class ProjectsSmallViewComponent implements OnChanges {
   viewData: Array<any>;
 
   constructor(private injector: Injector, private profileViewService: ProfileViewService) {
-    this.projects = this.injector.get('projects') || new Array<Employer>();
+    this.projects = this.injector.get('projects', new Array<Employer>());
     this.transformData();
   }
 
   transformData() {
     this.viewData = new Array<any>();
-    this.projects.map((projItem: Employer) => {
+    this.projects && this.projects.map((projItem: Employer) => {
       const item = { ...projItem, duration: this.profileViewService.getDuration(projItem.from, projItem.to).toString() };
       this.viewData.push(item);
     });

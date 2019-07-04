@@ -15,11 +15,11 @@ export class ExperienceBarViewComponent implements OnChanges {
   };
 
   constructor(private injector: Injector, private profileViewService: ProfileViewService) {
-    this.employers = this.injector.get('employers') || new Array<Employer>();
+    this.employers = this.injector.get('employers', new Array<Employer>());
     this.transformData();
   }
 
-  transformData() {    
+  transformData() {
     this.viewData.relevantExperience = this.profileViewService.getRelevantExperience(this.employers).toString();
     this.viewData.totalExperience = this.profileViewService.getTotalExperience(this.employers).toString();
   }

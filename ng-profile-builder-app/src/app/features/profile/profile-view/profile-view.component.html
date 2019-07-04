@@ -16,11 +16,11 @@
         </a>
 
       </div>
-      
+
       <a *ngIf="col.rows && col.rows.length" class="link settings row-settings" href="#" (click)="editColumnClick($event, col)">
         <span class="fa fa-cog"></span>
       </a>
-    
+
       <section class="container-fluid" *ngIf="col.rows && col.rows.length">
         <ng-container *ngTemplateOutlet="layoutRows; context: {rows: col.rows}"></ng-container>
       </section>

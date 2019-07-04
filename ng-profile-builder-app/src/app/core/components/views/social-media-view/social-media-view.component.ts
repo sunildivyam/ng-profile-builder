@@ -12,13 +12,13 @@ export class SocialMediaViewComponent implements OnChanges {
   viewData: Array<any>;
 
   constructor(private injector: Injector, private profileViewService: ProfileViewService) {
-    this.socialMedia = this.injector.get('socialMedia') || new Array<SocialMedia>();
+    this.socialMedia = this.injector.get('socialMedia', new Array<SocialMedia>());
     this.transformData();
   }
 
   transformData() {
     this.viewData = new Array<any>();
-    this.socialMedia.map((socialMediaItem: SocialMedia) => {
+    this.socialMedia && this.socialMedia.map((socialMediaItem: SocialMedia) => {
       const item = { ...socialMediaItem };
       this.viewData.push(item);
     });
