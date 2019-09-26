@@ -55,7 +55,7 @@ export class ProfileViewService {
     addedDuration.months = durationSrc.months + durationDest.months;
     if (addedDuration.months >= 12) {
       addedDuration.years += Math.floor(addedDuration.months / 12);
-      addedDuration.months += (addedDuration.months % 12);
+      addedDuration.months = (addedDuration.months % 12);
     }
     return addedDuration;
   }
