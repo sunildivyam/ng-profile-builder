@@ -1,5 +1,10 @@
 <div class="skill-list">
+  <div class="skill-item header">
+    <span class="name">Primary Skills</span>
+  </div>
   <div class="skill-item" *ngFor="let skill of viewData">
-    {{skill.name}}
+    <span class="name">{{skill.name}}</span>
+    <span class="experience">{{skill.experience}}</span>
+    <!-- <span class="rating"><pba-rating-view [rating]="skill.rating" [sizeClass]="'sm'"></pba-rating-view></span> -->
   </div>
 </div>

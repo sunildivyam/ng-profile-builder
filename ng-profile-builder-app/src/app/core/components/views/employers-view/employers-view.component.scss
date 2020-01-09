@@ -27,11 +27,19 @@ $line-color: #8d8d8d;
         text-align: center;
         z-index: 1;
       }
+      .experience {
+        border-top: 1px solid grey;
+        margin-top: 7px;
+      }
     }
     .right-info {
       border-top: $circleWidth solid $line-color;
       padding-top: 15px;
       padding-bottom: 15px;
+
+      h3, h4 {
+        font-weight: bold;
+      }
     }
 
     &:first-child {

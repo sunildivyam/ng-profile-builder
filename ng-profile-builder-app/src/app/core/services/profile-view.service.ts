@@ -60,8 +60,15 @@ export class ProfileViewService {
     return addedDuration;
   }
 
-  public getDuration(fromDate, toDate): Duration {
-    return this.dateDiff(fromDate, toDate);
+  public getDuration(fromDate, toDate, roundedYear: Boolean = false): Duration {
+    const duration = this.dateDiff(fromDate, toDate);
+    if (roundedYear) {
+      if (duration.months >= 6 ) {
+        duration.years++;
+      }
+      duration.months = 0;
+    }
+    return duration;
   }
 
   public getPresentEmployer(employers: Array<Employer>): Employer {
