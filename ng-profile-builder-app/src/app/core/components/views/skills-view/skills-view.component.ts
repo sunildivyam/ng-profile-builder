@@ -9,7 +9,7 @@ import { ProfileViewService } from '../../../services';
 })
 export class SkillsViewComponent implements OnChanges {
   @Input() skills: Array<Skill>;
-  @Input() sortBy: string = 'rating';
+  @Input() sortBy: string = '';  // 'rating'
   @Input() sortAsc: Boolean = false;
   viewData: Array<any>;
 

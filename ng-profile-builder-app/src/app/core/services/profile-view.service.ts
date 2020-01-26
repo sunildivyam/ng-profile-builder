@@ -35,7 +35,7 @@ export class ProfileViewService {
     let months = tMonths - fMonths;
     let years = tYears - fYears;
 
-    if (days >= 15) {
+    if (days >= 1) {
       months++;
     }
 
@@ -88,6 +88,7 @@ export class ProfileViewService {
         relevantDuration = this.addDuration(relevantDuration, this.dateDiff(employer.from, employer.to));
       }
     });
+    relevantDuration.roundYear();
     return relevantDuration;
   }
 
@@ -99,6 +100,7 @@ export class ProfileViewService {
     employers.map((employer) => {      
       totalDuration = this.addDuration(totalDuration, this.dateDiff(employer.from, employer.to));
     });
+    totalDuration.roundYear();
     return totalDuration;
   }
 }
