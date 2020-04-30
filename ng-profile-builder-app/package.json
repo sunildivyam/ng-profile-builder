@@ -27,7 +27,7 @@
     "firebaseui": "^3.6.0",
     "firebaseui-angular": "^3.4.1",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "ng2-dnd": "^5.0.2",
     "popper.js": "^1.14.7",
     "rxjs": "~6.3.3",
