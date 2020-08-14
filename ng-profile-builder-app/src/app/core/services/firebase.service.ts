@@ -24,7 +24,7 @@ export class FirebaseService {
         const layouts = data.map((e: any) => {
           return {
             id: e.payload.doc.id,
-            dateUpdated: e.payload.doc._document.version.toTimestamp().toDate(),
+            dateUpdated: e.payload.doc.Nd.version.timestamp.toDate(),
             ...e.payload.doc.data()
           };
         });
@@ -40,7 +40,7 @@ export class FirebaseService {
       this.db.doc(`${this.endpoints.layouts}/${id}`).snapshotChanges().subscribe((data: any) => {
         const layout = {
           id: data.payload.id,
-          dateUpdated: data.payload._document.version.toTimestamp().toDate(),
+          dateUpdated: data.payload.Nd.version.timestamp.toDate(),
           ...data.payload.data()
         };
         this.loaderService.stop();
@@ -90,12 +90,12 @@ export class FirebaseService {
       this.db.collection(this.endpoints.profiles, condFn).snapshotChanges().subscribe((data) => {
         data.sort((a: any, b: any) => {
           // desc order
-          return b.payload.doc._document.version.toTimestamp().seconds - a.payload.doc._document.version.toTimestamp().seconds;
+          return b.payload.doc.Nd.version.timestamp.seconds - a.payload.doc.Nd.version.timestamp.seconds;
         });
         const profiles = data.map((e: any) => {
           return {
             id: e.payload.doc.id,
-            dateUpdated: e.payload.doc._document.version.toTimestamp().toDate(),
+            dateUpdated: e.payload.doc.Nd.version.timestamp.toDate(),
             ...e.payload.doc.data()
           };
         });
@@ -115,7 +115,7 @@ export class FirebaseService {
       this.db.doc(`${this.endpoints.profiles}/${id}`).get().subscribe((data: any) => {
         const profile = {
           id: data.id,
-          dateUpdated: data._document.version.toTimestamp().toDate(),
+          dateUpdated: data.Nd.version.timestamp.toDate(),
           ...data.data()
         };
         this.loaderService.stop();

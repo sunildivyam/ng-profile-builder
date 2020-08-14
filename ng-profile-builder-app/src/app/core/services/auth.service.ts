@@ -13,7 +13,7 @@ export class AuthService {
     this.angularFireAuth.authState.subscribe(this.firebaseAuthChangeListner);
   }
 
-  private firebaseAuthChangeListner(user: User) {
+  public firebaseAuthChangeListner = (user: User) => {
     this._currentUser = user;
     if (user) {
       console.log('Logged in - Success');

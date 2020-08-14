@@ -20,7 +20,7 @@ export class ProfileSectionComponent implements OnInit, OnChanges {
   @Input() content: ProfileContent;
   @Input() components: Array<string>;
 
-  @ViewChild('vc', { read: ViewContainerRef }) viewContainerRef: ViewContainerRef;
+  @ViewChild('vc', { static: true, read: ViewContainerRef }) viewContainerRef: ViewContainerRef;
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 
