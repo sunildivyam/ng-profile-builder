@@ -7,26 +7,27 @@ import { User } from 'firebase';
   providedIn: 'root'
 })
 export class AuthService {
-  private _currentUser: any = {};
+  private _currentUser: User;
 
   constructor(private angularFireAuth: AngularFireAuth) {
     this.angularFireAuth.authState.subscribe(this.firebaseAuthChangeListner);
   }
 
-  private firebaseAuthChangeListner(response: any) {
-    if (response) {
-      // console.log("SUCCESS", response);
+  private firebaseAuthChangeListner(user: User) {
+    this._currentUser = user;
+    if (user) {
+      console.log('Logged in - Success');
     } else {
-      // console.log("LOGOUT", response);
+      console.log('Logged out - Success');
     }
   }
 
   public logout(): Promise<void> {
-    return this.angularFireAuth.auth.signOut();
+    return this.angularFireAuth.signOut();
   }
 
   public isUserLoggedIn(): boolean {
-    if (this.angularFireAuth.auth.currentUser) {
+    if (this._currentUser) {
       return true;
     }
     return false;
@@ -37,11 +38,11 @@ export class AuthService {
   }
 
   public get currentUserId(): string {
-    return this.angularFireAuth.auth.currentUser && this.angularFireAuth.auth.currentUser.uid;
+    return this._currentUser && this._currentUser.uid;
   }
 
   public get currentUser(): Object {
-    return this.angularFireAuth.auth.currentUser;
+    return this._currentUser;
   }
 
   public loginStateChange(): Observable<firebase.User> {

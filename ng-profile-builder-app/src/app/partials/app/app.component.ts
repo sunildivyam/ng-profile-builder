@@ -9,9 +9,9 @@ import { LoaderService } from '../../core';
 })
 export class AppComponent implements OnInit, OnDestroy {
   // bareboneMode enables the Header and footer invisible. For example, printing a profile.
-  private bareboneMode: boolean;
+  public bareboneMode: boolean;
   private routeDataSubscription: any;
-  private loading: boolean = false;
+  public loading: boolean = false;
 
   constructor(private route: ActivatedRoute,
     private router: Router,
