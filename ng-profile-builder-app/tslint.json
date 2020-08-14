@@ -26,6 +26,7 @@
       true,
       "element",
       "app",
+      "pba",
       "kebab-case"
     ],
     "eofline": true,
