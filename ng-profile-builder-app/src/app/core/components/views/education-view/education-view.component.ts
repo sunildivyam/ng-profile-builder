@@ -16,7 +16,7 @@ export class EducationViewComponent implements OnChanges {
     this.transformData();
   }
 
-  transformData() {
+  transformData(): void {
     this.viewData = new Array<any>();
     this.education && this.education.map((eduItem: Education) => {
       const item = { ...eduItem, duration: this.profileViewService.getDuration(eduItem.from, eduItem.to).toString() };
@@ -24,7 +24,7 @@ export class EducationViewComponent implements OnChanges {
     });
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.transformData();
   }
 }

@@ -1,7 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectorRef } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectorRef } from '@angular/core';
 import { Column } from '../../layout';
 import { ContextNavs } from '../configs/context-navs.config';
-import { ViewComponentsConfig } from '../models';
 import { ProfileViewsConfig } from '../configs/profile-views.config';
 
 @Component({
@@ -9,7 +8,7 @@ import { ProfileViewsConfig } from '../configs/profile-views.config';
   templateUrl: './profile-section-picker.component.html',
   styleUrls: ['./profile-section-picker.component.scss']
 })
-export class ProfileSectionPickerComponent implements OnInit {
+export class ProfileSectionPickerComponent {
   @Input() column: Column;
   @Output() closeClick = new EventEmitter();
 
@@ -30,7 +29,7 @@ export class ProfileSectionPickerComponent implements OnInit {
     return false;
   }
 
-  public toggleSelectComponent(componentName: string) {
+  public toggleSelectComponent(componentName: string): void {
     if (!this.column) {
       return;
     }
@@ -47,7 +46,7 @@ export class ProfileSectionPickerComponent implements OnInit {
     this.resetComponents();
   }
 
-  public resetComponents() {
+  public resetComponents(): void {
     const cmps = this.column.components.slice(0, this.column.components.length);
     delete this.column.components;
     this.column.components = cmps;
@@ -70,7 +69,7 @@ export class ProfileSectionPickerComponent implements OnInit {
     // }
   }
 
-  closeClicked(event: any) {
+  closeClicked(event: any): void {
     event.preventDefault();
     this.closeClick.emit(this.column);
   }
@@ -83,9 +82,4 @@ export class ProfileSectionPickerComponent implements OnInit {
   public columnFormCloseClick(col: Column): void {
     this.isColumnFormVisible = false;
   }
-
-
-  ngOnInit() {
-  }
-
 }

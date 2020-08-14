@@ -11,11 +11,11 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class LoginComponent implements OnInit {
   private returnUrl: string;
 
-  constructor(public authService: AuthService, 
-    private router: Router,
-    private route: ActivatedRoute) {
+  constructor(public authService: AuthService,
+              private router: Router,
+              private route: ActivatedRoute) {
       this.route.queryParams.subscribe((params: Params) => {
-        this.returnUrl = params['returnUrl'] || '/dashboard';
+        this.returnUrl = params.returnUrl || '/dashboard';
       });
 
       this.authService.loginStateChange().subscribe((user) => {
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
         }
       });
     }
-  
+
   public signInSuccessCb(successData: FirebaseUISignInSuccessWithAuthResult) {
      // console.log("Successfully Signed In", successData);
     // this.router.navigateByUrl(this.returnUrl);
@@ -42,11 +42,9 @@ export class LoginComponent implements OnInit {
       // console.log("logged out successfuly", res);
     }, (err) => {
       // console.log("Erro Logging out", err);
-    });  
+    });
   }
 
-  ngOnInit() {
-    
-  }
+
 
 }

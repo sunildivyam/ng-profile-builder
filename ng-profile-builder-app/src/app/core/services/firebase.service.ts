@@ -18,7 +18,7 @@ export class FirebaseService {
   // Layout APIs
   getLayouts(uid: string): Observable<any> {
     this.loaderService.start();
-    let condFn = ref => ref.where('uid', '==', uid);
+    const condFn = ref => ref.where('uid', '==', uid);
     return new Observable((observer) => {
       this.db.collection(this.endpoints.layouts, condFn).snapshotChanges().subscribe((data) => {
         const layouts = data.map((e: any) => {
@@ -84,7 +84,7 @@ export class FirebaseService {
   // Profile APIs
   getProfiles(uid: string): Observable<any> {
     this.loaderService.start();
-    let condFn = ref => ref.where('uid', '==', uid);
+    const condFn = ref => ref.where('uid', '==', uid);
 
     return new Observable((observer) => {
       this.db.collection(this.endpoints.profiles, condFn).snapshotChanges().subscribe((data) => {
@@ -103,7 +103,7 @@ export class FirebaseService {
         observer.next(profiles);
       }, (error) => {
         this.loaderService.stop();
-        console.log("ERROR:", error);
+        console.log('ERROR:', error);
         observer.error([]);
       });
     });
@@ -122,7 +122,7 @@ export class FirebaseService {
         observer.next(profile);
       }, (error) => {
         this.loaderService.stop();
-        console.log("ERROR:", error);
+        console.log('ERROR:', error);
         observer.error(null);
       });
     });
@@ -150,7 +150,7 @@ export class FirebaseService {
       }, (err) => {
         // console.log(err);
         this.loaderService.stop();
-        observer.error(err)
+        observer.error(err);
       });
     });
   }
@@ -165,7 +165,7 @@ export class FirebaseService {
     });
   }
 
-  parseJsonBeforeSave(profile: any) : any {
+  parseJsonBeforeSave(profile: any): any {
     delete profile.id;
     delete profile.dateUpdated;
     return profile;

@@ -6,7 +6,7 @@ import { AuthService } from '../../../services';
   templateUrl: './app-header.component.html',
   styleUrls: ['./app-header.component.scss']
 })
-export class AppHeaderComponent implements OnInit {
+export class AppHeaderComponent {
 
   constructor(public authService: AuthService) { }
 
@@ -17,8 +17,5 @@ export class AppHeaderComponent implements OnInit {
     }, (err) => {
       // todo
     });
-  }
-
-  ngOnInit() {
   }
 }

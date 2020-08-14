@@ -1,5 +1,4 @@
 import { Component,
-  OnInit,
   OnChanges,
   Input,
   ViewChild,
@@ -16,7 +15,7 @@ import { ProfileViewsConfig } from '../configs/profile-views.config';
   templateUrl: './profile-section.component.html',
   styleUrls: ['./profile-section.component.scss']
 })
-export class ProfileSectionComponent implements OnInit, OnChanges {
+export class ProfileSectionComponent implements OnChanges {
   @Input() content: ProfileContent;
   @Input() components: Array<string>;
 
@@ -24,7 +23,7 @@ export class ProfileSectionComponent implements OnInit, OnChanges {
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 
-  renderComponent(componentClass, inputNames) {
+  renderComponent(componentClass, inputNames): void {
     const inputProviders: Array<Provider> = inputNames.map((inputName) => {
       return {
         provide: inputName,
@@ -39,21 +38,18 @@ export class ProfileSectionComponent implements OnInit, OnChanges {
     this.viewContainerRef.insert(componentRef.hostView);
   }
 
-  renderComponents() {
+  renderComponents(): void {
     this.viewContainerRef.clear();
     if (!this.components || !this.components.length) {
-      return false;
+      return;
     }
     this.components.map((componentName) => {
-      const compConfig = <ViewComponentsConfig>ProfileViewsConfig[componentName];
+      const compConfig = ProfileViewsConfig[componentName] as ViewComponentsConfig;
       this.renderComponent(compConfig.component, compConfig.inputNames);
     });
   }
 
-  ngOnInit() {
-  }
-
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.renderComponents();
   }
 }

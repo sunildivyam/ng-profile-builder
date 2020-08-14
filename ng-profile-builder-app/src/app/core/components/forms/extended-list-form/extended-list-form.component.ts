@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import {NgModel} from '@angular/forms';
 
 
@@ -7,13 +7,13 @@ import {NgModel} from '@angular/forms';
   templateUrl: './extended-list-form.component.html',
   styleUrls: ['./extended-list-form.component.css']
 })
-export class ExtendedListFormComponent implements OnInit {
-  @Input() list:Array<string>;
-  @Input() headerText:string;
-  @Input() listId:string;
-  @Input() placeholderText:string;
-  @Input() addBtnLabel:string;
-  @Input() dragOperationEnabled:boolean;
+export class ExtendedListFormComponent {
+  @Input() list: Array<string>;
+  @Input() headerText: string;
+  @Input() listId: string;
+  @Input() placeholderText: string;
+  @Input() addBtnLabel: string;
+  @Input() dragOperationEnabled: boolean;
 
   @Output() onChange = new EventEmitter();
 
@@ -23,12 +23,9 @@ export class ExtendedListFormComponent implements OnInit {
 
   constructor() {
     this.formData = new Array<string>();
-   }
-
-  ngOnInit() {
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.formData = JSON.parse(JSON.stringify(this.list)) || new Array<string>();
   }
 
@@ -45,7 +42,7 @@ export class ExtendedListFormComponent implements OnInit {
 
   onAddClick(event) {
     event && event.preventDefault();
-    this.formData.push("");
+    this.formData.push('');
     event.items = this.formData;
     this.onChange.emit(event);
   }

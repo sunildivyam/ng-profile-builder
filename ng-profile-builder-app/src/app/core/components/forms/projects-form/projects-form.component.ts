@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, Injector } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, Injector } from '@angular/core';
 import {Project} from '../../../models';
 
 @Component({
@@ -6,7 +6,7 @@ import {Project} from '../../../models';
   templateUrl: './projects-form.component.html',
   styleUrls: ['./projects-form.component.css']
 })
-export class ProjectsFormComponent implements OnInit, OnChanges {
+export class ProjectsFormComponent implements OnChanges {
   @Input() projects: Array<Project>;
   @Output() onSave = new EventEmitter();
 
@@ -45,10 +45,7 @@ export class ProjectsFormComponent implements OnInit, OnChanges {
     this.saveSuccess = null;
   }
 
-  ngOnInit() {
-  }
-
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.formData = JSON.parse(JSON.stringify(this.projects)) || new Array<Project>();
   }
 

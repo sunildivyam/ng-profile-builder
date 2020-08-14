@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, Injector, OnChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter, Injector, OnChanges } from '@angular/core';
 
 import {Employer} from '../../../models';
 
@@ -8,7 +8,7 @@ import {Employer} from '../../../models';
   templateUrl: './employers-form.component.html',
   styleUrls: ['./employers-form.component.css']
 })
-export class EmployersFormComponent implements OnInit, OnChanges {
+export class EmployersFormComponent implements OnChanges {
   @Input() employers: Array<Employer>;
   @Output() onSave = new EventEmitter();
 
@@ -47,10 +47,7 @@ export class EmployersFormComponent implements OnInit, OnChanges {
     this.saveSuccess = null;
   }
 
-  ngOnInit() {
-  }
-
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.formData = JSON.parse(JSON.stringify(this.employers)) || new Array<Employer>();
   }
 

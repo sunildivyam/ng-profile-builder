@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Column, Row } from '../models';
 import { ContextNavs } from '../configs/context-navs';
 
@@ -7,14 +7,10 @@ import { ContextNavs } from '../configs/context-navs';
   templateUrl: './column-form.component.html',
   styleUrls: ['./column-form.component.scss']
 })
-export class ColumnFormComponent implements OnInit, OnChanges {
+export class ColumnFormComponent {
   @Input() column: Column;
   @Output() formClosed = new EventEmitter();
   public contextNav = ContextNavs;
-
-  constructor() {
-
-  }
 
   private getTotalOfColumns(cols: Array<Column>) {
     let colCount = 0;
@@ -80,12 +76,4 @@ export class ColumnFormComponent implements OnInit, OnChanges {
     event.preventDefault();
     this.formClosed.emit(this.column);
   }
-
-  ngOnInit() {
-  }
-
-  ngOnChanges() {
-    // this.initRows();
-  }
-
 }

@@ -36,7 +36,7 @@ export const ProfileViewsConfig = {
   projects: new ViewComponentsConfig('Projects', 'projects', ProjectsViewComponent, ['projects']),
   projectsSmall: new ViewComponentsConfig('Projects Small View', 'projectsSmall', ProjectsSmallViewComponent, ['projects']),
   projectsMedium: new ViewComponentsConfig('Projects Medium View', 'projectsMedium', ProjectsMediumViewComponent, ['projects']),
-  skills: new ViewComponentsConfig('Skills', 'skills', SkillsViewComponent, ['skills']),    
+  skills: new ViewComponentsConfig('Skills', 'skills', SkillsViewComponent, ['skills']),
   additionals: new ViewComponentsConfig('Additionals', 'additionals', AdditionalsViewComponent, ['additionals']),
-  disclaimer: new ViewComponentsConfig('Disclaimer', 'disclaimer', DisclaimerViewComponent, ['basicInfo']),  
+  disclaimer: new ViewComponentsConfig('Disclaimer', 'disclaimer', DisclaimerViewComponent, ['basicInfo']),
 };

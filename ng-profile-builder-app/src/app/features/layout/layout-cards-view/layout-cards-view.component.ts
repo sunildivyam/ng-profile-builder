@@ -32,7 +32,7 @@ export class LayoutCardsViewComponent implements OnChanges {
     });
   }
 
-  transformData() {
+  transformData(): void {
     this.viewData = new Array<any>();
     this.layouts.map((layout: Layout) => {
       const layoutItem = { ...layout };
@@ -40,7 +40,7 @@ export class LayoutCardsViewComponent implements OnChanges {
     });
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.transformData();
   }
 }

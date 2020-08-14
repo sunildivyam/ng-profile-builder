@@ -1,22 +1,19 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'pba-image-upload-form',
   templateUrl: './image-upload-form.component.html',
   styleUrls: ['./image-upload-form.component.scss']
 })
-export class ImageUploadFormComponent implements OnInit {
+export class ImageUploadFormComponent {
   @Input() imageSrc: string;
   @Output() imageChanged = new EventEmitter();
-  dragging: boolean = false;
-  dropped: boolean = false;
-  isError: boolean = false;
+  dragging = false;
+  dropped = false;
+  isError = false;
   errorMsg: string;
-  MAX_IMAGE_SIZE = (1024*300);  // 300kb
+  MAX_IMAGE_SIZE = (1024 * 300);  // 300kb
   constructor() { }
-
-  ngOnInit() {
-  }
 
   public handleDragEnter(event: any) {
     console.log('dragging');
@@ -58,13 +55,13 @@ export class ImageUploadFormComponent implements OnInit {
       this.dropped = true;
       this.dragging = false;
       this.isError = false;
-      if (this.imageSrc.length > this.MAX_IMAGE_SIZE) {        
-        this.toggleError(true, `Image exceeds Size of ${this.MAX_IMAGE_SIZE/1024} kb`);
+      if (this.imageSrc.length > this.MAX_IMAGE_SIZE) {
+        this.toggleError(true, `Image exceeds Size of ${this.MAX_IMAGE_SIZE / 1024} kb`);
         setTimeout(() => this.imageSrc = '', 2000);
         return;
       }
       this.imageChanged.emit(this.imageSrc);
-    }
+    };
 
     reader.readAsDataURL(file);
   }

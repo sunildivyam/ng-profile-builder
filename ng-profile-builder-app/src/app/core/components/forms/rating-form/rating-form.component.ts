@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'pba-rating-form',
   templateUrl: './rating-form.component.html',
   styleUrls: ['./rating-form.component.css']
 })
-export class RatingFormComponent implements OnInit {
+export class RatingFormComponent {
   @Input() rating: number;
   @Input() isReadOnly: boolean;
   @Input() sizeClass: string;
@@ -18,14 +18,7 @@ export class RatingFormComponent implements OnInit {
 
   constructor() {
     this.ratings = this.generateRatings();
-    this.sizeClass = "";
-  }
-
-  ngOnInit() {
-  }
-
-  ngOnChanges() {
-
+    this.sizeClass = '';
   }
 
   onRatingClick(event, rating) {
@@ -38,8 +31,8 @@ export class RatingFormComponent implements OnInit {
   }
 
   private generateRatings() {
-    let ratings = new Array<number>();
-    for (let i = this.MIN_RATING; i<=this.MAX_RATING; i++) {
+    const ratings = new Array<number>();
+    for (let i = this.MIN_RATING; i <= this.MAX_RATING; i++) {
       ratings.push(i);
     }
     return ratings;

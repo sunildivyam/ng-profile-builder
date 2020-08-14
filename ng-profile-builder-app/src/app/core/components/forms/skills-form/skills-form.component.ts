@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, Injector, OnChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter, Injector, OnChanges } from '@angular/core';
 import {Skill} from '../../../models';
 
 @Component({
@@ -6,7 +6,7 @@ import {Skill} from '../../../models';
   templateUrl: './skills-form.component.html',
   styleUrls: ['./skills-form.component.css']
 })
-export class SkillsFormComponent implements OnInit, OnChanges {
+export class SkillsFormComponent implements OnChanges {
   @Input() skills: Array<Skill>;
   @Output() onSave = new EventEmitter();
 
@@ -45,10 +45,7 @@ export class SkillsFormComponent implements OnInit, OnChanges {
     this.saveSuccess = null;
   }
 
-  ngOnInit() {
-  }
-
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.formData = JSON.parse(JSON.stringify(this.skills)) || new Array<Skill>();
   }
 

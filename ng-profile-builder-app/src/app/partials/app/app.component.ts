@@ -8,29 +8,30 @@ import { LoaderService } from '../../core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
+
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private loaderService: LoaderService) {
+
+  }
   // bareboneMode enables the Header and footer invisible. For example, printing a profile.
   public bareboneMode: boolean;
   private routeDataSubscription: any;
-  public loading: boolean = false;
-
-  constructor(private route: ActivatedRoute,
-    private router: Router,
-    private loaderService: LoaderService) {
-
-  }
+  public loading = false;
+  title = 'Profile Builder';
 
   ngOnInit(): void {
     this.loaderService.status.subscribe((value: boolean) => {
       this.loading = value;
     });
 
-    this.routeDataSubscription = this.router.events.subscribe((event:any) => {
-      switch(true) {
+    this.routeDataSubscription = this.router.events.subscribe((event: any) => {
+      switch (true) {
         case event instanceof NavigationStart:
           this.loaderService.start();
           break;
         case event instanceof ActivationEnd:
-          this.bareboneMode = event.snapshot.data['bareboneMode'] || false;
+          this.bareboneMode = event.snapshot.data.bareboneMode || false;
           break;
         case event instanceof NavigationEnd:
         case event instanceof NavigationCancel:
@@ -46,5 +47,4 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.routeDataSubscription.unsubscribe();
   }
-  title = 'Profile Builder';
 }

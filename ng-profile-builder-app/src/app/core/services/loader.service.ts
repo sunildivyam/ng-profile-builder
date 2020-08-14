@@ -12,7 +12,7 @@ export class LoaderService {
 
   constructor() { }
 
-  public get loading() : boolean {
+  public get loading(): boolean {
     return this._loading;
   }
 

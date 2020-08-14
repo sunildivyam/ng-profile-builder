@@ -5,11 +5,4 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './layouts-manage-landing.component.html',
   styleUrls: ['./layouts-manage-landing.component.scss']
 })
-export class LayoutsManageLandingComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class LayoutsManageLandingComponent{}

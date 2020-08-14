@@ -1,5 +1,4 @@
-import { Component, OnInit, Input, OnChanges, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Layout, Column } from '../models';
 
 @Component({

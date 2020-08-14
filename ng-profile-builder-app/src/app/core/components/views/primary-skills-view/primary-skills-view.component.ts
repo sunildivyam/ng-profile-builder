@@ -16,7 +16,7 @@ export class PrimarySkillsViewComponent implements OnChanges {
     this.transformData();
   }
 
-  transformData() {
+  transformData(): void {
     this.viewData = new Array<any>();
     this.skills && this.skills.map((skillItem: Skill) => {
       if (skillItem.isPrimarySkill === true) {
@@ -26,7 +26,7 @@ export class PrimarySkillsViewComponent implements OnChanges {
     });
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.transformData();
   }
 }

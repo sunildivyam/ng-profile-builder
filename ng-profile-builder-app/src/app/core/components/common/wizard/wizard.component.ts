@@ -84,7 +84,7 @@ export class WizardComponent implements OnChanges {
     }
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.loadSlide();
   }
 }

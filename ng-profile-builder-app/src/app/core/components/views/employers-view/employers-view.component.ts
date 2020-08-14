@@ -16,7 +16,7 @@ export class EmployersViewComponent implements OnChanges {
     this.transformData();
   }
 
-  transformData() {
+  transformData(): void {
     this.viewData = new Array<any>();
     this.employers && this.employers.map((empItem: Employer) => {
       const item = {...empItem, experience: this.profileViewService.getDuration(empItem.from, empItem.to).toString() };
@@ -24,7 +24,7 @@ export class EmployersViewComponent implements OnChanges {
     });
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.transformData();
   }
 }

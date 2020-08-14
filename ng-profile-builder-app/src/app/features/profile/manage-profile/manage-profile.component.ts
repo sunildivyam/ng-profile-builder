@@ -17,12 +17,12 @@ export class ManageProfileComponent implements OnInit {
   originalLayout: Layout;
   currentLayout: Layout;
   isUpdatingProfile: boolean;
-  isReadonlyProfileView: boolean = false;
+  isReadonlyProfileView = false;
 
   constructor(private firebaseService: FirebaseService,
-    private authService: AuthService,
-    private route: ActivatedRoute,
-    private router: Router /* ,
+              private authService: AuthService,
+              private route: ActivatedRoute,
+              private router: Router /* ,
     private profileService: ProfileService */ ) {
       this.route.parent.url.subscribe((urlSegments: Array<UrlSegment>) => {
         if (urlSegments.length) {
@@ -38,32 +38,32 @@ export class ManageProfileComponent implements OnInit {
       });
     }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getLayouts();
   }
 
-  public getProfile(id: string) {
+  public getProfile(id: string): void {
     this.firebaseService.getProfile(id, this.authService.currentUserId).subscribe((profile: Profile) => {
-      profile.content = <ProfileContent>{...(new ProfileContent()), ...profile.content};
+      profile.content = ({...(new ProfileContent()), ...profile.content} as ProfileContent);
       this.currentProfile = profile;
     }, (error) => {
       this.currentProfile = null;
     });
   }
 
-  public createProfile() {
+  public createProfile(): void {
     this.firebaseService.createProfile(this.currentProfile).subscribe((newProfileId: string) => {
       this.router.navigateByUrl(`/profiles/${newProfileId}/manage`);
     });
   }
 
-  public duplicateProfile(profile: Profile) {
+  public duplicateProfile(profile: Profile): void {
     this.firebaseService.createProfile(profile).subscribe((newProfileId: string) => {
       this.router.navigateByUrl('/dashboard');
     });
   }
 
-  public updateProfile(successCb, nextCb, errorCb) {
+  public updateProfile(successCb, nextCb, errorCb): void {
     this.isUpdatingProfile = true;
     this.firebaseService.updateProfile(this.currentProfile.id, this.currentProfile).subscribe(
       () => {
@@ -90,7 +90,7 @@ export class ManageProfileComponent implements OnInit {
     );
   }
 
-  public deleteProfile() {
+  public deleteProfile(): void {
     this.firebaseService.deleteProfile(this.currentProfile.id).subscribe((updatedProfile: Profile) => {
       this.currentProfile = updatedProfile;
     });
@@ -118,17 +118,17 @@ export class ManageProfileComponent implements OnInit {
     this.updateProfile(event.onSaveSuccess, event.onSaveNext, event.onSaveError);
   }
 
-  updateLayoutClicked() {
+  updateLayoutClicked(): void {
     this.isLayoutMode = true;
     this.isDataMode = false;
   }
 
-  updateProfileContentClicked() {
+  updateProfileContentClicked(): void {
     this.isDataMode = true;
     this.isLayoutMode = false;
   }
 
-  closeEditMode(event) {
+  closeEditMode(event): void {
     event.preventDefault();
     this.isDataMode = false;
     this.isLayoutMode = false;
@@ -142,7 +142,7 @@ export class ManageProfileComponent implements OnInit {
     this.currentProfile.layout = layout;
   }
 
-  revertLayoutClick() {
+  revertLayoutClick(): void {
     this.currentProfile.layout = this.originalLayout;
     this.currentLayout = undefined;
   }
@@ -151,14 +151,14 @@ export class ManageProfileComponent implements OnInit {
     this.updateProfile(event.onSaveSuccess, event.onSaveNext, event.onSaveError);
   }
 
-  public duplicateProfileClicked() {
+  public duplicateProfileClicked(): void {
     const duplicatedProfile = {...this.currentProfile};
     duplicatedProfile.id = undefined;
     duplicatedProfile.content.basicInfo.profileName = `DUPLICATED: ${duplicatedProfile.content.basicInfo.profileName}`;
     this.duplicateProfile(duplicatedProfile);
   }
 
-  public toggleProfileViewModeClick() {
+  public toggleProfileViewModeClick(): void {
     this.isReadonlyProfileView = !this.isReadonlyProfileView;
   }
 

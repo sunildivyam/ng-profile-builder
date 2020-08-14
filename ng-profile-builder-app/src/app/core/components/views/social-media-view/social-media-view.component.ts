@@ -16,7 +16,7 @@ export class SocialMediaViewComponent implements OnChanges {
     this.transformData();
   }
 
-  transformData() {
+  transformData(): void {
     this.viewData = new Array<any>();
     this.socialMedia && this.socialMedia.map((socialMediaItem: SocialMedia) => {
       const item = { ...socialMediaItem };
@@ -24,7 +24,7 @@ export class SocialMediaViewComponent implements OnChanges {
     });
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.transformData();
   }
 }

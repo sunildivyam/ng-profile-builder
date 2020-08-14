@@ -107,7 +107,7 @@ export class ManageLayoutsComponent implements OnInit {
     this.router.navigateByUrl(`/layouts/${layout.id}/manage`);
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getLayouts();
   }
 

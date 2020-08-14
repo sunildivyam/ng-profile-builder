@@ -19,12 +19,12 @@ export class ExperienceBarViewComponent implements OnChanges {
     this.transformData();
   }
 
-  transformData() {
+  transformData(): void {
     this.viewData.relevantExperience = this.profileViewService.getRelevantExperience(this.employers).toString();
     this.viewData.totalExperience = this.profileViewService.getTotalExperience(this.employers).toString();
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.transformData();
   }
 }

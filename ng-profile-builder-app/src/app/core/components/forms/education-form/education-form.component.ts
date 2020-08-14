@@ -6,7 +6,7 @@ import {Education} from '../../../models';
   templateUrl: './education-form.component.html',
   styleUrls: ['./education-form.component.css']
 })
-export class EducationFormComponent implements OnInit, OnChanges {
+export class EducationFormComponent implements OnChanges {
   @Input() education: Array<Education>;
   @Output() onSave = new EventEmitter();
 
@@ -45,10 +45,7 @@ export class EducationFormComponent implements OnInit, OnChanges {
     this.saveSuccess = null;
   }
 
-  ngOnInit() {
-  }
-
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.formData = JSON.parse(JSON.stringify(this.education)) || new Array<Education>();
   }
 

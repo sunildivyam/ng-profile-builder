@@ -3,7 +3,7 @@ export class SocialMedia {
     url: string;
 
     constructor() {
-        this.name = "";
-        this.url = "";
+        this.name = '';
+        this.url = '';
     }
 }

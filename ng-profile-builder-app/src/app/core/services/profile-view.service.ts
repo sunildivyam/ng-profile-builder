@@ -97,7 +97,7 @@ export class ProfileViewService {
       return new Duration(0, 0);
     }
     let totalDuration = new Duration(0, 0);
-    employers.map((employer) => {      
+    employers.map((employer) => {
       totalDuration = this.addDuration(totalDuration, this.dateDiff(employer.from, employer.to));
     });
     totalDuration.roundYear();

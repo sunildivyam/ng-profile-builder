@@ -7,7 +7,7 @@ export class ParallaxDirective {
 @Input ('ratio') paralaxratio: number;
 @Input ('isParallaxReady') isParallaxReady: boolean;
 
-initialTop: number = 0;
+initialTop = 0;
 
   constructor(private ref: ElementRef) {
       this.initialTop = this.ref.nativeElement.getBoundingClientRect().top;
@@ -19,7 +19,7 @@ initialTop: number = 0;
       console.log(this.ref.nativeElement.top);
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     // if (this.isParallaxReady === true) {
     //   (function(that) {setTimeout(() => {
     //     that.initialTop = that.ref.nativeElement.getBoundingClientRect().top;

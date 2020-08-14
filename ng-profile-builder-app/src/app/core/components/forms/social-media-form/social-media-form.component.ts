@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, Injector } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, Injector } from '@angular/core';
 import { SocialMedia } from '../../../models';
 
 @Component({
@@ -6,7 +6,7 @@ import { SocialMedia } from '../../../models';
   templateUrl: './social-media-form.component.html',
   styleUrls: ['./social-media-form.component.css']
 })
-export class SocialMediaFormComponent implements OnInit, OnChanges {
+export class SocialMediaFormComponent implements OnChanges {
   @Input() socialMedia: Array<SocialMedia>;
   @Output() onSave = new EventEmitter();
 
@@ -43,10 +43,7 @@ export class SocialMediaFormComponent implements OnInit, OnChanges {
     this.saveSuccess = null;
   }
 
-  ngOnInit() {
-  }
-
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.formData = JSON.parse(JSON.stringify(this.socialMedia)) || new Array<SocialMedia>();
   }
 

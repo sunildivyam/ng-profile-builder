@@ -44,11 +44,9 @@ export class BasicInfoFormComponent implements OnInit, OnChanges {
     this.saveSuccess = null;
    }
 
-  ngOnInit() {
 
-  }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.formData = JSON.parse(JSON.stringify(this.basicInfo)) || new BasicInfo();
   }
 

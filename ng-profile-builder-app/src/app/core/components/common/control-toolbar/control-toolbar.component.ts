@@ -5,7 +5,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   templateUrl: './control-toolbar.component.html',
   styleUrls: ['./control-toolbar.component.scss']
 })
-export class ControlToolbarComponent implements OnInit {
+export class ControlToolbarComponent {
   @Output() public onSaveClick = new EventEmitter();
   @Output() public onAddClick = new EventEmitter();
   @Output() public onDeleteClick = new EventEmitter();
@@ -20,8 +20,4 @@ export class ControlToolbarComponent implements OnInit {
   public deleteClick(event): void {
     this.onDeleteClick.emit(event);
   }
-
-  ngOnInit() {
-  }
-
 }

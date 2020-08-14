@@ -14,16 +14,17 @@ export class ProfileCardsViewComponent implements OnChanges {
   viewData: Array<any>;
 
   constructor(private profileViewService: ProfileViewService,
-    private firebaseService: FirebaseService,
-    private authService: AuthService,
-    private route: ActivatedRoute) {
+              private firebaseService: FirebaseService,
+              private authService: AuthService,
+              private route: ActivatedRoute) {
     this.route.url.subscribe((urlSegments: Array<UrlSegment>) => {
       if (urlSegments.length) {
         this.getProfiles();
       }
     });
   }
-  public getProfiles() {
+
+  public getProfiles(): void {
     this.firebaseService.getProfiles(this.authService.currentUserId).subscribe((profiles: Array<Profile>) => {
       this.profiles = profiles;
       this.transformData();
@@ -33,7 +34,7 @@ export class ProfileCardsViewComponent implements OnChanges {
     });
   }
 
-  transformData() {
+  transformData(): void {
     this.viewData = new Array<any>();
     this.profiles.map((profile: Profile) => {
       const profileItem = { ...profile };
@@ -41,7 +42,7 @@ export class ProfileCardsViewComponent implements OnChanges {
     });
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.transformData();
   }
 }

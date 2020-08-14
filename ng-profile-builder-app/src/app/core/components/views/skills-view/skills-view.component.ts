@@ -9,7 +9,7 @@ import { ProfileViewService } from '../../../services';
 })
 export class SkillsViewComponent implements OnChanges {
   @Input() skills: Array<Skill>;
-  @Input() sortBy: string = '';  // 'rating'
+  @Input() sortBy = '';  // 'rating'
   @Input() sortAsc: Boolean = false;
   viewData: Array<any>;
 
@@ -18,10 +18,10 @@ export class SkillsViewComponent implements OnChanges {
     this.transformData();
   }
 
-  transformData() {
+  transformData(): void {
     this.viewData = new Array<any>();
     this.skills && this.skills.map((skillItem: Skill) => {
-      const item = { ...skillItem, 
+      const item = { ...skillItem,
         experience: this.profileViewService.getDuration(skillItem.from, skillItem.to, true),
         experienceLabel: this.profileViewService.getDuration(skillItem.from, skillItem.to, true).toString()};
       this.viewData.push(item);
@@ -42,7 +42,7 @@ export class SkillsViewComponent implements OnChanges {
     return data;
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.transformData();
   }
 }

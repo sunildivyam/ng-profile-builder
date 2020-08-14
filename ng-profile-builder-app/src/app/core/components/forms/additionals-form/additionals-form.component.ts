@@ -9,7 +9,7 @@ import {Additional} from '../../../models';
   styleUrls: ['./additionals-form.component.css'],
   // encapsulation: ViewEncapsulation.Native,
 })
-export class AdditionalsFormComponent implements OnInit, OnChanges {
+export class AdditionalsFormComponent implements OnChanges {
   @Input() additionals: Array<Additional>;
   @Output() onSave = new EventEmitter();
 
@@ -48,10 +48,7 @@ export class AdditionalsFormComponent implements OnInit, OnChanges {
     this.saveSuccess = null;
   }
 
-  ngOnInit() {
-  }
-
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.formData = JSON.parse(JSON.stringify(this.additionals));
   }
 
