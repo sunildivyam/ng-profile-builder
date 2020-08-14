@@ -23,7 +23,7 @@ export class WizardComponent implements OnChanges {
   @Input() wizardContext: any;
   @Output() nextClick = new EventEmitter();
   @Output() previousClick = new EventEmitter();
-  @ViewChild('vc', {read: ViewContainerRef}) stepViewContainerRef: ViewContainerRef;
+  @ViewChild('vc', {static: true, read: ViewContainerRef}) stepViewContainerRef: ViewContainerRef;
   currentStep: WizardStep;
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {

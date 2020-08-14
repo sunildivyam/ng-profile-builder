@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 // Firebase modules
 import {FirebaseUIModule, firebase, firebaseui} from 'firebaseui-angular';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule, DefaultFirestoreSettings } from '@angular/fire/firestore';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import * as CommonComponents from './components/common';
@@ -19,7 +19,7 @@ import * as Services from './services';
 import { environment } from 'src/environments/environment';
 
 // This removes warning from console. as this setting will be removed from future releases, and will work as true by default.
-delete DefaultFirestoreSettings.timestampsInSnapshots;
+// delete DefaultFirestoreSettings.timestampsInSnapshots;
 
 const firebaseuiConfig = {
   signInFlow: 'redirect', // or popup
