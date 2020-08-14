@@ -4,6 +4,7 @@ node_js:
 before_install:
   - cd ng-profile-builder-app
 install:
+  - npm i
   - npm i firebase-tools -g
 script:
   - npm run lint
