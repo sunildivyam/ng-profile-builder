@@ -1,7 +1,42 @@
+.container-fluid {
+  // TODO
+}
 .row {
-  border-top: 1px solid #eaeaea;
-
-  &:first {
+  &:first-child {
     border-top: none;
   }
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  background-color: #3c3c3c;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.name {
+  margin: 0px;
+  padding: 4px 7px;
+  font-size: 1rem;
+  font-weight: normal;
+  background-color: #eaeaea;
+}
+.experience {
+  font-size: 0.8rem;
+  border-left: 1px solid grey;
+  padding-left: 4px;
+  padding-right: 7px;
+  margin-left: 4px;
+  color: white;
+  margin-top: 2px;
+}
+.rating {
+  padding-left: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.hidden {
+  display: none!important;
 }

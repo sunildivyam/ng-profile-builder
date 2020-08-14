@@ -20,4 +20,11 @@ export class Duration {
 
     return (this.years ? `${this.years} ${yPostFix} ` : '') + (this.months ? `${this.months} ${mPostFix}` : '');
   }
+
+  public roundYear(): void {
+    if (this.months >= 6 ) {
+      this.years++;
+      this.months = 0;
+    }
+  }
 }

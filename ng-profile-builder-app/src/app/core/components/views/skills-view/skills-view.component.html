@@ -4,11 +4,13 @@
     </div>
     <div class="card-body">
       <div class="container-fluid">
-        <div class="row"  *ngFor="let skill of viewData">
-          <div class="col-sm-12">
-              <h4 class=""><strong>{{skill.name}}</strong></h4>
-              <small class="">{{skill.experience}}</small>
-              <pba-rating-view [rating]="skill.rating"></pba-rating-view>
+        <div class="row {{skill.isPrimarySkill ? 'hidden': ''}}"  *ngFor="let skill of viewData">
+          <div class="col-sm-12 item">
+              <div class="name"><span>{{skill.name}}</span></div>
+              <div class="rating">
+                <pba-rating-view [rating]="skill.rating"></pba-rating-view>
+                <small class="experience">{{skill.experienceLabel}}</small>
+              </div>
           </div>
         </div>
       </div>
