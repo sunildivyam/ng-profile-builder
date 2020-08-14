@@ -1,11 +1,13 @@
 language: node_js
 node_js:
   - "12.13.1"
+before_install:
+  - cd ng-profile-builder-app
+install:
+  - npm i firebase-tools -g
 script:
   - npm run lint
   - npm run test
   - npm run build
-install:
-  - npm i firebase-tools -g
 after_success:
   - echo "success deployed"
