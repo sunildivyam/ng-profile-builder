@@ -16,14 +16,14 @@ script:
 after_success:
   - echo "BUILD SUccessfull"
 deploy:
-  - provider: npm
+  - provider: script
     script:
       - echo "Deploying on PR"
     on:
       branches:
         only:
           - travis-ci-cd
-  - provider: npm
+  - provider: script
     script:
       - echo "Deploying on MASTER"
     on:
