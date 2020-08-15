@@ -18,13 +18,6 @@ after_success:
 deploy:
   - provider: script
     script:
-      - echo "Deploying on PR"
-    on:
-      branches:
-        only:
-          - travis-ci-cd
-  - provider: script
-    script:
       - echo "Deploying on MASTER"
     on:
       branches:
