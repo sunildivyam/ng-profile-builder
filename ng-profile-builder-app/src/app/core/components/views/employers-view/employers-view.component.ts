@@ -16,15 +16,17 @@ export class EmployersViewComponent implements OnChanges {
     this.transformData();
   }
 
-  transformData() {
+  transformData(): void {
     this.viewData = new Array<any>();
-    this.employers && this.employers.map((empItem: Employer) => {
-      const item = {...empItem, experience: this.profileViewService.getDuration(empItem.from, empItem.to).toString() };
-      this.viewData.push(item);
-    });
+    if (this.employers && this.employers.length) {
+      this.employers.map((empItem: Employer) => {
+        const item = {...empItem, experience: this.profileViewService.getDuration(empItem.from, empItem.to).toString() };
+        this.viewData.push(item);
+      });
+    }
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.transformData();
   }
 }

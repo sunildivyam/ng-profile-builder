@@ -9,23 +9,23 @@ import { FirebaseService } from 'src/app/core';
   styleUrls: ['./parallax-view-profile.component.scss']
 })
 export class ParallaxViewProfileComponent implements OnInit {
-  isDataReady: boolean = false;
+  isDataReady = false;
   currentProfile: Profile;
   constructor(private firebaseService: FirebaseService,
-    private route: ActivatedRoute) { }
+              private route: ActivatedRoute) { }
 
   public getProfile(id: string): any {
-    if ((this.currentProfile && this.currentProfile.id == id) || !id) {
+    if ((this.currentProfile && this.currentProfile.id === id) || !id) {
       return false;
     }
     this.firebaseService.getProfile(id, '').subscribe((profile: Profile) => {
-      profile.content = <ProfileContent>{...(new ProfileContent()), ...profile.content};
+      profile.content = ({...(new ProfileContent()), ...profile.content} as ProfileContent);
       this.currentProfile = profile;
       this.isDataReady = true;
     });
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.route.parent.url.subscribe((urlSegments: Array<UrlSegment>) => {
       if (urlSegments.length) {
         const profileId = urlSegments[0].path;

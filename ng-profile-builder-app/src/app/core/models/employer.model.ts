@@ -8,7 +8,7 @@ export class Employer {
     roles: Array<string>;
     isRelevant: boolean;
 
-    constructor () {
+    constructor() {
         this.employerName = '';
         this.from = null;
         this.to = null;

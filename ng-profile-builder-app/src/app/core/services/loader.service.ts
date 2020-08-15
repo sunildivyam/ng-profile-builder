@@ -6,38 +6,38 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class LoaderService {
-  private _activeLoadrequests = 0;
-  private _loading: boolean;
+  private pActiveLoadrequests = 0;
+  private pLoading: boolean;
   public status: Subject<boolean> = new Subject();
 
   constructor() { }
 
-  public get loading() : boolean {
-    return this._loading;
+  public get loading(): boolean {
+    return this.pLoading;
   }
 
   public set loading(value: boolean) {
-    this._loading = value;
+    this.pLoading = value;
     setTimeout(() => {
       this.status.next(value);
     });
   }
 
   public start(): void {
-    this._activeLoadrequests++;
-    if (!this._loading) {
+    this.pActiveLoadrequests++;
+    if (!this.pLoading) {
       this.loading = true;
     }
   }
 
   public stop(force: boolean = false): void {
     if (force === true) {
-      this._activeLoadrequests = 0;
+      this.pActiveLoadrequests = 0;
     }
-    if (this._activeLoadrequests > 0) {
-      this._activeLoadrequests--;
+    if (this.pActiveLoadrequests > 0) {
+      this.pActiveLoadrequests--;
     }
-    if (this._activeLoadrequests === 0 && this._loading === true ) {
+    if (this.pActiveLoadrequests === 0 && this.pLoading === true ) {
       this.loading = false;
     }
   }

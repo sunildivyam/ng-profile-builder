@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, Injector } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, Injector } from '@angular/core';
 import { SocialMedia } from '../../../models';
 
 @Component({
@@ -6,27 +6,27 @@ import { SocialMedia } from '../../../models';
   templateUrl: './social-media-form.component.html',
   styleUrls: ['./social-media-form.component.css']
 })
-export class SocialMediaFormComponent implements OnInit, OnChanges {
+export class SocialMediaFormComponent implements OnChanges {
   @Input() socialMedia: Array<SocialMedia>;
-  @Output() onSave = new EventEmitter();
+  @Output() saved = new EventEmitter();
 
   formData: Array<SocialMedia>;
   saveStarted: boolean;
   saveSuccess: boolean;
 
-  private onSaveSuccess() {
+  private savedSuccess(): void {
     console.log('Social Media Saved');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
-  private onSaveNext() {
+  private savedNext(): void {
     console.log('Social Media Saving');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
-  private onSaveError() {
+  private savedError(): void {
     console.log('Social Media Error occured');
     this.saveStarted = false;
     this.saveSuccess = false;
@@ -34,25 +34,22 @@ export class SocialMediaFormComponent implements OnInit, OnChanges {
 
   constructor(private injector: Injector) {
     const formInjector = this.injector.get('socialMedia');
-    const onSaveFromInjector = this.injector.get('onSave');
-    if (onSaveFromInjector) {
-      this.onSave = onSaveFromInjector;
+    const savedFromInjector = this.injector.get('saved');
+    if (savedFromInjector) {
+      this.saved = savedFromInjector;
     }
     this.formData = formInjector || new Array<SocialMedia>();
     this.saveStarted = false;
     this.saveSuccess = null;
   }
 
-  ngOnInit() {
-  }
-
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.formData = JSON.parse(JSON.stringify(this.socialMedia)) || new Array<SocialMedia>();
   }
 
-  onSaveClick(event) {
+  saveClicked(event): void {
     if (this.saveStarted === true) {
-      return false;
+      return;
     }
 
     this.saveStarted = true;
@@ -61,19 +58,19 @@ export class SocialMediaFormComponent implements OnInit, OnChanges {
     event.preventDefault();
     event.formName = 'socialMedia';
     event.formData = this.formData;
-    event.onSaveSuccess = this.onSaveSuccess.bind(this);
-    event.onSaveNext = this.onSaveNext.bind(this);
-    event.onSaveError = this.onSaveError.bind(this);
+    event.savedSuccess = this.savedSuccess.bind(this);
+    event.savedNext = this.savedNext.bind(this);
+    event.savedError = this.savedError.bind(this);
 
-    this.onSave.emit(event);
+    this.saved.emit(event);
   }
 
-  onRemoveClick(event, index) {
+  onRemoveClick(event, index): void {
     event.preventDefault();
     this.formData.splice(index, 1);
   }
 
-  onAddClick(event) {
+  addClicked(event): void {
     event.preventDefault();
     this.formData.push(new SocialMedia());
   }

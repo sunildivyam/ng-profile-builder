@@ -16,17 +16,19 @@ export class PrimarySkillsViewComponent implements OnChanges {
     this.transformData();
   }
 
-  transformData() {
+  transformData(): void {
     this.viewData = new Array<any>();
-    this.skills && this.skills.map((skillItem: Skill) => {
-      if (skillItem.isPrimarySkill === true) {
-        const item = { ...skillItem, experience: this.profileViewService.getDuration(skillItem.from, skillItem.to, true).toString() };
-        this.viewData.push(item);
-      }
-    });
+    if (this.skills && this.skills.length) {
+      this.skills.map((skillItem: Skill) => {
+        if (skillItem.isPrimarySkill === true) {
+          const item = { ...skillItem, experience: this.profileViewService.getDuration(skillItem.from, skillItem.to, true).toString() };
+          this.viewData.push(item);
+        }
+      });
+    }
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.transformData();
   }
 }

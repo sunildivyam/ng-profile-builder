@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, Injector } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, Injector } from '@angular/core';
 import {BasicInfo} from '../../../models';
 
 @Component({
@@ -6,28 +6,28 @@ import {BasicInfo} from '../../../models';
   templateUrl: './basic-info-form.component.html',
   styleUrls: ['./basic-info-form.component.css']
 })
-export class BasicInfoFormComponent implements OnInit, OnChanges {
+export class BasicInfoFormComponent implements OnChanges {
   @Input() basicInfo: BasicInfo;
-  @Output() onSave = new EventEmitter<BasicInfo>();
+  @Output() saved = new EventEmitter<BasicInfo>();
 
   formData: BasicInfo;
   saveStarted: boolean;
   saveSuccess: boolean;
 
 
-  onSaveSuccess() {
+  savedSuccess(): void {
     console.log('Basic info Saved');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
-  onSaveNext() {
+  savedNext(): void {
     console.log('Basic info Saving');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
-  onSaveError() {
+  savedError(): void {
     console.log('Basic info Error occured');
     this.saveStarted = false;
     this.saveSuccess = false;
@@ -35,26 +35,24 @@ export class BasicInfoFormComponent implements OnInit, OnChanges {
 
   constructor(private injector: Injector) {
     const formInjector = this.injector.get('basicInfo');
-    const onSaveFromInjector = this.injector.get('onSave');
-    if (onSaveFromInjector) {
-      this.onSave = onSaveFromInjector;
+    const savedFromInjector = this.injector.get('saved');
+    if (savedFromInjector) {
+      this.saved = savedFromInjector;
     }
     this.formData = formInjector || new BasicInfo();
     this.saveStarted = false;
     this.saveSuccess = null;
    }
 
-  ngOnInit() {
 
-  }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.formData = JSON.parse(JSON.stringify(this.basicInfo)) || new BasicInfo();
   }
 
-  onSaveClick(event) {
+  saveClicked(event): void {
     if (this.saveStarted === true) {
-      return false;
+      return;
     }
 
     this.saveStarted = true;
@@ -63,11 +61,11 @@ export class BasicInfoFormComponent implements OnInit, OnChanges {
     event.preventDefault();
     event.formName = 'basicInfo';
     event.formData = this.formData;
-    event.onSaveSuccess = this.onSaveSuccess.bind(this);
-    event.onSaveNext = this.onSaveNext.bind(this);
-    event.onSaveError = this.onSaveError.bind(this);
+    event.savedSuccess = this.savedSuccess.bind(this);
+    event.savedNext = this.savedNext.bind(this);
+    event.savedError = this.savedError.bind(this);
 
-    this.onSave.emit(event);
+    this.saved.emit(event);
   }
 
   overviewInput(event: any): void {
@@ -76,7 +74,7 @@ export class BasicInfoFormComponent implements OnInit, OnChanges {
     });
   }
 
-  profileImageChanged(imageBase64Str: string) {
+  profileImageChanged(imageBase64Str: string): void {
     this.formData.profileImage = imageBase64Str;
   }
 }

@@ -60,7 +60,7 @@ export class ProfileViewService {
     return addedDuration;
   }
 
-  public getDuration(fromDate, toDate, roundedYear: Boolean = false): Duration {
+  public getDuration(fromDate, toDate, roundedYear = false): Duration {
     const duration = this.dateDiff(fromDate, toDate);
     if (roundedYear) {
       if (duration.months >= 6 ) {
@@ -97,7 +97,7 @@ export class ProfileViewService {
       return new Duration(0, 0);
     }
     let totalDuration = new Duration(0, 0);
-    employers.map((employer) => {      
+    employers.map((employer) => {
       totalDuration = this.addDuration(totalDuration, this.dateDiff(employer.from, employer.to));
     });
     totalDuration.roundYear();

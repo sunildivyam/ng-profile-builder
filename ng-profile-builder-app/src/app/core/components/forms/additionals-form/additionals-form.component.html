@@ -38,15 +38,15 @@
                 [placeholderText]="'Bullet point text...'"
                 [addBtnLabel]="'Add Bullet Point'"
                 [dragOperationEnabled]="dragOperationBulletsEnabled"
-                (onChange)="onBulletsChange($event, idx)">
+                (changed)="onBulletsChange($event, idx)">
               </pba-extended-list-form>
             </div>
           </div>
         </div>
-        <a class="btn btn-success list-group" href="#" (click)="onAddClick($event)"> Add Additional </a>
+        <a class="btn btn-success list-group" href="#" (click)="addClicked($event)"> Add Additional </a>
     </div>
     <div class="card-footer">
-      <button class="btn btn-primary" (click)="onSaveClick($event)">
+      <button class="btn btn-primary" (click)="saveClicked($event)">
         <span>Save Additionals </span>
         <span class="fa fa-spinner" *ngIf="saveStarted===true"></span>
         <span class="fa fa-check text-success" *ngIf="saveSuccess===true"></span>

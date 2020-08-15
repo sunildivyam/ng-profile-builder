@@ -20,12 +20,12 @@ export class ProfileHeaderViewComponent implements OnChanges {
     this.transformData();
   }
 
-  transformData() {
+  transformData(): void {
     this.viewData = { ...this.basicInfo };
-    this.viewData.presentEmployer = <Employer>this.profileViewService.getPresentEmployer(this.employers);
+    this.viewData.presentEmployer = (this.profileViewService.getPresentEmployer(this.employers) as Employer);
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.transformData();
   }
 }

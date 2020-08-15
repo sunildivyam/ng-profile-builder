@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpHandler, HttpRequest, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { finalize } from "rxjs/operators";
+import { finalize } from 'rxjs/operators';
 import { LoaderService } from './loader.service';
 
 @Injectable()

@@ -5,11 +5,4 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './error-landing.component.html',
   styleUrls: ['./error-landing.component.scss']
 })
-export class ErrorLandingComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class ErrorLandingComponent{}

@@ -39,15 +39,15 @@ export class ManageLayoutsComponent implements OnInit {
   }
 
   private setCurrentLayout(): void {
-    if (this.currentLayoutId && this.currentLayoutId != '0' && this.layouts.length) {
-      this.currentLayout = this.layouts.find((lt) => this.currentLayoutId == lt.id);
+    if (this.currentLayoutId && this.currentLayoutId !== '0' && this.layouts.length) {
+      this.currentLayout = this.layouts.find((lt) => this.currentLayoutId === lt.id);
     } else if (this.currentLayoutId === '0'){
       this.createLayout();
     } else {
       this.currentLayout = null;
     }
   }
-  private createLayout() {
+  private createLayout(): void {
     this.currentLayout = new Layout();
     this.currentLayout.uid = this.authService.currentUserId;
     this.firebaseService.createLayout(this.currentLayout)
@@ -60,9 +60,9 @@ export class ManageLayoutsComponent implements OnInit {
     });
   }
 
-  private deleteLayout() {
+  private deleteLayout(): void {
     if (!this.currentLayout || !this.currentLayout.id) {
-      return false;
+      return;
     }
     this.firebaseService.deleteLayout(this.currentLayout.id)
     .subscribe(() => {
@@ -81,7 +81,7 @@ export class ManageLayoutsComponent implements OnInit {
     });
   }
 
-  private updateLayout() {
+  private updateLayout(): void {
     this.firebaseService.updateLayout(this.currentLayout.id, this.currentLayout)
     .subscribe((data) => {
       this.currentLayout = this.currentLayout;
@@ -107,7 +107,7 @@ export class ManageLayoutsComponent implements OnInit {
     this.router.navigateByUrl(`/layouts/${layout.id}/manage`);
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getLayouts();
   }
 

@@ -19,13 +19,12 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "pba",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
       "pba",
       "kebab-case"
     ],

@@ -1,5 +1,4 @@
-import { Component, OnInit, Input, OnChanges, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Layout, Column } from '../models';
 
 @Component({
@@ -19,7 +18,7 @@ export class LayoutViewComponent implements OnInit, OnChanges {
     this.sampleText = 'Lorem ipsum sample text, your content goes here.';
   }
 
-  public titleChange() {
+  public titleChange(): void {
     if (!this.layout) {
       return;
     }

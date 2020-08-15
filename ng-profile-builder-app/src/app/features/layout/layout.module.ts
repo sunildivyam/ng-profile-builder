@@ -11,7 +11,7 @@ import { ColumnFormComponent } from './column-form/column-form.component';
 import { LayoutCardsViewComponent } from './layout-cards-view/layout-cards-view.component';
 
 @NgModule({
-  providers:[],
+  providers: [],
   imports: [CoreModule, FormsModule, CommonModule, RouterModule],
   declarations: [LayoutViewComponent, LayoutListComponent, ManageLayoutsComponent, ColumnFormComponent, LayoutCardsViewComponent],
   exports: [LayoutViewComponent, LayoutListComponent, ManageLayoutsComponent, ColumnFormComponent, LayoutCardsViewComponent]

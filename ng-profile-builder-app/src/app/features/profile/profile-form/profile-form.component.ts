@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, EventEmitter, Output } from '@angular/core';
+import { Component, Input, OnChanges, EventEmitter, Output } from '@angular/core';
 import { Profile } from '../models';
 import { ProfileWizardSteps } from '../configs/profile-wizard-steps';
 import { WizardStep } from 'src/app/core';
@@ -8,7 +8,7 @@ import { WizardStep } from 'src/app/core';
   templateUrl: './profile-form.component.html',
   styleUrls: ['./profile-form.component.scss']
 })
-export class ProfileFormComponent implements OnInit, OnChanges {
+export class ProfileFormComponent implements OnChanges {
   @Input() profile: Profile;
   @Output() saved = new EventEmitter();
 
@@ -27,16 +27,13 @@ export class ProfileFormComponent implements OnInit, OnChanges {
     this.saved.emit(event);
   }
 
-  ngOnInit() {
-  }
-
-  ngOnChanges() {
+  ngOnChanges(): void {
     if (this.profile && this.profile.content) {
       const pSteps = ProfileWizardSteps.slice();
       pSteps.map((step: WizardStep) => {
         step.data = {};
         step.data[step.name] = this.profile.content[step.name];
-        step.data.onSave = this.saveProfileClicked;
+        step.data.saved = this.saveProfileClicked;
       });
       this.profileSteps = pSteps;
     }

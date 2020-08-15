@@ -7,26 +7,16 @@ import { Layout } from '../models';
   styleUrls: ['./layout-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.Default,
 })
-export class LayoutListComponent implements OnInit, OnChanges {
+export class LayoutListComponent {
 @Input() public layouts: Array<Layout>;
 @Input() public selectedLayout: Layout;
-@Output() public onSelect = new EventEmitter();
+@Output() public selected = new EventEmitter();
 
-  constructor() {
+  public selectLayoutClick(event): void {
+    this.selected.emit(this.selectedLayout);
   }
 
-  public selectLayoutClick(event): void {    
-    this.onSelect.emit(this.selectedLayout);
-  }
-
-  public compareFn(c1: any, c2:any): boolean {
+  public compareFn(c1: any, c2: any): boolean {
       return c1 && c2 ? c1.id === c2.id : c1 === c2;
-  }
-
-  public ngOnInit(): void {
-
-  }
-
-  public ngOnChanges(): void {
   }
 }

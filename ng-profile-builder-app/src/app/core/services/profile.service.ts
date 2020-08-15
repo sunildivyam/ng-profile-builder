@@ -9,10 +9,10 @@ import { Profile } from 'src/app/features/profile/models';
 export class ProfileService {
   private api = environment.apiConfig;
 
-  constructor(private http: HttpClient, /*private httpHeaders: HttpHeaders*/) {    
+  constructor(private http: HttpClient, /*private httpHeaders: HttpHeaders*/) {
     this.setHeaders();
   }
-  private setHeaders() {
+  private setHeaders(): void {
     // this.httpHeaders.set('Content-type', 'javascript/json');
   }
 
@@ -71,7 +71,7 @@ export class ProfileService {
 
   // MIGRATION:
 
-  getProfilesForMigration() {
+  getProfilesForMigration(): Observable<any> {
     const url = 'http://localhost:3000/api/usersdeep';
     return this.http.get(url);
   }

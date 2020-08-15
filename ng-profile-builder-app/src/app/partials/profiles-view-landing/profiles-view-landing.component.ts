@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router, ActivatedRoute, UrlSegment } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { Router, ActivatedRoute, UrlSegment } from '@angular/router';
   templateUrl: './profiles-view-landing.component.html',
   styleUrls: ['./profiles-view-landing.component.scss']
 })
-export class ProfilesViewLandingComponent implements OnInit {
+export class ProfilesViewLandingComponent {
   public currentProfileId: string;
 
   constructor(private router: Router, private route: ActivatedRoute) {
@@ -16,8 +16,4 @@ export class ProfilesViewLandingComponent implements OnInit {
       }
     });
   }
-
-  ngOnInit() {
-  }
-
 }

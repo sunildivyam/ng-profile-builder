@@ -7,18 +7,18 @@ export const environment = {
   apiConfig: {
     baseUrl: 'http://localhost:3000',
     endpoints: {
-      "layouts": "layouts",
-      "users": "users",
-      "profiles": "profiles"
+      layouts: 'layouts',
+      users: 'users',
+      profiles: 'profiles'
     }
   },
   firebase: {
-    apiKey: "",
-    authDomain: "ng-profile-builder.firebaseapp.com",
-    databaseURL: "https://ng-profile-builder.firebaseio.com",
-    projectId: "ng-profile-builder",
-    storageBucket: "ng-profile-builder.appspot.com",
-    messagingSenderId: ""
+    apiKey: '',
+    authDomain: 'ng-profile-builder.firebaseapp.com',
+    databaseURL: 'https://ng-profile-builder.firebaseio.com',
+    projectId: 'ng-profile-builder',
+    storageBucket: 'ng-profile-builder.appspot.com',
+    messagingSenderId: ''
   }
 };
 

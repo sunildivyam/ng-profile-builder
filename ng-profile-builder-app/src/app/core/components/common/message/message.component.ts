@@ -5,13 +5,9 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './message.component.html',
   styleUrls: ['./message.component.scss']
 })
-export class MessageComponent implements OnInit {
+export class MessageComponent {
   @Input() headerText: string;
   @Input() messageText: string;
-  
+
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }

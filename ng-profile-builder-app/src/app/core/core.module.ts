@@ -33,7 +33,7 @@ const firebaseuiConfig = {
         'user_friends'
       ],
       customParameters: {
-        'auth_type': 'reauthenticate'
+        auth_type: 'reauthenticate'
       },
       provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID
     },
@@ -49,7 +49,7 @@ const firebaseuiConfig = {
   tosUrl: '/termsofservice',
   privacyPolicyUrl: '/privacypolicy',
   credentialHelper: firebaseui.auth.CredentialHelper.ACCOUNT_CHOOSER_COM
-}
+};
 
 @NgModule({
   providers: Object.values(Services),

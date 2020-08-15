@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProfileContent } from '../models';
 import { Layout, Column } from '../../layout';
 
@@ -7,7 +7,7 @@ import { Layout, Column } from '../../layout';
   templateUrl: './profile-view.component.html',
   styleUrls: ['./profile-view.component.scss']
 })
-export class ProfileViewComponent implements OnInit, OnChanges {
+export class ProfileViewComponent {
   @Input() content: ProfileContent;
   @Input() layout: Layout;
   @Input() isReadonly: boolean;
@@ -17,7 +17,7 @@ export class ProfileViewComponent implements OnInit, OnChanges {
 
   constructor() { }
 
-  editSectionClick(event, col: Column) {
+  editSectionClick(event, col: Column): void {
     this.sectionColumn = col;
   }
 
@@ -29,11 +29,5 @@ export class ProfileViewComponent implements OnInit, OnChanges {
 
   public columnFormCloseClick(col: Column): void {
     this.isColumnFormVisible = false;
-  }
-
-  ngOnInit() {
-  }
-
-  ngOnChanges(changes) {    
   }
 }

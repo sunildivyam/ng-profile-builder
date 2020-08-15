@@ -7,14 +7,14 @@ import { User } from 'firebase';
   providedIn: 'root'
 })
 export class AuthService {
-  private _currentUser: User;
+  private pCurrentUser: User;
 
   constructor(private angularFireAuth: AngularFireAuth) {
     this.angularFireAuth.authState.subscribe(this.firebaseAuthChangeListner);
   }
 
   public firebaseAuthChangeListner = (user: User) => {
-    this._currentUser = user;
+    this.pCurrentUser = user;
     if (user) {
       console.log('Logged in - Success');
     } else {
@@ -27,7 +27,7 @@ export class AuthService {
   }
 
   public isUserLoggedIn(): boolean {
-    if (this._currentUser) {
+    if (this.pCurrentUser) {
       return true;
     }
     return false;
@@ -38,11 +38,11 @@ export class AuthService {
   }
 
   public get currentUserId(): string {
-    return this._currentUser && this._currentUser.uid;
+    return this.pCurrentUser && this.pCurrentUser.uid;
   }
 
-  public get currentUser(): Object {
-    return this._currentUser;
+  public get currentUser(): User {
+    return this.pCurrentUser;
   }
 
   public loginStateChange(): Observable<firebase.User> {

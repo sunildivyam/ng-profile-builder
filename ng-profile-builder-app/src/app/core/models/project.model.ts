@@ -6,14 +6,14 @@ export class Project {
     summary: string;
     technologies: Array<string>;
     roles: Array<string>;
-    
+
     constructor() {
-        this.name = "";
-        this.clientName = "";
+        this.name = '';
+        this.clientName = '';
         this.from = null;
         this.to = null;
-        this.summary = "";
+        this.summary = '';
         this.technologies = new Array<string>();
-        this.roles = new Array<string>();    
+        this.roles = new Array<string>();
     }
 }

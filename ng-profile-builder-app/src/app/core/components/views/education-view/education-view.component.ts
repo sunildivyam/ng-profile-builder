@@ -16,15 +16,17 @@ export class EducationViewComponent implements OnChanges {
     this.transformData();
   }
 
-  transformData() {
+  transformData(): void {
     this.viewData = new Array<any>();
-    this.education && this.education.map((eduItem: Education) => {
-      const item = { ...eduItem, duration: this.profileViewService.getDuration(eduItem.from, eduItem.to).toString() };
-      this.viewData.push(item);
-    });
+    if (this.education && this.education.length) {
+      this.education.map((eduItem: Education) => {
+        const item = { ...eduItem, duration: this.profileViewService.getDuration(eduItem.from, eduItem.to).toString() };
+        this.viewData.push(item);
+      });
+    }
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.transformData();
   }
 }

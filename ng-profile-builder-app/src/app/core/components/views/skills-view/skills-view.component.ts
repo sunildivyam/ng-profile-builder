@@ -9,8 +9,8 @@ import { ProfileViewService } from '../../../services';
 })
 export class SkillsViewComponent implements OnChanges {
   @Input() skills: Array<Skill>;
-  @Input() sortBy: string = '';  // 'rating'
-  @Input() sortAsc: Boolean = false;
+  @Input() sortBy = '';  // 'rating'
+  @Input() sortAsc = false;
   viewData: Array<any>;
 
   constructor(private injector: Injector, private profileViewService: ProfileViewService) {
@@ -18,18 +18,20 @@ export class SkillsViewComponent implements OnChanges {
     this.transformData();
   }
 
-  transformData() {
+  transformData(): void {
     this.viewData = new Array<any>();
-    this.skills && this.skills.map((skillItem: Skill) => {
-      const item = { ...skillItem, 
-        experience: this.profileViewService.getDuration(skillItem.from, skillItem.to, true),
-        experienceLabel: this.profileViewService.getDuration(skillItem.from, skillItem.to, true).toString()};
-      this.viewData.push(item);
-    });
+    if (this.skills && this.skills.length) {
+      this.skills.map((skillItem: Skill) => {
+        const item = { ...skillItem,
+          experience: this.profileViewService.getDuration(skillItem.from, skillItem.to, true),
+          experienceLabel: this.profileViewService.getDuration(skillItem.from, skillItem.to, true).toString()};
+        this.viewData.push(item);
+      });
+    }
     this.viewData = this.sortSkills(this.viewData, this.sortBy, this.sortAsc);
   }
 
-  sortSkills(data: Array<any>, sortBy: string = '', sortAsc: Boolean = true): Array<any> {
+  sortSkills(data: Array<any>, sortBy: string = '', sortAsc = true): Array<any> {
     if (sortBy === 'rating' || sortBy === 'experience') {
       data.sort((a, b) => {
         if (sortAsc) {
@@ -42,7 +44,7 @@ export class SkillsViewComponent implements OnChanges {
     return data;
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.transformData();
   }
 }

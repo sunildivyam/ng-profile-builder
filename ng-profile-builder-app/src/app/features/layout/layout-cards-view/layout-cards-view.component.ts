@@ -22,7 +22,7 @@ export class LayoutCardsViewComponent implements OnChanges {
       }
     });
   }
-  public getLayouts() {
+  public getLayouts(): void {
     this.firebaseService.getLayouts(this.authService.currentUserId).subscribe((layouts: Array<Layout>) => {
       this.layouts = layouts;
       this.transformData();
@@ -32,7 +32,7 @@ export class LayoutCardsViewComponent implements OnChanges {
     });
   }
 
-  transformData() {
+  transformData(): void {
     this.viewData = new Array<any>();
     this.layouts.map((layout: Layout) => {
       const layoutItem = { ...layout };
@@ -40,7 +40,7 @@ export class LayoutCardsViewComponent implements OnChanges {
     });
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.transformData();
   }
 }

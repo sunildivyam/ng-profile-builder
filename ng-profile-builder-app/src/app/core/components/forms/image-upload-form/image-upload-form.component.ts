@@ -1,41 +1,38 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'pba-image-upload-form',
   templateUrl: './image-upload-form.component.html',
   styleUrls: ['./image-upload-form.component.scss']
 })
-export class ImageUploadFormComponent implements OnInit {
+export class ImageUploadFormComponent {
   @Input() imageSrc: string;
   @Output() imageChanged = new EventEmitter();
-  dragging: boolean = false;
-  dropped: boolean = false;
-  isError: boolean = false;
+  dragging = false;
+  dropped = false;
+  isError = false;
   errorMsg: string;
-  MAX_IMAGE_SIZE = (1024*300);  // 300kb
+  MAX_IMAGE_SIZE = (1024 * 300);  // 300kb
   constructor() { }
 
-  ngOnInit() {
-  }
-
-  public handleDragEnter(event: any) {
+  public handleDragEnter(event: any): void {
     console.log('dragging');
     this.dragging = true;
     this.dropped = false;
   }
 
-  public handleDragLeave(event: any) {
+  public handleDragLeave(event: any): void {
     console.log('dragging left');
     this.dragging = false;
   }
 
-  public handleDrop(event: any) {
+  public handleDrop(event: any): void {
     console.log('dropped');
     event.preventDefault();
     this.handleChange(event);
   }
 
-  public handleChange(event: any) {
+  public handleChange(event: any): void {
     this.isError = false;
     const eventSrcObject = event.dataTransfer ? event.dataTransfer : event.target;
     if (!eventSrcObject.files || !eventSrcObject.files.length ) {
@@ -58,25 +55,25 @@ export class ImageUploadFormComponent implements OnInit {
       this.dropped = true;
       this.dragging = false;
       this.isError = false;
-      if (this.imageSrc.length > this.MAX_IMAGE_SIZE) {        
-        this.toggleError(true, `Image exceeds Size of ${this.MAX_IMAGE_SIZE/1024} kb`);
+      if (this.imageSrc.length > this.MAX_IMAGE_SIZE) {
+        this.toggleError(true, `Image exceeds Size of ${this.MAX_IMAGE_SIZE / 1024} kb`);
         setTimeout(() => this.imageSrc = '', 2000);
         return;
       }
       this.imageChanged.emit(this.imageSrc);
-    }
+    };
 
     reader.readAsDataURL(file);
   }
 
-  public clear(event: any) {
+  public clear(event: any): void {
     event.preventDefault();
     this.imageSrc = '';
     this.isError = false;
     this.imageChanged.emit(this.imageSrc);
   }
 
-  toggleError(show: boolean, msg: string) {
+  toggleError(show: boolean, msg: string): void {
     this.isError = show;
     this.errorMsg = msg;
   }

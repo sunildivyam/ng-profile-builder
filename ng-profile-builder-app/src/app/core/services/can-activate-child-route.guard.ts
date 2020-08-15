@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class CanActivateChildRouteGuard implements CanActivateChild {
 
   constructor(private authService: AuthService,
-    private router: Router) {}
+              private router: Router) {}
 
   canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<boolean> | boolean {
     if (this.authService.isUserLoggedIn()){

@@ -16,15 +16,17 @@ export class ProjectsSmallViewComponent implements OnChanges {
     this.transformData();
   }
 
-  transformData() {
+  transformData(): void {
     this.viewData = new Array<any>();
-    this.projects && this.projects.map((projItem: Employer) => {
-      const item = { ...projItem, duration: this.profileViewService.getDuration(projItem.from, projItem.to).toString() };
-      this.viewData.push(item);
-    });
+    if (this.projects && this.projects.length) {
+      this.projects.map((projItem: Employer) => {
+        const item = { ...projItem, duration: this.profileViewService.getDuration(projItem.from, projItem.to).toString() };
+        this.viewData.push(item);
+      });
+    }
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.transformData();
   }
 }

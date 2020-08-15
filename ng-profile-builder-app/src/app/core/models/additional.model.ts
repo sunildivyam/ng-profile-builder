@@ -1,11 +1,11 @@
 export class Additional {
-    title:string;
+    title: string;
     summary: string;
     bullets: Array<string>;
 
     constructor() {
-        this.title = "";
-        this.summary = "";
+        this.title = '';
+        this.summary = '';
         this.bullets = new Array<string>();
     }
 }
