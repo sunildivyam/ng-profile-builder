@@ -16,6 +16,19 @@ script:
 after_success:
   - echo "BUILD SUccessfull"
 deploy:
-  - echo "Deploying ........"
+  - provider: npm
+    script:
+      - echo "Deploying on PR"
+    on:
+      branches:
+        only:
+        - travis-ci-cd
+  - provider: npm
+    script:
+      - echo "Deploying on MASTER"
+    on:
+      branches:
+        only:
+        - master
 after_deploy:
   - echo "Deployed!"
