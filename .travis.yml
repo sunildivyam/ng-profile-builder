@@ -22,13 +22,13 @@ deploy:
     on:
       branches:
         only:
-        - travis-ci-cd
+          - travis-ci-cd
   - provider: npm
     script:
       - echo "Deploying on MASTER"
     on:
       branches:
         only:
-        - master
+          - master
 after_deploy:
   - echo "Deployed!"
