@@ -15,24 +15,24 @@ export class ImageUploadFormComponent {
   MAX_IMAGE_SIZE = (1024 * 300);  // 300kb
   constructor() { }
 
-  public handleDragEnter(event: any) {
+  public handleDragEnter(event: any): void {
     console.log('dragging');
     this.dragging = true;
     this.dropped = false;
   }
 
-  public handleDragLeave(event: any) {
+  public handleDragLeave(event: any): void {
     console.log('dragging left');
     this.dragging = false;
   }
 
-  public handleDrop(event: any) {
+  public handleDrop(event: any): void {
     console.log('dropped');
     event.preventDefault();
     this.handleChange(event);
   }
 
-  public handleChange(event: any) {
+  public handleChange(event: any): void {
     this.isError = false;
     const eventSrcObject = event.dataTransfer ? event.dataTransfer : event.target;
     if (!eventSrcObject.files || !eventSrcObject.files.length ) {
@@ -66,14 +66,14 @@ export class ImageUploadFormComponent {
     reader.readAsDataURL(file);
   }
 
-  public clear(event: any) {
+  public clear(event: any): void {
     event.preventDefault();
     this.imageSrc = '';
     this.isError = false;
     this.imageChanged.emit(this.imageSrc);
   }
 
-  toggleError(show: boolean, msg: string) {
+  toggleError(show: boolean, msg: string): void {
     this.isError = show;
     this.errorMsg = msg;
   }

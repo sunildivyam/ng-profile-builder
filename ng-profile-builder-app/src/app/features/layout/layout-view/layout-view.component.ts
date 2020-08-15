@@ -18,7 +18,7 @@ export class LayoutViewComponent implements OnInit, OnChanges {
     this.sampleText = 'Lorem ipsum sample text, your content goes here.';
   }
 
-  public titleChange() {
+  public titleChange(): void {
     if (!this.layout) {
       return;
     }

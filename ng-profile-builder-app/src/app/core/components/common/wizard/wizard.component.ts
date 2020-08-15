@@ -29,7 +29,7 @@ export class WizardComponent implements OnChanges {
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {
   }
 
-  nextBtnClick(event) {
+  nextBtnClick(event): void {
     event.preventDefault();
     if (this.activeStepIndex < (this.steps.length - 1)) {
       this.activeStepIndex++;
@@ -39,7 +39,7 @@ export class WizardComponent implements OnChanges {
     }
   }
 
-  previousBtnClick(event) {
+  previousBtnClick(event): void {
     event.preventDefault();
     if (this.activeStepIndex > 0) {
       this.activeStepIndex--;

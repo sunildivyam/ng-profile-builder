@@ -10,7 +10,7 @@ export class RatingFormComponent {
   @Input() isReadOnly: boolean;
   @Input() sizeClass: string;
 
-  @Output() onChange = new EventEmitter();
+  @Output() changed = new EventEmitter();
 
   private MAX_RATING = 10;
   private MIN_RATING = 1;
@@ -21,16 +21,16 @@ export class RatingFormComponent {
     this.sizeClass = '';
   }
 
-  onRatingClick(event, rating) {
+  onRatingClick(event, rating): void {
     if (this.isReadOnly === true) {
       return;
     }
     this.rating = rating;
     event.rating = rating;
-    this.onChange.emit(event);
+    this.changed.emit(event);
   }
 
-  private generateRatings() {
+  private generateRatings(): Array<number> {
     const ratings = new Array<number>();
     for (let i = this.MIN_RATING; i <= this.MAX_RATING; i++) {
       ratings.push(i);

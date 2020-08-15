@@ -60,7 +60,7 @@ export class ProfileViewService {
     return addedDuration;
   }
 
-  public getDuration(fromDate, toDate, roundedYear: Boolean = false): Duration {
+  public getDuration(fromDate, toDate, roundedYear = false): Duration {
     const duration = this.dateDiff(fromDate, toDate);
     if (roundedYear) {
       if (duration.months >= 6 ) {

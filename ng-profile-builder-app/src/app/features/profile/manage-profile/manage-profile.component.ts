@@ -27,7 +27,7 @@ export class ManageProfileComponent implements OnInit {
       this.route.parent.url.subscribe((urlSegments: Array<UrlSegment>) => {
         if (urlSegments.length) {
           const profileId = urlSegments[0].path;
-          if (profileId && profileId != '0') {
+          if (profileId && profileId !== '0') {
             this.getProfile(profileId);
           } else {
             this.currentProfile = new Profile();
@@ -115,7 +115,7 @@ export class ManageProfileComponent implements OnInit {
   public updateProfileClick(event): void {
     const profileStep = event.currentStep;
     this.currentProfile.content[profileStep.name] = profileStep.data[profileStep.name];
-    this.updateProfile(event.onSaveSuccess, event.onSaveNext, event.onSaveError);
+    this.updateProfile(event.savedSuccess, event.savedNext, event.savedError);
   }
 
   updateLayoutClicked(): void {
@@ -148,7 +148,7 @@ export class ManageProfileComponent implements OnInit {
   }
 
   public updateProfileLayoutClick(event): void {
-    this.updateProfile(event.onSaveSuccess, event.onSaveNext, event.onSaveError);
+    this.updateProfile(event.savedSuccess, event.savedNext, event.savedError);
   }
 
   public duplicateProfileClicked(): void {

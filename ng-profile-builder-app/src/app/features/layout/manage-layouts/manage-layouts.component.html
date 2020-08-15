@@ -4,14 +4,14 @@
       <div class="col-sm-4">
       </div>
       <div class="col-sm-4">
-          <pba-layout-list class="input-group-prepend" [layouts]="layouts" (onSelect)="currentLayoutChanged($event)" [selectedLayout]="currentLayout">
+          <pba-layout-list class="input-group-prepend" [layouts]="layouts" (selected)="currentLayoutChanged($event)" [selectedLayout]="currentLayout">
           </pba-layout-list>
       </div>
       <div class="col-sm-4 text-right">
           <pba-control-toolbar
-          (onSaveClick)="updateLayoutClick($event)"
-          (onDeleteClick)="deleteLayoutClick($event)"
-          (onAddClick)="addLayoutClick($event)"></pba-control-toolbar>
+          (saveClicked)="updateLayoutClick($event)"
+          (deleteClicked)="deleteLayoutClick($event)"
+          (addClicked)="addLayoutClick($event)"></pba-control-toolbar>
       </div>
     </div>
     <div *ngIf="!currentLayout && !layouts.length" class="row">

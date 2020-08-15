@@ -12,11 +12,11 @@ export class ColumnFormComponent {
   @Output() formClosed = new EventEmitter();
   public contextNav = ContextNavs;
 
-  private getTotalOfColumns(cols: Array<Column>) {
+  private getTotalOfColumns(cols: Array<Column>): number {
     let colCount = 0;
     cols.map((col) => {
       if (col.name) {
-        colCount += parseInt(col.name);
+        colCount += parseInt(col.name, 10);
       }
     });
     return colCount;
@@ -36,7 +36,7 @@ export class ColumnFormComponent {
   public addColumnClick(event, row: Row): void {
     if (!this.column.rows || !this.column.rows.length) {
       this.column.rows.push(this.getNewRow());
-    } else if (row.cols.length === 12 || this.getTotalOfColumns(row.cols) == 12) {
+    } else if (row.cols.length === 12 || this.getTotalOfColumns(row.cols) === 12) {
       return;
     } else {
       const col = new Column();

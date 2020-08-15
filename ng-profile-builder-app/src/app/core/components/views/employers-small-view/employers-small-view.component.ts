@@ -18,10 +18,12 @@ export class EmployersSmallViewComponent implements OnChanges {
 
   transformData(): void {
     this.viewData = new Array<any>();
-    this.employers && this.employers.map((empItem: Employer) => {
-      const item = { ...empItem, experience: this.profileViewService.getDuration(empItem.from, empItem.to).toString() };
-      this.viewData.push(item);
-    });
+    if (this.employers && this.employers.length) {
+      this.employers.map((empItem: Employer) => {
+        const item = { ...empItem, experience: this.profileViewService.getDuration(empItem.from, empItem.to).toString() };
+        this.viewData.push(item);
+      });
+    }
   }
 
   ngOnChanges(): void {

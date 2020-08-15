@@ -53,7 +53,7 @@
               <i *ngIf="!isReadonlyProfileView" class="fa fa-desktop"></i>
               <i *ngIf="isReadonlyProfileView" class="fa fa-edit"></i></a>
           <a class="btn btn-default" (click)="revertLayoutClick($event)" title="revert to profile layout"><i class="fa fa-undo"></i></a>
-          <pba-layout-list class="input-group-prepend" [layouts]="layouts" (onSelect)="currentLayoutChanged($event)" [selectedLayout]="currentLayout"></pba-layout-list>
+          <pba-layout-list class="input-group-prepend" [layouts]="layouts" (selected)="currentLayoutChanged($event)" [selectedLayout]="currentLayout"></pba-layout-list>
         </div>
       </div>
     </div>

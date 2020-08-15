@@ -33,7 +33,7 @@ export class ProfileFormComponent implements OnChanges {
       pSteps.map((step: WizardStep) => {
         step.data = {};
         step.data[step.name] = this.profile.content[step.name];
-        step.data.onSave = this.saveProfileClicked;
+        step.data.saved = this.saveProfileClicked;
       });
       this.profileSteps = pSteps;
     }

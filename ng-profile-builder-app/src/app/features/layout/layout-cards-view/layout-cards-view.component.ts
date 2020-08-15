@@ -22,7 +22,7 @@ export class LayoutCardsViewComponent implements OnChanges {
       }
     });
   }
-  public getLayouts() {
+  public getLayouts(): void {
     this.firebaseService.getLayouts(this.authService.currentUserId).subscribe((layouts: Array<Layout>) => {
       this.layouts = layouts;
       this.transformData();

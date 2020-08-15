@@ -8,26 +8,26 @@ import {Education} from '../../../models';
 })
 export class EducationFormComponent implements OnChanges {
   @Input() education: Array<Education>;
-  @Output() onSave = new EventEmitter();
+  @Output() saved = new EventEmitter();
 
   formData: Array<Education>;
   isListMode: boolean;
   saveStarted: boolean;
   saveSuccess: boolean;
 
-  private onSaveSuccess() {
+  private savedSuccess(): void {
     console.log('Education Saved');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
-  private onSaveNext() {
+  private savedNext(): void {
     console.log('Education Saving');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
-  private onSaveError() {
+  private savedError(): void {
     console.log('Education Error occured');
     this.saveStarted = false;
     this.saveSuccess = false;
@@ -35,9 +35,9 @@ export class EducationFormComponent implements OnChanges {
 
   constructor(private injector: Injector) {
     const formInjector = this.injector.get('education');
-    const onSaveFromInjector = this.injector.get('onSave');
-    if (onSaveFromInjector) {
-      this.onSave = onSaveFromInjector;
+    const savedFromInjector = this.injector.get('saved');
+    if (savedFromInjector) {
+      this.saved = savedFromInjector;
     }
     this.formData = formInjector || new Array<Education>();
     this.isListMode = false;
@@ -49,9 +49,9 @@ export class EducationFormComponent implements OnChanges {
     this.formData = JSON.parse(JSON.stringify(this.education)) || new Array<Education>();
   }
 
-  onSaveClick(event) {
+  saveClicked(event): void {
     if (this.saveStarted === true) {
-      return false;
+      return;
     }
 
     this.saveStarted = true;
@@ -60,19 +60,19 @@ export class EducationFormComponent implements OnChanges {
     event.preventDefault();
     event.formName = 'education';
     event.formData = this.formData;
-    event.onSaveSuccess = this.onSaveSuccess.bind(this);
-    event.onSaveNext = this.onSaveNext.bind(this);
-    event.onSaveError = this.onSaveError.bind(this);
+    event.savedSuccess = this.savedSuccess.bind(this);
+    event.savedNext = this.savedNext.bind(this);
+    event.savedError = this.savedError.bind(this);
 
-    this.onSave.emit(event);
+    this.saved.emit(event);
   }
 
-  onRemoveClick(event, index) {
+  onRemoveClick(event, index): void {
     event.preventDefault();
     this.formData.splice(index, 1);
   }
 
-  onAddClick(event) {
+  addClicked(event): void {
     event.preventDefault();
     this.formData.push(new Education());
   }

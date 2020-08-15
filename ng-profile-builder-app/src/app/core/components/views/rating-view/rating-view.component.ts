@@ -18,7 +18,7 @@ export class RatingViewComponent {
     this.sizeClass = '';
   }
 
-  private generateRatings() {
+  private generateRatings(): Array<number> {
     const ratings = new Array<number>();
     for (let i = this.MIN_RATING; i <= this.MAX_RATING; i++) {
       ratings.push(i);

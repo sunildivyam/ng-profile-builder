@@ -10,10 +10,10 @@ import { Layout } from '../models';
 export class LayoutListComponent {
 @Input() public layouts: Array<Layout>;
 @Input() public selectedLayout: Layout;
-@Output() public onSelect = new EventEmitter();
+@Output() public selected = new EventEmitter();
 
   public selectLayoutClick(event): void {
-    this.onSelect.emit(this.selectedLayout);
+    this.selected.emit(this.selectedLayout);
   }
 
   public compareFn(c1: any, c2: any): boolean {

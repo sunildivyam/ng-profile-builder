@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FirebaseUISignInSuccessWithAuthResult, FirebaseUISignInFailure } from 'firebaseui-angular';
 import { AuthService } from '../../../services';
 import { Router, ActivatedRoute, Params } from '@angular/router';
@@ -8,7 +8,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   private returnUrl: string;
 
   constructor(public authService: AuthService,
@@ -27,12 +27,12 @@ export class LoginComponent implements OnInit {
       });
     }
 
-  public signInSuccessCb(successData: FirebaseUISignInSuccessWithAuthResult) {
+  public signInSuccessCb(successData: FirebaseUISignInSuccessWithAuthResult): void {
      // console.log("Successfully Signed In", successData);
     // this.router.navigateByUrl(this.returnUrl);
   }
 
-  public signInErrorCb(errorData: FirebaseUISignInFailure) {
+  public signInErrorCb(errorData: FirebaseUISignInFailure): void {
     // console.log("Signing In Failed", errorData);
   }
 
@@ -44,7 +44,4 @@ export class LoginComponent implements OnInit {
       // console.log("Erro Logging out", err);
     });
   }
-
-
-
 }

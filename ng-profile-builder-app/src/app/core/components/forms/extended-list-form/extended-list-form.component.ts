@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild, OnChanges } from '@angular/core';
 import {NgModel} from '@angular/forms';
 
 
@@ -7,7 +7,7 @@ import {NgModel} from '@angular/forms';
   templateUrl: './extended-list-form.component.html',
   styleUrls: ['./extended-list-form.component.css']
 })
-export class ExtendedListFormComponent {
+export class ExtendedListFormComponent implements OnChanges {
   @Input() list: Array<string>;
   @Input() headerText: string;
   @Input() listId: string;
@@ -15,7 +15,7 @@ export class ExtendedListFormComponent {
   @Input() addBtnLabel: string;
   @Input() dragOperationEnabled: boolean;
 
-  @Output() onChange = new EventEmitter();
+  @Output() changed = new EventEmitter();
 
   @ViewChild(NgModel) model: NgModel;
 
@@ -29,31 +29,31 @@ export class ExtendedListFormComponent {
     this.formData = JSON.parse(JSON.stringify(this.list)) || new Array<string>();
   }
 
-  onListChange() {
-
-  }
-
-  onRemoveClick(event, index) {
-    event && event.preventDefault();
+  onRemoveClick(event, index): void {
+    if (event) {
+      event.preventDefault();
+    }
     this.formData.splice(index, 1);
     event.items = this.formData;
-    this.onChange.emit(event);
+    this.changed.emit(event);
   }
 
-  onAddClick(event) {
-    event && event.preventDefault();
+  addClicked(event): void {
+    if (event) {
+      event.preventDefault();
+    }
     this.formData.push('');
     event.items = this.formData;
-    this.onChange.emit(event);
+    this.changed.emit(event);
   }
 
-  onValueUpdate(event, itemIndex) {
+  onValueUpdate(event, itemIndex): void {
     this.formData[itemIndex] = event.srcElement.value;
     event.items = this.formData;
-    this.onChange.emit(event);
+    this.changed.emit(event);
   }
 
-  identify(index, item) {
+  identify(index, item): number  {
     return index;
   }
 }

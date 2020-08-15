@@ -11,26 +11,26 @@ import {Additional} from '../../../models';
 })
 export class AdditionalsFormComponent implements OnChanges {
   @Input() additionals: Array<Additional>;
-  @Output() onSave = new EventEmitter();
+  @Output() saved = new EventEmitter();
 
   formData: Array<Additional>;
   dragOperationBulletsEnabled: boolean;
   saveStarted: boolean;
   saveSuccess: boolean;
 
-  onSaveSuccess() {
+  savedSuccess(): void {
     console.log('Additionals Saved');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
-  onSaveNext() {
+  savedNext(): void {
     console.log('Additionals Saving');
     this.saveStarted = false;
     this.saveSuccess = true;
   }
 
-  onSaveError() {
+  savedError(): void {
     console.log('Additionals Error occured');
     this.saveStarted = false;
     this.saveSuccess = false;
@@ -38,9 +38,9 @@ export class AdditionalsFormComponent implements OnChanges {
 
   constructor(private injector: Injector) {
     const formInjector = this.injector.get('additionals');
-    const onSaveFromInjector = this.injector.get('onSave');
-    if (onSaveFromInjector) {
-      this.onSave = onSaveFromInjector;
+    const savedFromInjector = this.injector.get('saved');
+    if (savedFromInjector) {
+      this.saved = savedFromInjector;
     }
     this.formData = formInjector || new Array<Additional>();
     this.dragOperationBulletsEnabled = false;
@@ -52,9 +52,9 @@ export class AdditionalsFormComponent implements OnChanges {
     this.formData = JSON.parse(JSON.stringify(this.additionals));
   }
 
-  onSaveClick(event) {
+  saveClicked(event): void {
     if (this.saveStarted === true) {
-      return false;
+      return;
     }
 
     this.saveStarted = true;
@@ -63,24 +63,24 @@ export class AdditionalsFormComponent implements OnChanges {
     event.preventDefault();
     event.formName = 'additionals';
     event.formData = this.formData;
-    event.onSaveSuccess = this.onSaveSuccess.bind(this);
-    event.onSaveNext = this.onSaveNext.bind(this);
-    event.onSaveError = this.onSaveError.bind(this);
+    event.savedSuccess = this.savedSuccess.bind(this);
+    event.savedNext = this.savedNext.bind(this);
+    event.savedError = this.savedError.bind(this);
 
-    this.onSave.emit(event);
+    this.saved.emit(event);
   }
 
-  onRemoveClick(event, index) {
+  onRemoveClick(event, index): void {
     event.preventDefault();
     this.formData.splice(index, 1);
   }
 
-  onAddClick(event) {
+  addClicked(event): void {
     event.preventDefault();
     this.formData.push(new Additional());
   }
 
-  onBulletsChange(event, additionalIndex) {
+  onBulletsChange(event, additionalIndex): void {
     this.formData[additionalIndex].bullets = event.items;
   }
 }

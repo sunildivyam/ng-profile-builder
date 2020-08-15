@@ -15,7 +15,7 @@ export class ParallaxViewProfileComponent implements OnInit {
               private route: ActivatedRoute) { }
 
   public getProfile(id: string): any {
-    if ((this.currentProfile && this.currentProfile.id == id) || !id) {
+    if ((this.currentProfile && this.currentProfile.id === id) || !id) {
       return false;
     }
     this.firebaseService.getProfile(id, '').subscribe((profile: Profile) => {

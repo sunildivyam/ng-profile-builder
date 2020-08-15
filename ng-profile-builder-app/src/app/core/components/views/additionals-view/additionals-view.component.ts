@@ -19,10 +19,12 @@ export class AdditionalsViewComponent implements OnChanges {
 
   transformData(): void {
     this.viewData = new Array<any>();
-    this.additionals && this.additionals.map((additionalItem: Additional) => {
-      const item = { ...additionalItem };
-      this.viewData.push(item);
-    });
+    if (this.additionals && this.additionals.length) {
+      this.additionals.map((additionalItem: Additional) => {
+        const item = { ...additionalItem };
+        this.viewData.push(item);
+      });
+    }
   }
 
   ngOnChanges(): void {
