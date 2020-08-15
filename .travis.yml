@@ -16,9 +16,9 @@ script:
 after_success:
   - echo "BUILD SUccessfull"
 deploy:
-  - provider: script
+  - provider: npm
     script:
-      - echo "Deploying on MASTER"
+      - firebase deploy --token $FIREBASE_TOKEN
     on:
       branches:
         only:
