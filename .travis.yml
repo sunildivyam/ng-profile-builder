@@ -9,15 +9,18 @@ before_install:
   - cd ng-profile-builder-app
 install:
   - npm i
-  - npm i firebase-tools -g
 script:
   - npm run lint
   - npm run build --configuration=production
 after_success:
   - echo "BUILD SUccessfull"
 deploy:
-  - provider: npm
+  - provider: script
+    install:
+      - echo "Installing firebase dev tools"
+      - npm i firebase-tools -g
     script:
+      - echo "deploying to firebase"
       - firebase deploy --token $FIREBASE_TOKEN
     on:
       branches:
