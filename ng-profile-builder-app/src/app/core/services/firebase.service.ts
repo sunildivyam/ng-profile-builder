@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Profile } from 'src/app/features/profile';
 import { LoaderService } from './loader.service';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,10 @@ import { LoaderService } from './loader.service';
 export class FirebaseService {
   endpoints = environment.apiConfig.endpoints;
 
-  constructor(private db: AngularFirestore, private loaderService: LoaderService) {
+  constructor(
+    private db: AngularFirestore,
+    private loaderService: LoaderService,
+    private authService: AuthService) {
   }
 
   // Layout APIs
@@ -132,6 +136,7 @@ export class FirebaseService {
     this.loaderService.start();
     return new Observable((observer) => {
       const plainObject = this.parseJsonBeforeSave(JSON.parse(JSON.stringify(profile)));
+      plainObject.uid = this.authService.currentUserId;
       this.db.collection(this.endpoints.profiles).add(plainObject).then((data) => {
         this.loaderService.stop();
         observer.next(data.id);
@@ -143,6 +148,7 @@ export class FirebaseService {
     this.loaderService.start();
     return new Observable((observer) => {
       const plainObject = this.parseJsonBeforeSave(JSON.parse(JSON.stringify(profile)));
+      plainObject.uid = this.authService.currentUserId;
       this.db.doc(`${this.endpoints.profiles}/${id}`).update(plainObject).then((data) => {
         observer.next(data);
         observer.complete();

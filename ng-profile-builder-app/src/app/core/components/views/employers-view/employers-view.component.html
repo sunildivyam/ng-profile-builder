@@ -3,13 +3,13 @@
     <h2 class="card-title">Employers</h2>
   </div>
   <div class="card-body">
-    <div class="container-fluid info-section" *ngFor="let emp of viewData">
+    <div class="container-fluid info-section" *ngFor="let emp of viewData; let serialNo = index; let totalProjects = count">
       <div class="row">
         <div class="col-sm-2 left-info">
           <div>{{emp.from | date:'MMM, y'}}</div>
           <div>{{(emp.to | date:'MMM, y') ||  'Present'}}</div>
           <div class="experience"><i><strong>{{emp.experience}}</strong></i></div>
-          <div class="circle"></div>
+          <div class="circle"><span>{{totalProjects - serialNo}}</span></div>
         </div>
         <div class="col-sm-10 right-info">
           <h4 class="font-5">{{emp.designation}}</h4>
