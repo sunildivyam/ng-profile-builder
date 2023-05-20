@@ -11,6 +11,7 @@
     "deploy": "firebase deploy"
   },
   "private": true,
+  "nodejs": "12.11.0",
   "dependencies": {
     "@angular/animations": "~10.0.9",
     "@angular/common": "~10.0.9",
