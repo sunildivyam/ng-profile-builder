@@ -2,15 +2,14 @@ import { Injectable } from '@angular/core';
 import { Duration, Employer } from '../models';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProfileViewService {
-
-  constructor() { }
+  constructor() {}
 
   private dateDiff(fromDate, toDate): Duration {
     if (!toDate) {
-      toDate = (new Date()).toString();
+      toDate = new Date().toString();
     }
     const fDate = new Date(fromDate);
     const tDate = new Date(toDate);
@@ -55,7 +54,7 @@ export class ProfileViewService {
     addedDuration.months = durationSrc.months + durationDest.months;
     if (addedDuration.months >= 12) {
       addedDuration.years += Math.floor(addedDuration.months / 12);
-      addedDuration.months = (addedDuration.months % 12);
+      addedDuration.months = addedDuration.months % 12;
     }
     return addedDuration;
   }
@@ -63,7 +62,7 @@ export class ProfileViewService {
   public getDuration(fromDate, toDate, roundedYear = false): Duration {
     const duration = this.dateDiff(fromDate, toDate);
     if (roundedYear) {
-      if (duration.months >= 6 ) {
+      if (duration.months >= 6) {
         duration.years++;
       }
       duration.months = 0;
@@ -75,7 +74,7 @@ export class ProfileViewService {
     if (!employers || !employers.length) {
       return new Employer();
     }
-    return employers.find(emp => !emp.to) || new Employer();
+    return employers.find((emp) => !emp.to) || employers[0];
   }
 
   public getRelevantExperience(employers: Array<Employer>): Duration {
@@ -85,7 +84,10 @@ export class ProfileViewService {
     let relevantDuration = new Duration(0, 0);
     employers.map((employer) => {
       if (employer.isRelevant === true) {
-        relevantDuration = this.addDuration(relevantDuration, this.dateDiff(employer.from, employer.to));
+        relevantDuration = this.addDuration(
+          relevantDuration,
+          this.dateDiff(employer.from, employer.to)
+        );
       }
     });
     relevantDuration.roundYear();
@@ -98,7 +100,10 @@ export class ProfileViewService {
     }
     let totalDuration = new Duration(0, 0);
     employers.map((employer) => {
-      totalDuration = this.addDuration(totalDuration, this.dateDiff(employer.from, employer.to));
+      totalDuration = this.addDuration(
+        totalDuration,
+        this.dateDiff(employer.from, employer.to)
+      );
     });
     totalDuration.roundYear();
     return totalDuration;

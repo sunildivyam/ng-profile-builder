@@ -9,17 +9,17 @@ export const environment = {
     endpoints: {
       layouts: 'layouts',
       users: 'users',
-      profiles: 'profiles'
-    }
+      profiles: 'profiles',
+    },
   },
   firebase: {
-    apiKey: '',
+    apiKey: 'AIzaSyD39lUCqTODj57gQJRQZdJmIsWgZCc3gY0',
     authDomain: 'ng-profile-builder.firebaseapp.com',
     databaseURL: 'https://ng-profile-builder.firebaseio.com',
     projectId: 'ng-profile-builder',
     storageBucket: 'ng-profile-builder.appspot.com',
-    messagingSenderId: ''
-  }
+    messagingSenderId: '',
+  },
 };
 
 /*

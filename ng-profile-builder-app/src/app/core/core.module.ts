@@ -6,7 +6,7 @@ import { DndModule } from 'ng2-dnd';
 import { RouterModule } from '@angular/router';
 
 // Firebase modules
-import {FirebaseUIModule, firebase, firebaseui} from 'firebaseui-angular';
+import { FirebaseUIModule, firebase, firebaseui } from 'firebaseui-angular';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -22,38 +22,34 @@ import { environment } from 'src/environments/environment';
 // delete DefaultFirestoreSettings.timestampsInSnapshots;
 
 const firebaseuiConfig = {
-  signInFlow: 'redirect', // or popup
+  signInFlow: 'popup', // or redirect
   signInOptions: [
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     {
-      scopes: [
-        'public_profile',
-        'email',
-        'user_likes',
-        'user_friends'
-      ],
+      scopes: ['public_profile', 'email', 'user_likes', 'user_friends'],
       customParameters: {
-        auth_type: 'reauthenticate'
+        auth_type: 'reauthenticate',
       },
-      provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID
+      provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID,
     },
     firebase.auth.TwitterAuthProvider.PROVIDER_ID,
     firebase.auth.GithubAuthProvider.PROVIDER_ID,
     {
       requireDisplayName: false,
-      provider: firebase.auth.EmailAuthProvider.PROVIDER_ID
+      provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
     },
     firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-    firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
+    firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID,
   ],
   tosUrl: '/termsofservice',
   privacyPolicyUrl: '/privacypolicy',
-  credentialHelper: firebaseui.auth.CredentialHelper.ACCOUNT_CHOOSER_COM
+  credentialHelper: firebaseui.auth.CredentialHelper.ACCOUNT_CHOOSER_COM,
 };
 
 @NgModule({
   providers: Object.values(Services),
-  imports: [CommonModule,
+  imports: [
+    CommonModule,
     FormsModule,
     DndModule.forRoot(),
     RouterModule,
@@ -61,7 +57,8 @@ const firebaseuiConfig = {
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule.enablePersistence(),
-    FirebaseUIModule.forRoot(firebaseuiConfig)],
+    FirebaseUIModule.forRoot(firebaseuiConfig),
+  ],
   declarations: [
     CommonComponents.AppFooterComponent,
     CommonComponents.AppHeaderComponent,
@@ -100,7 +97,7 @@ const firebaseuiConfig = {
     ViewComponents.ProfileHeaderViewComponent,
     ViewComponents.PrimarySkillsViewComponent,
     ViewComponents.ImageViewComponent,
-    ],
+  ],
   exports: [
     CommonComponents.AppFooterComponent,
     CommonComponents.AppHeaderComponent,
@@ -138,8 +135,8 @@ const firebaseuiConfig = {
     ViewComponents.ProjectsMediumViewComponent,
     ViewComponents.ProfileHeaderViewComponent,
     ViewComponents.PrimarySkillsViewComponent,
-    ViewComponents.ImageViewComponent
-    ],
+    ViewComponents.ImageViewComponent,
+  ],
   entryComponents: Object.values({ ...FormComponents, ...ViewComponents }),
 })
-export class CoreModule { }
+export class CoreModule {}

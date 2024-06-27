@@ -1,19 +1,20 @@
 <div class="card employers-view">
   <div class="card-header">
-    <h2 class="card-title">Employers</h2>
+    <h2 class="card-title">EMPLOYERS</h2>
   </div>
   <div class="card-body">
-    <div class="container-fluid info-section" *ngFor="let emp of viewData; let serialNo = index; let totalProjects = count">
+    <div class="container-fluid info-section"
+      *ngFor="let emp of viewData; let serialNo = index; let totalProjects = count">
       <div class="row">
         <div class="col-sm-2 left-info">
           <div>{{emp.from | date:'MMM, y'}}</div>
-          <div>{{(emp.to | date:'MMM, y') ||  'Present'}}</div>
+          <div>{{(emp.to | date:'MMM, y') || 'Present'}}</div>
           <div class="experience"><i><strong>{{emp.experience}}</strong></i></div>
           <div class="circle"><span>{{totalProjects - serialNo}}</span></div>
         </div>
         <div class="col-sm-10 right-info">
-          <h4 class="font-5">{{emp.designation}}</h4>
-          <h3 class="font-4">{{emp.employerName}}</h3>
+          <h2 class="font-5">{{emp.designation}}</h2>
+          <h2 class="font-4">{{emp.employerName}}</h2>
           <summary class="font-4 padding-top-10">{{emp.summary}}</summary>
           <h3 *ngIf="emp.roles.length" class="font-4 padding-top-10">Roles:</h3>
           <ul *ngIf="emp.roles.length" class="padding-top-10">

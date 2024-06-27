@@ -1,6 +1,6 @@
 <div class="card employers-small-view">
   <div class="card-header">
-    <h2 class="card-title">Employers</h2>
+    <h2 class="card-title">EMPLOYERS</h2>
   </div>
   <div class="card-body">
     <div class="container-fluid" *ngFor="let emp of viewData">
@@ -12,7 +12,7 @@
           </h3>
           <h4 class="designation">{{emp.designation}} | <i><strong>{{emp.experience}}</strong></i></h4>
           <div class="duration">
-             <small>from {{emp.from | date:'MMM, y'}} to {{(emp.to | date:'MMM, y') || 'Present'}}</small>
+            <small>from {{emp.from | date:'MMM, y'}} to {{(emp.to | date:'MMM, y') || 'Present'}}</small>
           </div>
           <div class="more">
             <summary class="font-4 padding-top-10">{{emp.summary}}</summary>
