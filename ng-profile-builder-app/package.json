@@ -23,7 +23,7 @@
     "@angular/router": "~10.0.9",
     "bootstrap": "^4.5.2",
     "core-js": "^3.6.5",
-    "firebase": "^7.18.0",
+    "firebase": "^10.9.0",
     "firebaseui": "^4.6.1",
     "firebaseui-angular": "^5.0.0",
     "font-awesome": "^4.7.0",
