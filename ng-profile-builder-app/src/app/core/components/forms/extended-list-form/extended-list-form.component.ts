@@ -1,11 +1,17 @@
-import { Component, Input, Output, EventEmitter, ViewChild, OnChanges } from '@angular/core';
-import {NgModel} from '@angular/forms';
-
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ViewChild,
+  OnChanges,
+} from '@angular/core';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'pba-extended-list-form',
   templateUrl: './extended-list-form.component.html',
-  styleUrls: ['./extended-list-form.component.css']
+  styleUrls: ['./extended-list-form.component.css'],
 })
 export class ExtendedListFormComponent implements OnChanges {
   @Input() list: Array<string>;
@@ -26,7 +32,8 @@ export class ExtendedListFormComponent implements OnChanges {
   }
 
   ngOnChanges(): void {
-    this.formData = JSON.parse(JSON.stringify(this.list)) || new Array<string>();
+    this.formData =
+      JSON.parse(JSON.stringify(this.list)) || new Array<string>();
   }
 
   onRemoveClick(event, index): void {
@@ -48,12 +55,14 @@ export class ExtendedListFormComponent implements OnChanges {
   }
 
   onValueUpdate(event, itemIndex): void {
-    this.formData[itemIndex] = event.srcElement.value;
-    event.items = this.formData;
-    this.changed.emit(event);
+    setTimeout(() => {
+      this.formData[itemIndex] = event.target.innerHTML;
+      event.items = this.formData;
+      this.changed.emit(event);
+    });
   }
 
-  identify(index, item): number  {
+  identify(index, item): number {
     return index;
   }
 }

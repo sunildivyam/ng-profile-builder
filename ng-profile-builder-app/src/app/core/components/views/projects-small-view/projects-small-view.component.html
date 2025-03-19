@@ -8,14 +8,11 @@
         <div class="item col-sm-12">
           <div class="circle"></div>
           <h3 class="name">
-            {{proj.name}} | <i><small>{{proj.duration}}</small></i>
+            {{proj.name}} <i><small>{{proj.duration}}</small></i>
           </h3>
-          <h4 class="designation">{{proj.clientName}}</h4>
-          <div class="duration">
-            <small>from {{proj.from | date:'MMM, y'}} to {{(proj.to | date:'MMM, y') || 'Present'}}</small>
-          </div>
-          <div class="more">
-          </div>
+          <h4 class="designation">Client: {{proj.clientName}}<span class="duration">
+              <small>{{proj.from | date:'MMM, y'}} - {{(proj.to | date:'MMM, y') || 'Present'}}</small>
+            </span></h4>
         </div>
       </div>
     </div>

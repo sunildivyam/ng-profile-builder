@@ -11,7 +11,7 @@ export class EmployersMediumViewComponent implements OnChanges {
   @Input() employers: Array<Employer>;
   viewData: Array<any>;
 
-  constructor(private injector: Injector, private profileViewService: ProfileViewService) {
+  constructor(private injector: Injector, public profileViewService: ProfileViewService) {
     this.employers = this.injector.get('employers', new Array<Employer>());
     this.transformData();
   }

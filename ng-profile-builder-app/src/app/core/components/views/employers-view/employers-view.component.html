@@ -18,7 +18,7 @@
           <summary class="font-4 padding-top-10">{{emp.summary}}</summary>
           <h3 *ngIf="emp.roles.length" class="font-4 padding-top-10">Roles:</h3>
           <ul *ngIf="emp.roles.length" class="padding-top-10">
-            <li class="font-4" *ngFor="let role of emp.roles">{{role}}</li>
+            <li class="font-4" *ngFor="let role of emp.roles" [innerHtml]="role"></li>
           </ul>
         </div>
       </div>

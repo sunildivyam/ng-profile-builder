@@ -1,21 +1,18 @@
 <div class="card employers-small-view">
   <div class="card-header">
-    <h2 class="card-title">EMPLOYERS</h2>
+    <h2 class="card-title">EXPERIENCE <strong>{{profileViewService.getTotalExperience(viewData)}}</strong></h2>
   </div>
   <div class="card-body">
     <div class="container-fluid" *ngFor="let emp of viewData">
       <div class="row">
         <div class="item col-sm-12">
           <div class="circle"></div>
+          <h2 class="designation">{{emp.designation}} <i><strong>{{emp.experience}}</strong></i></h2>
           <h3 class="name">
-            {{emp.employerName}}
+            {{emp.employerName}} <span class="duration">
+              <small>{{emp.from | date:'MMM, y'}} - {{(emp.to | date:'MMM, y') || 'Present'}}</small>
+            </span>
           </h3>
-          <h4 class="designation">{{emp.designation}} | <i><strong>{{emp.experience}}</strong></i></h4>
-          <div class="duration">
-            <small>from {{emp.from | date:'MMM, y'}} to {{(emp.to | date:'MMM, y') || 'Present'}}</small>
-          </div>
-          <div class="more">
-          </div>
         </div>
       </div>
     </div>

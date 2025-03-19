@@ -8,9 +8,11 @@ $line-color: #bfbfbf;
     position: relative;
     margin-left: 5px;
     border-left: $circleWidth solid $line-color;
+
     .item {
       padding-left: ($circleSize/2)-1;
     }
+
     .circle {
       position: absolute;
       display: block;
@@ -25,13 +27,20 @@ $line-color: #bfbfbf;
     }
 
     .name {
+      justify-content: space-between;
+      display: flex;
       margin: 0px;
       line-height: $circleSize;
       padding-left: 15px;
       border-bottom: $circleWidth solid $line-color;
+      font-size: 1.3rem;
     }
+
     .designation {
+      justify-content: space-between;
+      display: flex;
       padding-left: $contentLeftSpaceing;
+      font-size: 1rem;
     }
 
     .duration {

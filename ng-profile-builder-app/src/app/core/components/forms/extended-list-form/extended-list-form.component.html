@@ -1,14 +1,21 @@
 <form #extendedListForm{{listId}}="ngForm">
   <label class="form-label">{{headerText}}</label>
-  <div class="extended-list-container" dnd-sortable-container [sortableData]="formData" [dropZones]="['extended-list-zone']">
-    <div class="extended-list-item" *ngFor="let listItem of formData; let itemIndex=index; trackBy:identify" dnd-sortable [sortableIndex]="itemIndex" [dragEnabled]="dragOperationEnabled">
+  <div class="extended-list-container" dnd-sortable-container [sortableData]="formData"
+    [dropZones]="['extended-list-zone']">
+    <div class="extended-list-item" *ngFor="let listItem of formData; let itemIndex=index; trackBy:identify"
+      dnd-sortable [sortableIndex]="itemIndex" [dragEnabled]="dragOperationEnabled">
       <div class="input-group">
-        <input type="text"
+        <!-- <input type="text"
         class="form-control"
         name="extendedListItem{{listId}}_{{itemIndex}}"
         placeholder="placeholderText"
         [ngModel]="formData[itemIndex]"
-        (change)="onValueUpdate($event, itemIndex)">
+        (change)="onValueUpdate($event, itemIndex)"> -->
+        <div class="form-control editablediv" rows="2" name="extendedListItem{{listId}}_{{itemIndex}}"
+          [innerHTML]="formData[itemIndex]" (blur)="onValueUpdate($event, itemIndex)" contenteditable="true"></div>
+
+        <!-- <textarea class="form-control" name="extendedListItem{{listId}}_{{itemIndex}}" placeholder="placeholderText"
+          [ngModel]="formData[itemIndex]" (change)="onValueUpdate($event, itemIndex)"></textarea> -->
         <a class="btn btn-danger input-group-addon" href="#" (click)="onRemoveClick($event, itemIndex)">
           <span class="fa fa-close"></span>
         </a>

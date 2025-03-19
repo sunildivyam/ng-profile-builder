@@ -8,20 +8,20 @@
         <div class="item col-sm-12">
           <div class="circle"></div>
           <h3 class="name">
-            {{proj.name}} | <i><small>{{proj.duration}}</small></i>
+            {{proj.name}} <i><small>{{proj.duration}}</small></i>
           </h3>
-          <h4 class="designation">{{proj.clientName}}</h4>
-          <div class="duration">
-            <small>from {{proj.from | date:'MMM, y'}} to {{(proj.to | date:'MMM, y') || 'Present'}}</small>
-          </div>
+          <h4 class="designation">Client: {{proj.clientName}}<span class="duration">
+              <small>{{proj.from | date:'MMM, y'}} - {{(proj.to | date:'MMM, y') || 'Present'}}</small>
+            </span></h4>
+
           <div class="more">
-            <summary class="font-4 padding-top-10">{{proj.summary}}</summary>
+            <!-- <summary class="font-4 padding-top-10">{{proj.summary}}</summary> -->
             <div *ngIf="proj.technologies.length" class="padding-top-10">
-              <span class="font-4 label">{{proj.technologies.join(', ')}}</span>
+              <strong>Stack: </strong> <span class="font-4 label">{{proj.technologies.join(', ')}}</span>
             </div>
-            <h3 *ngIf="proj.roles.length" class="font-4 padding-top-10">My Roles in the Project:</h3>
+            <h3 *ngIf="proj.roles.length" class="font-4 padding-top-10">Roles:</h3>
             <ul *ngIf="proj.roles.length" class="padding-top-10">
-              <li class="font-4" *ngFor="let role of proj.roles">{{role}}</li>
+              <li class="font-4" *ngFor="let role of proj.roles" [innerHtml]="role"></li>
             </ul>
           </div>
         </div>

@@ -1,5 +1,9 @@
-.container-fluid {
-  // TODO
+:host {
+  .card {
+    border-left: 1px solid rgb(237, 237, 237);
+  }
+
+  .card-header {}
 }
 
 .row {
@@ -11,19 +15,17 @@
 .item {
   display: flex;
   flex-direction: column;
-  padding: 0px;
+  padding: 0px 5px;
   background-color: #ffffff;
   border-radius: 5px;
   overflow: hidden;
-  border: 1px solid rgb(237, 237, 237);
 }
 
 .name {
   margin: 0px;
-  padding: 4px 7px;
-  font-size: 1rem;
+  padding: 0x;
+  font-size: 0.8rem;
   font-weight: normal;
-  background-color: #eaeaea;
 }
 
 .experience {
@@ -45,4 +47,14 @@
 
 .hidden {
   display: none !important;
+}
+
+.skills-container {
+  border-left: 1px solid rgb(209, 209, 209);
+  padding-top: 0;
+}
+
+.item-container {
+  margin: 5px;
+  border: 1px solid rgb(235, 235, 235);
 }

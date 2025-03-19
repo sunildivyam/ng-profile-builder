@@ -6,9 +6,9 @@
     <div class="container-fluid" >
       <div class="row">
         <div class="col-sm-12">
-            <summary [hidden]="!additional.summary" class="">{{additional.summary}}</summary>
+            <summary [hidden]="!additional.summary" class="" [innerHtml]="additional.summary"></summary>
             <ul [hidden]="!additional.bullets.length" class="">
-              <li class="" *ngFor="let bullet of additional.bullets">{{bullet}}</li>
+              <li class="" *ngFor="let bullet of additional.bullets" [innerHtml]="bullet"></li>
             </ul>
         </div>
       </div>

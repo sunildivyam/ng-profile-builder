@@ -12,6 +12,7 @@ export { SkillsViewComponent } from './skills-view/skills-view.component';
 export { SocialMediaViewComponent } from './social-media-view/social-media-view.component';
 export { ProfileHeaderViewComponent } from './profile-header-view/profile-header-view.component';
 export { PrimarySkillsViewComponent } from './primary-skills-view/primary-skills-view.component';
+export { PrimarySkillsModernViewComponent } from './primary-skills-modern-view/primary-skills-modern-view.component';
 export { ContactBarViewComponent } from './contact-bar-view/contact-bar-view.component';
 export { SummaryViewComponent } from './summary-view/summary-view.component';
 export { DisclaimerViewComponent } from './disclaimer-view/disclaimer-view.component';

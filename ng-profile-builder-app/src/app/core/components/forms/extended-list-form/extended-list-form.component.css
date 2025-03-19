@@ -33,3 +33,7 @@
 .extended-list-item {
   margin-bottom: 10px;
 }
+
+.editablediv {
+  height: auto;
+}

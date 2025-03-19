@@ -96,6 +96,7 @@ const firebaseuiConfig = {
     ViewComponents.ProjectsMediumViewComponent,
     ViewComponents.ProfileHeaderViewComponent,
     ViewComponents.PrimarySkillsViewComponent,
+    ViewComponents.PrimarySkillsModernViewComponent,
     ViewComponents.ImageViewComponent,
   ],
   exports: [
@@ -135,6 +136,7 @@ const firebaseuiConfig = {
     ViewComponents.ProjectsMediumViewComponent,
     ViewComponents.ProfileHeaderViewComponent,
     ViewComponents.PrimarySkillsViewComponent,
+    ViewComponents.PrimarySkillsModernViewComponent,
     ViewComponents.ImageViewComponent,
   ],
   entryComponents: Object.values({ ...FormComponents, ...ViewComponents }),

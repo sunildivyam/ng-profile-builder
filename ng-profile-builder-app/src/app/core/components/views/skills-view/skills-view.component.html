@@ -1,4 +1,4 @@
-<div class="card">
+<!-- <div class="card">
     <div class="card-header">
       <h2 class="card-title">Secondary Skills</h2>
     </div>
@@ -15,4 +15,19 @@
         </div>
       </div>
     </div>
+  </div> -->
+
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">OTHER SKILLS</h2>
   </div>
+  <div class="card-body container-fluid skills-container">
+    <div class="row">
+      <div class="item-container {{skill.isPrimarySkill ? 'hidden': ''}}" *ngFor="let skill of viewData">
+        <div class="item">
+          <div class="name"><span>{{skill.name}}</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,11 +3,11 @@ import { Skill } from '../../../models';
 import { ProfileViewService } from '../../../services';
 
 @Component({
-  selector: 'pba-primary-skills-view',
-  templateUrl: './primary-skills-view.component.html',
-  styleUrls: ['./primary-skills-view.component.scss'],
+  selector: 'pba-primary-skills-modern-view',
+  templateUrl: './primary-skills-modern-view.component.html',
+  styleUrls: ['./primary-skills-modern-view.component.scss'],
 })
-export class PrimarySkillsViewComponent implements OnChanges {
+export class PrimarySkillsModernViewComponent implements OnChanges {
   @Input() skills: Array<Skill>;
   viewData: Array<any>;
 

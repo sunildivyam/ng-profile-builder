@@ -12,6 +12,7 @@ import {
   AdditionalsViewComponent,
   ProfileHeaderViewComponent,
   PrimarySkillsViewComponent,
+  PrimarySkillsModernViewComponent,
   ContactBarViewComponent,
   ExperienceBarViewComponent,
   SummaryViewComponent,
@@ -21,22 +22,116 @@ import {
 import { ViewComponentsConfig } from '../models';
 
 export const ProfileViewsConfig = {
-  profileHeader: new ViewComponentsConfig('Profile Header', 'profileHeader', ProfileHeaderViewComponent, ['basicInfo', 'employers']),
-  image: new ViewComponentsConfig('Profile Image', 'image', ImageViewComponent, ['basicInfo']),
-  contactBar: new ViewComponentsConfig('Contact Bar', 'contactBar', ContactBarViewComponent, ['basicInfo']),
-  experienceBar: new ViewComponentsConfig('Experience Bar', 'experienceBar', ExperienceBarViewComponent, ['employers']),
-  socialMedia: new ViewComponentsConfig('Social Media', 'socialMedia', SocialMediaViewComponent, ['socialMedia']),
-  primarySkills: new ViewComponentsConfig('Primary Skills', 'primarySkills', PrimarySkillsViewComponent, ['skills']),
-  basicInfo: new ViewComponentsConfig('Basic Information', 'basicInfo',  BasicInfoViewComponent, ['basicInfo']),
-  summary: new ViewComponentsConfig('Profile Summary', 'summary', SummaryViewComponent, ['basicInfo']),
-  employers: new ViewComponentsConfig('Employers', 'employers', EmployersViewComponent, ['employers']),
-  employersSmall: new ViewComponentsConfig('Employers Small View', 'employersSmall', EmployersSmallViewComponent, ['employers']),
-  employersMedium: new ViewComponentsConfig('Employers Medium View', 'employersMedium', EmployersMediumViewComponent, ['employers']),
-  education: new ViewComponentsConfig('Education', 'education', EducationViewComponent, ['education']),
-  projects: new ViewComponentsConfig('Projects', 'projects', ProjectsViewComponent, ['projects']),
-  projectsSmall: new ViewComponentsConfig('Projects Small View', 'projectsSmall', ProjectsSmallViewComponent, ['projects']),
-  projectsMedium: new ViewComponentsConfig('Projects Medium View', 'projectsMedium', ProjectsMediumViewComponent, ['projects']),
-  skills: new ViewComponentsConfig('Skills', 'skills', SkillsViewComponent, ['skills']),
-  additionals: new ViewComponentsConfig('Additionals', 'additionals', AdditionalsViewComponent, ['additionals']),
-  disclaimer: new ViewComponentsConfig('Disclaimer', 'disclaimer', DisclaimerViewComponent, ['basicInfo']),
+  profileHeader: new ViewComponentsConfig(
+    'Profile Header',
+    'profileHeader',
+    ProfileHeaderViewComponent,
+    ['basicInfo', 'employers']
+  ),
+  image: new ViewComponentsConfig(
+    'Profile Image',
+    'image',
+    ImageViewComponent,
+    ['basicInfo']
+  ),
+  contactBar: new ViewComponentsConfig(
+    'Contact Bar',
+    'contactBar',
+    ContactBarViewComponent,
+    ['basicInfo']
+  ),
+  experienceBar: new ViewComponentsConfig(
+    'Experience Bar',
+    'experienceBar',
+    ExperienceBarViewComponent,
+    ['employers']
+  ),
+  socialMedia: new ViewComponentsConfig(
+    'Social Media',
+    'socialMedia',
+    SocialMediaViewComponent,
+    ['socialMedia']
+  ),
+  primarySkills: new ViewComponentsConfig(
+    'Primary Skills',
+    'primarySkills',
+    PrimarySkillsViewComponent,
+    ['skills']
+  ),
+  primarySkillsModern: new ViewComponentsConfig(
+    'Primary Skills Modern',
+    'primarySkillsModern',
+    PrimarySkillsModernViewComponent,
+    ['skills']
+  ),
+
+  basicInfo: new ViewComponentsConfig(
+    'Basic Information',
+    'basicInfo',
+    BasicInfoViewComponent,
+    ['basicInfo']
+  ),
+  summary: new ViewComponentsConfig(
+    'Profile Summary',
+    'summary',
+    SummaryViewComponent,
+    ['basicInfo']
+  ),
+  employers: new ViewComponentsConfig(
+    'Employers',
+    'employers',
+    EmployersViewComponent,
+    ['employers']
+  ),
+  employersSmall: new ViewComponentsConfig(
+    'Employers Small View',
+    'employersSmall',
+    EmployersSmallViewComponent,
+    ['employers']
+  ),
+  employersMedium: new ViewComponentsConfig(
+    'Employers Medium View',
+    'employersMedium',
+    EmployersMediumViewComponent,
+    ['employers']
+  ),
+  education: new ViewComponentsConfig(
+    'Education',
+    'education',
+    EducationViewComponent,
+    ['education']
+  ),
+  projects: new ViewComponentsConfig(
+    'Projects',
+    'projects',
+    ProjectsViewComponent,
+    ['projects']
+  ),
+  projectsSmall: new ViewComponentsConfig(
+    'Projects Small View',
+    'projectsSmall',
+    ProjectsSmallViewComponent,
+    ['projects']
+  ),
+  projectsMedium: new ViewComponentsConfig(
+    'Projects Medium View',
+    'projectsMedium',
+    ProjectsMediumViewComponent,
+    ['projects']
+  ),
+  skills: new ViewComponentsConfig('Skills', 'skills', SkillsViewComponent, [
+    'skills',
+  ]),
+  additionals: new ViewComponentsConfig(
+    'Additionals',
+    'additionals',
+    AdditionalsViewComponent,
+    ['additionals']
+  ),
+  disclaimer: new ViewComponentsConfig(
+    'Disclaimer',
+    'disclaimer',
+    DisclaimerViewComponent,
+    ['basicInfo']
+  ),
 };

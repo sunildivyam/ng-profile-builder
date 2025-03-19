@@ -5,7 +5,7 @@ import { ProfileViewService } from '../../../services';
 @Component({
   selector: 'pba-education-view',
   templateUrl: './education-view.component.html',
-  styleUrls: ['./education-view.component.css']
+  styleUrls: ['./education-view.component.scss']
 })
 export class EducationViewComponent implements OnChanges {
   @Input() education: Array<Education>;

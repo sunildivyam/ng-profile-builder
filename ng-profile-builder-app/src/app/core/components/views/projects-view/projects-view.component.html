@@ -22,7 +22,7 @@
           </div>
           <h3 *ngIf="proj.roles.length" class="font-4 padding-top-10">My Roles & Responsibilities:</h3>
           <ul *ngIf="proj.roles.length" class="padding-top-10">
-            <li class="font-4" *ngFor="let role of proj.roles">{{role}}</li>
+            <li class="font-4" *ngFor="let role of proj.roles" [innerHtml]="role"></li>
           </ul>
         </div>
       </div>
