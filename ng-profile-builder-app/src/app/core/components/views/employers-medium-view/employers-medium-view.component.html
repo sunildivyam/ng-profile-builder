@@ -7,14 +7,14 @@
       <div class="row">
         <div class="item col-sm-12">
           <div class="circle"></div>
-          <h2 class="designation">{{emp.designation}} <i><strong>{{emp.experience}}</strong></i></h2>
+          <h2 class="designation">{{emp.designation}} <small>{{emp.experience}}</small></h2>
           <h3 class="name">
             {{emp.employerName}} <span class="duration">
               <small>{{emp.from | date:'MMM, y'}} - {{(emp.to | date:'MMM, y') || 'Present'}}</small>
             </span>
           </h3>
           <div class="more">
-            <!-- <summary class="font-4 padding-top-10">{{emp.summary}}</summary> -->
+            <summary class="font-4 padding-top-10">{{emp.summary}}</summary>
             <h3 *ngIf="emp.roles.length" class="font-4 padding-top-10">Roles:</h3>
             <ul *ngIf="emp.roles.length" class="padding-top-10">
               <li class="font-4" *ngFor="let role of emp.roles" [innerHtml]="role"></li>

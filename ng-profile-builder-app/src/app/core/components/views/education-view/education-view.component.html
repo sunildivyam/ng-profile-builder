@@ -5,12 +5,12 @@
   <div class="card-body">
     <div class="container-fluid" *ngFor="let edu of viewData">
       <div class="row">
-        <div class="col-sm-2">
+        <div class="col-sm-3">
           <div>{{edu.from | date:'MMM, y'}}</div>
           <div>{{(edu.to | date:'MMM, y') || 'Present'}}</div>
           <div><i><strong>{{edu.duration}}</strong></i></div>
         </div>
-        <div class="col-sm-10">
+        <div class="col-sm-9">
           <h2 class="font-3">{{edu.name}}</h2>
           <h3 class="font-4">{{edu.branch}}</h3>
           <h3 class="font-5">{{edu.institution}}</h3>

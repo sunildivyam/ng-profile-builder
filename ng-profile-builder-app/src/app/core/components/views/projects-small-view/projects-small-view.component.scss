@@ -1,13 +1,22 @@
 $circleSize: 20px;
 $circleWidth: 2px;
 $contentLeftSpaceing: 15px;
-$line-color: #bfbfbf;
+$line-color: #010059;
+$text-color: white;
 
 .projects-small-view {
+  .card-header {
+    background: $line-color;
+    color: $text-color;
+  }
+
   .row {
     position: relative;
     margin-left: 5px;
+    margin-bottom: 1px;
     border-left: $circleWidth solid $line-color;
+    background-color: $line-color;
+    color: $text-color;
 
     .item {
       padding-left: ($circleSize/2)-1;
@@ -20,7 +29,7 @@ $line-color: #bfbfbf;
       top: ($circleSize/2)+1;
       width: $circleSize;
       height: $circleSize;
-      background: white;
+      background: $line-color;
       border: $circleWidth solid $line-color;
       border-radius: 50%;
       text-align: center;
@@ -29,19 +38,30 @@ $line-color: #bfbfbf;
     .name {
       justify-content: space-between;
       display: flex;
-      font-size: 1.3rem;
+      font-size: 1em;
       margin: 0px;
       line-height: $circleSize;
       padding-left: 15px;
       border-bottom: $circleWidth solid $line-color;
       text-transform: uppercase;
+      background-color: $line-color;
+
+      small {
+        font-size: 70%;
+        text-align: right;
+      }
     }
 
     .designation {
       justify-content: space-between;
       display: flex;
-      font-size: 1.3rem;
+      font-size: 1em;
       padding-left: $contentLeftSpaceing;
+
+      small {
+        font-size: 70%;
+        text-align: right;
+      }
     }
 
     .duration {
@@ -51,6 +71,19 @@ $line-color: #bfbfbf;
     .more {
       padding-left: $contentLeftSpaceing;
       padding-top: 15px;
+      background-color: $text-color;
+      color: $line-color;
+
+      .stack {
+        border-top: 1px solid lightgrey;
+        font-size: 0.9em;
+      }
+
+      summary {
+        font-size: 0.9em;
+        font-style: italic;
+        display: flex;
+      }
     }
   }
 }

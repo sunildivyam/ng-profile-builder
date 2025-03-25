@@ -1,9 +1,17 @@
-$circleSize: 20px;
+$circleSize: 30px;
 $circleWidth: 2px;
 $contentLeftSpaceing: 15px;
-$line-color: #bfbfbf;
+$line-color: #c0e0f2;
 
 .employers-small-view {
+  .container-fluid {
+    padding: 0px;
+  }
+
+  .card-header {
+    background: $line-color;
+  }
+
   .card-title {
     justify-content: space-between;
     display: flex;
@@ -12,7 +20,9 @@ $line-color: #bfbfbf;
   .row {
     position: relative;
     margin-left: 5px;
+    margin-bottom: 1px;
     border-left: $circleWidth solid $line-color;
+    background: $line-color;
 
     .item {
       padding-left: ($circleSize/2)-1;
@@ -25,7 +35,7 @@ $line-color: #bfbfbf;
       top: ($circleSize/2)+1;
       width: $circleSize;
       height: $circleSize;
-      background: white;
+      background: $line-color;
       border: $circleWidth solid $line-color;
       border-radius: 50%;
       text-align: center;
@@ -38,12 +48,20 @@ $line-color: #bfbfbf;
       line-height: $circleSize;
       padding-left: 15px;
       border-bottom: $circleWidth solid $line-color;
+
+      small {
+        text-align: right;
+      }
     }
 
     .designation {
       justify-content: space-between;
       display: flex;
       padding-left: $contentLeftSpaceing;
+
+      small {
+        text-align: right;
+      }
     }
 
     .duration {
@@ -53,6 +71,12 @@ $line-color: #bfbfbf;
     .more {
       padding-left: $contentLeftSpaceing;
       padding-top: 15px;
+      background-color: white;
+
+      summary {
+        display: flex;
+        
+      }
     }
   }
 }

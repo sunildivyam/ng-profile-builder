@@ -74,7 +74,13 @@ export class ProfileViewService {
     if (!employers || !employers.length) {
       return new Employer();
     }
-    return employers.find((emp) => !emp.to) || employers[0];
+
+    let pEmployer = employers.find((emp) => !emp.to) || employers[0];
+    if (pEmployer.designation.includes('Sabbatical')) {
+      pEmployer = employers.length >= 2 ? employers[1] : employers[0];
+    }
+
+    return pEmployer;
   }
 
   public getRelevantExperience(employers: Array<Employer>): Duration {
@@ -100,10 +106,12 @@ export class ProfileViewService {
     }
     let totalDuration = new Duration(0, 0);
     employers.map((employer) => {
-      totalDuration = this.addDuration(
-        totalDuration,
-        this.dateDiff(employer.from, employer.to)
-      );
+      if (!employer.designation.includes('Sabbatical')) {
+        totalDuration = this.addDuration(
+          totalDuration,
+          this.dateDiff(employer.from, employer.to)
+        );
+      }
     });
     totalDuration.roundYear();
     return totalDuration;
